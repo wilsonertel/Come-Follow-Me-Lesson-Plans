@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2 Kings 16–25 — Lesson Handout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<style>
+  :root{
+    /* Motif: two kingdoms falling in siege-fire — and one golden scroll found in the ashes. */
+    --night:#221410;      /* burnt iron / ash */
+    --night-2:#150c08;    /* darker band */
+    --accent:#c1491d;     /* ember / Assyrian copper */
+    --accent-soft:#e0763b;
+    --gold:#d9a83f;       /* the scroll of the law */
+    --parch:#f8f3e8;
+    --parch-2:#f0e8d6;
+    --ink:#2a2620;
+    --ink-soft:#5c5344;
+    --echo:#2f6f63;       /* Book of Mormon echo */
+    --echo-soft:#e3ede9;
+    --gold-soft:#f6ecd3;
+    --line:#d9cdb4;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--parch);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);}
+  h2.sec{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(26px,4.4vw,34px);line-height:1.1;margin:0;color:var(--night);}
+  h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:20px;color:var(--night);margin:0 0 6px;}
+  p{margin:0 0 15px;} strong{font-weight:700;color:#221f19;} em{font-style:italic;}
+
+  .hero{position:relative;overflow:hidden;color:#f4efe4;
+    background:radial-gradient(120% 90% at 82% 8%, color-mix(in srgb,var(--accent) 42%,transparent), transparent 46%),
+      radial-gradient(90% 70% at 78% 30%, color-mix(in srgb,var(--gold) 22%,transparent), transparent 55%),
+      linear-gradient(160deg,var(--night) 0%,var(--night-2) 100%);}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:56px 22px 60px;position:relative;z-index:2;
+    display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;}
+  .hero .eyebrow{color:var(--accent-soft);}
+  .hero h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(42px,9vw,78px);line-height:.92;letter-spacing:-.01em;margin:12px 0 8px;color:#fff;}
+  .hero .kicker{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(18px,3.4vw,23px);color:var(--gold);margin:0 0 18px;}
+  .theme-chip{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:600;color:#f4efe4;}
+  .theme-chip b{color:var(--accent-soft);font-weight:700;}
+  .hook{margin:18px 0 0;max-width:36ch;color:#e7e0d2;font-size:15.5px;line-height:1.55;}
+  .hero-art{align-self:stretch;display:flex;align-items:center;justify-content:center;min-width:150px;}
+
+  .band{background:var(--night-2);color:#efe7d5;}
+  .journey{max-width:var(--maxw);margin:0 auto;padding:20px 22px;display:flex;align-items:stretch;gap:6px;}
+  .jlabel{align-self:center;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;margin-right:6px;}
+  .stop{flex:1;text-align:center;padding:6px 4px;}
+  .stop .dot{width:14px;height:14px;border-radius:50%;margin:0 auto 8px;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent);}
+  .stop .dot.g{background:var(--gold);box-shadow:0 0 0 4px color-mix(in srgb,var(--gold) 26%,transparent);}
+  .stop .nm{font-family:"Fraunces",serif;font-weight:600;font-size:16px;color:#fff;}
+  .stop .ds{font-size:11.5px;color:#cbb9a4;line-height:1.3;margin-top:2px;}
+  .stop .hx{font-size:10.5px;color:var(--gold);line-height:1.35;margin-top:5px;padding-top:5px;border-top:1px dashed rgba(217,168,63,.35);font-style:italic;}
+  .arrow{align-self:flex-start;margin-top:26px;color:#6e5b47;font-size:18px;flex:0 0 auto;}
+
+  section.block{padding:46px 0 8px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+  .sec-num{font-family:"Fraunces",serif;font-weight:900;font-size:15px;color:#fff;background:var(--night);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .sec-ico{width:24px;height:24px;color:var(--accent);flex:0 0 auto;}
+  .rule{height:3px;background:linear-gradient(90deg,var(--accent),var(--gold) 60%,transparent);border-radius:3px;margin:10px 0 22px;}
+  .lead{font-size:15px;color:var(--ink-soft);font-style:italic;margin:-6px 0 20px;}
+
+  .card{background:var(--parch-2);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:18px 20px;margin:20px 0;}
+  .card.warm{border-left-color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--parch));}
+  .card .tag{font-size:11.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--night);margin-bottom:7px;display:block;}
+  .card.warm .tag{color:#a4560f;} .card p:last-child{margin-bottom:0;}
+
+  .pull{margin:24px 0;padding:16px 22px;border-left:5px solid var(--accent);background:linear-gradient(90deg,var(--gold-soft),transparent);
+    font-family:"Fraunces",serif;font-size:21px;font-style:italic;color:var(--night);line-height:1.35;}
+  .pull cite{display:block;font-family:"Inter";font-style:normal;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:8px;}
+
+  .tl{position:relative;margin:8px 0 6px;padding-left:8px;}
+  .step{position:relative;padding:0 0 22px 54px;}
+  .step:before{content:"";position:absolute;left:19px;top:6px;bottom:-6px;width:2px;background:var(--line);}
+  .step:last-child:before{display:none;}
+  .step .badge{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:11px;background:var(--night);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:700;font-size:15px;z-index:2;}
+  .step .badge.g{background:var(--gold);color:var(--night);}
+  .step .vv{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--accent);text-transform:uppercase;}
+  .step h3{margin:2px 0 5px;} .step p{margin:0;font-size:15.5px;}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:8px 0 4px;}
+  .pcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;}
+  .pcard .row{padding:13px 16px;}
+  .pcard .k{border-left:5px solid var(--gold);background:var(--gold-soft);}
+  .pcard .b{border-left:5px solid var(--echo);background:var(--echo-soft);}
+  .pcard .mini{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;}
+  .pcard .k .mini{color:#9a6a12;} .pcard .b .mini{color:var(--echo);}
+  .pcard .row p{margin:0;font-size:14px;line-height:1.5;}
+  .pcard .teach{margin-top:auto;padding:12px 16px;background:#faf6ec;border-top:1px dashed var(--line);font-size:13px;color:var(--ink);}
+  .pcard .teach b{color:var(--night);}
+
+  .points{list-style:none;padding:0;margin:14px 0;}
+  .points li{position:relative;padding:12px 16px 12px 46px;background:var(--parch-2);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;font-size:15px;}
+  .points li:before{content:"";position:absolute;left:16px;top:16px;width:14px;height:14px;border-radius:50%;border:3px solid var(--accent);}
+  .points li strong{color:var(--night);}
+  .resto{display:flex;gap:8px;align-items:stretch;margin:14px 0 6px;flex-wrap:nowrap;}
+  .rnode{flex:1;background:var(--night);color:#f2ecdd;border-radius:12px;padding:14px;}
+  .rnode .yr{font-family:"Fraunces",serif;font-weight:700;color:var(--gold);font-size:15px;}
+  .rnode .tt{font-weight:700;font-size:14px;margin:3px 0 4px;color:#fff;} .rnode .ds{font-size:12px;color:#d5c3ab;line-height:1.4;}
+  .rarrow{align-self:center;color:var(--accent);font-size:20px;flex:0 0 auto;}
+  .ideas{list-style:none;padding:0;margin:12px 0;}
+  .ideas li{position:relative;padding:11px 14px 11px 44px;border-bottom:1px solid var(--line);font-size:15px;}
+  .ideas li:last-child{border-bottom:0;}
+  .ideas li svg{position:absolute;left:14px;top:12px;width:20px;height:20px;color:var(--echo);}
+
+  footer{margin-top:40px;background:var(--night-2);color:#c3b096;}
+  footer .wrap{padding:26px 22px;font-size:12.5px;line-height:1.6;} footer b{color:#e7e0d2;}
+  .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 40%,transparent);display:flex;align-items:center;gap:8px;}
+  .printbtn:hover{filter:brightness(.93);}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:720px){
+    .hero-inner{grid-template-columns:1fr;} .hero-art{order:-1;min-width:0;}
+    .journey{flex-direction:column;gap:0;} .jlabel{margin:0 0 8px;text-align:center;}
+    .arrow{align-self:center;transform:rotate(90deg);margin:2px 0;}
+    .grid{grid-template-columns:1fr;} .resto{flex-direction:column;} .rarrow{transform:rotate(90deg);align-self:center;}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none;} html{scroll-behavior:auto;}}
+  @media print{
+    body{font-size:11.5pt;} .printbtn{display:none;}
+    .hero{background:var(--night)!important;} .reveal{opacity:1;transform:none;}
+    section.block{padding:16px 0 4px;break-inside:avoid;} .pcard,.step,.card,.rnode{break-inside:avoid;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Deep Dive · The Fall of Two Kingdoms</div>
+      <h1>2 Kings 16–25</h1>
+      <p class="kicker">Two Kingdoms Fall · Two Kings Trust the Lord</p>
+      <span class="theme-chip"><b>"He Trusted in the Lord God of Israel"</b> · Come, Follow Me · July 13–19, 2026</span>
+      <p class="hook">Assyria scatters Israel. Babylon burns Jerusalem. And in between, Hezekiah's prayer and Josiah's rediscovered scroll show what one person's trust in the Lord can do.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg width="150" height="170" viewBox="0 0 150 170" fill="none">
+        <!-- rediscovered scroll -->
+        <rect x="35" y="34" width="80" height="102" rx="6" fill="#f6ecd3" stroke="#d9a83f" stroke-width="3"/>
+        <rect x="27" y="24" width="96" height="16" rx="8" fill="#d9a83f"/>
+        <rect x="27" y="130" width="96" height="16" rx="8" fill="#d9a83f"/>
+        <line x1="48" y1="56" x2="102" y2="56" stroke="#c1491d" stroke-width="3" stroke-linecap="round"/>
+        <line x1="48" y1="70" x2="102" y2="70" stroke="#b9a276" stroke-width="3" stroke-linecap="round"/>
+        <line x1="48" y1="84" x2="94" y2="84" stroke="#b9a276" stroke-width="3" stroke-linecap="round"/>
+        <line x1="48" y1="98" x2="102" y2="98" stroke="#b9a276" stroke-width="3" stroke-linecap="round"/>
+        <line x1="48" y1="112" x2="88" y2="112" stroke="#b9a276" stroke-width="3" stroke-linecap="round"/>
+        <!-- ember flames behind -->
+        <path d="M18 150c-6-9-2-17 4-22-1 8 5 9 8 15 2 5-1 10-6 11-3 1-5-1-6-4z" fill="#c1491d" opacity=".85"/>
+        <path d="M130 148c-7-10-2-18 5-24-1 9 6 10 9 17 2 6-2 11-7 12-4 1-6-2-7-5z" fill="#e0763b" opacity=".8"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- ============ AT-A-GLANCE BAND ============ -->
+<div class="band">
+  <div class="journey">
+    <span class="jlabel">The Arc</span>
+    <div class="stop"><div class="dot"></div><div class="nm">Ahaz</div><div class="ds">Judah copies the world · ch. 16</div><div class="hx">Buys Assyrian "protection" from Tiglath-Pileser III with temple treasure, c. 732 BC</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Israel Falls</div><div class="ds">Assyria, 722 BC · ch. 17</div><div class="hx">Samaria destroyed after a 3-year siege; ten tribes deported — Sargon II claims the win</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot g"></div><div class="nm">Hezekiah</div><div class="ds">Trust under siege · chs. 18–20</div><div class="hx">701 BC: Sennacherib takes 46 cities, traps him "like a bird in a cage" — but never takes Jerusalem</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Manasseh</div><div class="ds">55 dark years · ch. 21</div><div class="hx">Assyria at the peak of its power; Judah a quiet, compliant vassal</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot g"></div><div class="nm">Josiah</div><div class="ds">The scroll found · chs. 22–23</div><div class="hx">Scroll found 622 BC; Nineveh falls to Babylon &amp; the Medes 612 — Assyria collapses</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Judah Falls</div><div class="ds">Babylon, 586 BC · chs. 24–25</div><div class="hx">Nebuchadnezzar II deports Judah in 597 &amp; 586; temple burned — Lehi's Jerusalem</div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ 1. HISTORY ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">1</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 4v5h5"/></svg>
+      <h2 class="sec">Historical Summary of the Period</h2></div>
+    <div class="rule"></div>
+
+    <p>These ten chapters cover roughly <strong>150 years — from about 735 BC to 586 BC</strong> — the most consequential century and a half in Old Testament history. When the block opens, there are still two Israelite kingdoms: <strong>Israel</strong> in the north (capital: Samaria) and <strong>Judah</strong> in the south (capital: Jerusalem). When it closes, both are gone.</p>
+
+    <p><strong>The Assyrian war machine.</strong> The superpower of the age was <strong>Assyria</strong>, based in what is now northern Iraq along the Tigris River. (Its royal seat moved over time — Nineveh, its most famous capital, was actually made the capital by Sennacherib in Hezekiah's own day.) Under kings like <strong>Tiglath-Pileser III</strong>, Assyria perfected siege warfare and a policy of mass deportation — uprooting conquered peoples and resettling them elsewhere so they could never rebel again. Around <strong>732 BC</strong>, King <strong>Ahaz of Judah</strong> voluntarily made himself Assyria's vassal, paying tribute with temple treasure to buy protection (2 Kings 16:7–8) — a decision with a spiritual price tag, since vassalage came with cultural and religious pressure.</p>
+
+    <p><strong>722 BC — the Northern Kingdom falls.</strong> When Israel's last king, Hoshea, stopped paying tribute, Assyria (under <strong>Shalmaneser V</strong>, with <strong>Sargon II</strong> claiming the final victory) besieged Samaria for three years and destroyed it. The ten northern tribes were deported across the empire and never returned as a nation — this is the origin of the phrase <strong>"the lost ten tribes."</strong> Foreign peoples were settled in their place; their descendants, mixed with remaining Israelites, became the <strong>Samaritans</strong> of the New Testament (2 Kings 17:24).</p>
+
+    <p><strong>701 BC — Jerusalem under siege.</strong> When Hezekiah of Judah rebelled against Assyria, King <strong>Sennacherib</strong> stormed through Judah, destroying 46 fortified cities — most famously <strong>Lachish</strong> — and surrounded Jerusalem. This is the crisis of chapters 18–19. Jerusalem survived; Sennacherib went home without taking it.</p>
+
+    <p><strong>The rise of Babylon.</strong> Assyria itself collapsed a century later — Nineveh fell to the Babylonians and Medes in <strong>612 BC</strong>. The new superpower was <strong>Babylon</strong>: its crown prince <strong>Nebuchadnezzar II</strong> crushed Egypt at the battle of Carchemish (605 BC), took the throne just weeks later, and inherited Judah as a vassal. When Judah's kings rebelled, Nebuchadnezzar came twice: in <strong>597 BC</strong> he deported King Jehoiachin and thousands of leading citizens, and in <strong>586 BC</strong>, after Zedekiah's rebellion, he burned Jerusalem and Solomon's temple to the ground and carried Judah into exile (2 Kings 25). The Old Testament's first great era ends in Babylonian captivity — but prophets had already promised a return.</p>
+
+    <div class="card"><span class="tag">Archaeology You Can Point To</span>
+      <p><strong>The Taylor Prism</strong> (British Museum — two sister prisms bearing the same annals sit in Chicago's Oriental Institute and the Israel Museum in Jerusalem) is Sennacherib's own six-sided clay record of the 701 BC campaign. He brags about capturing 46 of Hezekiah's cities and shutting Hezekiah up in Jerusalem <em>"like a bird in a cage"</em> — but notably never claims to have captured Jerusalem, matching the Bible's account of the city's miraculous deliverance. The <strong>Lachish reliefs</strong>, carved stone panels from Sennacherib's palace at Nineveh (also British Museum), vividly depict his siege of Lachish, and the actual Assyrian siege ramp is still visible at the site in Israel today. And in Jerusalem you can still walk through <strong>Hezekiah's Tunnel</strong> — the 1,750-foot water tunnel Hezekiah's engineers cut through bedrock to secure the city's water supply before the siege (2 Kings 20:20), where the ancient <strong>Siloam Inscription</strong> was found describing the moment the two digging crews met in the middle. One more: in 2015, excavators near the Temple Mount uncovered a clay <strong>seal impression of Hezekiah himself</strong> — "Belonging to Hezekiah [son of] Ahaz, king of Judah" — the first seal of a Judahite king ever found in a scientific excavation. The man in this week's chapters left his fingerprint-sized signature in the dirt of Jerusalem.</p>
+    </div>
+
+    <div class="card"><span class="tag">Ten Tribes + Judah = Eleven? — the Tribal Math, and the First "Jews"</span>
+      <p>Students who count will notice ten "lost" tribes plus Judah only makes eleven. The twelfth is <strong>Benjamin</strong>, which stayed with Judah at the split (1 Kings 12:21) — Jerusalem sat right on the Judah–Benjamin border. Two more wrinkles: <strong>Levi</strong> had no tribal land and was scattered among all the tribes; after the split, many Levites moved south because Jeroboam's golden-calf religion put them out of a job (2 Chronicles 11:13–14). And <strong>Simeon's</strong> territory sat inside Judah's borders from the start (Joshua 19:1), so it was largely absorbed early. The count still works because <strong>Joseph</strong> counted as two tribes — Ephraim and Manasseh — which is also why the prophets often call the northern kingdom simply "Ephraim." The north wasn't purely lost, either: faithful families "out of all the tribes" migrated south to worship at the temple (2 Chronicles 11:16), and Hezekiah invited northern survivors to his great Passover (2 Chronicles 30).</p>
+      <p>This southern remnant — mainly Judah, Benjamin, and Levi, with pieces of every other tribe mixed in — is the group that came to be called the <strong>"Jews,"</strong> from <em>Yehudi</em>, "of Judah." The word's first appearance in the King James Bible is in this very block, in the account of Ahaz (2 Kings 16:6). Originally it meant "someone from the kingdom of Judah"; through the exile it broadened to mean the whole covenant people, whatever their tribe — Mordecai the Benjamite is "a Jew" in Esther. The Book of Mormon uses it the same way: Lehi's family were "Jews" in the national sense (2 Nephi 33:8) while descending from <strong>Manasseh</strong> by lineage (Alma 10:3) — a family from one of the "lost" ten tribes, living in Jerusalem, carrying Israel's covenant to a new world.</p>
+    </div>
+
+    <p><strong>Why this matters for Latter-day Saints:</strong> the events of chapters 24–25 are the exact backdrop of the opening of the Book of Mormon. Lehi's family left Jerusalem "in the commencement of the first year of the reign of Zedekiah" (1 Nephi 1:4) — that is, right inside 2 Kings 24 — because Lehi, like Jeremiah, prophesied the destruction described in 2 Kings 25.</p>
+  </section>
+
+  <!-- ============ 2. CHAPTER SUMMARY ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">2</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <h2 class="sec">Chapter Summary — 2 Kings 16–25</h2></div>
+    <div class="rule"></div>
+    <p class="lead">Ten chapters, one arc: two kingdoms drift from their covenant, two kings pull Judah back, and the block ends in exile — with a spark of hope in the last verses.</p>
+    <div class="tl">
+      <div class="step"><span class="badge">16</span><div class="vv">2 Kings 16</div><h3>Ahaz — Judah Copies the World</h3><p>King Ahaz of Judah embraces idolatry, even sacrificing his own son (v. 3). Threatened by Israel and Syria, he buys Assyrian protection with temple treasure instead of trusting the Lord. In Damascus he admires a pagan altar and has a copy built for the Lord's temple, shoving the Lord's altar aside (vv. 10–16) — a picture of what happens when we remodel our worship to match the world.</p></div>
+      <div class="step"><span class="badge">17</span><div class="vv">2 Kings 17</div><h3>The Fall of the Northern Kingdom (722 BC)</h3><p>Assyria besieges Samaria for three years, destroys it, and deports the ten tribes. The chapter pauses for a rare editorial explanation (vv. 7–23): this happened because Israel worshipped idols, "hardened their necks," and rejected the prophets God "testified against them" by. Foreigners resettled in the land become the ancestors of the Samaritans (v. 24).</p></div>
+      <div class="step"><span class="badge g">18</span><div class="vv">2 Kings 18</div><h3>Hezekiah's Reforms — and the Assyrians at the Gate</h3><p>Hezekiah removes idolatrous shrines and even destroys the brass serpent of Moses because people had begun worshipping it (v. 4). The verdict: "He trusted in the Lord God of Israel; so that after him was none like him" (v. 5). Then Sennacherib invades, and his spokesman (the "Rabshakeh") stands outside Jerusalem's wall taunting the people in their own language: your God can't save you — no other nation's gods have (vv. 28–35).</p></div>
+      <div class="step"><span class="badge g">19</span><div class="vv">2 Kings 19</div><h3>Hezekiah's Prayer and the Deliverance of Jerusalem</h3><p>Hezekiah tears his clothes, goes to the temple, and sends to the prophet Isaiah. When a threatening letter arrives, he spreads it out before the Lord and prays one of scripture's great prayers (vv. 14–19). Isaiah delivers the Lord's answer: Sennacherib will not shoot one arrow into the city (v. 32). That night an angel of the Lord smites 185,000 in the Assyrian camp; Sennacherib retreats to Nineveh and is later killed by his own sons (vv. 35–37).</p></div>
+      <div class="step"><span class="badge">20</span><div class="vv">2 Kings 20</div><h3>Fifteen More Years — and a Warning About Babylon</h3><p>Hezekiah falls deathly ill; after his tearful prayer, the Lord adds fifteen years to his life, confirmed by the sign of the shadow moving backward (vv. 1–11). But when Babylonian envoys visit, Hezekiah proudly shows them all his treasures — and Isaiah prophesies that everything they saw will one day be carried to Babylon (vv. 16–18). The end of the book is foreshadowed here.</p></div>
+      <div class="step"><span class="badge">21</span><div class="vv">2 Kings 21</div><h3>Manasseh — Fifty-Five Years of Apostasy</h3><p>Hezekiah's son Manasseh reverses everything: idol altars inside the temple itself, child sacrifice, sorcery, and innocent blood filling Jerusalem "from one end to another" (v. 16). His 55-year reign — the longest of any king of Judah — does damage the nation never fully recovers from. His son Amon follows the same path and is assassinated after two years.</p></div>
+      <div class="step"><span class="badge g">22</span><div class="vv">2 Kings 22</div><h3>Josiah and the Book Found in the Temple (622 BC)</h3><p>Josiah becomes king at age eight and "turned not aside to the right hand or to the left" (vv. 1–2). At 26, while repairing the temple, his high priest Hilkiah finds "the book of the law" — scripture so neglected it had been lost in the Lord's own house. When it's read to Josiah, he tears his clothes in grief and sends to <strong>Huldah the prophetess</strong>, who confirms the Lord's word (vv. 8–20).</p></div>
+      <div class="step"><span class="badge g">23</span><div class="vv">2 Kings 23</div><h3>Covenant Renewal and Josiah's Reforms</h3><p>Josiah gathers all the people, reads them the book himself, and covenants "to walk after the Lord … with all their heart and all their soul; and all the people stood to the covenant" (v. 3). He purges idolatry from the land — even the shrines Solomon built — and holds a Passover unlike any "since the days of the judges" (v. 22). Josiah dies in battle at Megiddo in 609 BC, and Judah's last four kings quickly undo his work.</p></div>
+      <div class="step"><span class="badge">24</span><div class="vv">2 Kings 24</div><h3>Babylon Comes — the First Deportation (597 BC)</h3><p>Nebuchadnezzar makes Judah a vassal; when Judah rebels, he besieges Jerusalem, deports young King Jehoiachin along with the craftsmen, soldiers, and treasures, and installs Zedekiah as a puppet king (vv. 10–17). <em>This is the exact moment the Book of Mormon opens — Lehi leaves Jerusalem in Zedekiah's first year (1 Nephi 1:4).</em></p></div>
+      <div class="step"><span class="badge">25</span><div class="vv">2 Kings 25</div><h3>The Fall of Jerusalem (586 BC) — and a Spark of Hope</h3><p>Zedekiah rebels; after a grinding siege of roughly a year and a half (some chronologies say longer) and desperate famine, Jerusalem falls. Zedekiah's sons are slain before his eyes, he is blinded and taken in chains, and the Babylonians burn the temple, the palace, and the city, carrying Judah into exile. Yet the book's last verses show exiled King Jehoiachin lifted from prison and given a seat at Babylon's table (vv. 27–30) — a quiet signal that David's line, and God's promises, are not extinguished.</p></div>
+    </div>
+
+    <div class="card warm"><span class="tag">Handling the Hard Question — "Why Did God Let This Happen?"</span>
+      <p>Students may ask why a loving God would allow His covenant people to be conquered and scattered. The text itself answers carefully: chapter 17 lists generations of warnings through prophets that Israel refused (17:13–14), and Deuteronomy 28 had spelled out from the beginning that keeping the covenant brought protection while breaking it forfeited it. The scattering was the consequence Israel chose, not God abandoning them — and even then, the Lord immediately began working the scattering into His plan of gathering. Branches of Israel carried the covenant worldwide (including Lehi's family), and prophets from Isaiah to President Nelson teach that the gathering of scattered Israel is the great work of the last days. The exile is a tragedy, but it is not the end of the story — that's the whole point of the final verses of chapter 25.</p>
+    </div>
+
+    <blockquote class="pull">"He trusted in the Lord God of Israel … For he clave to the Lord, and departed not from following him."<cite>2 Kings 18:5–6</cite></blockquote>
+  </section>
+
+  <!-- ============ 3. BOOK OF MORMON PARALLELS ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">3</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-1.6-1.2-3.6-2-6-2v13c2.4 0 4.4.8 6 2"/><path d="M12 6c1.6-1.2 3.6-2 6-2v13c-2.4 0-4.4.8-6 2"/><path d="M12 6v13"/></svg>
+      <h2 class="sec">Comparison to the Book of Mormon</h2></div>
+    <div class="rule"></div>
+    <p class="lead">This block doesn't just parallel the Book of Mormon — it launches it. The Book of Mormon's first chapter takes place inside 2 Kings 24.</p>
+    <div class="grid">
+      <div class="pcard">
+        <div class="row k"><div class="mini">2 Kings 24–25</div><p>Lehi's Jerusalem. Zedekiah reigns, prophets warn of destruction, and in 586 BC the city and temple burn.</p></div>
+        <div class="row b"><div class="mini">1 Nephi 1:4, 13; 2 Nephi 1:4</div><p>The Book of Mormon opens "in the commencement of the first year of the reign of Zedekiah." Lehi sees Jerusalem's destruction in vision and escapes with his family; later Nephi confirms it happened.</p></div>
+        <div class="teach"><b>Teaches:</b> The Book of Mormon begins as a live eyewitness thread inside this very week's chapters — two books, one moment in history.</div>
+      </div>
+      <div class="pcard">
+        <div class="row k"><div class="mini">2 Kings 22 — The Lost Book</div><p>Judah loses its scriptures inside its own temple; without the book of the law, the nation drifts into deep apostasy for two generations.</p></div>
+        <div class="row b"><div class="mini">Omni 1:14–17 · 1 Nephi 3–5</div><p>The people of Zarahemla left Jerusalem <em>without</em> records — and their language and faith deteriorated. That's exactly why the Lord required Nephi to obtain the brass plates at any cost.</p></div>
+        <div class="teach"><b>Teaches:</b> A people without scriptures loses its faith within generations; a people with them can always find the way back.</div>
+      </div>
+      <div class="pcard">
+        <div class="row k"><div class="mini">2 Kings 18–19 — The Siege</div><p>A massive enemy army surrounds God's people; Hezekiah leads them to fortify, pray, and trust — and the Lord delivers Jerusalem without a battle.</p></div>
+        <div class="row b"><div class="mini">3 Nephi 3–4</div><p>Facing the Gadianton siege, the Nephites gather, fortify, and cry to the Lord — and are delivered. (The Come, Follow Me outline itself points here.)</p></div>
+        <div class="teach"><b>Teaches:</b> When we do all we can and put our trust in God, deliverance comes in His way and His timing.</div>
+      </div>
+      <div class="pcard">
+        <div class="row k"><div class="mini">2 Kings 18:28–35 — The Taunts</div><p>The Rabshakeh mocks faith in the people's own language: be realistic, no god has ever saved anyone, surrender and life will be easier.</p></div>
+        <div class="row b"><div class="mini">Alma 30:13–17</div><p>Korihor makes the same arguments to the Nephites: you can't know what you can't see, faith is "the effect of a frenzied mind," trust only what's provable.</p></div>
+        <div class="teach"><b>Teaches:</b> The adversary's arguments barely change across 2,700 years — learning to recognize them in scripture helps youth recognize them today.</div>
+      </div>
+      <div class="pcard">
+        <div class="row k"><div class="mini">2 Kings 23:1–3 — The Covenant</div><p>Josiah reads the word of God to all the people, and together they covenant to follow the Lord with all their heart and soul — "and all the people stood to the covenant."</p></div>
+        <div class="row b"><div class="mini">Mosiah 5:2, 5–8</div><p>After King Benjamin teaches his gathered people, they experience a mighty change of heart and covenant together to obey God and take upon them the name of Christ.</p></div>
+        <div class="teach"><b>Teaches:</b> Hearing the word of God leads to covenant, and covenant changes a whole people — the same pattern we live at baptism and the sacrament.</div>
+      </div>
+      <div class="pcard">
+        <div class="row k"><div class="mini">2 Kings 17 &amp; 25 — The Scattering</div><p>Israel is scattered by Assyria and Judah by Babylon — yet the book ends with the royal line preserved and hope alive.</p></div>
+        <div class="row b"><div class="mini">3 Nephi 15:15–17; 16:1–4 · Jacob 5</div><p>The risen Savior tells the Nephites they are the "other sheep" — a scattered branch of Israel He personally visits. Jacob's olive-tree allegory shows the Lord scattering branches to save the tree, then gathering them again.</p></div>
+        <div class="teach"><b>Teaches:</b> Scattering was never abandonment — the Lord tracked every branch, and the gathering of Israel is His great latter-day work we get to join.</div>
+      </div>
+    </div>
+    <div class="card"><span class="tag">Bonus Thread — Mulek</span>
+      <p>2 Kings 25:7 says Zedekiah's sons were slain — but the Book of Mormon reveals one son, <strong>Mulek</strong>, escaped and was led to the promised land (Helaman 8:21; Omni 1:15–16). His descendants, the people of Zarahemla, later merged with the Nephites. The Book of Mormon quietly resolves a detail this very chapter leaves open.</p>
+    </div>
+  </section>
+
+  <!-- ============ 4. TIE TO COME, FOLLOW ME ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">4</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>
+      <h2 class="sec">Tie to Come, Follow Me</h2></div>
+    <div class="rule"></div>
+    <p>This week's official outline is <strong>"He Trusted in the Lord God of Israel" (July 13–19, 2 Kings 16–25)</strong>. It skips past the tragedy to spotlight the two "bright spots in the dark years of Judah's history" — Hezekiah and Josiah — and organizes the week around four principles:</p>
+
+    <h3 style="margin-top:22px">The outline's four principles</h3>
+    <ul class="points">
+      <li><strong>"I can stay true to the Lord when my faith is challenged" (2 Kings 18–19).</strong> The youth/seminary emphasis for the week. The outline invites students to imagine hearing the Assyrian taunts (18:28–37; 19:10–13), then <em>compare the Assyrians' reasons not to trust the Lord with the reasons Satan gives us to doubt today</em> — and contrast them with our reasons we <em>do</em> trust Him. Study Hezekiah's response (19:1–7, 14–19), the Lord's answer (19:35–37), and why Hezekiah stayed faithful (18:5–7). The outline pairs this with President Jeffrey R. Holland's "Fear Not: Believe Only!" (Apr. 2022), Elder Jörg Klebingat's "Valiant Discipleship in the Latter Days" (Apr. 2022), the hymn "Let Us All Press On," and cross-references 2 Chronicles 31–32 and 3 Nephi 3–4.</li>
+      <li><strong>"All things are in the Lord's hands" (2 Kings 19:20–37).</strong> Sennacherib had every earthly reason to expect victory (see 17; 18:33–34; 19:11–13) — but the Lord's message through Isaiah (19:20–34) shows who actually directs history. Ask: what truths in the Lord's message build faith in Him and His plan?</li>
+      <li><strong>"The scriptures can turn my heart to the Lord" (2 Kings 21–23).</strong> Judah's fall under Manasseh and return under Josiah frame the question: what helps us turn back to God when something is spiritually lacking? Study how and why Josiah's people changed (22:8–11; 23:1–6, 21, 24). President Spencer W. Kimball called Josiah's story "one of the finest stories in all of the scriptures" (Teachings: Spencer W. Kimball, 62–64). Cross-reference Alma 31:5 — the word had a "more powerful effect" than the sword — and the Church's "Josiah and the Book of the Law" video.</li>
+      <li><strong>"A covenant is a whole-souled commitment between me and the Lord" (2 Kings 23:1–25).</strong> Josiah's covenant in 23:3 — with all his heart and all his soul — models covenant keeping. The outline points to Elder Thierry Mutombo's April 2026 talk "The Joy of a Covenant Relationship with God" and asks: how have your covenants helped you?</li>
+      <li><strong>Scripture Helps for the week</strong> answer three questions your class may raise: <em>Who were the Assyrians? What was the book of the law discovered in the temple? How does the destruction of Jerusalem relate to the scattering of Israel?</em> The July "Thoughts to Keep in Mind" article, "Jesus Will Say to All Israel, 'Come Home,'" frames the scattering-and-gathering theme for the whole month.</li>
+    </ul>
+
+    <h3 style="margin-top:24px">From scattering to gathering — the Restoration thread</h3>
+    <div class="resto">
+      <div class="rnode"><div class="yr">722 / 586 BC</div><div class="tt">Israel &amp; Judah Scattered</div><div class="ds">Ten tribes lost to Assyria; Judah exiled to Babylon (2 Kings 17; 25).</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">~600 BC</div><div class="tt">Lehi Leaves Jerusalem</div><div class="ds">A branch of Israel is broken off and carried to a promised land (1 Nephi 1–2).</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">1829–30</div><div class="tt">A Book Comes Out of the Dust</div><div class="ds">That branch's record — the Book of Mormon — returns as an instrument of the gathering.</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">Today</div><div class="tt">The Gathering of Israel</div><div class="ds">President Nelson calls it the most important work on earth — your students are part of it.</div></div>
+    </div>
+
+    <h3 style="margin-top:24px">Teaching ideas for youth Sunday School (ages 12–13)</h3>
+    <ul class="ideas">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Two voices at the wall.</strong> Split the class in two. One side lists the Rabshakeh's arguments from 2 Kings 18:28–35 in their own words ("be realistic," "no one else's faith worked," "surrender is easier"); the other lists Hezekiah's responses (19:14–19). Then ask: which of the Rabshakeh's lines have you heard in 2026 versions? What are <em>your</em> reasons for trusting the Lord? (This is the outline's own core youth activity.)</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>"Like a bird in a cage."</strong> Show a photo of the Taylor Prism and read Sennacherib's boast that he trapped Hezekiah "like a bird in a cage" — then point out what the proud king's record <em>doesn't</em> say: that he ever took the city. Even the enemy's own monument silently testifies of 2 Kings 19:35. Twelve-year-olds love that the receipts exist.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Hide the scriptures.</strong> Before class, hide a copy of the scriptures in the room and have the class hunt for it. Then tell Josiah's story (22:8–11): God's word was lost <em>in the temple itself</em>. Discuss: what would our lives be missing if the scriptures disappeared? What's the difference between owning scriptures and having them "found" in our lives?</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Stand to the covenant.</strong> Read 2 Kings 23:3 and have everyone literally stand as you reach "all the people stood to the covenant." Ask what covenants they've already made (baptism) and will yet make, and what "whole-souled" — all their heart and soul — looks like on a normal Tuesday. Share a moment from Elder Mutombo's talk about covenants carrying him through hard times.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Open the Book of Mormon inside 2 Kings 24.</strong> Have a student read 2 Kings 24:17–18, then immediately read 1 Nephi 1:4. Watch it click that the Book of Mormon begins <em>inside this week's reading</em> — Lehi walked those streets. It's one of the best "the scriptures are one story" moments in the whole year.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Kings sort.</strong> Write the block's kings on cards (Ahaz, Hoshea, Hezekiah, Manasseh, Amon, Josiah, Jehoiakim, Jehoiachin, Zedekiah) and have the class sort them: trusted the Lord vs. didn't — then ask what each choice cost or blessed the whole nation. Point out Josiah was crowned at 8 and led reform as a young man: righteousness doesn't wait for adulthood.</li>
+    </ul>
+  </section>
+</div>
+
+<footer><div class="wrap"><b>2 Kings 16–25 — "He Trusted in the Lord God of Israel."</b> Prepared from the official Come, Follow Me—For Home and Church: Old Testament 2026 outline (July 13–19, churchofjesuschrist.org), the King James Version, and historical/archaeological sources on the Assyrian and Babylonian campaigns (Taylor Prism, Lachish reliefs, Siloam Inscription; British Museum and related scholarship). Conference talks cited: Jeffrey R. Holland, "Fear Not: Believe Only!" (Apr. 2022); Jörg Klebingat, "Valiant Discipleship in the Latter Days" (Apr. 2022); Thierry Mutombo, "The Joy of a Covenant Relationship with God" (Apr. 2026); Teachings of Presidents of the Church: Spencer W. Kimball, 62–64.</div></footer>
+
+<button class="printbtn" onclick="window.print()" aria-label="Print handout">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+  Print
+</button>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    function showAll(){ els.forEach(function(el){ el.classList.add('in'); }); }
+    if(!('IntersectionObserver' in window)){ showAll(); return; }
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.08, rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+    setTimeout(showAll, 2500);
+  })();
+</script>
+</body>
+</html>

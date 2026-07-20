@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2 Kings 3 — Lesson Handout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<style>
+  :root{
+    /* Motif: a waterless desert march, then ditches filling with water red as blood at dawn */
+    --night:#3b2320;      /* deep desert oxblood at dusk */
+    --night-2:#2a1714;    /* darker band */
+    --accent:#c14b2a;     /* blood-at-sunrise / burnt sienna */
+    --accent-soft:#db733f;
+    --gold:#d9a441;       /* desert gold */
+    --parch:#f7f1e6;      /* warm sand reading surface */
+    --parch-2:#efe6d3;
+    --ink:#2c2620;
+    --ink-soft:#5f5344;
+    --echo:#2b6f7d;       /* the water in the ditches */
+    --echo-soft:#dcebed;
+    --gold-soft:#f6ecd2;
+    --line:#ddceb2;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--parch);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);}
+  h2.sec{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(26px,4.4vw,34px);line-height:1.1;margin:0;color:var(--night);}
+  h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:20px;color:var(--night);margin:0 0 6px;}
+  p{margin:0 0 15px;} strong{font-weight:700;color:#221f19;} em{font-style:italic;}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;color:#f4efe4;
+    background:radial-gradient(120% 90% at 82% 12%, color-mix(in srgb,var(--accent) 46%,transparent), transparent 48%),
+      radial-gradient(90% 70% at 78% 34%, color-mix(in srgb,var(--gold) 24%,transparent), transparent 55%),
+      linear-gradient(160deg,var(--night) 0%,var(--night-2) 100%);}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:56px 22px 60px;position:relative;z-index:2;
+    display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;}
+  .hero .eyebrow{color:var(--accent-soft);}
+  .hero h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(48px,10vw,86px);line-height:.9;letter-spacing:-.01em;margin:12px 0 8px;color:#fff;}
+  .hero .kicker{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(18px,3.4vw,23px);color:var(--gold);margin:0 0 18px;}
+  .theme-chip{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:600;color:#f4efe4;}
+  .theme-chip b{color:var(--accent-soft);font-weight:700;}
+  .hook{margin:18px 0 0;max-width:38ch;color:#e7e0d2;font-size:15.5px;line-height:1.55;}
+  .hero-art{align-self:stretch;display:flex;align-items:center;justify-content:center;min-width:160px;}
+
+  /* AT-A-GLANCE BAND */
+  .band{background:var(--night-2);color:#efe7d5;}
+  .journey{max-width:var(--maxw);margin:0 auto;padding:20px 22px;display:flex;align-items:stretch;gap:6px;}
+  .jlabel{align-self:center;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;margin-right:6px;}
+  .stop{flex:1;text-align:center;padding:6px 4px;}
+  .stop .dot{width:14px;height:14px;border-radius:50%;margin:0 auto 8px;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent);}
+  .stop .nm{font-family:"Fraunces",serif;font-weight:600;font-size:15.5px;color:#fff;}
+  .stop .ds{font-size:11.5px;color:#cdb9a8;line-height:1.3;margin-top:2px;}
+  .arrow{align-self:flex-start;margin-top:20px;color:#7a5c50;font-size:18px;flex:0 0 auto;}
+
+  /* SECTION SHELL */
+  section.block{padding:46px 0 8px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+  .sec-num{font-family:"Fraunces",serif;font-weight:900;font-size:15px;color:#fff;background:var(--night);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .sec-ico{width:24px;height:24px;color:var(--accent);flex:0 0 auto;}
+  .rule{height:3px;background:linear-gradient(90deg,var(--accent),var(--gold) 60%,transparent);border-radius:3px;margin:10px 0 22px;}
+  .lead{font-size:15px;color:var(--ink-soft);font-style:italic;margin:-6px 0 20px;}
+
+  /* CALLOUT CARD */
+  .card{background:var(--parch-2);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:18px 20px;margin:20px 0;}
+  .card.warm{border-left-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--parch));}
+  .card.water{border-left-color:var(--echo);background:color-mix(in srgb,var(--echo) 10%,var(--parch));}
+  .card .tag{font-size:11.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--night);margin-bottom:7px;display:block;}
+  .card.warm .tag{color:#a4400f;} .card.water .tag{color:var(--echo);} .card p:last-child{margin-bottom:0;}
+
+  /* PULL QUOTE */
+  .pull{margin:24px 0;padding:16px 22px;border-left:5px solid var(--accent);background:linear-gradient(90deg,var(--gold-soft),transparent);
+    font-family:"Fraunces",serif;font-size:21px;font-style:italic;color:var(--night);line-height:1.35;}
+  .pull cite{display:block;font-family:"Inter";font-style:normal;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:8px;}
+
+  /* SUMMARY TIMELINE */
+  .tl{position:relative;margin:8px 0 6px;padding-left:8px;}
+  .step{position:relative;padding:0 0 22px 54px;}
+  .step:before{content:"";position:absolute;left:19px;top:6px;bottom:-6px;width:2px;background:var(--line);}
+  .step:last-child:before{display:none;}
+  .step .badge{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:11px;background:var(--night);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:700;font-size:15px;z-index:2;}
+  .step .vv{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--accent);text-transform:uppercase;}
+  .step h3{margin:2px 0 5px;} .step p{margin:0;font-size:15.5px;}
+
+  /* PARALLEL CARDS */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:8px 0 4px;}
+  .pcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;}
+  .pcard .row{padding:13px 16px;}
+  .pcard .k{border-left:5px solid var(--gold);background:var(--gold-soft);}
+  .pcard .b{border-left:5px solid var(--echo);background:var(--echo-soft);}
+  .pcard .mini{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;}
+  .pcard .k .mini{color:#9a6a12;} .pcard .b .mini{color:var(--echo);}
+  .pcard .row p{margin:0;font-size:14px;line-height:1.5;}
+  .pcard .teach{margin-top:auto;padding:12px 16px;background:#faf6ec;border-top:1px dashed var(--line);font-size:13px;color:var(--ink);}
+  .pcard .teach b{color:var(--night);}
+
+  /* MANUAL POINTS + RESTO + IDEAS */
+  .points{list-style:none;padding:0;margin:14px 0;}
+  .points li{position:relative;padding:12px 16px 12px 46px;background:var(--parch-2);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;font-size:15px;}
+  .points li:before{content:"";position:absolute;left:16px;top:16px;width:14px;height:14px;border-radius:50%;border:3px solid var(--accent);}
+  .points li strong{color:var(--night);}
+  .resto{display:flex;gap:8px;align-items:stretch;margin:14px 0 6px;flex-wrap:nowrap;}
+  .rnode{flex:1;background:var(--night);color:#f2ecdd;border-radius:12px;padding:14px;}
+  .rnode .yr{font-family:"Fraunces",serif;font-weight:700;color:var(--gold);font-size:15px;}
+  .rnode .tt{font-weight:700;font-size:14px;margin:3px 0 4px;color:#fff;} .rnode .ds{font-size:12px;color:#d3c3b6;line-height:1.4;}
+  .rarrow{align-self:center;color:var(--accent);font-size:20px;flex:0 0 auto;}
+  .ideas{list-style:none;padding:0;margin:12px 0;}
+  .ideas li{position:relative;padding:11px 14px 11px 44px;border-bottom:1px solid var(--line);font-size:15px;}
+  .ideas li:last-child{border-bottom:0;}
+  .ideas li svg{position:absolute;left:14px;top:12px;width:20px;height:20px;color:var(--echo);}
+
+  footer{margin-top:40px;background:var(--night-2);color:#c3b2a6;}
+  footer .wrap{padding:26px 22px;font-size:12.5px;line-height:1.6;} footer b{color:#e7e0d2;}
+  .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 40%,transparent);display:flex;align-items:center;gap:8px;}
+  .printbtn:hover{filter:brightness(.93);}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:720px){
+    .hero-inner{grid-template-columns:1fr;} .hero-art{order:-1;min-width:0;}
+    .journey{flex-direction:column;gap:0;} .jlabel{margin:0 0 8px;text-align:center;}
+    .arrow{align-self:center;transform:rotate(90deg);margin:2px 0;}
+    .grid{grid-template-columns:1fr;} .resto{flex-direction:column;} .rarrow{transform:rotate(90deg);}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none;} html{scroll-behavior:auto;}}
+  @media print{
+    body{font-size:11.5pt;} .printbtn{display:none;}
+    .hero{background:var(--night)!important;} .reveal{opacity:1;transform:none;}
+    section.block{padding:16px 0 4px;break-inside:avoid;} .pcard,.step,.card,.rnode{break-inside:avoid;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Deep Dive · The Elisha Chapters</div>
+      <h1>2 Kings 3</h1>
+      <p class="kicker">Three Kings, a Waterless March, and a Prophet's Word</p>
+      <span class="theme-chip"><b>"There Is a Prophet in Israel"</b> · Come, Follow Me · July 6–12, 2026</span>
+      <p class="hook">Three armies dying of thirst in the desert — until a prophet calls for a harpist, and by dawn the valley is full of water shining red as blood.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <!-- Sunrise over ditches filling with water, tinted red at dawn -->
+      <svg width="170" height="170" viewBox="0 0 170 170" fill="none">
+        <defs>
+          <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f0c04a"/><stop offset="1" stop-color="#c14b2a"/>
+          </linearGradient>
+        </defs>
+        <circle cx="85" cy="74" r="30" fill="url(#sun)"/>
+        <g stroke="#db733f" stroke-width="3" stroke-linecap="round" opacity=".85">
+          <line x1="85" y1="20" x2="85" y2="34"/><line x1="85" y1="114" x2="85" y2="126"/>
+          <line x1="31" y1="74" x2="43" y2="74"/><line x1="127" y1="74" x2="139" y2="74"/>
+          <line x1="47" y1="36" x2="55" y2="44"/><line x1="115" y1="104" x2="123" y2="112"/>
+          <line x1="123" y1="36" x2="115" y2="44"/><line x1="55" y1="104" x2="47" y2="112"/>
+        </g>
+        <g stroke-linecap="round" fill="none">
+          <path d="M14 128 q14 -9 28 0 t28 0 t28 0 t28 0 t28 0" stroke="#c14b2a" stroke-width="4" opacity=".9"/>
+          <path d="M14 142 q14 -9 28 0 t28 0 t28 0 t28 0 t28 0" stroke="#2b6f7d" stroke-width="4" opacity=".9"/>
+          <path d="M14 156 q14 -9 28 0 t28 0 t28 0 t28 0 t28 0" stroke="#2b6f7d" stroke-width="4" opacity=".65"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- ============ AT-A-GLANCE BAND ============ -->
+<div class="band">
+  <div class="journey">
+    <span class="jlabel">The March</span>
+    <div class="stop"><div class="dot"></div><div class="nm">Samaria</div><div class="ds">Jehoram musters Israel</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Edom Desert</div><div class="ds">7 days · no water</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Elisha</div><div class="ds">"Bring me a minstrel"</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">The Ditches</div><div class="ds">Water comes at dawn</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Moab</div><div class="ds">Routed, then withdrawal</div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ 1. HISTORY ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">1</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 4v5h5"/></svg>
+      <h2 class="sec">Historical Summary of the Period</h2></div>
+    <div class="rule"></div>
+
+    <p>Chapter 3 drops us into the <strong>divided kingdom</strong> in the middle of the 9th century BC. After Solomon, Israel had split in two: the ten northern tribes ("Israel," capital Samaria) and the two southern tribes ("Judah," capital Jerusalem). The north was ruled by the notorious <strong>house of Omri</strong> — the dynasty of Ahab and Jezebel. Ahab has just died, and his son <strong>Jehoram</strong> (also spelled Joram) now sits on Israel's throne, roughly 852–841 BC. To the south, the good king <strong>Jehoshaphat</strong> of Judah reigns, and <strong>Edom</strong>, southeast of the Dead Sea, is a vassal with its own subordinate king.</p>
+
+    <p>The rebel in the story is <strong>Moab</strong>, the highland plateau east of the Dead Sea, between the deep Arnon Gorge in the north and the Zered River in the south. It was sheep country. Moab's king, <strong>Mesha</strong>, is called a "sheepmaster," and under Omri and Ahab he had been paying Israel a staggering tribute in lambs and wool. When Ahab died and Israel looked weak, Mesha stopped paying and declared independence — the "rebellion" that launches the chapter.</p>
+
+    <p>Geography drives the plot. Rather than attack Moab head-on from the north, the three allied kings take the long southern loop <strong>through the wilderness of Edom</strong>, hoping to hit Moab from an unexpected direction. It is brutal, dry terrain — and after a seven-day march their water runs out, setting up the crisis.</p>
+
+    <div class="card water"><span class="tag">Concrete anchor · The Mesha Stele</span><p>This chapter is one of the best-documented events in the Old Testament, because <strong>King Mesha carved his own version of it in stone.</strong> The <strong>Mesha Stele</strong> (also called the Moabite Stone) was discovered in 1868 at Dhiban, Jordan — biblical Dibon, Moab's capital. It is a slab of black basalt with 34 lines of Moabite text (a language almost identical to Hebrew), written about 840 BC to celebrate Mesha's revolt and to thank Moab's god <strong>Chemosh</strong>. The stele names <strong>Omri, king of Israel</strong>, describes Israel's decades of oppression over Moab, and even carries the sacred name of Israel's God — <strong>YHWH</strong> — where Mesha boasts of dragging "the vessels of Yahweh" before Chemosh. Mesha's stone tells the victory side of the war; 2 Kings 3 tells of the campaign that first devastated his land. Two records, two perspectives, one real war — a remarkable outside witness to the world of scripture.</p></div>
+  </section>
+
+  <!-- ============ 2. CHAPTER SUMMARY ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">2</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <h2 class="sec">Chapter Summary</h2></div>
+    <div class="rule"></div>
+
+    <div class="tl">
+      <div class="step"><span class="badge">1</span><div class="vv">vv. 1–3</div><h3>A "less-bad" king takes the throne</h3><p>Jehoram, son of Ahab, becomes king of Israel. He removes the pillar of Baal his father had made — a step in the right direction — but still clings to the golden-calf worship Jeroboam had started. Half-hearted reform, not real repentance.</p></div>
+      <div class="step"><span class="badge">2</span><div class="vv">vv. 4–5</div><h3>Tribute and rebellion</h3><p>Mesha, king of Moab and a sheepmaster, had been paying Israel 100,000 lambs and the wool of 100,000 rams. When Ahab dies, Mesha rebels and stops the tribute.</p></div>
+      <div class="step"><span class="badge">3</span><div class="vv">vv. 6–8</div><h3>An alliance of three kings</h3><p>Jehoram enlists Jehoshaphat of Judah; together they choose the long, hard southern route through the wilderness of Edom, and Edom's king joins the coalition. Three armies march on Moab.</p></div>
+      <div class="step"><span class="badge">4</span><div class="vv">vv. 9–10</div><h3>Out of water</h3><p>After seven days there is no water for the soldiers or the animals. Jehoram despairs and blames the Lord for gathering three kings only to hand them to Moab.</p></div>
+      <div class="step"><span class="badge">5</span><div class="vv">vv. 11–12</div><h3>"Is there a prophet here?"</h3><p>Jehoshaphat, the faithful one, asks for a prophet of the Lord. A servant names Elisha — the man who "poured water on the hands of Elijah," his former apprentice. The three kings humble themselves and go down to him.</p></div>
+      <div class="step"><span class="badge">6</span><div class="vv">vv. 13–14</div><h3>Elisha's rebuke — and mercy</h3><p>Elisha bluntly tells Jehoram to go consult the pagan prophets of his parents. Only out of respect for righteous Jehoshaphat will Elisha even inquire of the Lord on their behalf.</p></div>
+      <div class="step"><span class="badge">7</span><div class="vv">v. 15</div><h3>"Bring me a minstrel"</h3><p>Elisha calls for a musician. As the music plays, "the hand of the Lord came upon him" and revelation flows. Praise and stillness prepare the prophet to receive the word.</p></div>
+      <div class="step"><span class="badge">8</span><div class="vv">vv. 16–19</div><h3>The unlikely promise</h3><p>The word of the Lord: dig the valley full of ditches. You will see no wind and no rain, yet the valley will fill with water — enough for the armies and the animals — and the Lord will also deliver Moab into your hand.</p></div>
+      <div class="step"><span class="badge">9</span><div class="vv">v. 20</div><h3>Water at dawn</h3><p>The next morning, at the time of the sacrifice, water comes "by the way of Edom" and floods the land. The promise made before any cloud appeared is kept.</p></div>
+      <div class="step"><span class="badge">10</span><div class="vv">vv. 21–23</div><h3>Red as blood</h3><p>The Moabites gather to fight. At sunrise the water shines red as blood. Mistaking it for slaughter, they conclude the allied kings have turned on one another — and rush in to grab the spoil.</p></div>
+      <div class="step"><span class="badge">11</span><div class="vv">vv. 24–25</div><h3>The rout</h3><p>Israel rises up and drives Moab back, ruining cities, stopping wells, felling trees, and reducing the land — until only the fortress of Kir-hareseth is left standing.</p></div>
+      <div class="step"><span class="badge">12</span><div class="vv">vv. 26–27</div><h3>The wall</h3><p>Cornered and desperate, the king of Moab offers his firstborn son — his heir — as a burnt sacrifice on the city wall. "Great indignation" falls against Israel, and the coalition breaks off the siege and withdraws.</p></div>
+    </div>
+
+    <div class="card warm"><span class="tag">Teacher's note · the hard ending (v. 27)</span><p>Verse 27 troubles careful readers, so be ready for it. Two things help. <strong>First, the human sacrifice</strong> reflects the horror of <strong>Chemosh worship</strong>, which sometimes demanded a child's life — the very darkness the Mesha Stele hints at with its "devoted to Chemosh" language. It is meant to shock; the text is not endorsing it. <strong>Second, "great indignation against Israel"</strong> (Hebrew <em>qetseph</em>, "wrath") is deliberately ambiguous. It does <em>not</em> mean Chemosh defeated the Lord — Israel had <em>already</em> accomplished its aim and devastated Moab. Most scholars read it either as the <strong>horror and demoralization</strong> that swept Israel's own troops at witnessing the atrocity, or as Moab's <strong>furious, cornered resistance</strong> surging. The chapter is showing the grim cost of this era's warfare and idolatry, not a contest the true God lost.</p></div>
+
+    <blockquote class="pull">"Is there not here a prophet of the LORD, that we may enquire of the LORD by him?"<cite>2 Kings 3:11</cite></blockquote>
+  </section>
+
+  <!-- ============ 3. BOOK OF MORMON PARALLELS ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">3</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-1.6-1.2-3.6-2-6-2v13c2.4 0 4.4.8 6 2"/><path d="M12 6c1.6-1.2 3.6-2 6-2v13c-2.4 0-4.4.8-6 2"/><path d="M12 6v13"/></svg>
+      <h2 class="sec">Comparison to the Book of Mormon</h2></div>
+    <div class="rule"></div>
+    <p class="lead">On the surface it's a war story — but its spine is a pattern the Book of Mormon repeats constantly: when God's people run out of every earthly resource, the word of the Lord through His prophet becomes their real strength.</p>
+    <div class="grid">
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">2 Kings 3:11</div><p>Out of water and options, Jehoshaphat's first move is to ask, "Is there not here a prophet of the LORD?"</p></div>
+        <div class="row b"><div class="mini">1 Nephi 15:8 · Alma 43:23–24</div><p>Nephi asks his murmuring brothers, "Have ye inquired of the Lord?" Captain Moroni sends to the prophet Alma to learn where the armies should march.</p></div>
+        <div class="teach"><b>Teaches:</b> In a crisis, the first act of faith is to seek the Lord's word through His living prophet — before we act on our own.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">2 Kings 3:16–17</div><p>"Make this valley full of ditches." Dig for water you cannot yet see — with no wind and no rain in sight.</p></div>
+        <div class="row b"><div class="mini">Ether 3:1–6 · 12:6</div><p>The brother of Jared shapes sixteen stones and asks the Lord to touch them; the light comes only after he does the work. "Faith is things which are hoped for and not seen."</p></div>
+        <div class="teach"><b>Teaches:</b> Prepare the vessel and act <em>before</em> the blessing is visible. Faith moves first; the evidence follows.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">2 Kings 3:14</div><p>The wicked Jehoram is spared and helped only "for the sake of" the righteous Jehoshaphat standing beside him.</p></div>
+        <div class="row b"><div class="mini">Alma 10:22–23</div><p>Amulek teaches that a city is preserved because of the righteous within it: "it is by the prayers of the righteous that ye are spared."</p></div>
+        <div class="teach"><b>Teaches:</b> The faithful are a shelter for those around them. Your righteousness quietly blesses more people than just you.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">2 Kings 3:9, 20</div><p>Three armies fainting in the wilderness of Edom are sustained by water only God could provide, arriving overnight.</p></div>
+        <div class="row b"><div class="mini">1 Nephi 17:1–3, 12–13</div><p>The Lord nourishes Lehi's family in the wilderness for years, giving them strength and direction they could not supply for themselves.</p></div>
+        <div class="teach"><b>Teaches:</b> God sustains His covenant people through the desert stretches of life — often in ways they never expected.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">2 Kings 3:22–24</div><p>Moab, deceived by water glowing red at sunrise, charges in for plunder and is routed. God wins the battle.</p></div>
+        <div class="row b"><div class="mini">Alma 44:3–4</div><p>Moroni tells his enemies the Nephites are protected "by their faith, by their religion" — deliverance comes by God's power, not the arm of flesh.</p></div>
+        <div class="teach"><b>Teaches:</b> Real deliverance comes from the Lord's power, not from superior numbers or strength.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 4. TIE TO COME, FOLLOW ME ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">4</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>
+      <h2 class="sec">Tie to Come, Follow Me</h2></div>
+    <div class="rule"></div>
+
+    <p>This week's outline — <strong>"There Is a Prophet in Israel": 2 Kings 2–7 (July 6–12, 2026)</strong> — pulls its title from Naaman's story in chapter 5, but chapter 3 is where the theme first bites: three kings and their armies discover that all their combined power is worth less than one prophet's word. The manual's principle headings all trace back through this chapter.</p>
+
+    <h3 style="margin-top:22px">What the manual points to — and how 2 Kings 3 feeds it</h3>
+    <ul class="points">
+      <li><strong>"God can work miracles in my life" (2 Kings 2–6).</strong> The outline invites you to list the miracles across these chapters and ponder each one. Chapter 3's water-in-a-death-valley is exactly that kind of miracle — an impossibility that turns the people back to the Lord.</li>
+      <li><strong>"The Lord will fulfill His words given through His prophets" (2 Kings 4:8–17; 7:1–16).</strong> Elisha's unlikely promise in 3:16–19 — water with no rain, plus victory over Moab — is fulfilled by the very next morning (v. 20), the same pattern the outline highlights.</li>
+      <li><strong>Elisha's miracles testify of Christ.</strong> The outline pairs Elisha's miracles with the Savior's (Luke 7; John 6; Luke 17) to show "the Lord's life-giving, nourishing, and healing power." Chapter 3's life-giving water in a place of death fits that witness.</li>
+      <li><strong>The mantle at work.</strong> The Scripture Helps the outline lists (Elijah's whirlwind, the falling mantle, Naaman's soil) surround this chapter. The mantle Elisha received in chapter 2 is the very authority he now wields before three kings in chapter 3.</li>
+      <li><strong>Book of Mormon cross-references the outline gives.</strong> 2 Nephi 26:12–13 and Moroni 7:35–37 (miracles have not ceased) and D&C 1:37–38 (the Lord's word through prophets will all be fulfilled) each illuminate chapter 3 directly.</li>
+    </ul>
+
+    <div class="resto">
+      <div class="rnode"><div class="yr">c. 850 BC</div><div class="tt">Elisha before three kings</div><div class="ds">One prophet's word outweighs three armies (2 Kings 3).</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">Meridian</div><div class="tt">Christ & His prophets</div><div class="ds">The outline pairs Elisha's miracles with the Savior's — the source of all prophetic power.</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">1830–Today</div><div class="tt">Living prophets</div><div class="ds">D&C 1:37–38: "whether by mine own voice or the voice of my servants, it is the same." President Nelson: "seek and expect miracles."</div></div>
+    </div>
+
+    <h3 style="margin-top:24px">Teaching ideas for youth (ages 12–13)</h3>
+    <ul class="ideas">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Play, then read v. 15.</strong> Play a few seconds of calm instrumental music, then read how Elisha called for a minstrel before revelation came. Ask: how do <em>we</em> prepare our minds to feel the Spirit — phones down, hymns, prayer, stillness?</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>"Dig the ditches."</strong> Give the class a task where they must act before they can see the payoff. Tie it to Ether 12:6 — faith acts first. Ask: what "ditch" is the Lord asking you to dig this week, before you can see the water?</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>List-the-miracles activity (from the outline).</strong> Have them scan 2 Kings 2–6 and list every miracle, then mark which ones Jesus also did. Start them off with the chapter 3 water.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Map the march.</strong> Trace Samaria → wilderness of Edom on a map. Let them feel seven waterless days before the rescue, then connect it to a time they felt "out of water" and the Lord provided.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Show the Mesha Stele.</strong> This age loves "is this real?" — a photo of a real stone naming King Mesha from verse 4 makes the scriptures concrete and historically grounded.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Don't dodge verse 27.</strong> If a student asks about the sacrifice, use the teacher's note above. It's a chance to contrast a false god who demanded a child's death with the true God, who gives living water and gave His Son to save us.</li>
+    </ul>
+  </section>
+</div>
+
+<footer><div class="wrap"><b>2 Kings 3 — "There Is a Prophet in Israel."</b> Built on the official Come, Follow Me—For Home and Church: Old Testament 2026 outline (July 6–12) and the Bible Dictionary ("Kings, books of"). Historical detail on the Mesha Stele / Moabite Stone from biblical-archaeology sources. Conference references: Russell M. Nelson, "The Power of Spiritual Momentum" (2022); the outline also cites Henry B. Eyring and Ronald A. Rasband on 2 Kings 6:16. Scripture quoted briefly from the King James Version and the Book of Mormon.</div></footer>
+
+<button class="printbtn" onclick="window.print()" aria-label="Print handout">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+  Print
+</button>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    function showAll(){ els.forEach(function(el){ el.classList.add('in'); }); }
+    if(!('IntersectionObserver' in window)){ showAll(); return; }
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.08, rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+    setTimeout(showAll, 2500);
+  })();
+</script>
+</body>
+</html>

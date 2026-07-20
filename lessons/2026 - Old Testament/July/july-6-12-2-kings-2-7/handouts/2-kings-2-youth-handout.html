@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>2 Kings 2 — Youth Lesson Handout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<style>
+  :root{
+    --night:#151d3b;      /* midnight sky */
+    --night-2:#0d1329;    /* deeper */
+    --ember:#e8791e;      /* flame */
+    --ember-soft:#f4a63f; /* flame highlight */
+    --gold:#e6b34a;       /* gold */
+    --parch:#f7f2e8;      /* reading surface */
+    --parch-2:#efe7d5;    /* card surface */
+    --ink:#2a2620;        /* body ink */
+    --ink-soft:#5c5344;   /* muted ink */
+    --teal:#2f6f63;       /* Book of Mormon accent */
+    --teal-soft:#e3ede9;
+    --gold-soft:#f6ecd3;
+    --line:#d9cdb4;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--parch);
+    color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;
+    font-size:17px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+
+  /* ---------- eyebrow / headings ---------- */
+  .eyebrow{
+    font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ember);
+  }
+  h2.sec{
+    font-family:"Fraunces",Georgia,serif;
+    font-weight:600;font-size:clamp(26px,4.4vw,34px);line-height:1.1;
+    margin:0;color:var(--night);
+  }
+  h3{
+    font-family:"Fraunces",Georgia,serif;font-weight:600;
+    font-size:20px;color:var(--night);margin:0 0 6px;
+  }
+  p{margin:0 0 15px;}
+  strong{font-weight:700;color:#221f19;}
+  em{font-style:italic;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(120% 90% at 82% 8%, rgba(232,121,30,.42), transparent 46%),
+      radial-gradient(90% 70% at 78% 30%, rgba(230,179,74,.22), transparent 55%),
+      linear-gradient(160deg,var(--night) 0%,var(--night-2) 100%);
+    color:#f4efe4;
+  }
+  .stars{position:absolute;inset:0;pointer-events:none;opacity:.9;}
+  .hero-inner{
+    max-width:var(--maxw);margin:0 auto;padding:56px 22px 60px;
+    position:relative;z-index:2;
+    display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;
+  }
+  .hero .eyebrow{color:var(--ember-soft);}
+  .hero h1{
+    font-family:"Fraunces",Georgia,serif;font-weight:900;
+    font-size:clamp(48px,10vw,86px);line-height:.9;letter-spacing:-.01em;
+    margin:12px 0 8px;color:#fff;
+  }
+  .hero .kicker{
+    font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:500;
+    font-size:clamp(18px,3.4vw,23px);color:var(--gold);margin:0 0 18px;
+  }
+  .theme-chip{
+    display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:600;
+    letter-spacing:.01em;color:#f4efe4;
+  }
+  .theme-chip b{color:var(--ember-soft);font-weight:700;}
+  .hook{margin:18px 0 0;max-width:34ch;color:#e7e0d2;font-size:15.5px;line-height:1.55;}
+
+  /* ascending flame svg */
+  .flame-wrap{align-self:stretch;display:flex;align-items:center;justify-content:center;min-width:150px;}
+  .flame{width:150px;height:230px;filter:drop-shadow(0 8px 30px rgba(232,121,30,.5));}
+  .flame .core{transform-origin:center bottom;animation:flick 3.2s ease-in-out infinite;}
+  @keyframes flick{0%,100%{transform:scaleY(1) scaleX(1);}50%{transform:scaleY(1.04) scaleX(.97);}}
+
+  /* ---------- JOURNEY MAP ---------- */
+  .journey-band{background:var(--night-2);color:#efe7d5;}
+  .journey{
+    max-width:var(--maxw);margin:0 auto;padding:20px 22px;
+    display:flex;align-items:stretch;gap:6px;
+  }
+  .jlabel{align-self:center;font-size:11.5px;font-weight:700;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--gold);white-space:nowrap;margin-right:6px;}
+  .stop{flex:1;text-align:center;padding:6px 4px;}
+  .stop .dot{
+    width:14px;height:14px;border-radius:50%;margin:0 auto 8px;
+    background:var(--ember);box-shadow:0 0 0 4px rgba(232,121,30,.22);
+  }
+  .stop .nm{font-family:"Fraunces",serif;font-weight:600;font-size:16px;color:#fff;}
+  .stop .ds{font-size:11.5px;color:#b9c0d6;line-height:1.3;margin-top:2px;}
+  .arrow{align-self:flex-start;margin-top:20px;color:#5b6486;font-size:18px;flex:0 0 auto;}
+
+  /* ---------- SECTION SHELL ---------- */
+  section.block{padding:46px 0 8px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+  .sec-num{
+    font-family:"Fraunces",serif;font-weight:900;font-size:15px;color:#fff;
+    background:var(--night);width:34px;height:34px;border-radius:9px;
+    display:flex;align-items:center;justify-content:center;flex:0 0 auto;
+  }
+  .sec-ico{width:24px;height:24px;color:var(--ember);flex:0 0 auto;}
+  .rule{height:3px;background:linear-gradient(90deg,var(--ember),var(--gold) 60%,transparent);
+    border-radius:3px;margin:10px 0 22px;}
+
+  .lead{font-size:15px;color:var(--ink-soft);font-style:italic;margin:-6px 0 20px;}
+
+  /* callout card */
+  .card{
+    background:var(--parch-2);border:1px solid var(--line);border-left:5px solid var(--gold);
+    border-radius:12px;padding:18px 20px;margin:20px 0;
+  }
+  .card.warm{border-left-color:var(--ember);background:#f8ede0;}
+  .card .tag{font-size:11.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;
+    color:var(--night);margin-bottom:7px;display:block;}
+  .card.warm .tag{color:#a4560f;}
+  .card p:last-child{margin-bottom:0;}
+
+  /* pull quote */
+  .pull{
+    margin:24px 0;padding:16px 22px;border-left:5px solid var(--ember);
+    background:linear-gradient(90deg,var(--gold-soft),transparent);
+    font-family:"Fraunces",serif;font-size:21px;font-style:italic;color:var(--night);
+    line-height:1.35;
+  }
+  .pull cite{display:block;font-family:"Inter";font-style:normal;font-size:12.5px;
+    font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ember);margin-top:8px;}
+
+  /* ---------- TIMELINE (chapter movements) ---------- */
+  .tl{position:relative;margin:8px 0 6px;padding-left:8px;}
+  .step{position:relative;padding:0 0 22px 54px;}
+  .step:before{content:"";position:absolute;left:19px;top:6px;bottom:-6px;width:2px;background:var(--line);}
+  .step:last-child:before{display:none;}
+  .step .badge{
+    position:absolute;left:0;top:0;width:40px;height:40px;border-radius:11px;
+    background:var(--night);color:#fff;display:flex;align-items:center;justify-content:center;
+    font-family:"Fraunces",serif;font-weight:700;font-size:15px;z-index:2;
+  }
+  .step .vv{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--ember);text-transform:uppercase;}
+  .step h3{margin:2px 0 5px;}
+  .step p{margin:0;font-size:15.5px;}
+
+  /* ---------- PARALLEL CARDS ---------- */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:8px 0 4px;}
+  .pcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;
+    display:flex;flex-direction:column;}
+  .pcard .row{padding:13px 16px;}
+  .pcard .k{border-left:5px solid var(--gold);background:var(--gold-soft);}
+  .pcard .b{border-left:5px solid var(--teal);background:var(--teal-soft);}
+  .pcard .mini{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+    margin-bottom:3px;}
+  .pcard .k .mini{color:#9a6a12;}
+  .pcard .b .mini{color:var(--teal);}
+  .pcard .row p{margin:0;font-size:14px;line-height:1.5;}
+  .pcard .teach{margin-top:auto;padding:12px 16px;background:#faf6ec;border-top:1px dashed var(--line);
+    font-size:13px;color:var(--ink);}
+  .pcard .teach b{color:var(--night);}
+
+  /* ---------- CFM manual points ---------- */
+  .points{list-style:none;padding:0;margin:14px 0;}
+  .points li{position:relative;padding:12px 16px 12px 46px;background:var(--parch-2);
+    border:1px solid var(--line);border-radius:10px;margin-bottom:10px;font-size:15px;}
+  .points li:before{content:"";position:absolute;left:16px;top:16px;width:14px;height:14px;
+    border-radius:50%;border:3px solid var(--ember);}
+  .points li strong{color:var(--night);}
+
+  /* restoration mini-timeline */
+  .resto{display:flex;gap:8px;align-items:stretch;margin:14px 0 6px;flex-wrap:nowrap;}
+  .rnode{flex:1;background:var(--night);color:#f2ecdd;border-radius:12px;padding:14px 14px;}
+  .rnode .yr{font-family:"Fraunces",serif;font-weight:700;color:var(--gold);font-size:15px;}
+  .rnode .tt{font-weight:700;font-size:14px;margin:3px 0 4px;color:#fff;}
+  .rnode .ds{font-size:12px;color:#c3c9de;line-height:1.4;}
+  .rarrow{align-self:center;color:var(--ember);font-size:20px;flex:0 0 auto;}
+
+  /* teaching ideas checklist */
+  .ideas{list-style:none;padding:0;margin:12px 0;}
+  .ideas li{position:relative;padding:11px 14px 11px 44px;border-bottom:1px solid var(--line);font-size:15px;}
+  .ideas li:last-child{border-bottom:0;}
+  .ideas li svg{position:absolute;left:14px;top:12px;width:20px;height:20px;color:var(--teal);}
+
+  /* ---------- FOOTER ---------- */
+  footer{margin-top:40px;background:var(--night-2);color:#aab2cc;}
+  footer .wrap{padding:26px 22px;font-size:12.5px;line-height:1.6;}
+  footer b{color:#e7e0d2;}
+
+  /* ---------- print button ---------- */
+  .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;
+    background:var(--ember);color:#fff;border:none;border-radius:999px;
+    padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;
+    box-shadow:0 8px 24px rgba(232,121,30,.4);display:flex;align-items:center;gap:8px;}
+  .printbtn:hover{background:#d76c14;}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:720px){
+    .hero-inner{grid-template-columns:1fr;}
+    .flame-wrap{order:-1;min-width:0;}
+    .flame{width:110px;height:170px;}
+    .journey{flex-direction:column;gap:0;}
+    .jlabel{margin:0 0 8px;text-align:center;}
+    .arrow{align-self:center;transform:rotate(90deg);margin:2px 0;}
+    .grid{grid-template-columns:1fr;}
+    .resto{flex-direction:column;}
+    .rarrow{transform:rotate(90deg);}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .flame .core{animation:none;}
+    .reveal{transition:none;opacity:1;transform:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- print ---------- */
+  @media print{
+    body{font-size:11.5pt;}
+    .printbtn{display:none;}
+    .hero{background:var(--night)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .reveal{opacity:1;transform:none;}
+    section.block{padding:16px 0 4px;break-inside:avoid;}
+    .pcard,.step,.card,.rnode{break-inside:avoid;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <svg class="stars" aria-hidden="true"><defs></defs>
+    <g fill="#ffffff">
+      <circle cx="8%" cy="22%" r="1.1" opacity=".7"/><circle cx="15%" cy="60%" r="1" opacity=".5"/>
+      <circle cx="24%" cy="14%" r="1.3" opacity=".8"/><circle cx="33%" cy="72%" r="1" opacity=".5"/>
+      <circle cx="46%" cy="20%" r="1.1" opacity=".6"/><circle cx="55%" cy="52%" r="1" opacity=".45"/>
+      <circle cx="63%" cy="12%" r="1.2" opacity=".7"/><circle cx="72%" cy="66%" r="1" opacity=".5"/>
+      <circle cx="88%" cy="40%" r="1.1" opacity=".6"/><circle cx="94%" cy="70%" r="1" opacity=".5"/>
+      <circle cx="40%" cy="80%" r="1" opacity=".4"/><circle cx="18%" cy="36%" r="1" opacity=".5"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Deep Dive · The Elisha Chapters</div>
+      <h1>2 Kings 2</h1>
+      <p class="kicker">Elijah Taken Up · Elisha Takes the Mantle</p>
+      <span class="theme-chip"><b>“There Is a Prophet in Israel”</b> · Come, Follow Me · July 6–12</span>
+      <p class="hook">A chariot of fire, a falling mantle, and a river that parts twice — the day God's power passed from one prophet to the next.</p>
+    </div>
+    <div class="flame-wrap" aria-hidden="true">
+      <svg class="flame" viewBox="0 0 120 200">
+        <defs>
+          <linearGradient id="fl" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#b9420a"/><stop offset=".55" stop-color="#e8791e"/>
+            <stop offset="1" stop-color="#f7d774"/>
+          </linearGradient>
+        </defs>
+        <!-- rising sparks -->
+        <circle cx="60" cy="26" r="3" fill="#f7d774" opacity=".9"/>
+        <circle cx="74" cy="52" r="2.2" fill="#f4a63f" opacity=".8"/>
+        <circle cx="46" cy="46" r="2" fill="#f4a63f" opacity=".7"/>
+        <!-- flame body -->
+        <g class="core">
+          <path d="M60 190 C24 168 30 128 48 108 C58 96 54 84 48 74 C70 84 74 108 70 122 C82 112 84 92 80 78 C98 96 104 138 84 168 C78 178 70 186 60 190 Z" fill="url(#fl)"/>
+          <path d="M60 188 C44 176 46 150 58 134 C64 126 62 116 60 108 C72 118 74 140 68 154 C76 148 78 136 76 126 C88 142 86 168 70 182 Z" fill="#f7d774" opacity=".85"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- ============ JOURNEY BAND ============ -->
+<div class="journey-band">
+  <div class="journey">
+    <span class="jlabel">The route of<br>Chapter 2</span>
+    <div class="stop"><div class="dot"></div><div class="nm">Gilgal</div><div class="ds">The journey begins</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Bethel</div><div class="ds">Calf-worship town</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Jericho</div><div class="ds">Lowest city on earth</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">The Jordan</div><div class="ds">The river parts</div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ 1. HISTORY ============ -->
+  <section class="block reveal">
+    <div class="sec-head">
+      <span class="sec-num">1</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 4v5h5"/><path d="M8 13h8M8 16h5"/></svg>
+      <h2 class="sec">Historical Summary of the Period</h2>
+    </div>
+    <div class="rule"></div>
+
+    <p>The Elisha chapters open in the <strong>mid-800s B.C. (about 850 B.C.)</strong>, roughly a century after the united kingdom of David and Solomon split in two. The <strong>northern kingdom of Israel</strong> (ten tribes, capital Samaria) had broken away from the <strong>southern kingdom of Judah</strong> (capital Jerusalem, ruled by the line of David). Chapter 2 takes place entirely in the north, where Elijah and Elisha ministered.</p>
+
+    <p>The north was in deep spiritual trouble. Its founding king, Jeroboam I, had set up <strong>golden calves at Bethel and Dan</strong> so his people wouldn't travel to the temple in Jerusalem — which is why Bethel, a town in this chapter, was already a center of false worship. Worse, the ruling <strong>house of Ahab (the Omride dynasty)</strong> had married in the Phoenician princess Jezebel and made <strong>Baal worship</strong> the state religion, even killing the Lord's prophets. Elijah's whole ministry — Mount Carmel, the drought — had been a head-on confrontation with that apostasy. Chapter 2 is the moment the torch passes: Elijah's work is finished, and God raises up Elisha to carry it for the next fifty-plus years, through the reigns of Joram, Jehu, and beyond.</p>
+
+    <div class="card">
+      <span class="tag">Who were the “sons of the prophets”?</span>
+      <p>The groups that keep appearing in this chapter (at Bethel, Jericho, and later Gilgal) were <strong>prophetic schools or guilds</strong> — communities of prophet apprentices who lived together, studied the law of Moses, worshiped, and trained for ministry, a bit like a seminary or a religious order. There were at least <strong>fifty at Jericho and a hundred at Gilgal</strong>. In an age of Baal worship they were a <strong>faithful remnant</strong> (recall the 7,000 in Israel who had not bowed to Baal, 1 Kings 19:18), and Elijah — then Elisha — served as their overseer. That's why their recognition of Elisha in verse 15 matters so much: the faithful community formally accepts him as their new leader.</p>
+    </div>
+
+    <p>The geography is meaningful too. The chapter traces the route <strong>Gilgal → Bethel → Jericho → the Jordan River</strong> (mapped above). Jericho sits near the lowest inhabited spot on earth, by the Jordan; Bethel is up in the highlands. When Elijah parts the Jordan and the two cross over — then Elisha parts it again coming back — the scene deliberately echoes <em>Israel first crossing the Jordan into the promised land under Joshua</em>, and even Moses at the Red Sea. The narrator is signaling that Elisha stands in the great line of God's deliverers.</p>
+  </section>
+
+  <!-- ============ 2. CHAPTER SUMMARY ============ -->
+  <section class="block reveal">
+    <div class="sec-head">
+      <span class="sec-num">2</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1.5 3-1 5 0 7 .8 1.6 3 1.4 3 4a3 3 0 0 1-6 0c0-1 .4-1.7 1-2.4"/><path d="M9 13c-1.2 1-2 2.4-2 4a5 5 0 0 0 10 0c0-2.5-1.5-3.7-2.5-5"/></svg>
+      <h2 class="sec">Chapter Summary</h2>
+    </div>
+    <div class="rule"></div>
+
+    <div class="tl">
+      <div class="step">
+        <span class="badge">1</span>
+        <div class="vv">Verses 1–8</div>
+        <h3>The final journey</h3>
+        <p>Knowing the Lord is about to take Elijah, the two prophets walk from Gilgal to Bethel to Jericho. Three times Elijah tells Elisha to stay behind; three times Elisha refuses — <em>“I will not leave thee.”</em> At each stop the sons of the prophets quietly tell Elisha his master will be taken “today,” and each time Elisha says he already knows. At the Jordan, Elijah rolls up his <strong>mantle</strong> (his prophet's cloak), strikes the water, and it divides so the two cross on dry ground while fifty of the prophets watch from a distance.</p>
+      </div>
+      <div class="step">
+        <span class="badge">2</span>
+        <div class="vv">Verses 9–10</div>
+        <h3>The double portion</h3>
+        <p>Elijah asks what he can do for Elisha before he goes. Elisha asks for a <strong>“double portion” of Elijah's spirit</strong>. This is not a request to be twice as powerful — in the law of Moses the <em>firstborn son received a double share of the inheritance</em> (Deuteronomy 21:17). Elisha is asking to be recognized as Elijah's rightful heir, to inherit the prophetic office. Elijah answers that it is a hard thing, but if Elisha sees him taken, the request is granted.</p>
+      </div>
+      <div class="step">
+        <span class="badge">3</span>
+        <div class="vv">Verses 11–12</div>
+        <h3>Elijah translated</h3>
+        <p>As they talk, a <strong>chariot of fire and horses of fire</strong> separate them, and Elijah goes up “by a whirlwind into heaven.” He does not die — he is <strong>translated</strong>. Elisha cries out, <em>“My father, my father, the chariot of Israel, and the horsemen thereof,”</em> then tears his own clothes in grief. His words are striking: the true “chariots and horsemen” — the real defense of Israel — were not the army, but the prophet of God.</p>
+      </div>
+      <div class="step">
+        <span class="badge">4</span>
+        <div class="vv">Verses 13–15</div>
+        <h3>The mantle &amp; the return crossing</h3>
+        <p>Elisha picks up the fallen mantle, walks back to the Jordan, strikes the water and asks, <em>“Where is the Lord God of Elijah?”</em> The river parts again. The same power now rests on the new prophet. The watching sons of the prophets declare, <em>“The spirit of Elijah doth rest on Elisha,”</em> and bow before him — the succession is publicly confirmed.</p>
+      </div>
+      <div class="step">
+        <span class="badge">5</span>
+        <div class="vv">Verses 16–25</div>
+        <h3>Confirming, healing &amp; the mockers</h3>
+        <p>Fifty men insist on searching for Elijah; after three days they find nothing, confirming he was truly taken. Elisha then works his <strong>first miracle</strong>: the spring at Jericho is bad and the land unfruitful, so he throws salt from a new bowl into the water and heals it “unto this day” — barrenness turned to life. Finally, traveling up to Bethel (the calf-worship town), Elisha is jeered by a crowd of youths chanting <em>“Go up, thou bald head”</em> — mocking both the prophet and Elijah's going “up.” He curses them in the Lord's name, and two she-bears maul forty-two of them.</p>
+      </div>
+    </div>
+
+    <div class="card warm">
+      <span class="tag">Note on the she-bears</span>
+      <p>This account troubles many readers, so context helps. The Hebrew word for “little children” (<em>na‘ar</em>) usually means <strong>youths or young men</strong>, not toddlers — likely a sizable, hostile mob. Bethel was the heart of Israel's <em>apostate calf worship</em>, so this was organized contempt for God's prophet and, in mocking his “going up,” possibly a jeer at the reality of Elijah's translation. In the Old Testament, attacks by wild beasts are a recognized <strong>covenant curse</strong> for those who reject the Lord (Leviticus 26:21–22). The scene marks how serious it was to despise a true prophet — a fitting theme to open these chapters.</p>
+    </div>
+
+    <blockquote class="pull">“Where is the Lord God of Elijah?”<cite>2 Kings 2:14 — Elisha, striking the Jordan</cite></blockquote>
+  </section>
+
+  <!-- ============ 3. BOOK OF MORMON ============ -->
+  <section class="block reveal">
+    <div class="sec-head">
+      <span class="sec-num">3</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-1.6-1.2-3.6-2-6-2v13c2.4 0 4.4.8 6 2"/><path d="M12 6c1.6-1.2 3.6-2 6-2v13c-2.4 0-4.4.8-6 2"/><path d="M12 6v13"/></svg>
+      <h2 class="sec">Comparison to the Book of Mormon</h2>
+    </div>
+    <div class="rule"></div>
+    <p class="lead">The same gospel patterns run through both records — use these to show your class that the scriptures testify of one another.</p>
+
+    <div class="grid">
+      <!-- 1 -->
+      <div class="pcard">
+        <div class="row k"><div class="mini">In 2 Kings 2</div><p>Elijah is taken up in a whirlwind without dying — he is <strong>translated</strong> (2:11).</p></div>
+        <div class="row b"><div class="mini">Book of Mormon echo</div><p>The Three Nephites are changed so they never taste death (3 Nephi 28:7–9); Alma “was taken up” like Moses (Alma 45:18–19).</p></div>
+        <div class="teach"><b>Teaches:</b> God can translate His faithful servants and keep them for His purposes. Death is not the end of prophetic service.</div>
+      </div>
+      <!-- 2 -->
+      <div class="pcard">
+        <div class="row k"><div class="mini">In 2 Kings 2</div><p>The double portion and mantle pass to Elisha; the prophets recognize him (2:9–15).</p></div>
+        <div class="row b"><div class="mini">Book of Mormon echo</div><p>Prophetic authority is conferred and handed on: Alma to his sons; Nephi to Nephi; Mormon to Moroni.</p></div>
+        <div class="teach"><b>Teaches:</b> The Lord's work never depends on one man — it continues by orderly succession. There is always a living prophet.</div>
+      </div>
+      <!-- 3 -->
+      <div class="pcard">
+        <div class="row k"><div class="mini">In 2 Kings 2</div><p>Elisha parts the Jordan with the mantle — the same miracle confirms the new prophet (2:13–14).</p></div>
+        <div class="row b"><div class="mini">Book of Mormon echo</div><p>The Lord confirms His servant with power, as when He gave Nephi sealing power (Helaman 10:4–10).</p></div>
+        <div class="teach"><b>Teaches:</b> God authenticates His chosen prophets so the people can trust and follow them.</div>
+      </div>
+      <!-- 4 -->
+      <div class="pcard">
+        <div class="row k"><div class="mini">In 2 Kings 2</div><p><em>“My father … the chariot of Israel, and the horsemen thereof”</em> — the prophet is Israel's true strength (2:12).</p></div>
+        <div class="row b"><div class="mini">Book of Mormon echo</div><p>The Nephites prosper as they heed prophets and decline when they reject them (Helaman 13–14).</p></div>
+        <div class="teach"><b>Teaches:</b> A people's real protection is spiritual, not military — the prophet matters more than the army.</div>
+      </div>
+      <!-- 5 -->
+      <div class="pcard">
+        <div class="row k"><div class="mini">In 2 Kings 2</div><p>Elisha heals the barren, deadly waters of Jericho and gives life (2:19–22).</p></div>
+        <div class="row b"><div class="mini">Book of Mormon echo</div><p>The waters of Mormon become a place of cleansing and covenant (Mosiah 18:8–17); Christ as living water.</p></div>
+        <div class="teach"><b>Teaches:</b> Through His prophet the Lord turns barrenness and death into life — a type of the Savior's healing power.</div>
+      </div>
+      <!-- 6 -->
+      <div class="pcard">
+        <div class="row k"><div class="mini">In 2 Kings 2</div><p>The “sons of the prophets” keep true worship alive amid Baal worship.</p></div>
+        <div class="row b"><div class="mini">Book of Mormon echo</div><p>Alma organizes the Church of God in a wicked land (Mosiah 18); a faithful remnant is preserved.</p></div>
+        <div class="teach"><b>Teaches:</b> God always preserves a covenant people and trains up future leaders, even in dark times.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. CFM TIE ============ -->
+  <section class="block reveal">
+    <div class="sec-head">
+      <span class="sec-num">4</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>
+      <h2 class="sec">Tie to Come, Follow Me</h2>
+    </div>
+    <div class="rule"></div>
+
+    <p>This week's outline is titled <strong>“There Is a Prophet in Israel”</strong> — a phrase Elisha himself speaks later, in 2 Kings 5:8. Chapter 2 is the <strong>foundation of that whole theme</strong>: before we watch the prophet heal, feed, and deliver in chapters 3–7, this chapter establishes that prophetic authority is real, God-given, and passed on in an orderly, witnessed way. If there is a prophet in Israel, it is because God put him there.</p>
+
+    <h3 style="margin-top:22px">What the manual points to in this chapter</h3>
+    <ul class="points">
+      <li><strong>“God can work miracles in my life.”</strong> The outline specifically cites <strong>2 Kings 2:19–22</strong> (healing the barren waters) as an example of the Lord working a miracle — “a barren land that needs pure water.” It invites you to list the miracles across chapters 2–6 and compare Elisha's miracles with the Savior's.</li>
+      <li>The week's <strong>Scripture Helps</strong> ask two questions drawn straight from this chapter: <em>“What does it mean that Elijah went up by a whirlwind into heaven?”</em> and <em>“What was significant about Elijah's mantle falling to Elisha?”</em> — so the manual wants learners to understand both the translation and the mantle.</li>
+    </ul>
+
+    <h3 style="margin-top:22px">Why this matters for Latter-day Saints</h3>
+    <p>Elijah's translation isn't just a dramatic exit — it connects directly to the temple. Because Elijah <strong>did not die</strong>, he could later appear in person: he held the <strong>sealing power of the Melchizedek Priesthood</strong> (the last prophet to hold it before Christ, per the Bible Dictionary), he appeared on the Mount of Transfiguration (Matthew 17:3), and he returned to restore the sealing keys to Joseph Smith and Oliver Cowdery, fulfilling Malachi 4:5–6. President Dallin H. Oaks spoke on “the mantle of Elijah” in early 2026. So when your class reads about the mantle passing to Elisha, they're seeing a pattern that reaches all the way to the <strong>living prophet and the temple ordinances</strong> today.</p>
+
+    <div class="resto">
+      <div class="rnode"><div class="yr">≈ 850 B.C.</div><div class="tt">Elijah translated</div><div class="ds">Taken up without dying (2 Kings 2:11); keeps the sealing power.</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">≈ A.D. 33</div><div class="tt">Mount of Transfiguration</div><div class="ds">Elijah appears in person with Moses and the Savior (Matthew 17:3).</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">Apr 3, 1836</div><div class="tt">Kirtland Temple</div><div class="ds">Restores sealing keys to Joseph Smith &amp; Oliver Cowdery (D&amp;C 110:13–16).</div></div>
+    </div>
+
+    <h3 style="margin-top:24px">Teaching ideas for your 12–13-year-olds</h3>
+    <ul class="ideas">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>When a President of the Church passes away, how does the next one get his authority? Tie the orderly succession today to the mantle passing to Elisha — no chaos, no self-appointment; God's power is handed on.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Explain the “double portion” as an inheritance term (the firstborn's double share). Elisha wanted to inherit the family business — God's work. Ask what “inheritance” the Lord offers them.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Have them list every miracle in chapters 2–6 (start with the Jericho spring here) and match a few to miracles of Jesus — reinforcing that Elisha's works testify of Christ.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Use verse 12 (“the chariot of Israel”) to ask: what really protects and strengthens a people? Preview the chariots of fire coming in chapter 6.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Handle “go up, thou bald head” honestly if it comes up (use the note above), then turn it into a discussion about respecting the Lord's servants.</li>
+    </ul>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <b>2 Kings 2 — “There Is a Prophet in Israel.”</b> Scripture text from the King James Version and the Book of Mormon. Historical background from ninth-century B.C. divided-kingdom sources. Lesson references from <b>Come, Follow Me — Old Testament 2026</b> (July 6–12). Prepared as a youth lesson handout.
+  </div>
+</footer>
+
+<button class="printbtn" onclick="window.print()" aria-label="Print handout">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+  Print
+</button>
+
+<script>
+  // scroll reveal — with guaranteed fallback so content is never left hidden
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    function showAll(){ els.forEach(function(el){ el.classList.add('in'); }); }
+    if(!('IntersectionObserver' in window)){ showAll(); return; }
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.08, rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+    // failsafe: if anything hasn't revealed shortly after load, reveal it
+    setTimeout(showAll, 2500);
+  })();
+</script>
+</body>
+</html>
