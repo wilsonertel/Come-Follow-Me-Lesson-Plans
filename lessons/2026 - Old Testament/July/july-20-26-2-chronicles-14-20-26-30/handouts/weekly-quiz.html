@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Weekly Quiz — 2 Chronicles 14–20; 26; 30 — Come, Follow Me 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#151d3b; --night-2:#0d1329;
+    --ember:#e8791e; --ember-soft:#f4a63f;
+    --gold:#e6b34a; --gold-soft:#f6ecd3;
+    --parch:#f7f2e8; --parch-2:#efe7d5;
+    --ink:#2a2620; --ink-soft:#5c5344;
+    --teal:#2f6f63; --line:#d9cdb4; --maxw:980px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--parch);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  a{color:var(--teal);}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ember);}
+  .hero{position:relative;overflow:hidden;color:#f4efe4;
+    background:radial-gradient(120% 90% at 82% 8%, rgba(232,121,30,.42), transparent 46%),
+      radial-gradient(90% 70% at 78% 30%, rgba(230,179,74,.22), transparent 55%),
+      linear-gradient(160deg,var(--night) 0%,var(--night-2) 100%);}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:52px 22px 54px;position:relative;z-index:2;}
+  .hero .eyebrow{color:var(--ember-soft);}
+  .hero h1{font-family:"Fraunces",Georgia,serif;font-weight:900;
+    font-size:clamp(34px,6.5vw,58px);line-height:1.02;letter-spacing:-.01em;margin:12px 0 8px;color:#fff;}
+  .hero .kicker{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:500;
+    font-size:clamp(17px,3vw,22px);color:var(--gold);margin:0 0 14px;}
+  .hero p.sub{margin:0;max-width:62ch;color:#e7e0d2;font-size:15.5px;}
+  .crumbs{max-width:var(--maxw);margin:0 auto;padding:14px 22px 0;font-size:13.5px;color:var(--ink-soft);}
+  .crumbs a{color:var(--teal);text-decoration:none;font-weight:600;}
+  .crumbs a:hover{text-decoration:underline;}
+  .crumbs span{margin:0 6px;color:#b9ac91;}
+  footer{margin-top:48px;background:var(--night-2);color:#aab2cc;}
+  footer .wrap{padding:24px 22px;font-size:12.5px;line-height:1.6;}
+  footer b{color:#e7e0d2;}
+  .badge{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+    border-radius:999px;padding:3px 10px;}
+  .badge.ready{background:var(--teal);color:#fff;}
+  .badge.soon{background:var(--parch-2);color:var(--ink-soft);border:1px solid var(--line);}
+
+  .hero-inner{padding:40px 22px 42px;}
+  .namebar{display:flex;gap:24px;flex-wrap:wrap;margin:30px 0 4px;}
+  .namebar .fld{flex:1;min-width:210px;display:flex;align-items:flex-end;gap:10px;}
+  .namebar label{font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap;padding-bottom:3px;}
+  .namebar .blank{flex:1;border-bottom:2px solid var(--night);height:26px;}
+  ol.qs{list-style:none;padding:0;margin:20px 0 0;}
+  ol.qs li{padding:16px 0 14px;border-top:1px solid var(--line);break-inside:avoid;}
+  ol.qs li:first-child{border-top:0;}
+  .qrow{display:flex;gap:13px;align-items:flex-start;}
+  .qnum{flex:0 0 auto;width:30px;height:30px;border-radius:8px;background:var(--night);color:#fff;font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;}
+  .qnum.long{background:var(--ember);}
+  .qtext{font-size:16px;font-weight:600;color:var(--night);padding-top:4px;line-height:1.4;}
+  .qtext .tagl{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--ember);border-radius:999px;padding:2px 9px;margin-left:8px;vertical-align:middle;}
+  .lines{margin:11px 0 0 43px;}
+  .lines span{display:block;border-bottom:1.5px solid var(--line);height:30px;}
+  .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--ember);color:#fff;border:none;border-radius:999px;padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 24px rgba(232,121,30,.4);display:flex;align-items:center;gap:8px;}
+  .printbtn:hover{background:#d76c14;}
+  @media print{
+    @page{margin:11mm;}
+    body{font-size:10.5pt;background:#fff;}
+    .printbtn,.crumbs{display:none;}
+    .hero{background:var(--night)!important;}
+    .hero-inner{padding:16px 22px 18px;}
+    .hero h1{font-size:25pt;margin:6px 0 4px;}
+    .hero .kicker{font-size:12.5pt;margin:0 0 6px;}
+    .hero p.sub{font-size:9.5pt;max-width:none;}
+    .namebar{margin:14px 0 2px;}
+    ol.qs{margin-top:10px;}
+    ol.qs li{padding:8px 0 6px;}
+    .qtext{font-size:11pt;}
+    .qnum{width:24px;height:24px;font-size:12px;}
+    .lines{margin-top:8px;margin-left:37px;}
+    .lines span{height:22px;}
+    footer{margin-top:12px;}
+    footer .wrap{padding:12px 22px;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Come, Follow Me &middot; July 20–26</div>
+    <h1>Weekly Quiz</h1>
+    <p class="kicker">2 Chronicles 14–20; 26; 30 &middot; &ldquo;Our Eyes Are upon Thee&rdquo;</p>
+    <p class="sub">Write your name at the top, then answer each question in your own words. When you're finished, hand your quiz back to your teacher.</p>
+  </div>
+</header>
+<nav class="crumbs"><a href="../../../../../index.html">Home</a><span>&rsaquo;</span>2026 &ndash; Old Testament<span>&rsaquo;</span><a href="../../index.html">July</a><span>&rsaquo;</span><a href="../index.html">July 20–26</a><span>&rsaquo;</span>Quiz</nav>
+<div class="wrap">
+  <div class="namebar">
+    <div class="fld"><label>Name</label><span class="blank"></span></div>
+    <div class="fld"><label>Date</label><span class="blank"></span></div>
+  </div>
+  <ol class="qs">
+    <li>
+      <div class="qrow"><span class="qnum">1</span><div class="qtext">When a huge army came against Judah, what did King Jehoshaphat tell the people to do before they went out? (2 Chronicles 20)</div></div>
+      <div class="lines"><span></span><span></span></div>
+    </li>
+    <li>
+      <div class="qrow"><span class="qnum">2</span><div class="qtext">Finish Jehoshaphat's prayer: “…we have no might… neither know we what to do: but our eyes are upon ____.” (2 Chronicles 20:12)</div></div>
+      <div class="lines"><span></span><span></span></div>
+    </li>
+    <li>
+      <div class="qrow"><span class="qnum">3</span><div class="qtext">What did King Uzziah do wrong that caused him to be struck with leprosy? (2 Chronicles 26)</div></div>
+      <div class="lines"><span></span><span></span></div>
+    </li>
+    <li>
+      <div class="qrow"><span class="qnum">4</span><div class="qtext">Whom did King Hezekiah invite to come and keep the Passover in Jerusalem? (2 Chronicles 30)</div></div>
+      <div class="lines"><span></span><span></span></div>
+    </li>
+    <li>
+      <div class="qrow"><span class="qnum long">5</span><div class="qtext">Jehoshaphat was told, “The battle is not yours, but God's” (2 Chronicles 20:15). Write about a hard thing you are facing right now, and how you could “keep your eyes on” the Lord for help with it. <span class="tagl">Longer answer</span></div></div>
+      <div class="lines"><span></span><span></span><span></span><span></span><span></span></div>
+    </li>
+  </ol>
+</div>
+<button class="printbtn" onclick="window.print()" aria-label="Print quiz">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+  Print
+</button>
+<footer><div class="wrap"><b>2 Chronicles 14–20; 26; 30 &mdash; Weekly Quiz.</b> Come, Follow Me: Old Testament 2026 (July 20–26). Print, fill in by hand, and return to your teacher.</div></footer>
+</body>
+</html>
