@@ -47,42 +47,29 @@
   .badge.soon{background:var(--parch-2);color:var(--ink-soft);border:1px solid var(--line);}
 
   .hero-inner{padding:40px 22px 42px;}
-  .namebar{display:flex;gap:24px;flex-wrap:wrap;margin:30px 0 4px;}
-  .namebar .fld{flex:1;min-width:210px;display:flex;align-items:flex-end;gap:10px;}
-  .namebar label{font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap;padding-bottom:3px;}
-  .namebar .blank{flex:1;border-bottom:2px solid var(--night);height:26px;}
-  ol.qs{list-style:none;padding:0;margin:20px 0 0;}
-  ol.qs li{padding:16px 0 14px;border-top:1px solid var(--line);break-inside:avoid;}
+  .config-warn{background:#fff3cd;border:1px solid var(--gold);border-radius:10px;padding:12px 16px;margin:22px 0 0;font-size:13.5px;color:#6b5310;}
+  label.namelab{display:block;font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:26px 0 6px;}
+  input[type=text],textarea{width:100%;font-family:inherit;font-size:15.5px;line-height:1.5;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:11px 13px;}
+  input[type=text]::placeholder,textarea::placeholder{color:#b3a98f;}
+  input[type=text]:focus,textarea:focus{outline:none;border-color:var(--ember);box-shadow:0 0 0 3px rgba(232,121,30,.16);}
+  textarea{resize:vertical;}
+  ol.qs{list-style:none;padding:0;margin:24px 0 0;}
+  ol.qs li{padding:18px 0 4px;border-top:1px solid var(--line);}
   ol.qs li:first-child{border-top:0;}
-  .qrow{display:flex;gap:13px;align-items:flex-start;}
+  .qrow{display:flex;gap:13px;align-items:flex-start;margin-bottom:11px;}
   .qnum{flex:0 0 auto;width:30px;height:30px;border-radius:8px;background:var(--night);color:#fff;font-family:"Fraunces",Georgia,serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;}
   .qnum.long{background:var(--ember);}
-  .qtext{font-size:16px;font-weight:600;color:var(--night);padding-top:4px;line-height:1.4;}
+  .qtext{font-size:16px;font-weight:600;color:var(--night);padding-top:4px;line-height:1.4;display:block;}
   .qtext .tagl{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--ember);border-radius:999px;padding:2px 9px;margin-left:8px;vertical-align:middle;}
-  .lines{margin:11px 0 0 43px;}
-  .lines span{display:block;border-bottom:1.5px solid var(--line);height:30px;}
-  .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--ember);color:#fff;border:none;border-radius:999px;padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 24px rgba(232,121,30,.4);display:flex;align-items:center;gap:8px;}
-  .printbtn:hover{background:#d76c14;}
-  @media print{
-    @page{margin:11mm;}
-    body{font-size:10.5pt;background:#fff;}
-    .printbtn,.crumbs{display:none;}
-    .hero{background:var(--night)!important;}
-    .hero-inner{padding:16px 22px 18px;}
-    .hero h1{font-size:25pt;margin:6px 0 4px;}
-    .hero .kicker{font-size:12.5pt;margin:0 0 6px;}
-    .hero p.sub{font-size:9.5pt;max-width:none;}
-    .namebar{margin:14px 0 2px;}
-    ol.qs{margin-top:10px;}
-    ol.qs li{padding:8px 0 6px;}
-    .qtext{font-size:11pt;}
-    .qnum{width:24px;height:24px;font-size:12px;}
-    .lines{margin-top:8px;margin-left:37px;}
-    .lines span{height:22px;}
-    footer{margin-top:12px;}
-    footer .wrap{padding:12px 22px;}
-    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-  }
+  .answerbox{margin-left:43px;}
+  .submitrow{margin:26px 0 44px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+  .submitbtn{background:var(--ember);color:#fff;border:none;border-radius:999px;padding:13px 28px;font-family:inherit;font-weight:700;font-size:15.5px;cursor:pointer;box-shadow:0 8px 24px rgba(232,121,30,.35);}
+  .submitbtn:hover{background:#d76c14;}
+  .submithint{font-size:13px;color:var(--ink-soft);}
+  .thanks{background:var(--gold-soft);border:1px solid var(--gold);border-radius:16px;padding:36px 26px;margin:34px 0 44px;text-align:center;}
+  .thanks h2{font-family:"Fraunces",Georgia,serif;color:var(--night);font-size:28px;margin:0 0 8px;}
+  .thanks p{margin:0;color:var(--ink-soft);font-size:15.5px;}
+  @media (max-width:680px){.answerbox{margin-left:0;}}
 </style>
 </head>
 <body>
@@ -91,42 +78,70 @@
     <div class="eyebrow">Come, Follow Me &middot; July 27 – August 2</div>
     <h1>Weekly Quiz</h1>
     <p class="kicker">Ezra 1; 3–7; Nehemiah 2; 4–6; 8 &middot; &ldquo;I Am Doing a Great Work&rdquo;</p>
-    <p class="sub">Write your name at the top, then answer each question in your own words. When you're finished, hand your quiz back to your teacher.</p>
+    <p class="sub">Type your name, answer each question in your own words, then press Submit. Your answers go straight to your teacher.</p>
   </div>
 </header>
 <nav class="crumbs"><a href="../../../../../index.html">Home</a><span>&rsaquo;</span>2026 &ndash; Old Testament<span>&rsaquo;</span><a href="../../index.html">August</a><span>&rsaquo;</span><a href="../index.html">July 27 – August 2</a><span>&rsaquo;</span>Quiz</nav>
 <div class="wrap">
-  <div class="namebar">
-    <div class="fld"><label>Name</label><span class="blank"></span></div>
-    <div class="fld"><label>Date</label><span class="blank"></span></div>
+  <div id="quizwrap">
+    
+    <form action="https://script.google.com/macros/s/AKfycbxEl1qMMTESQZO66Q_MVV1O79i0SiyNjJjQQ9NW0MFUKI96H6iszQ67fK-b4IeYL-hF/exec" method="POST" target="cfm_sink" onsubmit="return quizSubmit(this)">
+      <input type="hidden" name="week" value="July 27 – August 2 · Ezra 1; 3–7; Nehemiah 2; 4–6; 8">
+      <label class="namelab" for="nm">Your name</label>
+      <input type="text" id="nm" name="name" required autocomplete="name" placeholder="First and last name" />
+      <ol class="qs">
+      <li>
+        <div class="qrow"><span class="qnum">1</span><label class="qtext" for="a0">Which Persian king let the Jews return to Jerusalem to rebuild the temple? (Ezra 1)</label></div>
+        <input type="hidden" name="q0" value="Which Persian king let the Jews return to Jerusalem to rebuild the temple? (Ezra 1)">
+        <div class="answerbox"><textarea id="a0" name="answer0" rows="2" required></textarea></div>
+      </li>
+      <li>
+        <div class="qrow"><span class="qnum">2</span><label class="qtext" for="a1">Finish Nehemiah's answer to those trying to stop him: “I am doing a ____ ____, so that I cannot come down.” (Nehemiah 6:3)</label></div>
+        <input type="hidden" name="q1" value="Finish Nehemiah's answer to those trying to stop him: “I am doing a ____ ____, so that I cannot come down.” (Nehemiah 6:3)">
+        <div class="answerbox"><textarea id="a1" name="answer1" rows="2" required></textarea></div>
+      </li>
+      <li>
+        <div class="qrow"><span class="qnum">3</span><label class="qtext" for="a2">How many days did it take Nehemiah and the people to finish rebuilding the wall? (Nehemiah 6:15)</label></div>
+        <input type="hidden" name="q2" value="How many days did it take Nehemiah and the people to finish rebuilding the wall? (Nehemiah 6:15)">
+        <div class="answerbox"><textarea id="a2" name="answer2" rows="2" required></textarea></div>
+      </li>
+      <li>
+        <div class="qrow"><span class="qnum">4</span><label class="qtext" for="a3">In Nehemiah 8, what did Ezra read aloud to all the people gathered at the Water Gate?</label></div>
+        <input type="hidden" name="q3" value="In Nehemiah 8, what did Ezra read aloud to all the people gathered at the Water Gate?">
+        <div class="answerbox"><textarea id="a3" name="answer3" rows="2" required></textarea></div>
+      </li>
+      <li>
+        <div class="qrow"><span class="qnum long">5</span><label class="qtext" for="a4">Nehemiah kept building even when people mocked him and tried to distract him. Write about a “great work” or good goal in your own life — what it is, what makes it hard, and how you can keep going without “coming down.” <span class="tagl">Longer answer</span></label></div>
+        <input type="hidden" name="q4" value="Nehemiah kept building even when people mocked him and tried to distract him. Write about a “great work” or good goal in your own life — what it is, what makes it hard, and how you can keep going without “coming down.”">
+        <div class="answerbox"><textarea id="a4" name="answer4" rows="6" required></textarea></div>
+      </li>
+      </ol>
+      <div class="submitrow">
+        <button class="submitbtn" type="submit">Submit my answers</button>
+        <span class="submithint">All questions are required.</span>
+      </div>
+    </form>
   </div>
-  <ol class="qs">
-    <li>
-      <div class="qrow"><span class="qnum">1</span><div class="qtext">Which Persian king let the Jews return to Jerusalem to rebuild the temple? (Ezra 1)</div></div>
-      <div class="lines"><span></span><span></span></div>
-    </li>
-    <li>
-      <div class="qrow"><span class="qnum">2</span><div class="qtext">Finish Nehemiah's answer to those trying to stop him: “I am doing a ____ ____, so that I cannot come down.” (Nehemiah 6:3)</div></div>
-      <div class="lines"><span></span><span></span></div>
-    </li>
-    <li>
-      <div class="qrow"><span class="qnum">3</span><div class="qtext">How many days did it take Nehemiah and the people to finish rebuilding the wall? (Nehemiah 6:15)</div></div>
-      <div class="lines"><span></span><span></span></div>
-    </li>
-    <li>
-      <div class="qrow"><span class="qnum">4</span><div class="qtext">In Nehemiah 8, what did Ezra read aloud to all the people gathered at the Water Gate?</div></div>
-      <div class="lines"><span></span><span></span></div>
-    </li>
-    <li>
-      <div class="qrow"><span class="qnum long">5</span><div class="qtext">Nehemiah kept building even when people mocked him and tried to distract him. Write about a “great work” or good goal in your own life — what it is, what makes it hard, and how you can keep going without “coming down.” <span class="tagl">Longer answer</span></div></div>
-      <div class="lines"><span></span><span></span><span></span><span></span><span></span></div>
-    </li>
-  </ol>
+  <div class="thanks" id="thanks" hidden>
+    <h2>Thank you, <span class="who">friend</span>!</h2>
+    <p>Your answers were sent to your teacher. You can close this page now.</p>
+  </div>
 </div>
-<button class="printbtn" onclick="window.print()" aria-label="Print quiz">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
-  Print
-</button>
-<footer><div class="wrap"><b>Ezra 1; 3–7; Nehemiah 2; 4–6; 8 &mdash; Weekly Quiz.</b> Come, Follow Me: Old Testament 2026 (July 27 – August 2). Print, fill in by hand, and return to your teacher.</div></footer>
+<iframe name="cfm_sink" style="display:none" aria-hidden="true" title="submit target"></iframe>
+<footer><div class="wrap"><b>Ezra 1; 3–7; Nehemiah 2; 4–6; 8 &mdash; Weekly Quiz.</b> Come, Follow Me: Old Testament 2026 (July 27 – August 2). Your name and answers are sent to your teacher's response sheet.</div></footer>
+<script>
+function quizSubmit(f){
+  setTimeout(function(){
+    document.getElementById('quizwrap').hidden = true;
+    var t = document.getElementById('thanks');
+    var who = t.querySelector('.who');
+    var nm = (f.name.value || '').trim();
+    if (who && nm) who.textContent = nm;
+    t.hidden = false;
+    window.scrollTo(0, 0);
+  }, 200);
+  return true;
+}
+</script>
 </body>
 </html>
