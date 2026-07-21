@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nehemiah 2; 4–6 — Rebuilding the Wall · Lesson Handout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<style>
+  :root{
+    --night:#2b2926;      /* charcoal stone */
+    --night-2:#1c1b19;
+    --accent:#b5732e;     /* forged bronze */
+    --accent-soft:#d29350;
+    --gold:#cf9a4a;
+    --parch:#f4f1ea;
+    --parch-2:#e9e4d8;
+    --ink:#2a2620;
+    --ink-soft:#5c5344;
+    --echo:#436c86;       /* steel blue — the "echo" color */
+    --echo-soft:#e0e9ef;
+    --gold-soft:#f4ead3;
+    --line:#d6ccb7;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--parch);color:var(--ink);font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);}
+  h2.sec{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(26px,4.4vw,34px);line-height:1.1;margin:0;color:var(--night);}
+  h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:20px;color:var(--night);margin:0 0 6px;}
+  p{margin:0 0 15px;} strong{font-weight:700;color:#221f19;} em{font-style:italic;}
+
+  .hero{position:relative;overflow:hidden;color:#f4efe4;
+    background:radial-gradient(120% 90% at 82% 8%, color-mix(in srgb,var(--accent) 42%,transparent), transparent 46%),
+      radial-gradient(90% 70% at 78% 30%, color-mix(in srgb,var(--gold) 20%,transparent), transparent 55%),
+      linear-gradient(160deg,var(--night) 0%,var(--night-2) 100%);}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:56px 22px 60px;position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;}
+  .hero .eyebrow{color:var(--accent-soft);}
+  .hero h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(46px,9.4vw,80px);line-height:.9;letter-spacing:-.01em;margin:12px 0 8px;color:#fff;}
+  .hero .kicker{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(18px,3.4vw,23px);color:var(--gold);margin:0 0 18px;}
+  .theme-chip{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:600;color:#f4efe4;}
+  .theme-chip b{color:var(--accent-soft);font-weight:700;}
+  .hook{margin:18px 0 0;max-width:37ch;color:#e7e0d2;font-size:15.5px;line-height:1.55;}
+  .hero-art{align-self:stretch;display:flex;align-items:center;justify-content:center;min-width:150px;}
+
+  .band{background:var(--night-2);color:#efe7d5;}
+  .journey{max-width:var(--maxw);margin:0 auto;padding:20px 22px;display:flex;align-items:stretch;gap:6px;}
+  .jlabel{align-self:center;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;margin-right:6px;}
+  .stop{flex:1;text-align:center;padding:6px 4px;}
+  .stop .dot{width:14px;height:14px;border-radius:50%;margin:0 auto 8px;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent);}
+  .stop .nm{font-family:"Fraunces",serif;font-weight:600;font-size:15px;color:#fff;}
+  .stop .ds{font-size:11px;color:#c6c1b6;line-height:1.3;margin-top:2px;}
+  .arrow{align-self:flex-start;margin-top:20px;color:#6c665c;font-size:18px;flex:0 0 auto;}
+
+  section.block{padding:46px 0 8px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+  .sec-num{font-family:"Fraunces",serif;font-weight:900;font-size:15px;color:#fff;background:var(--night);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .sec-ico{width:24px;height:24px;color:var(--accent);flex:0 0 auto;}
+  .rule{height:3px;background:linear-gradient(90deg,var(--accent),var(--gold) 60%,transparent);border-radius:3px;margin:10px 0 22px;}
+  .lead{font-size:15px;color:var(--ink-soft);font-style:italic;margin:-6px 0 20px;}
+
+  .card{background:var(--parch-2);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:18px 20px;margin:20px 0;}
+  .card.warm{border-left-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--parch));}
+  .card .tag{font-size:11.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--night);margin-bottom:7px;display:block;}
+  .card.warm .tag{color:#8f5a20;} .card p:last-child{margin-bottom:0;}
+
+  .pull{margin:24px 0;padding:16px 22px;border-left:5px solid var(--accent);background:linear-gradient(90deg,var(--gold-soft),transparent);font-family:"Fraunces",serif;font-size:21px;font-style:italic;color:var(--night);line-height:1.35;}
+  .pull cite{display:block;font-family:"Inter";font-style:normal;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:8px;}
+
+  .tl{position:relative;margin:8px 0 6px;padding-left:8px;}
+  .step{position:relative;padding:0 0 22px 54px;}
+  .step:before{content:"";position:absolute;left:19px;top:6px;bottom:-6px;width:2px;background:var(--line);}
+  .step:last-child:before{display:none;}
+  .step .badge{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:11px;background:var(--night);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:700;font-size:15px;z-index:2;}
+  .step .vv{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--accent);text-transform:uppercase;}
+  .step h3{margin:2px 0 5px;} .step p{margin:0;font-size:15.5px;}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:8px 0 4px;}
+  .pcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;}
+  .pcard .row{padding:13px 16px;}
+  .pcard .k{border-left:5px solid var(--gold);background:var(--gold-soft);}
+  .pcard .b{border-left:5px solid var(--echo);background:var(--echo-soft);}
+  .pcard .mini{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;}
+  .pcard .k .mini{color:#8f5a20;} .pcard .b .mini{color:var(--echo);}
+  .pcard .row p{margin:0;font-size:14px;line-height:1.5;}
+  .pcard .teach{margin-top:auto;padding:12px 16px;background:#faf6ec;border-top:1px dashed var(--line);font-size:13px;color:var(--ink);}
+  .pcard .teach b{color:var(--night);}
+
+  .points{list-style:none;padding:0;margin:14px 0;}
+  .points li{position:relative;padding:12px 16px 12px 46px;background:var(--parch-2);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;font-size:15px;}
+  .points li:before{content:"";position:absolute;left:16px;top:16px;width:14px;height:14px;border-radius:50%;border:3px solid var(--accent);}
+  .points li strong{color:var(--night);}
+  .resto{display:flex;gap:8px;align-items:stretch;margin:14px 0 6px;flex-wrap:nowrap;}
+  .rnode{flex:1;background:var(--night);color:#f2ecdd;border-radius:12px;padding:14px;}
+  .rnode .yr{font-family:"Fraunces",serif;font-weight:700;color:var(--gold);font-size:15px;}
+  .rnode .tt{font-weight:700;font-size:14px;margin:3px 0 4px;color:#fff;} .rnode .ds{font-size:12px;color:#c9c4ba;line-height:1.4;}
+  .rarrow{align-self:center;color:var(--accent);font-size:20px;flex:0 0 auto;}
+  .ideas{list-style:none;padding:0;margin:12px 0;}
+  .ideas li{position:relative;padding:11px 14px 11px 44px;border-bottom:1px solid var(--line);font-size:15px;}
+  .ideas li:last-child{border-bottom:0;}
+  .ideas li svg{position:absolute;left:14px;top:12px;width:20px;height:20px;color:var(--echo);}
+
+  footer{margin-top:40px;background:var(--night-2);color:#b3aea3;}
+  footer .wrap{padding:26px 22px;font-size:12.5px;line-height:1.6;} footer b{color:#e7e0d2;}
+  .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 40%,transparent);display:flex;align-items:center;gap:8px;}
+  .printbtn:hover{filter:brightness(.93);}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  .set-nav{max-width:var(--maxw);margin:0 auto;padding:14px 22px 0;font-size:12.5px;color:var(--ink-soft);}
+  .set-nav b{color:var(--night);}
+
+  @media (max-width:720px){
+    .hero-inner{grid-template-columns:1fr;} .hero-art{order:-1;min-width:0;}
+    .journey{flex-direction:column;gap:0;} .jlabel{margin:0 0 8px;text-align:center;}
+    .arrow{align-self:center;transform:rotate(90deg);margin:2px 0;}
+    .grid{grid-template-columns:1fr;} .resto{flex-direction:column;} .rarrow{transform:rotate(90deg);}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none;} html{scroll-behavior:auto;}}
+  @media print{
+    body{font-size:11.5pt;} .printbtn{display:none;}
+    .hero{background:var(--night)!important;} .reveal{opacity:1;transform:none;}
+    section.block{padding:16px 0 4px;break-inside:avoid;} .pcard,.step,.card,.rnode{break-inside:avoid;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Deep Dive · Part 2 of 3 · Rebuilding the Wall</div>
+      <h1>Nehemiah 2; 4–6</h1>
+      <p class="kicker">The Cupbearer's Courage · A Wall in 52 Days</p>
+      <span class="theme-chip"><b>"I Am Doing a Great Work"</b> · Come, Follow Me · July 27–Aug 2</span>
+      <p class="hook">A servant in a foreign palace hears his city lies defenseless — and against mockery, threats, and four attempts to lure him "down," he rebuilds Jerusalem's wall in under two months.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg width="150" height="150" viewBox="0 0 150 150" fill="none">
+        <defs><linearGradient id="b1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d29350"/><stop offset="1" stop-color="#b5732e"/></linearGradient></defs>
+        <!-- battlement -->
+        <path d="M18 96 h18 v-12 h18 v12 h18 v-12 h18 v12 h18 v-12 h18 v12 h0 v34 h-126 z" fill="url(#b1)" opacity=".9"/>
+        <line x1="18" y1="110" x2="144" y2="110" stroke="#1c1b19" stroke-width="2" opacity=".35"/>
+        <line x1="50" y1="96" x2="50" y2="130" stroke="#1c1b19" stroke-width="2" opacity=".25"/>
+        <line x1="86" y1="96" x2="86" y2="130" stroke="#1c1b19" stroke-width="2" opacity=".25"/>
+        <line x1="118" y1="96" x2="118" y2="130" stroke="#1c1b19" stroke-width="2" opacity=".25"/>
+        <!-- crossed sword + trowel -->
+        <g stroke="#f4efe4" stroke-width="4" stroke-linecap="round">
+          <line x1="46" y1="20" x2="96" y2="78"/>
+        </g>
+        <path d="M104 22 l16 8 -20 20 -8 -8 z" fill="#f4efe4"/>
+        <line x1="96" y1="52" x2="60" y2="88" stroke="#f4efe4" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="44" cy="18" r="4" fill="#cf9a4a"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="set-nav">This handout is <b>Part 2 of 3</b> in a set that splits the week by what is being rebuilt: <b>the Temple</b> (Ezra 1; 3–6), <b>the Wall</b> (here), and <b>the People</b> (Ezra 7; Nehemiah 8). A combined packet and a one-page "arc" summary round out the set.</div>
+
+<!-- ============ AT-A-GLANCE BAND ============ -->
+<div class="band">
+  <div class="journey">
+    <span class="jlabel">Nehemiah's Mission</span>
+    <div class="stop"><div class="dot"></div><div class="nm">445 BC</div><div class="ds">Cupbearer in Susa hears the news</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Night ride</div><div class="ds">Inspects the ruins alone</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">"Rise&nbsp;up&nbsp;&amp;&nbsp;build"</div><div class="ds">The people take heart</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Sword&nbsp;+&nbsp;trowel</div><div class="ds">Build and guard together</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">52 days</div><div class="ds">The wall is finished</div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ 1. HISTORY ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">1</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 4v5h5"/></svg>
+      <h2 class="sec">Historical Summary of the Period</h2></div>
+    <div class="rule"></div>
+    <p>This story unfolds about <strong>70 years after the temple was finished</strong> — roughly <strong>445 BC</strong>, deep in the reign of the Persian emperor <strong>Artaxerxes I</strong>. Jerusalem had its rebuilt temple, but the city itself still lay open and exposed: its defensive walls broken down and its gates burned ever since Babylon destroyed it in 586 BC. In the ancient world, <strong>a city without walls was no real city at all</strong> — it was defenseless against raiders, commercially crippled, and a public disgrace. For the returned covenant people, broken walls meant a broken, vulnerable community.</p>
+    <p><strong>Nehemiah</strong> was a Jew who had risen to a position of remarkable trust in the Persian court: <strong>cupbearer to the king</strong>. He tasted the royal wine to guard against poison, and he had the king's ear daily. When his brother Hanani arrives from Judah with the news that Jerusalem's wall is still broken and its gates burned, Nehemiah weeps, fasts, and prays for days — then asks the king to send him as governor of Judah to rebuild.</p>
+    <p><strong>The opposition</strong> came from three regional officials who did not want a strong, independent Judah on their borders: <strong>Sanballat the Horonite</strong>, the governor of Samaria; <strong>Tobiah the Ammonite</strong>; and <strong>Geshem the Arabian</strong>. They mocked the builders, spread rumors that Nehemiah was plotting rebellion, schemed to attack the workers, and repeatedly tried to lure Nehemiah into a "meeting" where they could harm him.</p>
+    <div class="card"><span class="tag">Concrete anchor · The Elephantine Papyri</span><p>On an island in the Nile in southern Egypt, a Jewish military colony left behind about <strong>175 Aramaic documents</strong>, preserved for millennia by the dry desert air. One letter — dated about <strong>407 BC</strong>, within living memory of Nehemiah's own century — names <strong>"Sanballat, governor of Samaria"</strong> and his sons Delaiah and Shelemiah. That is a real, dated, non-biblical document naming Nehemiah's chief opponent. (A group of seal impressions later found at Wadi Daliyeh points to the same family.) Nehemiah's enemies were not literary villains; they were historical figures.</p></div>
+    <p>Against all of it, the wall was completed in an astonishing <strong>52 days</strong> (Nehemiah 6:15) — so fast that even the enemies had to admit "this work was wrought of our God."</p>
+  </section>
+
+  <!-- ============ 2. CHAPTER SUMMARY ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">2</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <h2 class="sec">Chapter Summary</h2></div>
+    <div class="rule"></div>
+    <div class="tl">
+      <div class="step"><span class="badge">1</span><div class="vv">Nehemiah 2:1–8</div><h3>Sadness before the king</h3><p>Nehemiah's grief shows on his face. When the king asks why, Nehemiah shoots up a silent prayer "to the God of heaven" in the moment — then boldly asks to be sent to rebuild. The king grants it, with letters of safe passage and timber. Nehemiah credits "the good hand of my God upon me."</p></div>
+      <div class="step"><span class="badge">2</span><div class="vv">Nehemiah 2:9–16</div><h3>The night inspection</h3><p>Arriving in Jerusalem, Nehemiah tells no one his plan at first. He rides out by night to survey the broken walls and burned gates for himself — counting the cost and making a real plan before asking anyone to commit.</p></div>
+      <div class="step"><span class="badge">3</span><div class="vv">Nehemiah 2:17–20</div><h3>"Let us rise up and build"</h3><p>He rallies the people; they answer, "Let us rise up and build," and "strengthened their hands for this good work." Sanballat, Tobiah, and Geshem laugh them to scorn and accuse them of rebelling against the king. Nehemiah answers that the God of heaven will prosper them.</p></div>
+      <div class="step"><span class="badge">4</span><div class="vv">Nehemiah 4</div><h3>Building under threat</h3><p>As the wall reaches half its height, the enemies conspire to attack. Nehemiah posts a round-the-clock guard and arms the workers so that "every one with one of his hands wrought in the work, and with the other hand held a weapon." They labor from first light "till the stars appeared," trusting that "our God shall fight for us."</p></div>
+      <div class="step"><span class="badge">5</span><div class="vv">Nehemiah 5</div><h3>Justice inside the walls</h3><p>A second front opens — not from enemies, but within. The poor are being crushed by wealthy fellow Jews through crippling debt and even mortgaged children. Nehemiah rebukes the nobles, makes them return what they've taken, and refuses even his own governor's food allowance. He leads by sacrifice, not privilege.</p></div>
+      <div class="step"><span class="badge">6</span><div class="vv">Nehemiah 6</div><h3>Refusing to come down</h3><p>Sanballat invites Nehemiah four times to "meet" in the plain of Ono; four times Nehemiah answers, "I am doing a great work, so that I cannot come down." Threats and a hired false prophet fail to make him flee. The wall is finished in 52 days, and the enemies are cast down, "for they perceived that this work was wrought of our God."</p></div>
+    </div>
+    <div class="card warm"><span class="tag">On the "sword and trowel" (Nehemiah 4:16–18)</span><p>This isn't a lesson in violence — it's a picture of <strong>faithful vigilance</strong>. The builders worked with everything they had <em>and</em> stayed ready, trusting God to fight for them. Diligence and watchfulness go together. Nehemiah's charge sums it up: "Be not ye afraid of them: remember the Lord, which is great and terrible" (Nehemiah 4:14).</p></div>
+    <blockquote class="pull">"I am doing a great work, so that I cannot come down: why should the work cease, whilst I leave it, and come down to you?"<cite>Nehemiah 6:3 — the verse the whole week is named for</cite></blockquote>
+  </section>
+
+  <!-- ============ 3. BOOK OF MORMON PARALLELS ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">3</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-1.6-1.2-3.6-2-6-2v13c2.4 0 4.4.8 6 2"/><path d="M12 6c1.6-1.2 3.6-2 6-2v13c-2.4 0-4.4.8-6 2"/><path d="M12 6v13"/></svg>
+      <h2 class="sec">Comparison to the Book of Mormon</h2></div>
+    <div class="rule"></div>
+    <p class="lead">Nehemiah's courage under fire has close cousins throughout the Book of Mormon.</p>
+    <div class="grid">
+      <div class="pcard">
+        <div class="row k"><div class="mini">Nehemiah 4:16–18</div><p>The builders work with a tool in one hand and a <strong>weapon in the other</strong>, guarding the work as they build.</p></div>
+        <div class="row b"><div class="mini">Book of Mormon echo</div><p>The Nephites <strong>fortify and defend their cities</strong> while continuing to build and live righteously (Alma 48:7–10; 50:1–6).</p></div>
+        <div class="teach"><b>Teaches:</b> God's people both work and watch — diligence and defense belong together.</div>
+      </div>
+      <div class="pcard">
+        <div class="row k"><div class="mini">Nehemiah 6:3</div><p>Nehemiah <strong>refuses to "come down"</strong> and abandon the work, no matter how the enemy baits him.</p></div>
+        <div class="row b"><div class="mini">Book of Mormon echo</div><p><strong>Abinadi</strong> will not take back his message even under threat of death: "I will not recall the words which I have spoken" (Mosiah 17:9–10).</p></div>
+        <div class="teach"><b>Teaches:</b> Stay on the errand God gave you; don't let anyone talk or scare you off it.</div>
+      </div>
+      <div class="pcard">
+        <div class="row k"><div class="mini">Nehemiah 2:17–18</div><p>Nehemiah rallies a discouraged people: <strong>"Let us rise up and build."</strong></p></div>
+        <div class="row b"><div class="mini">Book of Mormon echo</div><p><strong>Captain Moroni</strong> raises the title of liberty and rallies the people to defend their families, freedom, and faith (Alma 46:12–13, 20).</p></div>
+        <div class="teach"><b>Teaches:</b> A righteous leader can inspire ordinary people to rise to a great cause.</div>
+      </div>
+      <div class="pcard">
+        <div class="row k"><div class="mini">Nehemiah 5:14–18</div><p>Nehemiah <strong>refuses his governor's allowance</strong> and defends the poor from their own leaders.</p></div>
+        <div class="row b"><div class="mini">Book of Mormon echo</div><p><strong>King Benjamin</strong> labors with his own hands so as not to burden his people (Mosiah 2:12–14).</p></div>
+        <div class="teach"><b>Teaches:</b> True leaders serve and sacrifice rather than take advantage of their position.</div>
+      </div>
+      <div class="pcard">
+        <div class="row k"><div class="mini">Nehemiah 6:16</div><p>The enemies see the finished wall and know the <strong>work "was wrought of our God."</strong></p></div>
+        <div class="row b"><div class="mini">Book of Mormon echo</div><p><strong>Ammon</strong> gives all credit to God: "I know that I am nothing… but the Lord… has all power" (Alma 26:11–12).</p></div>
+        <div class="teach"><b>Teaches:</b> When the work succeeds against the odds, the glory belongs to God.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. TIE TO COME, FOLLOW ME ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">4</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>
+      <h2 class="sec">Tie to Come, Follow Me</h2></div>
+    <div class="rule"></div>
+    <p>The wall chapters carry the week's central, seminary-marked principle: <strong>God has an important work for me to do.</strong></p>
+    <h3 style="margin-top:22px">What the outline points to in these chapters</h3>
+    <ul class="points">
+      <li><strong>"God has an important work for me to do" (Ezra 4–7; Nehemiah 2; 4; 6).</strong> The outline offers a compare-your-life chart: <em>God's work for Nehemiah</em> (Nehemiah 2:17–18) · <em>the opposition he faced</em> (Nehemiah 2:19; 4:1–3, 7–8; 6:1–13) · <em>how he responded</em> (Nehemiah 2:20; 4:6, 9; 6:3–15) — with a matching line for the work, opposition, and response in <em>your</em> life.</li>
+      <li><strong>Two phrases to sit with:</strong> what it means to have <em>"a mind to work"</em> in the Savior's service (Nehemiah 4:6), and what it means to feel <em>"the good hand of … God upon [you]"</em> as you serve (Nehemiah 2:8, 18).</li>
+      <li><strong>The talk the outline cites:</strong> President Dieter F. Uchtdorf, "<em>We Are Doing a Great Work and Cannot Come Down</em>" (May 2009) — especially the last two sections, which apply Nehemiah's line directly to us.</li>
+      <li><strong>Also suggested:</strong> the Young Women Theme, the Aaronic Priesthood Quorum Theme, and hymns "As Sisters in Zion" (no. 309) and "Ye Elders of Israel" (no. 319).</li>
+      <li><strong>Scripture Help for this block:</strong> "Why was it so important to rebuild Jerusalem's walls?" — answered in the history section above. <strong>Bible Dictionary:</strong> "Nehemiah."</li>
+    </ul>
+    <div class="resto">
+      <div class="rnode"><div class="yr">Then</div><div class="tt">Walls under threat</div><div class="ds">Sanballat mocks and plots while the wall rises — opposition is the norm, not the exception.</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">Kirtland &amp; Nauvoo</div><div class="tt">Temples under threat</div><div class="ds">Latter-day temples were built amid mobs and threats — the same pattern of opposition to the Lord's work.</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">You</div><div class="tt">Your great work</div><div class="ds">Every real effort to build God's kingdom draws resistance. The answer is Nehemiah's: keep building.</div></div>
+    </div>
+    <h3 style="margin-top:24px">Teaching ideas for youth (ages 12–13)</h3>
+    <ul class="ideas">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Build the outline's three-column chart on the board, then fill it in for a <em>real</em> challenge in their lives — being a good example at school, keeping a standard online. What's the work? What's the opposition? How will they respond like Nehemiah?</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Unpack "sword and trowel." What does it look like to keep building while resisting pressure? Give modern examples (peer pressure, phone distractions) and have them name their own "one hand builds, one hand guards."</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Memorize Nehemiah 6:3 together as a one-line comeback to distraction. Read or watch the last two sections of President Uchtdorf's talk and ask what "great work" they will not come down from.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Notice that Nehemiah prayed a split-second prayer before answering the king (Nehemiah 2:4). Practice "arrow prayers" — quick, silent prayers in the moment before a hard conversation or decision.</li>
+    </ul>
+  </section>
+</div>
+
+<footer><div class="wrap"><b>Nehemiah 2; 4–6 — "I Am Doing a Great Work" (Part 2 of 3: the Wall).</b> Outline, principle, cited talk (Uchtdorf, May 2009), and teaching prompts from Come, Follow Me—For Home and Church: Old Testament 2026 (July 27–August 2), churchofjesuschrist.org. Sanballat's historicity is attested in the Elephantine papyri (c. 407 BC) and Wadi Daliyeh bullae. Nehemiah's mission dates to c. 445 BC (Artaxerxes I); the wall was finished in 52 days (Nehemiah 6:15). Scripture quotations are from the King James Version. Prepared as personal lesson-study help.</div></footer>
+
+<button class="printbtn" onclick="window.print()" aria-label="Print handout">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+  Print
+</button>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    function showAll(){ els.forEach(function(el){ el.classList.add('in'); }); }
+    if(!('IntersectionObserver' in window)){ showAll(); return; }
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.08, rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+    setTimeout(showAll, 2500);
+  })();
+</script>
+</body>
+</html>
