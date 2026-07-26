@@ -72,6 +72,10 @@
   .foot .big{font-family:"Fraunces",serif;font-style:italic;font-weight:600;font-size:clamp(16px,2.4vw,21px);line-height:1.25;max-width:64ch;}
   .foot .src{font-size:11px;opacity:.9;line-height:1.45;max-width:40ch;}
 
+  /* Scripture links — open on churchofjesuschrist.org, or in the Gospel Library app on mobile */
+  a.sref{color:inherit;font-weight:inherit;text-decoration:none;border-bottom:1px solid currentColor;border-radius:2px;}
+  a.sref:hover{background:rgba(0,0,0,.06);}
+  a.sref:focus-visible{outline:2px solid currentColor;outline-offset:2px;}
   .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--s4);color:#fff;border:none;border-radius:999px;padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 24px rgba(185,130,47,.4);display:flex;align-items:center;gap:8px;}
   .printbtn:hover{filter:brightness(.94);}
   .tip{text-align:center;font-size:11.5px;color:var(--ink-soft);margin-top:14px;}
@@ -89,6 +93,7 @@
   }
 
   @media print{
+    a.sref{border-bottom:0!important;background:none!important;}
     @page{size:A4 landscape;margin:9mm;}
     body{background:#fff;font-size:9pt;}
     .sheet{max-width:100%;padding:0;}
@@ -111,7 +116,7 @@
     <div class="eyebrow">Come, Follow Me · Ezra &amp; Nehemiah · July 27–Aug 2</div>
     <h1>The Anatomy of a Great Work</h1>
     <p class="sub">Three different projects — a temple, a wall, and a people's own hearts — all move through the very same five stages.</p>
-    <span class="versechip">"I am doing a great work, so that I cannot come down." — Nehemiah 6:3</span>
+    <span class="versechip">"I am doing a great work, so that I cannot come down." — <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/6?lang=eng&amp;id=p3#p3">Nehemiah 6:3</a></span>
     <p class="intro">Read <strong>down</strong> a column to see one stage across all three stories, or read <strong>across</strong> a row to follow one project from call to celebration. The bottom row is for you.</p>
   </div>
 
@@ -137,35 +142,35 @@
     </div>
 
     <div class="mrow">
-      <div class="rlabel temple"><div class="who">The Temple</div><div class="subwho">Zerubbabel &amp; the exiles · Ezra 1; 3–6</div></div>
-      <div class="cell s1"><span class="stagetag">The Call</span><span class="ref">Ezra 1:1–3</span><p>The Lord stirs up Cyrus; the exiles are sent home to build the house of the Lord.</p></div>
-      <div class="cell s2"><span class="stagetag">Starting the Work</span><span class="ref">Ezra 3:8–11</span><p>They build the altar, then lay the temple's foundation with trumpets and singing.</p></div>
-      <div class="cell s3"><span class="stagetag">Opposition</span><span class="ref">Ezra 4:1–5, 24</span><p>Adversaries "weaken their hands," hire counselors, and halt the work by letters to the king.</p></div>
-      <div class="cell s4"><span class="stagetag">Pressing Through</span><span class="ref">Ezra 5:1–2</span><p>Haggai and Zechariah stir them; Zerubbabel rises and builds, appealing to Cyrus's decree.</p></div>
-      <div class="cell s5"><span class="stagetag">Completion</span><span class="ref">Ezra 6:15–16, 22</span><p>The temple is finished (516 BC) and dedicated with a joyful Passover.</p></div>
+      <div class="rlabel temple"><div class="who">The Temple</div><div class="subwho">Zerubbabel &amp; the exiles · <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/1?lang=eng">Ezra 1</a>; <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/3?lang=eng">3–6</a></div></div>
+      <div class="cell s1"><span class="stagetag">The Call</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/1?lang=eng&amp;id=p1-p3#p1">Ezra 1:1–3</a></span><p>The Lord stirs up Cyrus; the exiles are sent home to build the house of the Lord.</p></div>
+      <div class="cell s2"><span class="stagetag">Starting the Work</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/3?lang=eng&amp;id=p8-p11#p8">Ezra 3:8–11</a></span><p>They build the altar, then lay the temple's foundation with trumpets and singing.</p></div>
+      <div class="cell s3"><span class="stagetag">Opposition</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/4?lang=eng&amp;id=p1-p5#p1">Ezra 4:1–5</a>, <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/4?lang=eng&amp;id=p24#p24">24</a></span><p>Adversaries "weaken their hands," hire counselors, and halt the work by letters to the king.</p></div>
+      <div class="cell s4"><span class="stagetag">Pressing Through</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/5?lang=eng&amp;id=p1-p2#p1">Ezra 5:1–2</a></span><p>Haggai and Zechariah stir them; Zerubbabel rises and builds, appealing to Cyrus's decree.</p></div>
+      <div class="cell s5"><span class="stagetag">Completion</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/6?lang=eng&amp;id=p15-p16#p15">Ezra 6:15–16</a>, <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/6?lang=eng&amp;id=p22#p22">22</a></span><p>The temple is finished (516 BC) and dedicated with a joyful Passover.</p></div>
     </div>
 
     <div class="mrow">
-      <div class="rlabel wall"><div class="who">The Wall</div><div class="subwho">Nehemiah · Nehemiah 2; 4–6</div></div>
-      <div class="cell s1"><span class="stagetag">The Call</span><span class="ref">Nehemiah 2:5–8</span><p>The cupbearer is sent to rebuild Jerusalem's wall — "the good hand of my God upon me."</p></div>
-      <div class="cell s2"><span class="stagetag">Starting the Work</span><span class="ref">Nehemiah 2:17–18</span><p>He inspects the ruins by night, then rallies the people: "Let us rise up and build."</p></div>
-      <div class="cell s3"><span class="stagetag">Opposition</span><span class="ref">Nehemiah 4:1–3; 6:1–4</span><p>Sanballat mocks and plots; four times he tries to lure Nehemiah "down" to a trap.</p></div>
-      <div class="cell s4"><span class="stagetag">Pressing Through</span><span class="ref">Nehemiah 4:16–20; 6:3</span><p>They build with sword and trowel: "I am doing a great work… I cannot come down."</p></div>
-      <div class="cell s5"><span class="stagetag">Completion</span><span class="ref">Nehemiah 6:15–16</span><p>The wall is finished in 52 days; even enemies see it "was wrought of our God."</p></div>
+      <div class="rlabel wall"><div class="who">The Wall</div><div class="subwho">Nehemiah · <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/2?lang=eng">Nehemiah 2</a>; <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/4?lang=eng">4–6</a></div></div>
+      <div class="cell s1"><span class="stagetag">The Call</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/2?lang=eng&amp;id=p5-p8#p5">Nehemiah 2:5–8</a></span><p>The cupbearer is sent to rebuild Jerusalem's wall — "the good hand of my God upon me."</p></div>
+      <div class="cell s2"><span class="stagetag">Starting the Work</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/2?lang=eng&amp;id=p17-p18#p17">Nehemiah 2:17–18</a></span><p>He inspects the ruins by night, then rallies the people: "Let us rise up and build."</p></div>
+      <div class="cell s3"><span class="stagetag">Opposition</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/4?lang=eng&amp;id=p1-p3#p1">Nehemiah 4:1–3</a>; <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/6?lang=eng&amp;id=p1-p4#p1">6:1–4</a></span><p>Sanballat mocks and plots; four times he tries to lure Nehemiah "down" to a trap.</p></div>
+      <div class="cell s4"><span class="stagetag">Pressing Through</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/4?lang=eng&amp;id=p16-p20#p16">Nehemiah 4:16–20</a>; <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/6?lang=eng&amp;id=p3#p3">6:3</a></span><p>They build with sword and trowel: "I am doing a great work… I cannot come down."</p></div>
+      <div class="cell s5"><span class="stagetag">Completion</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/6?lang=eng&amp;id=p15-p16#p15">Nehemiah 6:15–16</a></span><p>The wall is finished in 52 days; even enemies see it "was wrought of our God."</p></div>
     </div>
 
     <div class="mrow">
-      <div class="rlabel people"><div class="who">The People</div><div class="subwho">Ezra &amp; the Water Gate · Ezra 7; Nehemiah 8</div></div>
-      <div class="cell s1"><span class="stagetag">The Call</span><span class="ref">Ezra 7:6, 10</span><p>Ezra "prepared his heart to seek… do… and teach" the law, and the king sends him.</p></div>
-      <div class="cell s2"><span class="stagetag">Starting the Work</span><span class="ref">Nehemiah 8:1–5</span><p>The whole people gather at the Water Gate and the book of the law is opened before all.</p></div>
-      <div class="cell s3"><span class="stagetag">Opposition</span><span class="ref">Nehemiah 8:9</span><p>Seeing how far they had drifted, the people are overcome — grief threatens to stall the day.</p></div>
-      <div class="cell s4"><span class="stagetag">Pressing Through</span><span class="ref">Nehemiah 8:8, 10</span><p>The word is read and explained; "the joy of the Lord is your strength" turns tears to gladness.</p></div>
-      <div class="cell s5"><span class="stagetag">Completion</span><span class="ref">Nehemiah 8:17</span><p>They keep the Feast of Tabernacles with "very great gladness" and renew the covenant.</p></div>
+      <div class="rlabel people"><div class="who">The People</div><div class="subwho">Ezra &amp; the Water Gate · <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/7?lang=eng">Ezra 7</a>; <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/8?lang=eng">Nehemiah 8</a></div></div>
+      <div class="cell s1"><span class="stagetag">The Call</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/7?lang=eng&amp;id=p6#p6">Ezra 7:6</a>, <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/7?lang=eng&amp;id=p10#p10">10</a></span><p>Ezra "prepared his heart to seek… do… and teach" the law, and the king sends him.</p></div>
+      <div class="cell s2"><span class="stagetag">Starting the Work</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/8?lang=eng&amp;id=p1-p5#p1">Nehemiah 8:1–5</a></span><p>The whole people gather at the Water Gate and the book of the law is opened before all.</p></div>
+      <div class="cell s3"><span class="stagetag">Opposition</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/8?lang=eng&amp;id=p9#p9">Nehemiah 8:9</a></span><p>Seeing how far they had drifted, the people are overcome — grief threatens to stall the day.</p></div>
+      <div class="cell s4"><span class="stagetag">Pressing Through</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/8?lang=eng&amp;id=p8#p8">Nehemiah 8:8</a>, <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/8?lang=eng&amp;id=p10#p10">10</a></span><p>The word is read and explained; "the joy of the Lord is your strength" turns tears to gladness.</p></div>
+      <div class="cell s5"><span class="stagetag">Completion</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/8?lang=eng&amp;id=p17#p17">Nehemiah 8:17</a></span><p>They keep the Feast of Tabernacles with "very great gladness" and renew the covenant.</p></div>
     </div>
 
     <div class="mrow fill">
       <div class="rlabel you"><div class="who">Your Great Work</div><div class="subwho">Fill in your own ________</div></div>
-      <div class="cell s1"><span class="stagetag">The Call</span><span class="ref">Nehemiah 2:12</span><p>What has God put in your heart to build?</p></div>
+      <div class="cell s1"><span class="stagetag">The Call</span><span class="ref"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/2?lang=eng&amp;id=p12#p12">Nehemiah 2:12</a></span><p>What has God put in your heart to build?</p></div>
       <div class="cell s2"><span class="stagetag">Starting the Work</span><span class="ref">Your first step</span><p>What is the "arise and build" you can start now?</p></div>
       <div class="cell s3"><span class="stagetag">Opposition</span><span class="ref">Name it</span><p>Mockery? Discouragement? Distraction? Doubt?</p></div>
       <div class="cell s4"><span class="stagetag">Pressing Through</span><span class="ref">Your answer</span><p>How will you keep your hands to the work — and not "come down"?</p></div>
@@ -176,7 +181,7 @@
 
   <div class="foot">
     <div class="big">One call. One start. Real opposition. A choice to press through. And a finished work that gives God the glory. It was true for the temple, the wall, and the word — and it can be true for you.</div>
-    <div class="src">Come, Follow Me—For Home and Church: Old Testament 2026 (July 27–Aug 2), churchofjesuschrist.org. Scripture from the King James Version. A one-page companion to the Ezra &amp; Nehemiah lesson set.</div>
+    <div class="src">Come, Follow Me—For Home and Church: Old Testament 2026 (July 27–Aug 2), churchofjesuschrist.org. Scripture from the King James Version. A one-page companion to the Ezra &amp; Nehemiah lesson set. Every reference is a link — on a phone or tablet it opens in the <b>Gospel Library</b> app.</div>
   </div>
 
   <p class="tip">Tip: this sheet is built to print on a single landscape page — use the Print button and choose <strong>Landscape</strong>.</p>
