@@ -440,10 +440,20 @@ async function main(){
   state.myId = getMyId();
   state.store = await openStore();
 
-  $("#mode").textContent = state.store.mode === "shared"
-    ? "Live class leaderboard"
-    : "Practice mode — this device only";
-  $("#mode").className = "modetag " + state.store.mode;
+  /* A configured leaderboard that could not be reached must say so. If it
+     quietly said "practice mode" instead, a student would keep checking
+     chapters off into a roster nobody else can see. */
+  const tag = $("#mode");
+  if (state.store.degraded){
+    tag.textContent = "Can’t reach the leaderboard — saved on this device only";
+    tag.className = "modetag offline";
+  } else if (state.store.mode === "shared"){
+    tag.textContent = "Live class leaderboard";
+    tag.className = "modetag shared";
+  } else {
+    tag.textContent = "Practice mode — this device only";
+    tag.className = "modetag local";
+  }
 
   state.store.subscribe((racers) => {
     state.racers = racers;
