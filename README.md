@@ -8,6 +8,7 @@ Open **[index.html](index.html)** — the home page lists all 12 months of the 2
 
 ```
 index.html                          ← Home page (all 12 months, all 52 weeks)
+race/                               ← The Scripture Race reading game
 lessons/
   2026 - Old Testament/
     January/ … December/            ← One folder per month, with a month overview page
@@ -16,6 +17,24 @@ lessons/
         handouts/                   ← Lesson handout files (HTML and Word)
 tools/                              ← Lesson-builder skill bundle
 ```
+
+## The Scripture Race
+
+**[race/index.html](race/index.html)** is a reading game for the kids, linked from
+a card on the home page. It lists every chapter the Come, Follow Me outline
+assigns from **August 3 through December 27 — 238 in all**. A student types their
+name, picks a car colour, and taps chapters as they read them; their car moves
+around the track and the class leaderboard reorders itself. Read all 238 and the
+car parks in victory lane.
+
+A pace car shows how far along a student who never fell behind would be, so
+"12 chapters behind pace" is visible without anyone doing arithmetic.
+
+Out of the box the race runs in **practice mode**: it works fully, but each device
+keeps its own roster. To put the whole class on one live leaderboard, follow
+**[race/SETUP.md](race/SETUP.md)** — a free Firebase Realtime Database, pasted into
+`race/config.js`. Separate groups can be sent to separate tracks with
+`race/index.html?class=whatever`.
 
 Weeks follow the official Come, Follow Me outline at [churchofjesuschrist.org](https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026?lang=eng) — same date ranges, scripture blocks, and lesson titles. Weeks that span two months are filed under the month in which the week ends (matching the Gospel Library app).
 
