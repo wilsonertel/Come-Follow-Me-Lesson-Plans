@@ -60,13 +60,11 @@ In **Realtime Database → Rules**, replace what's there with:
         "racers": {
           ".read": true,
           ".write": true,
-          ".validate": "newData.hasChildren() || !newData.exists()",
           "$racer": {
-            "name":   { ".validate": "newData.isString() && newData.val().length <= 30" },
+            "name":   { ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 30" },
             "color":  { ".validate": "newData.isString() && newData.val().length <= 9" },
             "joined": { ".validate": "newData.isNumber()" },
-            "read":   { "$chapter": { ".validate": "newData.isBoolean()" } },
-            "$other": { ".validate": false }
+            "read":   { "$chapter": { ".validate": "newData.isBoolean()" } }
           }
         }
       }
@@ -76,7 +74,14 @@ In **Realtime Database → Rules**, replace what's there with:
 ```
 
 This keeps the race open — no logins for the kids — while making sure nothing
-but racers and chapter checkmarks can ever be written into your database.
+outside `race/*/racers` is writable, names stay short, and a chapter flag can
+only ever be `true`.
+
+> An earlier version of this file added `"$other": { ".validate": false }` to
+> reject unrecognised keys. It was removed: a `$` wildcard sitting beside named
+> keys at the same level may also match those named keys, in which case every
+> write is rejected and nobody can join. It blocked only junk fields the page
+> never reads, which is not worth that risk.
 
 ### What "open" honestly means
 
