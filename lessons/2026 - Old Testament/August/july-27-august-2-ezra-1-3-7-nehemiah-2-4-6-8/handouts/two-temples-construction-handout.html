@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Two Temples, Two Generations — Building the Salt Lake Temple &amp; the Temple of Zerubbabel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<style>
+  :root{
+    --night:#333c46; --night-2:#222932;
+    --accent:#b4842f; --accent-soft:#dcae55; --gold:#d5ac53;
+    --parch:#f7f4ed; --parch-2:#ece6d9;
+    --ink:#2c2a25; --ink-soft:#5e574a;
+    --echo:#4a6076; --echo-soft:#e5ebf1;
+    --gold-soft:#f6eed8; --line:#d9cfba; --maxw:940px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--parch);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);}
+  h2.sec{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(26px,4.4vw,34px);line-height:1.1;margin:0;color:var(--night);}
+  h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:20px;color:var(--night);margin:0 0 6px;}
+  p{margin:0 0 15px;} strong{font-weight:700;color:#221f19;} em{font-style:italic;}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;color:#f4efe4;
+    background:radial-gradient(120% 90% at 82% 8%, color-mix(in srgb,var(--accent) 40%,transparent), transparent 46%),
+      radial-gradient(90% 70% at 78% 30%, color-mix(in srgb,var(--gold) 20%,transparent), transparent 55%),
+      linear-gradient(160deg,var(--night) 0%,var(--night-2) 100%);}
+  .courses{position:absolute;inset:0;pointer-events:none;opacity:.13;
+    background-image:linear-gradient(0deg,rgba(255,255,255,.5) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.35) 1px,transparent 1px);
+    background-size:100% 34px, 78px 34px;}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:54px 22px 58px;position:relative;z-index:2;
+    display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;}
+  .hero .eyebrow{color:var(--accent-soft);}
+  .hero h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(40px,8.4vw,72px);line-height:.94;letter-spacing:-.01em;margin:12px 0 8px;color:#fff;}
+  .hero .kicker{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(17px,3.2vw,22px);color:var(--gold);margin:0 0 18px;}
+  .hook{margin:14px 0 0;max-width:42ch;color:#e7e0d2;font-size:15.5px;line-height:1.55;}
+  .hero-art{align-self:stretch;display:flex;align-items:center;justify-content:center;min-width:160px;}
+
+  /* BAND — two parallel timelines */
+  .band{background:var(--night-2);color:#efe7d5;padding:8px 0 14px;}
+  .track{max-width:var(--maxw);margin:0 auto;padding:14px 22px;}
+  .track + .track{border-top:1px solid rgba(255,255,255,.12);}
+  .jlabel{display:block;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0 0 4px;}
+  .jsub{display:block;font-size:11.5px;color:#8f99a8;margin-bottom:12px;font-style:italic;}
+  .track.jeru .jlabel{color:var(--accent-soft);}
+  .track.slc .jlabel{color:#9fbcd6;}
+  .journey{display:flex;align-items:stretch;gap:6px;}
+  .stop{flex:1;text-align:center;padding:2px 4px;}
+  .stop .dot{width:13px;height:13px;border-radius:50%;margin:0 auto 8px;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent);}
+  .track.slc .stop .dot{background:#7fa3c4;box-shadow:0 0 0 4px rgba(127,163,196,.22);}
+  .stop .nm{font-family:"Fraunces",serif;font-weight:600;font-size:16px;color:#fff;}
+  .stop .ds{font-size:11.5px;color:#b7bfcc;line-height:1.3;margin-top:2px;}
+  .arrow{align-self:flex-start;margin-top:0;color:#5d6878;font-size:18px;flex:0 0 auto;}
+
+  /* SECTION SHELL */
+  section.block{padding:46px 0 8px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+  .sec-num{font-family:"Fraunces",serif;font-weight:900;font-size:15px;color:#fff;background:var(--night);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .sec-ico{width:24px;height:24px;color:var(--accent);flex:0 0 auto;}
+  .rule{height:3px;background:linear-gradient(90deg,var(--accent),var(--gold) 60%,transparent);border-radius:3px;margin:10px 0 22px;}
+  .lead{font-size:15px;color:var(--ink-soft);font-style:italic;margin:-6px 0 20px;}
+
+  .card{background:var(--parch-2);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:18px 20px;margin:20px 0;}
+  .card.warm{border-left-color:var(--accent);background:color-mix(in srgb,var(--accent) 11%,var(--parch));}
+  .card.cool{border-left-color:var(--echo);background:var(--echo-soft);}
+  .card .tag{font-size:11.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--night);margin-bottom:7px;display:block;}
+  .card.warm .tag{color:#8a6113;} .card.cool .tag{color:var(--echo);} .card p:last-child{margin-bottom:0;}
+
+  .pull{margin:24px 0;padding:16px 22px;border-left:5px solid var(--accent);background:linear-gradient(90deg,var(--gold-soft),transparent);
+    font-family:"Fraunces",serif;font-size:20px;font-style:italic;color:var(--night);line-height:1.35;}
+  .pull cite{display:block;font-family:"Inter";font-style:normal;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:8px;}
+
+  /* TIMELINE */
+  .tl{position:relative;margin:8px 0 6px;padding-left:8px;}
+  .step{position:relative;padding:0 0 22px 62px;}
+  .step:before{content:"";position:absolute;left:23px;top:6px;bottom:-6px;width:2px;background:var(--line);}
+  .step:last-child:before{display:none;}
+  .step .badge{position:absolute;left:0;top:0;width:48px;height:40px;border-radius:9px;background:var(--night);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:700;font-size:13.5px;z-index:2;line-height:1.05;text-align:center;}
+  .step.gold .badge{background:var(--accent);}
+  .step .vv{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--accent);text-transform:uppercase;}
+  .step h3{margin:2px 0 5px;} .step p{margin:0;font-size:15.5px;}
+
+  /* COMPARISON CARDS */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:8px 0 4px;}
+  .pcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;}
+  .pcard .cap{padding:9px 16px;background:var(--night);color:#fff;font-family:"Fraunces",serif;font-size:15px;font-weight:600;}
+  .pcard .row{padding:13px 16px;}
+  .pcard .k{border-left:5px solid var(--gold);background:var(--gold-soft);}
+  .pcard .b{border-left:5px solid var(--echo);background:var(--echo-soft);}
+  .pcard .mini{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;}
+  .pcard .k .mini{color:#8a6113;} .pcard .b .mini{color:var(--echo);}
+  .pcard .row p{margin:0;font-size:14px;line-height:1.5;}
+
+  /* FACT TABLE */
+  .facts{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:14.5px;}
+  .facts th,.facts td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;}
+  .facts thead th{background:var(--night);color:#fff;font-family:"Fraunces",serif;font-weight:600;font-size:15px;}
+  .facts tbody th{background:var(--parch-2);font-weight:700;color:var(--night);width:26%;font-size:13.5px;}
+  .facts td.j{background:var(--gold-soft);} .facts td.s{background:var(--echo-soft);}
+
+  footer{margin-top:40px;background:var(--night-2);color:#a9b1bd;}
+  footer .wrap{padding:26px 22px;font-size:12.5px;line-height:1.6;} footer b{color:#e7e0d2;}
+  .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 40%,transparent);display:flex;align-items:center;gap:8px;}
+  .printbtn:hover{filter:brightness(.93);}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  a.sref{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 45%,transparent);border-radius:2px;transition:background .15s ease,border-color .15s ease;}
+  a.sref:hover{background:color-mix(in srgb,var(--accent) 13%,transparent);border-bottom-color:var(--accent);}
+  a.sref:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+  .pull cite a.sref,.mini a.sref{color:inherit;font-weight:inherit;border-bottom-color:currentColor;}
+  .facts td.j a.sref,.facts td.s a.sref{color:var(--night);border-bottom-color:rgba(44,42,37,.35);}
+  footer a.sref{color:inherit;border-bottom-color:rgba(255,255,255,.34);}
+  footer a.sref:hover{background:rgba(255,255,255,.13);border-bottom-color:#fff;}
+
+  @media (max-width:720px){
+    .hero-inner{grid-template-columns:1fr;} .hero-art{order:-1;min-width:0;}
+    .journey{flex-direction:column;gap:0;}
+    .jlabel,.jsub{text-align:center;}
+    .stop{padding:6px 4px;}
+    .arrow{align-self:center;transform:rotate(90deg);margin:2px 0;}
+    .grid{grid-template-columns:1fr;}
+    .facts thead{display:none;}
+    .facts,.facts tbody,.facts tr,.facts th,.facts td{display:block;width:100%;}
+    .facts tr{margin-bottom:14px;border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+    .facts th,.facts td{border:0;border-bottom:1px solid var(--line);}
+    .facts td.j:before{content:"Jerusalem — ";font-weight:700;color:#8a6113;}
+    .facts td.s:before{content:"Salt Lake City — ";font-weight:700;color:var(--echo);}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none;} html{scroll-behavior:auto;}}
+  @media print{
+    body{font-size:11.5pt;} .printbtn{display:none;}
+    .hero{background:var(--night)!important;} .reveal{opacity:1;transform:none;}
+    section.block{padding:16px 0 4px;break-inside:avoid;} .pcard,.step,.card,.facts tr{break-inside:avoid;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    a.sref{color:inherit!important;background:none!important;border-bottom:0!important;font-weight:inherit;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="courses" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Class Handout</div>
+      <h1>Two Temples,<br>Two Generations</h1>
+      <p class="kicker">Building the Salt Lake Temple · Rebuilding the Temple in Jerusalem</p>
+      <p class="hook">Two groups of covenant people, about 2,400 years apart, set out to build a house of the Lord in a hard place. Both were mocked. Both were stopped. Both finished — and both took longer than most of the people who started expected to live.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg width="150" height="185" viewBox="0 0 150 185" fill="none">
+        <circle cx="75" cy="20" r="13" fill="none" stroke="#dcae55" stroke-width="1.4" opacity=".55"/>
+        <path d="M75 8l3.2 8.4L87 19l-8.8 2.6L75 30l-3.2-8.4L63 19l8.8-2.6z" fill="#dcae55"/>
+        <path d="M50 78l0-16 8-14 8 14 0 16z" fill="#5b6773" stroke="#8f9aa5" stroke-width="1"/>
+        <path d="M67 70l0-24 8-16 8 16 0 24z" fill="#6c7885" stroke="#a2adb8" stroke-width="1"/>
+        <path d="M84 78l0-16 8-14 8 14 0 16z" fill="#5b6773" stroke="#8f9aa5" stroke-width="1"/>
+        <rect x="44" y="78" width="62" height="86" fill="#66727f" stroke="#a2adb8" stroke-width="1"/>
+        <g stroke="#8b95a1" stroke-width="1" opacity=".8">
+          <path d="M44 95h62M44 112h62M44 129h62M44 146h62"/>
+          <path d="M60 78v17M91 78v17M52 95v17M75 95v17M98 95v17M60 112v17M91 112v17M52 129v17M75 129v17M98 129v17"/>
+        </g>
+        <path d="M62 128c0-4 2.7-7 6-7s6 3 6 7v18H62z" fill="#dcae55" opacity=".85"/>
+        <path d="M78 128c0-4 2.7-7 6-7s6 3 6 7v18H78z" fill="#dcae55" opacity=".45"/>
+        <path d="M28 164h94" stroke="#dcae55" stroke-width="2" opacity=".7"/>
+        <text x="75" y="180" text-anchor="middle" fill="#dcae55" font-family="Inter,sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.4">HOLINESS TO THE LORD</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="band">
+  <div class="track jeru">
+    <span class="jlabel">Temple of Zerubbabel at a glance</span>
+    <span class="jsub">Jerusalem · about 23 years from the return to the dedication</span>
+    <div class="journey">
+      <div class="stop"><div class="dot"></div><div class="nm">587 BC</div><div class="ds">Solomon's temple burned by Babylon</div></div>
+      <div class="arrow">▸</div>
+      <div class="stop"><div class="dot"></div><div class="nm">538 BC</div><div class="ds">Decree of Cyrus · exiles return</div></div>
+      <div class="arrow">▸</div>
+      <div class="stop"><div class="dot"></div><div class="nm">536 BC</div><div class="ds">Foundation laid · weeping and shouting</div></div>
+      <div class="arrow">▸</div>
+      <div class="stop"><div class="dot"></div><div class="nm">534 BC</div><div class="ds">Halted by court order · ~16 years lost</div></div>
+      <div class="arrow">▸</div>
+      <div class="stop"><div class="dot"></div><div class="nm">520 BC</div><div class="ds">Haggai &amp; Zechariah · work resumes</div></div>
+      <div class="arrow">▸</div>
+      <div class="stop"><div class="dot"></div><div class="nm">515 BC</div><div class="ds">Finished &amp; dedicated with joy</div></div>
+    </div>
+  </div>
+  <div class="track slc">
+    <span class="jlabel">Salt Lake Temple at a glance</span>
+    <span class="jsub">Utah · 40 years from cornerstone to dedication, to the day</span>
+    <div class="journey">
+      <div class="stop"><div class="dot"></div><div class="nm">1847</div><div class="ds">Site chosen four days after arrival</div></div>
+      <div class="arrow">▸</div>
+      <div class="stop"><div class="dot"></div><div class="nm">1853</div><div class="ds">Ground broken · cornerstones laid</div></div>
+      <div class="arrow">▸</div>
+      <div class="stop"><div class="dot"></div><div class="nm">1858</div><div class="ds">Foundation buried &amp; hidden</div></div>
+      <div class="arrow">▸</div>
+      <div class="stop"><div class="dot"></div><div class="nm">1862</div><div class="ds">Sandstone torn out, granite in</div></div>
+      <div class="arrow">▸</div>
+      <div class="stop"><div class="dot"></div><div class="nm">1892</div><div class="ds">Capstone &amp; Hosanna Shout</div></div>
+      <div class="arrow">▸</div>
+      <div class="stop"><div class="dot"></div><div class="nm">1893</div><div class="ds">Dedicated — 40 years to the day</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ===== 1. HISTORY ===== -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">1</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 4v5h5"/></svg>
+      <h2 class="sec">The History: Building the Salt Lake Temple</h2></div>
+    <div class="rule"></div>
+
+    <p><strong>A people with a temple-shaped grief.</strong> The Saints who entered the Salt Lake Valley in July 1847 were not new to temple building — they were new to <em>losing</em> temples. They had built and dedicated the Kirtland Temple in 1836 and then abandoned Ohio. They had poured five years and enormous sacrifice into the Nauvoo Temple, held a rushed season of ordinances there in the winter of 1845–46, and walked away as the wagons rolled west. They arrived in the West carrying the memory of a house of God they no longer had.</p>
+
+    <p><strong>Four days in.</strong> The main pioneer company reached the valley on July 24, 1847. On <strong>July 28</strong> — four days later, before anyone had a real house — Brigham Young walked the sagebrush flat with members of the Quorum of the Twelve, struck the ground with his cane, and said in substance, <em>"Here we will build the temple of our God."</em> Wilford Woodruff drove a stake into the hole. That evening the ten-acre block was marked out, and the whole city was laid out to grow outward from it: the temple first, the streets afterward. In that same first week, Elder George A. Smith preached that a temple in these mountains would fulfill Isaiah's promise that "the mountain of the Lord's house shall be established in the top of the mountains" (<a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/isa/2?lang=eng&amp;id=p2#p2">Isaiah 2:2</a>).</p>
+
+    <p><strong>A very poor people and a very large plan.</strong> The Saints voted in general conference in April 1851 to build. Ground was broken February 14, 1853 — Heber C. Kimball dedicated the site, Brigham Young turned the first shovel, and the crowd sang "Auld Lang Syne." The cornerstones were laid April 6, 1853. <strong>Truman O. Angell</strong>, a carpenter who became the Church architect, drew the plans under Brigham Young's direction, with William Ward assisting. From the start the exterior was designed to preach: six towers instead of Nauvoo's one, and stones carved as earthstones, moonstones, sunstones, and starstones.</p>
+
+    <blockquote class="pull">"I scarcely ever say much about revelations, or visions, but suffice it to say, five years ago last July I was here, and saw in the Spirit the Temple not ten feet from where we have laid the Chief Corner Stone."<cite>Brigham Young · April 6, 1853 · Journal of Discourses 1:133</cite></blockquote>
+
+    <p><strong>The stone problem.</strong> The footings were first laid in red sandstone from Red Butte Canyon, close at hand. The walls were to be granite (technically quartz monzonite) from Little Cottonwood Canyon, about twenty miles southeast. There was no railroad. Ox teams hauled single blocks across the valley on a round trip that could take four days — longer in bad weather. Wards and priesthood quorums took turns supplying stonecutters, teamsters, and provisions as a form of labor tithing. Passersby on Temple Square described the constant clatter of chisels on stone as a kind of music.</p>
+
+    <div class="card"><span class="tag">Why granite?</span><p>After the sandstone footings failed, Heber C. Kimball put the question to the Saints directly: should the temple be built of Red Butte stone, adobe, or "the best materials that can be obtained in the mountains of North America"? They chose the hardest, heaviest, most inconvenient option available. Brigham Young's standard was blunt: he wanted a temple "built in a manner that it will endure through the Millennium." That single decision added years to the project — and is a large part of why the building is still standing after a 2020 earthquake and a full seismic renovation.</p></div>
+
+    <p><strong>Opposition from outside.</strong> In 1857–58 a U.S. Army expedition was sent to Utah on false reports of rebellion. Rather than risk the temple, the Saints <em>buried the foundation</em> and plowed the block so it looked like an ordinary field, then evacuated the city southward. Johnston's Army marched through an empty Salt Lake City in June 1858. Decades later, in the 1880s, federal antipolygamy legislation (the Edmunds–Tucker Act) authorized seizure of Church property and directly threatened the temples themselves. President Wilford Woodruff issued the Manifesto in 1890; the pressure eased, and the Saints sprinted for the finish.</p>
+
+    <p><strong>Opposition from within the project.</strong> When the buried foundation was uncovered around 1860–62, the sandstone was found to be cracked and the footing defective. Brigham Young is remembered as sitting down on one of the ruined stones and saying he would not move from the spot until he knew what to do. The answer was to tear out everything already built and start the footings over in granite, roughly sixteen feet thick. Fourteen years after groundbreaking — in 1867 — the walls finally rose above ground level.</p>
+
+    <p><strong>Three prophets and a generation of workmen.</strong> Brigham Young died in 1877 with the walls only about twenty feet above the ground; back in 1853 he had told the Saints he did not know whether he would see it finished and did not much care, so long as he was doing what God required that day. John Taylor led during the hardest legal years. Wilford Woodruff finished it. Truman Angell died in 1887, before completion; <strong>Joseph Don Carlos Young</strong> — Brigham's son and a trained engineer — completed the spires and interior, adding a steel frame, electric lighting, steam heating, and elevators. Interior plans were revised along the way as the St. George (1877), Logan (1884), and Manti (1888) temples taught the Church how temple ordinances actually needed to flow.</p>
+
+    <div class="card warm"><span class="tag">One man's story — John Rowe Moyle</span><p>A Cornish stonemason who joined the Church in England, crossed the plains with the first handcart company in 1856, and settled in Alpine, about twenty-two miles from Temple Square. Called as a stonecutter on the temple, he left home around 2:00 a.m. Monday, walked six hours to be at his post by eight, worked the week, and walked home Friday night, arriving near midnight — every week, for years. A cow kicked him and shattered his leg; it was amputated below the knee with a bucksaw. When it healed, he carved himself a wooden leg with a hinged ankle, taught himself to walk on it, and went back to the temple. His hands carved <strong>"Holiness to the Lord, the House of the Lord"</strong> on the east face. He died in 1889 — four years before the dedication.</p></div>
+
+    <p><strong>The finish.</strong> The exterior was completed in 1892. On April 6 of that year, tens of thousands of Saints packed Temple Square for the capstone ceremony, gave the Hosanna Shout — the first time they were instructed to wave white handkerchiefs as they did it — and watched a roughly twelve-foot statue of the angel Moroni, sculpted by Cyrus Dallin, set on the east center spire. President Woodruff then asked that the interior be finished within one year. Crews worked at speed; the annex and interior were completed the day before the dedication. On <strong>April 6, 1893 — forty years to the day from the laying of the cornerstone</strong> — President Wilford Woodruff offered the dedicatory prayer. Sessions ran twice a day for nearly three weeks, including sessions for children, so that every Latter-day Saint who wanted to be there could be.</p>
+  </section>
+
+  <!-- ===== 2. TIMELINE ===== -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">2</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <h2 class="sec">Timeline: Forty Years in Stone</h2></div>
+    <div class="rule"></div>
+    <p class="lead">From a cane in the dirt to a golden statue on the spire — with the setbacks left in.</p>
+
+    <div class="tl">
+      <div class="step gold"><span class="badge">1847</span><div class="vv">July 24 · July 28</div><h3>The valley, then the site</h3><p>The pioneer company arrives July 24. Four days later Brigham Young marks the temple spot with his cane; Wilford Woodruff drives a stake. The ten-acre block is surveyed that evening and the city is platted around it.</p></div>
+
+      <div class="step"><span class="badge">1851</span><div class="vv">April conference</div><h3>The Saints vote to build</h3><p>In general conference the members sustain the decision to build a temple — four years of survival farming after arriving in a desert basin.</p></div>
+
+      <div class="step gold"><span class="badge">1853</span><div class="vv">Feb. 14 · April 6</div><h3>Ground broken; cornerstones laid</h3><p>Thousands stand in the February cold; the crowd sings "Auld Lang Syne." On April 6 the cornerstones are laid, and Brigham Young tells the congregation he had already seen the temple in vision, and that it would have six towers.</p></div>
+
+      <div class="step"><span class="badge">1853<br>–57</span><div class="vv">The slow years</div><h3>Sandstone footings, ox teams, four-day hauls</h3><p>Footings go in with red sandstone from Red Butte Canyon. Granite blocks are dragged from Little Cottonwood Canyon by ox team — up to four days for a single stone. Crop failures and hard winters repeatedly pull men off the project.</p></div>
+
+      <div class="step gold"><span class="badge">1858</span><div class="vv">The Utah War</div><h3>The temple is buried</h3><p>With a U.S. Army column approaching, the Saints cover the foundation with dirt and plow the block so it looks like a field, then evacuate south. Johnston's Army marches through a deserted city in June. The site stays hidden until about 1860.</p></div>
+
+      <div class="step"><span class="badge">1861<br>–62</span><div class="vv">The crisis</div><h3>Cracked stone, and a decision to start over</h3><p>When the foundation is uncovered, the sandstone is cracked and the footing defective. Brigham Young orders every compromised stone removed and replaced with granite footings roughly sixteen feet thick. Years of finished work are undone on purpose.</p></div>
+
+      <div class="step"><span class="badge">1867</span><div class="vv">Year 14</div><h3>The walls finally clear the ground</h3><p>Fourteen years after groundbreaking, there is at last something above ground level to look at.</p></div>
+
+      <div class="step"><span class="badge">1868<br>–73</span><div class="vv">Railroad detour</div><h3>Delayed by a railroad, then rescued by one</h3><p>Brigham Young pulls temple workers off to help build the transcontinental railroad, finished May 1869. In 1873 a rail spur reaches the quarry. Delivery of a granite block drops from about four days by ox team to roughly one hour by steam engine.</p></div>
+
+      <div class="step"><span class="badge">1877</span><div class="vv">Succession</div><h3>Brigham Young dies with walls twenty feet high</h3><p>He dedicates the St. George Temple in January and dies in August, never seeing the Salt Lake Temple rise past about twenty feet. John Taylor, then Wilford Woodruff, carry it on. Logan (1884) and Manti (1888) are completed first, and what is learned there reshapes the Salt Lake interior plans.</p></div>
+
+      <div class="step"><span class="badge">1887<br>–90</span><div class="vv">Legal siege</div><h3>The government threatens to take the temples</h3><p>Federal antipolygamy law authorizes seizure of Church property; the temples themselves are at risk. In 1890 President Woodruff issues the Manifesto. Pressure eases, and work accelerates toward completion.</p></div>
+
+      <div class="step gold"><span class="badge">1892</span><div class="vv">April 6</div><h3>The capstone and the shout</h3><p>The exterior is finished. Tens of thousands gather; the Hosanna Shout is given with white handkerchiefs waved for the first time; Cyrus Dallin's twelve-foot angel Moroni is placed on the east center spire. President Woodruff asks that the inside be done in one year.</p></div>
+
+      <div class="step gold"><span class="badge">1893</span><div class="vv">April 6 · and 20 days after</div><h3>Dedicated — forty years to the day</h3><p>The interior is finished the afternoon before. President Wilford Woodruff offers the dedicatory prayer at the first session. Sessions run twice daily for nearly three weeks, including sessions for children. Brigham Young, Truman Angell, and John Moyle are all long dead. The building they never saw finished is the one the Church is still using today.</p></div>
+    </div>
+
+    <div class="card cool"><span class="tag">Numbers worth putting on the board</span><p><strong>46 years</strong> from Brigham Young's cane to the dedication. <strong>40 years</strong> from cornerstone to dedication, to the day. <strong>14 years</strong> before the walls cleared the ground. <strong>20 miles</strong> from quarry to temple block. <strong>4 days</strong> to move one stone by ox — <strong>1 hour</strong> by rail. <strong>3 Church presidents</strong>, <strong>2 chief architects</strong>, and an unknown number of stonecutters who died before the doors opened.</p></div>
+  </section>
+
+  <!-- ===== 3. COMPARISON ===== -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">3</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-1.6-1.2-3.6-2-6-2v13c2.4 0 4.4.8 6 2"/><path d="M12 6c1.6-1.2 3.6-2 6-2v13c-2.4 0-4.4.8-6 2"/><path d="M12 6v13"/></svg>
+      <h2 class="sec">Side by Side: Jerusalem and Salt Lake</h2></div>
+    <div class="rule"></div>
+    <p class="lead">Gold panel = the returning exiles under Zerubbabel, Ezra, and Nehemiah. Blue panel = the Latter-day Saints in the Salt Lake Valley.</p>
+
+    <table class="facts">
+      <thead><tr><th>&nbsp;</th><th>Temple of Zerubbabel</th><th>Salt Lake Temple</th></tr></thead>
+      <tbody>
+        <tr><th>Permission to build</th><td class="j">Decree of Cyrus, king of Persia, about 538 BC (<a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/1?lang=eng&amp;id=p1-p4#p1">Ezra 1:1–4</a>)</td><td class="s">Voted by the Saints in general conference, April 1851</td></tr>
+        <tr><th>Site chosen</th><td class="j">The ruins of Solomon's temple, destroyed 587/586 BC</td><td class="s">July 28, 1847 — four days after the pioneers arrived</td></tr>
+        <tr><th>Foundation laid</th><td class="j">Second year after the return; shouting and weeping together (<a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/3?lang=eng&amp;id=p8-p13#p8">Ezra 3:8–13</a>)</td><td class="s">Cornerstones April 6, 1853; the crowd sang "Auld Lang Syne"</td></tr>
+        <tr><th>Materials</th><td class="j">Timber from Lebanon floated to Joppa; stone reused and quarried locally (<a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/3?lang=eng&amp;id=p7#p7">Ezra 3:7</a>)</td><td class="s">Red Butte sandstone (abandoned), then Little Cottonwood granite hauled 20 miles</td></tr>
+        <tr><th>Work stopped</th><td class="j">Roughly 16 years, by legal appeal to the Persian court (<a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/4?lang=eng&amp;id=p4-p24#p4">Ezra 4:4–24</a>)</td><td class="s">Buried under dirt in 1858; footings torn out and redone 1861–62</td></tr>
+        <tr><th>Restarted by</th><td class="j">Prophets Haggai and Zechariah, about 520 BC (<a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/5?lang=eng&amp;id=p1-p2#p1">Ezra 5:1–2</a>)</td><td class="s">Brigham Young's decision to rebuild in granite</td></tr>
+        <tr><th>Time to finish</th><td class="j">About 23 years from the first return to dedication in 515 BC (<a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/6?lang=eng&amp;id=p15#p15">Ezra 6:15</a>)</td><td class="s">40 years from cornerstone; 46 from the choosing of the site</td></tr>
+        <tr><th>At the dedication</th><td class="j">Joy, sacrifice, and the Passover kept (<a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/6?lang=eng&amp;id=p16-p22#p16">Ezra 6:16–22</a>)</td><td class="s">Dedicatory prayer, Hosanna Shout, ~20 days of sessions</td></tr>
+      </tbody>
+    </table>
+
+    <div class="grid">
+
+      <div class="pcard">
+        <div class="cap">1. Help from an unexpected quarter</div>
+        <div class="row k"><div class="mini"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/1?lang=eng&amp;id=p1-p4#p1">Ezra 1:1–4</a>; <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/6?lang=eng&amp;id=p8-p12#p8">6:8–12</a></div><p>Cyrus — a Persian king who did not worship Jehovah — is stirred up by the Lord to fund the temple out of the royal treasury. Later Darius reaffirms the order and pays for it.</p></div>
+        <div class="row b"><div class="mini">Salt Lake, 1858 &amp; 1869</div><p>Thomas L. Kane, a non-member friend of the Saints, traveled at his own expense to mediate the Utah War and helped avert bloodshed. And the transcontinental railroad — built by outsiders for money, not religion — ended up cutting a four-day haul to one hour.</p></div>
+      </div>
+
+      <div class="pcard">
+        <div class="cap">2. Weeping and shouting at the same moment</div>
+        <div class="row k"><div class="mini"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/3?lang=eng&amp;id=p10-p13#p10">Ezra 3:10–13</a></div><p>When the foundation was laid, the young shouted for joy and the old men who had seen Solomon's temple wept aloud — and no one could tell the noises apart.</p></div>
+        <div class="row b"><div class="mini">Feb. 14, 1853</div><p>At the groundbreaking the Saints sang "Auld Lang Syne" — a song about old friends and days gone by. They had buried Joseph Smith, lost Kirtland, and left Nauvoo's temple behind. The new start carried the old grief inside it.</p></div>
+      </div>
+
+      <div class="pcard">
+        <div class="cap">3. Opposition that actually works — for a while</div>
+        <div class="row k"><div class="mini"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/4?lang=eng&amp;id=p4-p24#p4">Ezra 4:4–24</a></div><p>Adversaries "weakened the hands" of the builders, hired counselors against them, and finally got a royal order to stop. The work ceased until the second year of Darius — about sixteen lost years.</p></div>
+        <div class="row b"><div class="mini">1858 &amp; the 1880s</div><p>The foundation was buried and disguised as a plowed field so an approaching army wouldn't find it. Thirty years later, federal law authorized seizing Church property, temples included.</p></div>
+      </div>
+
+      <div class="pcard">
+        <div class="cap">4. Prophets restart what discouragement stopped</div>
+        <div class="row k"><div class="mini"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/5?lang=eng&amp;id=p1-p2#p1">Ezra 5:1–2</a>; <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/hag/1?lang=eng&amp;id=p2-p8#p2">Haggai 1:2–8</a></div><p>Haggai and Zechariah prophesied, and Zerubbabel and Jeshua "rose up" and began building again. Haggai's rebuke: the people had gotten comfortable in their own paneled houses while the Lord's house lay waste.</p></div>
+        <div class="row b"><div class="mini">About 1862</div><p>Facing cracked footings, Brigham Young is remembered as sitting down on the ruined stone and refusing to move until he knew what to do — then ordering every bad stone pulled and replaced with granite.</p></div>
+      </div>
+
+      <div class="pcard">
+        <div class="cap">5. Building with one hand, defending with the other</div>
+        <div class="row k"><div class="mini"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/4?lang=eng&amp;id=p16-p18#p16">Nehemiah 4:16–18</a></div><p>Half the men worked while half held spears; the builders wore a sword at the side while laying stone, with a trumpeter beside Nehemiah to sound an alarm.</p></div>
+        <div class="row b"><div class="mini">1850s–60s</div><p>The same men who cut temple granite were also breaking desert ground, forting up against conflict, and evacuating their families south. John Moyle built a fort in Alpine during the army's approach — and still went back to the temple.</p></div>
+      </div>
+
+      <div class="pcard">
+        <div class="cap">6. "I cannot come down"</div>
+        <div class="row k"><div class="mini"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/6?lang=eng&amp;id=p1-p4#p1">Nehemiah 6:1–4</a></div><p>Enemies invited Nehemiah to a meeting in the plain of Ono, meaning to harm him. His answer four times over: "I am doing a great work, so that I cannot come down."</p></div>
+        <div class="row b"><div class="mini">John Rowe Moyle</div><p>Twenty-two miles on foot each way, every week. Then a shattered leg, an amputation with a bucksaw, a hand-carved wooden leg — and back to the same twenty-two miles and the same chisel.</p></div>
+      </div>
+
+      <div class="pcard">
+        <div class="cap">7. Finished by people who weren't there at the start</div>
+        <div class="row k"><div class="mini"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/3?lang=eng&amp;id=p12#p12">Ezra 3:12</a>; <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/6?lang=eng&amp;id=p15#p15">6:15</a></div><p>The men who wept at the foundation remembered a temple most of the builders had never seen. Many who returned from Babylon in 538 BC did not live to see the dedication in 515 BC.</p></div>
+        <div class="row b"><div class="mini">1853 → 1893</div><p>Brigham Young, Truman Angell, and John Moyle all died before the doors opened. Three Church presidents and two chief architects carried it. Children born the year of the groundbreaking were forty at the dedication.</p></div>
+      </div>
+
+      <div class="pcard">
+        <div class="cap">8. A dedication the whole people attends</div>
+        <div class="row k"><div class="mini"><a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/6?lang=eng&amp;id=p16-p22#p16">Ezra 6:16–22</a>; <a class="sref" target="_blank" rel="noopener" href="https://www.churchofjesuschrist.org/study/scriptures/ot/neh/8?lang=eng&amp;id=p1-p12#p1">Nehemiah 8:1–12</a></div><p>Israel kept the dedication with joy, offered sacrifice, and kept the Passover. Later the whole congregation — men, women, and "all that could hear with understanding" — gathered while Ezra read the law.</p></div>
+        <div class="row b"><div class="mini">April 1893</div><p>Sessions twice a day for nearly three weeks, including sessions just for children, specifically so that ordinary Saints — not just leaders — could be inside for the dedication of the house they had paid for and built.</p></div>
+      </div>
+
+    </div>
+
+    <div class="card"><span class="tag">Honest differences worth naming</span><p>The parallels are strong but not identical. Cyrus <em>funded</em> the Jerusalem temple; the U.S. government mostly <em>obstructed</em> the Salt Lake Temple. Zerubbabel's temple was rebuilt on the ruins of Solomon's, deliberately more modest, and the ark of the covenant was never returned — the Holy of Holies stood empty. The Salt Lake Temple was built larger and more ornate than anything the Saints had attempted. And the Jerusalem temple's ordinances were the Mosaic sacrificial system; the Salt Lake Temple's are the endowment and sealing ordinances of the restored gospel. Same pattern of faith and opposition; different dispensations, different covenants.</p></div>
+  </section>
+</div>
+
+<footer><div class="wrap"><b>Two Temples, Two Generations — the construction of the Salt Lake Temple compared with the rebuilding of the temple in Jerusalem.</b> Sources: Church History Topics, "Salt Lake Temple" (ChurchofJesusChrist.org); Church News Almanac, "Salt Lake Temple"; Brigham Young, Journal of Discourses 1:131–137 (April 6, 1853); Dieter F. Uchtdorf, "Lift Where You Stand," Oct. 2008 (Moyle account); Scripture Helps: Old Testament, Ezra and Nehemiah; Richard Neitzel Holzapfel, <i>Every Stone a Sermon</i>; Richard O. Cowan, "The Design, Construction, and Role of the Salt Lake Temple." Scripture quotations are KJV. Where 19th-century accounts differ on details (crowd sizes, exact distances, the wording of remembered sayings), the handout notes the range rather than picking one.</div></footer>
+
+<button class="printbtn" onclick="window.print()" aria-label="Print handout">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+  Print
+</button>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    function showAll(){ els.forEach(function(el){ el.classList.add('in'); }); }
+    if(!('IntersectionObserver' in window)){ showAll(); return; }
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.08, rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+    setTimeout(showAll, 2500);
+  })();
+</script>
+</body>
+</html>
