@@ -17,7 +17,15 @@ export const DEFAULT_CLASS = "class-2026";
    project with a Realtime Database, then paste its config object here.
    Step-by-step instructions are in race/SETUP.md.
    ------------------------------------------------------------------ */
-export const FIREBASE_CONFIG = null;
+export const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyBDLl1WiPlx_zkVRNCjeW90e4hBugNHMeg",
+  authDomain: "scripture-race.firebaseapp.com",
+  databaseURL: "https://scripture-race-default-rtdb.firebaseio.com",
+  projectId: "scripture-race",
+  storageBucket: "scripture-race.firebasestorage.app",
+  messagingSenderId: "403376175896",
+  appId: "1:403376175896:web:f8d5dfc41666d32d977c6d"
+};
 
 /*  Example of a filled-in config:
 
