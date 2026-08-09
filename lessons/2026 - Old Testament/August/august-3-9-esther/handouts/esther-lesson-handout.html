@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Esther — Lesson Handout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<style>
+  :root{
+    --night:#2e1a4d;      /* Persian royal purple */
+    --night-2:#1a0e2e;
+    --accent:#c9962a;     /* the golden sceptre */
+    --accent-soft:#e5bc55;
+    --gold:#eccb6e;
+    --parch:#f9f5ec;
+    --parch-2:#f1e9d9;
+    --ink:#2b2519;
+    --ink-soft:#5e5445;
+    --echo:#2f6f4f;       /* myrtle green — Hadassah means "myrtle" */
+    --echo-soft:#e3efe7;
+    --gold-soft:#f8eed5;
+    --line:#ddd0b6;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--parch);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);}
+  h2.sec{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(26px,4.4vw,34px);line-height:1.1;margin:0;color:var(--night);}
+  h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:20px;color:var(--night);margin:0 0 6px;}
+  p{margin:0 0 15px;} strong{font-weight:700;color:#221f19;} em{font-style:italic;}
+
+  .hero{position:relative;overflow:hidden;color:#f4efe4;
+    background:radial-gradient(120% 90% at 82% 8%, color-mix(in srgb,var(--accent) 42%,transparent), transparent 46%),
+      radial-gradient(90% 70% at 78% 30%, color-mix(in srgb,var(--gold) 22%,transparent), transparent 55%),
+      linear-gradient(160deg,var(--night) 0%,var(--night-2) 100%);}
+  .stars{position:absolute;inset:0;pointer-events:none;opacity:.85;}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:56px 22px 60px;position:relative;z-index:2;
+    display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;}
+  .hero .eyebrow{color:var(--accent-soft);}
+  .hero h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(48px,10vw,86px);line-height:.9;letter-spacing:-.01em;margin:12px 0 8px;color:#fff;}
+  .hero .kicker{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(18px,3.4vw,23px);color:var(--gold);margin:0 0 18px;}
+  .theme-chip{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:600;color:#f4efe4;}
+  .theme-chip b{color:var(--accent-soft);font-weight:700;}
+  .hook{margin:18px 0 0;max-width:36ch;color:#e7e0d2;font-size:15.5px;line-height:1.55;}
+  .hero-art{align-self:stretch;display:flex;align-items:center;justify-content:center;min-width:150px;}
+
+  .band{background:var(--night-2);color:#efe7d5;}
+  .journey{max-width:var(--maxw);margin:0 auto;padding:20px 22px;display:flex;align-items:stretch;gap:6px;}
+  .jlabel{align-self:center;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;margin-right:6px;}
+  .stop{flex:1;text-align:center;padding:6px 4px;}
+  .stop .dot{width:14px;height:14px;border-radius:50%;margin:0 auto 8px;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent);}
+  .stop .nm{font-family:"Fraunces",serif;font-weight:600;font-size:16px;color:#fff;}
+  .stop .ds{font-size:11.5px;color:#c0b6d6;line-height:1.3;margin-top:2px;}
+  .arrow{align-self:flex-start;margin-top:20px;color:#6b5b86;font-size:18px;flex:0 0 auto;}
+
+  section.block{padding:46px 0 8px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+  .sec-num{font-family:"Fraunces",serif;font-weight:900;font-size:15px;color:#fff;background:var(--night);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .sec-ico{width:24px;height:24px;color:var(--accent);flex:0 0 auto;}
+  .rule{height:3px;background:linear-gradient(90deg,var(--accent),var(--gold) 60%,transparent);border-radius:3px;margin:10px 0 22px;}
+  .lead{font-size:15px;color:var(--ink-soft);font-style:italic;margin:-6px 0 20px;}
+
+  .card{background:var(--parch-2);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:18px 20px;margin:20px 0;}
+  .card.warm{border-left-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--parch));}
+  .card .tag{font-size:11.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--night);margin-bottom:7px;display:block;}
+  .card.warm .tag{color:#8a6413;} .card p:last-child{margin-bottom:0;}
+
+  .pull{margin:24px 0;padding:16px 22px;border-left:5px solid var(--accent);background:linear-gradient(90deg,var(--gold-soft),transparent);
+    font-family:"Fraunces",serif;font-size:21px;font-style:italic;color:var(--night);line-height:1.35;}
+  .pull cite{display:block;font-family:"Inter";font-style:normal;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:8px;}
+
+  .tl{position:relative;margin:8px 0 6px;padding-left:8px;}
+  .step{position:relative;padding:0 0 22px 54px;}
+  .step:before{content:"";position:absolute;left:19px;top:6px;bottom:-6px;width:2px;background:var(--line);}
+  .step:last-child:before{display:none;}
+  .step .badge{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:11px;background:var(--night);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:700;font-size:15px;z-index:2;}
+  .step .vv{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--accent);text-transform:uppercase;}
+  .step h3{margin:2px 0 5px;} .step p{margin:0;font-size:15.5px;}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:8px 0 4px;}
+  .pcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;}
+  .pcard .row{padding:13px 16px;}
+  .pcard .k{border-left:5px solid var(--gold);background:var(--gold-soft);}
+  .pcard .b{border-left:5px solid var(--echo);background:var(--echo-soft);}
+  .pcard .mini{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;}
+  .pcard .k .mini{color:#8a6413;} .pcard .b .mini{color:var(--echo);}
+  .pcard .row p{margin:0;font-size:14px;line-height:1.5;}
+  .pcard .teach{margin-top:auto;padding:12px 16px;background:#faf6ec;border-top:1px dashed var(--line);font-size:13px;color:var(--ink);}
+  .pcard .teach b{color:var(--night);}
+
+  .points{list-style:none;padding:0;margin:14px 0;}
+  .points li{position:relative;padding:12px 16px 12px 46px;background:var(--parch-2);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;font-size:15px;}
+  .points li:before{content:"";position:absolute;left:16px;top:16px;width:14px;height:14px;border-radius:50%;border:3px solid var(--accent);}
+  .points li strong{color:var(--night);}
+  .resto{display:flex;gap:8px;align-items:stretch;margin:14px 0 6px;flex-wrap:nowrap;}
+  .rnode{flex:1;background:var(--night);color:#f2ecdd;border-radius:12px;padding:14px;}
+  .rnode .yr{font-family:"Fraunces",serif;font-weight:700;color:var(--gold);font-size:15px;}
+  .rnode .tt{font-weight:700;font-size:14px;margin:3px 0 4px;color:#fff;} .rnode .ds{font-size:12px;color:#cec5e0;line-height:1.4;}
+  .rarrow{align-self:center;color:var(--accent);font-size:20px;flex:0 0 auto;}
+  .ideas{list-style:none;padding:0;margin:12px 0;}
+  .ideas li{position:relative;padding:11px 14px 11px 44px;border-bottom:1px solid var(--line);font-size:15px;}
+  .ideas li:last-child{border-bottom:0;}
+  .ideas li svg{position:absolute;left:14px;top:12px;width:20px;height:20px;color:var(--echo);}
+
+  footer{margin-top:40px;background:var(--night-2);color:#b2a8c6;}
+  footer .wrap{padding:26px 22px;font-size:12.5px;line-height:1.6;} footer b{color:#e7e0d2;}
+  .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 40%,transparent);display:flex;align-items:center;gap:8px;}
+  .printbtn:hover{filter:brightness(.93);}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:720px){
+    .hero-inner{grid-template-columns:1fr;} .hero-art{order:-1;min-width:0;}
+    .journey{flex-direction:column;gap:0;} .jlabel{margin:0 0 8px;text-align:center;}
+    .arrow{align-self:center;transform:rotate(90deg);margin:2px 0;}
+    .grid{grid-template-columns:1fr;} .resto{flex-direction:column;} .rarrow{transform:rotate(90deg);}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none;} html{scroll-behavior:auto;}}
+  @media print{
+    body{font-size:11.5pt;} .printbtn{display:none;}
+    .hero{background:var(--night)!important;} .reveal{opacity:1;transform:none;}
+    section.block{padding:16px 0 4px;break-inside:avoid;} .pcard,.step,.card,.rnode{break-inside:avoid;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <svg class="stars" viewBox="0 0 1200 380" preserveAspectRatio="none" aria-hidden="true">
+    <g fill="#ffffff">
+      <circle cx="90" cy="60" r="1.6" opacity=".7"/><circle cx="180" cy="130" r="1.1" opacity=".5"/>
+      <circle cx="270" cy="42" r="1.3" opacity=".6"/><circle cx="360" cy="180" r="1" opacity=".4"/>
+      <circle cx="470" cy="70" r="1.7" opacity=".65"/><circle cx="560" cy="150" r="1.1" opacity=".45"/>
+      <circle cx="650" cy="36" r="1.4" opacity=".6"/><circle cx="740" cy="120" r="1" opacity=".4"/>
+      <circle cx="820" cy="200" r="1.5" opacity=".5"/><circle cx="930" cy="64" r="1.2" opacity=".55"/>
+      <circle cx="1030" cy="150" r="1.6" opacity=".6"/><circle cx="1130" cy="86" r="1.1" opacity=".45"/>
+      <circle cx="140" cy="250" r="1.2" opacity=".4"/><circle cx="420" cy="290" r="1.4" opacity=".45"/>
+      <circle cx="690" cy="300" r="1.1" opacity=".4"/><circle cx="980" cy="270" r="1.3" opacity=".45"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Deep Dive · Old Testament 2026 · Week 32</div>
+      <h1>Esther</h1>
+      <p class="kicker">A Hidden Queen · A Sleepless King · A Reversal Nobody Saw Coming</p>
+      <span class="theme-chip"><b>“Thou Art Come … for Such a Time as This”</b> · Come, Follow Me · August 3–9, 2026</span>
+      <p class="hook">Ten chapters, one empire, and not a single mention of God — and yet He is on every page. Esther is the Old Testament’s masterclass in providence you only recognize looking backward.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg width="150" height="210" viewBox="0 0 150 210" fill="none">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#f6dc95"/><stop offset="55%" stop-color="#e0b653"/><stop offset="100%" stop-color="#b9861f"/>
+          </linearGradient>
+        </defs>
+        <!-- sceptre shaft -->
+        <rect x="70" y="62" width="10" height="132" rx="5" fill="url(#g1)"/>
+        <rect x="66" y="120" width="18" height="7" rx="3.5" fill="#b9861f" opacity=".85"/>
+        <rect x="66" y="160" width="18" height="7" rx="3.5" fill="#b9861f" opacity=".85"/>
+        <!-- lotus finial (Persian royal motif) -->
+        <path d="M75 14 C 84 34, 96 40, 96 54 C 96 66, 87 74, 75 74 C 63 74, 54 66, 54 54 C 54 40, 66 34, 75 14 Z" fill="url(#g1)"/>
+        <path d="M75 30 C 79 42, 85 46, 85 54 C 85 61, 81 65, 75 65 C 69 65, 65 61, 65 54 C 65 46, 71 42, 75 30 Z" fill="#2e1a4d" opacity=".35"/>
+        <!-- side petals -->
+        <path d="M54 52 C 40 48, 32 56, 34 68 C 44 68, 52 62, 54 52 Z" fill="url(#g1)" opacity=".9"/>
+        <path d="M96 52 C 110 48, 118 56, 116 68 C 106 68, 98 62, 96 52 Z" fill="url(#g1)" opacity=".9"/>
+        <!-- base -->
+        <ellipse cx="75" cy="196" rx="26" ry="7" fill="#b9861f" opacity=".5"/>
+        <!-- star (Esther = "star") -->
+        <path d="M124 118 l3.2 8.4 8.8 .6 -6.8 5.7 2.2 8.6 -7.4-4.8 -7.4 4.8 2.2-8.6 -6.8-5.7 8.8-.6 Z" fill="#f6dc95" opacity=".9"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- ============ AT-A-GLANCE BAND ============ -->
+<div class="band">
+  <div class="journey">
+    <span class="jlabel">The Reversal</span>
+    <div class="stop"><div class="dot"></div><div class="nm">Ch. 1–2</div><div class="ds">Vashti deposed · an orphan becomes queen</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Ch. 3–4</div><div class="ds">Haman’s decree · “for such a time as this”</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Ch. 5–7</div><div class="ds">The sceptre · a sleepless night · the gallows</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Ch. 8–10</div><div class="ds">Second decree · deliverance · Purim</div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ 1. HISTORY ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">1</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 4v5h5"/></svg>
+      <h2 class="sec">Historical Summary of the Period</h2></div>
+    <div class="rule"></div>
+
+    <p><strong>The empire.</strong> Esther takes place inside the Achaemenid Persian Empire, the largest state the world had yet seen. Cyrus the Great toppled Babylon in 539 BC; Darius I organized the empire into satrapies and built roads, a royal courier system, and palaces at Persepolis and Susa. Esther 1:1 describes a realm stretching from India to Ethiopia across 127 provinces — a claim that matches Persian royal inscriptions of the era, which list both India and Kush (Ethiopia) among the subject lands.</p>
+
+    <p><strong>The king.</strong> Ahasuerus is the Hebrew form of the Persian name rendered in Greek as <em>Xerxes</em>. He is Xerxes I, who reigned 486–465 BC — the same king the Greek historian Herodotus wrote about at length, and the king who invaded Greece. The Church’s <em>Scripture Helps</em> makes this identification explicitly.</p>
+
+    <p><strong>The dates line up remarkably well.</strong> Esther 1:3 sets the opening banquet in the king’s third year — roughly 483 BC. Herodotus devotes long passages to Xerxes gathering his nobles and generals at exactly this point to plan the Greek campaign, which launched in 480 BC. A 180-day “display of riches” followed by a seven-day feast for the whole citadel reads far less strangely once you know it doubles as a war council and a loyalty muster. Esther is crowned in the king’s seventh year (Esther 2:16), about 479 BC — that is, right after Xerxes came home humiliated from Salamis. Haman casts his lot in the twelfth year (Esther 3:7), about 474 BC.</p>
+
+    <p><strong>Where.</strong> Shushan (Susa) sat in what is now western Iran, roughly 200 miles east of ancient Babylon. It was the Persian winter capital; the court moved to cooler Ecbatana or Persepolis in summer. Susa is also where Nehemiah served as cupbearer and where Daniel received a vision (Nehemiah 1:1, 11; Daniel 8:1–2), so three Old Testament books share this one address.</p>
+
+    <p><strong>Why were Jews still in Persia?</strong> Cyrus’s decree in 538 BC let the exiles go home, and Ezra and Nehemiah — last week’s reading — follow the ones who went. Esther follows the ones who stayed. Two or three generations in, many Jewish families were settled, employed, and comfortable in the empire. Mordecai is a Benjamite descended from those carried away with Jeconiah (Esther 2:5–6); he holds a post at the king’s gate, which was not idle loitering but an official position within the royal compound.</p>
+
+    <p><strong>Culture the text assumes you know.</strong> Persians of rank took Persian names alongside their birth names — Hadassah (Hebrew, “myrtle”) is also Esther (“star”), the same double-naming Daniel and his friends experienced. Laws sealed with the king’s ring were <em>irreversible</em>, even by the king himself (Esther 1:19; 8:8; compare Daniel 6:8) — which is the single legal fact that drives the whole second half of the book. Casting lots (<em>pur</em>) to pick a date was ordinary Near Eastern practice using stones, bones, or ivory. Tearing clothes and wearing sackcloth and ashes was the standard public language of grief.</p>
+
+    <div class="card"><span class="tag">Archaeology you can point to</span>
+      <p><strong>Susa’s palace decor.</strong> Darius’s foundation inscription from Susa catalogs the exotic materials imported to build the palace — the same world of marble, precious stone, silver, and colored hangings that Esther 1:6 describes.<br>
+      <strong>The name Marduka.</strong> The Persepolis Fortification Tablets — thousands of administrative cuneiform records — contain more than thirty references to a name, <em>Marduka</em>, held by up to four different officials. Scholar Edwin Yamauchi’s careful conclusion is that it is <em>possible</em> one of them was the biblical Mordecai. Not proof — but proof that a Jewish official with that name in that bureaucracy is exactly the sort of person who existed.<br>
+      <strong>A dated loan document</strong> from Xerxes’ third year confirms the king was at Susa when Esther 1 says he was.</p>
+    </div>
+
+    <div class="card warm"><span class="tag">Be ready for the hard question</span>
+      <p>Esther is the only Old Testament book with no copy found among the Dead Sea Scrolls, and it never once mentions God, prayer, the temple, the law, or Jerusalem. Some scholars question how much of it is straight history, and some ancient Jews may not have counted it as scripture. The Bible Dictionary handles this honestly: though the book contains no direct reference to God, He is everywhere assumed — the story runs on a providential destiny and on fasting for deliverance. A useful frame for your class: Esther is what faith looks like when heaven is <em>silent</em>. That is not a defect in the book. That is the point of the book.</p>
+    </div>
+  </section>
+
+  <!-- ============ 2. CHAPTER SUMMARY ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">2</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <h2 class="sec">Chapter Summary</h2></div>
+    <div class="rule"></div>
+    <p class="lead">Watch for the hinge: every advantage Haman gains in chapters 3–5 becomes the exact instrument of his ruin in chapters 6–7.</p>
+    <div class="tl">
+
+      <div class="step"><span class="badge">1</span><div class="vv">Esther 1</div><h3>A queen says no</h3>
+      <p>Six months of displayed wealth culminate in a seven-day feast. On the seventh day, wine-merry, Ahasuerus summons Queen Vashti to be shown off before the court. She refuses. His counselor Memucan argues that if this stands, every wife in the empire will hear of it — so Vashti is deposed by an irreversible royal decree. The book opens by establishing two things it will need later: the king is impulsive, and Persian law cannot be recalled.</p></div>
+
+      <div class="step"><span class="badge">2</span><div class="vv">Esther 2</div><h3>An orphan becomes queen</h3>
+      <p>A kingdom-wide search gathers young women to the palace. Enter Mordecai, a Benjamite of the exile, and his cousin and ward Hadassah — Esther — whom he raised after her parents died. On his counsel, she conceals her Jewish identity. In the king’s seventh year Esther is chosen and crowned. Shortly after, Mordecai overhears two doorkeepers, Bigthan and Teresh, plotting to assassinate the king. He reports it through Esther, the plot is stopped — and the deed is written in the royal chronicles and then, apparently, forgotten. Remember that unpaid debt.</p></div>
+
+      <div class="step"><span class="badge">3</span><div class="vv">Esther 3</div><h3>Haman’s decree</h3>
+      <p>The king promotes Haman the Agagite above all princes and orders everyone to bow. Mordecai will not. The text’s label matters: “Agagite” likely marks Haman as a descendant of Agag, king of the Amalekites — Israel’s oldest enemies, and the very people Saul (a Benjamite, like Mordecai) failed to deal with in 1 Samuel 15. This is an ancient feud with new costumes. Enraged, Haman decides killing one man is too small and buys a genocide instead: 10,000 talents of silver for a decree that on the thirteenth day of Adar every Jew in the empire — young, old, women, children — may be destroyed. Lots (<em>pur</em>) pick the date. Couriers carry it to all 127 provinces. Then the chilling last line: the king and Haman sit down to drink, while the city of Shushan is left bewildered.</p></div>
+
+      <div class="step"><span class="badge">4</span><div class="vv">Esther 4</div><h3>“For such a time as this”</h3>
+      <p>Mordecai tears his clothes, puts on sackcloth and ashes, and cries out in the city; across the provinces Jews fast, weep, and mourn. Through the messenger Hathach he sends Esther a copy of the decree and asks her to plead with the king. Esther’s objection is not cowardice, it is arithmetic: anyone entering the inner court unsummoned is put to death unless the king extends the golden sceptre — and she has not been called in thirty days. Mordecai answers with the sentence that names the week: deliverance will come from somewhere, but she and her father’s house may not survive it — and who knows whether she came to the kingdom for such a time as this. Esther calls a three-day fast for all the Jews in Shushan, commits to go, and says: if I perish, I perish.</p></div>
+
+      <div class="step"><span class="badge">5</span><div class="vv">Esther 5</div><h3>The sceptre and the two banquets</h3>
+      <p>On the third day Esther puts on her royal apparel and stands in the inner court. The king extends the golden sceptre and offers her up to half the kingdom. She asks only that he and Haman come to a banquet — and there, asks them to come again tomorrow. Whatever her reason (time, timing, or nerve), the delay is everything. Haman goes home elated, then sees Mordecai at the gate and is filled with fury. His wife Zeresh and his friends propose a gallows fifty cubits high — roughly 75 feet, absurdly, theatrically tall. He has it built that night.</p></div>
+
+      <div class="step"><span class="badge">6</span><div class="vv">Esther 6</div><h3>The night the king could not sleep</h3>
+      <p>The book’s pivot, and it turns on insomnia. Unable to sleep, the king calls for the chronicles to be read aloud — and lands on the record of Mordecai’s unrewarded loyalty. Just then Haman arrives in the court, planning to request Mordecai’s execution. Before he can speak, the king asks him what should be done for the man the king delights to honor. Assuming himself the man, Haman designs the most extravagant honor he can imagine — and is then ordered to lead Mordecai through the streets in it. He goes home covering his head. Zeresh reads the omen instantly: if Mordecai is Jewish, Haman will not prevail. From here the fall is vertical.</p></div>
+
+      <div class="step"><span class="badge">7</span><div class="vv">Esther 7</div><h3>The second banquet</h3>
+      <p>At the second banquet Esther finally asks — for her own life and the life of her people, revealing both her identity and the fact that the enemy is sitting at the table. The king, in a rage, storms into the palace garden. Haman falls onto Esther’s couch to beg, which the returning king reads as an assault. The chamberlain Harbonah mentions, helpfully, that a seventy-five-foot gallows is standing in Haman’s own yard. Haman is hanged on it.</p></div>
+
+      <div class="step"><span class="badge">8</span><div class="vv">Esther 8</div><h3>The decree that cannot be undone</h3>
+      <p>Mordecai receives the signet ring Haman once wore. But the death decree still stands and cannot be revoked, so Esther pleads again, and a second decree goes out: the Jews may gather and defend themselves on that same thirteenth of Adar. Mordecai walks out in blue and white royal apparel with a great crown of gold, and the Jews have light, gladness, joy, and honor. Many people of the land declare themselves Jews.</p></div>
+
+      <div class="step"><span class="badge">9</span><div class="vv">Esther 9</div><h3>The day that turned</h3>
+      <p>On the appointed day the reverse of what was expected happens: the Jews defend themselves successfully across the provinces. Three separate times the text stops to note that they laid no hand on the spoil — this was survival, not plunder. Haman’s ten sons are executed. The days following become a feast: the fourteenth and fifteenth of Adar are established as Purim, named for the <em>pur</em> Haman cast, kept with feasting, gladness, sending portions to one another, and gifts to the poor.</p></div>
+
+      <div class="step"><span class="badge">10</span><div class="vv">Esther 10</div><h3>Mordecai the second</h3>
+      <p>Ten verses at the start, three at the end. Mordecai is now second only to the king, great among the Jews, and — the book’s closing note — <em>seeking the wealth of his people and speaking peace to all his seed</em>. Power in this book is finally held by someone who uses it for others.</p></div>
+
+    </div>
+
+    <div class="card warm"><span class="tag">The hard chapter: Esther 9</span>
+      <p>A class of thirteen-year-olds may ask why the “good guys” kill so many people. Give them the legal mechanics: the first decree authorizing the slaughter of Jews <em>could not be revoked</em>, so the only remedy Persian law allowed was a counter-decree permitting self-defense on that same day. The killing in chapter 9 is those who came armed to carry out the original edict. Note also the detail the narrator repeats three times — they took no spoil — which is precisely where Saul failed against the Amalekites in 1 Samuel 15. The final generation of that feud gets it right. Numbers in ancient Near Eastern accounts are often stylized for scale, so don’t stake anything on the arithmetic. A good discussion question: <em>what is the difference between revenge and defense, and how can you tell which one you’re doing?</em></p>
+    </div>
+
+    <blockquote class="pull">“Who knoweth whether thou art come to the kingdom for such a time as this?”<cite>Esther 4:14</cite></blockquote>
+  </section>
+
+  <!-- ============ 3. BOOK OF MORMON PARALLELS ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">3</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-1.6-1.2-3.6-2-6-2v13c2.4 0 4.4.8 6 2"/><path d="M12 6c1.6-1.2 3.6-2 6-2v13c-2.4 0-4.4.8-6 2"/><path d="M12 6v13"/></svg>
+      <h2 class="sec">Comparison to the Book of Mormon</h2></div>
+    <div class="rule"></div>
+    <p class="lead">Esther has no sermons, so its doctrine is carried in patterns. Each of these shows the same pattern surfacing in Nephite history.</p>
+    <div class="grid">
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Esther 2:7–17; 4:14</div><p>An orphaned exile is placed inside a foreign king’s household years before anyone knows why — and that placement is what saves a nation.</p></div>
+        <div class="row b"><div class="mini">Alma 17:20–25; 18:40–43</div><p>Ammon deliberately enters a Lamanite king’s court as a servant; the position he takes for humble reasons becomes the door through which a whole people receive the gospel.</p></div>
+        <div class="teach"><b>Teaches:</b> God positions His servants long before the crisis arrives. The assignment that feels small now may be the one thing that matters later.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Esther 4:16</div><p>Facing a death sentence she cannot fight, Esther’s first act is not strategy but a three-day fast joined by every Jew in Shushan.</p></div>
+        <div class="row b"><div class="mini">Alma 17:9; Mosiah 27:22–23</div><p>The sons of Mosiah fast and pray before entering Lamanite lands; Alma’s father gathers the priests to fast for a son beyond saving.</p></div>
+        <div class="teach"><b>Teaches:</b> Fasting is what faith does when the situation is genuinely beyond your control. It changes the person before it changes the odds.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Esther 5:14; 7:9–10</div><p>Haman builds a seventy-five-foot gallows for his enemy and is hanged on it himself. The trap closes on the trapper.</p></div>
+        <div class="row b"><div class="mini">1 Nephi 14:3; 22:14</div><p>Nephi sees that the great pit dug for the destruction of men will be filled by the very ones who dug it; those who fight against Zion are turned upon themselves.</p></div>
+        <div class="teach"><b>Teaches:</b> Pride is self-consuming. What you build to hurt someone else eventually needs somewhere to fall — and you are standing under it.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Esther 4:11–16</div><p>“If I perish, I perish.” Esther walks into a throne room where entering uninvited is a capital offense, because saying nothing costs more.</p></div>
+        <div class="row b"><div class="mini">Mosiah 12:1–2; 13:3–4; 17:9–10</div><p>Abinadi returns in disguise to the court of a king who has already threatened his life, refuses to recall a word, and is killed for it.</p></div>
+        <div class="teach"><b>Teaches:</b> Courage is not the absence of fear but the decision that some things matter more than your own safety.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Esther 4:14</div><p>Mordecai’s argument is not that Esther is lucky but that she was <em>placed</em> — that a life can be aimed at a moment.</p></div>
+        <div class="row b"><div class="mini">Alma 13:3</div><p>Priests are called and prepared from the foundation of the world, on account of their exceeding faith and good works and their choice of good.</p></div>
+        <div class="teach"><b>Teaches:</b> Foreordination is not fate. God prepares the opportunity; you still have to walk into the inner court.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Esther 3:12–13; 4:3; 9:1</div><p>A written extermination order goes out against an entire people; they fast and mourn, and on the appointed day the outcome is completely reversed.</p></div>
+        <div class="row b"><div class="mini">3 Nephi 3:1–7; 4:31–33</div><p>Giddianhi sends a written threat of annihilation to Lachoneus; the Nephites gather, cry to the Lord, are delivered, and lift their voices in praise.</p></div>
+        <div class="teach"><b>Teaches:</b> A signed decree is not the end of the story. God has repeatedly saved covenant peoples who had every reason to believe they were finished.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Esther 2:23; 6:1–3</div><p>A record written years earlier and then forgotten is read aloud on a sleepless night — and that record is what turns the entire book.</p></div>
+        <div class="row b"><div class="mini">Mosiah 1:3–5; 1 Nephi 5:14–19</div><p>King Benjamin teaches that without the plates his people would have dwindled in unbelief; Lehi searches the brass plates and finds his own lineage preserved on them.</p></div>
+        <div class="teach"><b>Teaches:</b> God works through records. Journals, testimonies, and family history do work that nobody sees at the time they are written.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Esther 8:15–17; 9:22</div><p>Sorrow turns to “light, and gladness, and joy, and honour”; the days of dread become the days of Purim, marked by gifts to one another and to the poor.</p></div>
+        <div class="row b"><div class="mini">Mosiah 24:21–22; Alma 26:11–16</div><p>Alma’s people, freed from Amulon’s bondage, pour out thanks to God; Ammon glories in the Lord and is brim with joy at what God did through him.</p></div>
+        <div class="teach"><b>Teaches:</b> Deliverance is meant to be commemorated. Remembering is how gratitude survives the years after the rescue.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 4. TIE TO COME, FOLLOW ME ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">4</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>
+      <h2 class="sec">Tie to Come, Follow Me</h2></div>
+    <div class="rule"></div>
+    <p><strong>Outline:</strong> “Thou Art Come … for Such a Time as This” — Esther, August 3–9, <em>Come, Follow Me—For Home and Church: Old Testament 2026</em>. The outline opens by asking whether the events of Esther are coincidence or divine plan, and quotes Elder Ronald A. Rasband: what looks like random chance is in fact overseen by a loving Father in Heaven, who is in the small details of our lives (“By Divine Design,” Nov. 2017). It also sends readers to the Bible Dictionary entry “Esther, book of.”</p>
+
+    <h3 style="margin-top:22px">The four principles the manual highlights</h3>
+    <ul class="points">
+      <li><strong>“The Lord puts me in situations where I can bless others.”</strong> Read the story looking for how the Lord made it possible for Esther to save the Jews — Esther 2:21–23; 3:10–14; 4:14–16. The outline quotes President Dieter F. Uchtdorf: each of us stands at a unique place with a task only we can perform, and there may be hearts only you can reach (“Lift Where You Stand,” Nov. 2008). It invites those with a patriarchal blessing to read it for what the Lord has for them to do. Linked video: “For Such a Time as This.”</li>
+      <li><strong>“Pride and anger can lead to downfall.”</strong> Esther 3; 5:9–14; 7 — track Haman’s feelings, words, and actions, what they reveal about his motives, and what they cost him. Cross-references given: Proverbs 16:32 and Alma 5:28.</li>
+      <li><strong>“Fasting shows that I trust and rely on the Lord.”</strong> Esther 3:13; 4:1–3, 10–17, then the results in 5:2–3 and 8:11–12. The outline points to Topics and Questions, “Fasting and Fast Offerings,” plus Isaiah 58:6–12 and the video “Fasting: Young Single Adult Ward, Amanda.”</li>
+      <li><strong>“Doing the right thing often requires great courage.”</strong> Esther 3:1–11; 4:10–17; 5:1–4; 9:17–19. It asks what Esther and Mordecai needed to <em>know about God</em> to choose as they did, notes that their courage brought different consequences, and connects Esther’s courage to “a day of gladness.” Suggested: videos “Courage” and “Dare to Stand Alone”; hymn “True to the Faith,” no. 254.</li>
+      <li><strong>Teaching note the outline includes for you.</strong> Elder David A. Bednar: the question is not “What do I tell them?” but “What can I invite them to <em>do</em>?” and what inspired questions will invite the Spirit (<em>Teaching in the Savior’s Way</em>). Plan at least one thing your class does, not just hears.</li>
+    </ul>
+
+    <h3 style="margin-top:24px">Scripture Helps questions the outline links</h3>
+    <ul class="points">
+      <li><strong>Where was Shushan?</strong> A Persian capital in modern western Iran, about 200 miles east of ancient Babylon — also Nehemiah’s and Daniel’s Shushan.</li>
+      <li><strong>Why did Mordecai tear his clothes and wear sackcloth and ashes?</strong> The standard biblical vocabulary of public grief; sackcloth was rough material normally made into sturdy bags.</li>
+      <li><strong>What is the Feast of Purim?</strong> Named from the <em>pur</em> Haman cast. Unlike the quieter Jewish holy days, Purim is loud and joyful: costumes, food, music, gifts to one another and to the poor, and a public reading of Esther in which the congregation boos and drowns out Haman’s name and cheers for Mordecai.</li>
+      <li><em>Also worth reading with your class:</em> why Mordecai may have refused to bow (the Agagite/Amalekite feud), what it meant to sit at the king’s gate, why Esther is also called Hadassah, and why Esther still had to plead after Haman was dead.</li>
+    </ul>
+
+    <h3 style="margin-top:24px">Latter-day voices on this chapter</h3>
+    <div class="resto">
+      <div class="rnode"><div class="yr">1997</div><div class="tt">Mary Ellen Smoot</div><div class="ds">“For Such a Time as This” — Esther’s phrase applied to covenant women today.</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">2008</div><div class="tt">Pres. Uchtdorf</div><div class="ds">“Lift Where You Stand” — your place and task are yours for a reason.</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">2009</div><div class="tt">Pres. Monson</div><div class="ds">“May You Have Courage” — moral courage in ordinary settings.</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">2017</div><div class="tt">Elder Rasband</div><div class="ds">“By Divine Design” — the Lord’s hand in the small details, not coincidence.</div></div>
+    </div>
+
+    <h3 style="margin-top:24px">Teaching ideas for youth Sunday School (ages 12–13)</h3>
+    <ul class="ideas">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Open with the coincidence hunt.</strong> Before you say anything, have them list every “lucky break” in the story: the king can’t sleep; the chronicles open to <em>that</em> page; Haman walks in at <em>that</em> hour; Esther happened to be queen. Then ask: at what point does a pile of coincidences stop looking like coincidence? That question is the whole lesson.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Do the Purim reading.</strong> Read Esther 3:1–6 and 7:9–10 aloud with the class booing at Haman’s name and cheering at Mordecai’s, the way Jewish congregations still do. It takes ninety seconds, it is genuinely fun, and it teaches them that this story belongs to a living people.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>The gallows chart.</strong> On the board, draw two columns: what Haman did to hurt Mordecai, and how each thing came back on him (the promotion, the decree, the gallows, the honor he designed). Let them fill it in. Then Proverbs 16:32 and Alma 5:28.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Make Esther 4:14 personal without making it heavy.</strong> Ask: what is a “for such a time as this” moment for someone your age? Push past the generic — a lunch table, a group chat, a teammate nobody talks to, a younger sibling. Their version of the inner court is smaller than Esther’s but the choice is the same shape.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Invite them to do something (Elder Bednar’s question).</strong> Concrete options: fast with a specific purpose this coming fast Sunday and write the purpose down; read their patriarchal blessing this week if they have one; write one sentence in a journal, since a forgotten record is what saves everyone in chapter 6.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Have the courage conversation honestly.</strong> Esther was afraid and went anyway; Mordecai’s courage got him a death threat before it got him a crown. Ask what Esther and Mordecai had to <em>know about God</em> to choose that. Don’t promise that standing up always works out quickly — the book itself takes years.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Close with the missing name.</strong> Tell them God is never mentioned in the entire book, and ask where they saw Him anyway. It reframes their own “God feels quiet right now” weeks, which at 12 and 13 they are starting to have.</li>
+    </ul>
+  </section>
+
+  <!-- ============ 5. TIE TO JESUS CHRIST ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">5</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M6 8h12"/></svg>
+      <h2 class="sec">Tie to Jesus Christ</h2></div>
+    <div class="rule"></div>
+    <p class="lead">Esther never names God — and yet the shape of the story is the shape of the Atonement.</p>
+
+    <ul class="points">
+      <li><strong>The intercessor who risks death to approach the throne.</strong> A condemned people have no standing before the king; someone who loves them enters the throne room at the cost of her own life to plead for them, and is accepted. That is the Savior’s role as Advocate — He stands before the Father pleading the cause of those who cannot plead for themselves (D&amp;C 45:3–5; Hebrews 7:25; 2 Nephi 2:9). Esther risked her life to save her people. Christ gave His.</li>
+      <li><strong>“If I perish, I perish” and “not my will, but thine.”</strong> Esther 4:16 is a submission made before the outcome is known — the same posture as Gethsemane (Luke 22:42; Mosiah 15:7). Both are decisions made in the dark.</li>
+      <li><strong>A decree that cannot be revoked, answered by a second decree.</strong> Persian law could not be unwritten, so the sentence of death stood; deliverance came not by cancelling the law but by a second, greater decree issued in the king’s name that let the condemned live. That is the logic of justice and mercy in Alma 42:13–15, 22–25 — the law is not set aside, it is <em>satisfied</em>, and mercy comes through one who has authority to answer it.</li>
+      <li><strong>The great reversal.</strong> Haman is exalted and then hanged on a tree; Mordecai is humiliated at the gate and then robed, crowned, and set second in the kingdom. The gospel runs the same reversal on purpose: the One who was despised, condemned, and hanged upon a tree is the One God has highly exalted (Philippians 2:8–11; 1 Nephi 19:9–10). The last chapter of Esther gives power to a man who uses it seeking the wealth of his people — the definition of a king after Christ’s pattern.</li>
+      <li><strong>Fasting that opens a door.</strong> Esther’s three-day fast precedes her acceptance in the inner court. The Savior’s own forty-day fast precedes His ministry, and Isaiah 58:6–12 — cited by this week’s outline — defines the fast God chooses as one that looses bands and lets the oppressed go free. Fasting has always been about someone else’s deliverance as much as our own.</li>
+      <li><strong>Sorrow turned into joy.</strong> Esther 9:22 marks the month that was turned from sorrow to gladness and from mourning to a good day — and the commemoration includes gifts to the poor. Jesus promised His disciples exactly this: your sorrow shall be turned into joy, and no one takes that joy from you (John 16:20–22). Purim is a small, loud, annual rehearsal of Easter.</li>
+      <li><strong>Hidden providence is how He usually works.</strong> The book’s silence about God is its most Christ-centered feature: it insists that a Father who is never mentioned is never absent. That is the experience of most disciples most of the time, and it is exactly what Elder Rasband describes in the talk this week’s outline quotes.</li>
+    </ul>
+
+    <blockquote class="pull">“And the Jews had light, and gladness, and joy, and honour.”<cite>Esther 8:16</cite></blockquote>
+  </section>
+</div>
+
+<footer><div class="wrap"><b>Esther — “Thou Art Come … for Such a Time as This.”</b> Prepared for youth Sunday School (ages 12–13), Come, Follow Me—For Home and Church: Old Testament 2026, week of August 3–9, 2026. Sources: the official weekly outline and <em>Scripture Helps: Old Testament</em> (“Esther”) at ChurchofJesusChrist.org; Bible Dictionary, “Esther, book of,” “Shushan,” “Agag,” “Lots, casting of,” “Feasts”; general conference addresses by Elder Ronald A. Rasband (2017), President Dieter F. Uchtdorf (2008), President Thomas S. Monson (2009), and Sister Mary Ellen Smoot (1997); historical background from Herodotus’s account of Xerxes I and published work on the Persepolis Fortification Tablets and the Achaemenid capitals. Scripture quotations are KJV.</div></footer>
+
+<button class="printbtn" onclick="window.print()" aria-label="Print handout">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+  Print
+</button>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    function showAll(){ els.forEach(function(el){ el.classList.add('in'); }); }
+    if(!('IntersectionObserver' in window)){ showAll(); return; }
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.08, rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+    setTimeout(showAll, 2500);
+  })();
+</script>
+</body>
+</html>
