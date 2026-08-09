@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Job — Come, Follow Me Lesson Handout · August 10–16, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<style>
+  :root{
+    /* MOTIF: the whirlwind and the morning stars — storm indigo, refiner's gold, dust-and-ashes parchment */
+    --night:#1b2544;
+    --night-2:#0d1226;
+    --accent:#d3a02c;
+    --accent-soft:#edc45f;
+    --gold:#f0d374;
+    --parch:#f8f4ea;
+    --parch-2:#efe8d8;
+    --ink:#2b2721;
+    --ink-soft:#5d5546;
+    --echo:#3d6a78;
+    --echo-soft:#e2edf0;
+    --gold-soft:#f8eed2;
+    --line:#dbcfb6;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--parch);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);}
+  h2.sec{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(26px,4.4vw,34px);line-height:1.1;margin:0;color:var(--night);}
+  h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:20px;color:var(--night);margin:0 0 6px;}
+  p{margin:0 0 15px;} strong{font-weight:700;color:#221f19;} em{font-style:italic;}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;color:#f4efe4;
+    background:radial-gradient(120% 90% at 82% 8%, color-mix(in srgb,var(--accent) 34%,transparent), transparent 46%),
+      radial-gradient(90% 70% at 78% 30%, color-mix(in srgb,var(--gold) 20%,transparent), transparent 55%),
+      linear-gradient(160deg,var(--night) 0%,var(--night-2) 100%);}
+  .stars{position:absolute;inset:0;pointer-events:none;opacity:.85;}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:56px 22px 60px;position:relative;z-index:2;
+    display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;}
+  .hero .eyebrow{color:var(--accent-soft);}
+  .hero h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(48px,10vw,86px);line-height:.9;letter-spacing:-.01em;margin:12px 0 8px;color:#fff;}
+  .hero .kicker{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(18px,3.4vw,23px);color:var(--gold);margin:0 0 18px;}
+  .theme-chip{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:600;color:#f4efe4;}
+  .theme-chip b{color:var(--accent-soft);font-weight:700;}
+  .hook{margin:18px 0 0;max-width:36ch;color:#e7e0d2;font-size:15.5px;line-height:1.55;}
+  .hero-art{align-self:stretch;display:flex;align-items:center;justify-content:center;min-width:150px;}
+  .spin{animation:slowspin 44s linear infinite;transform-origin:60px 60px;}
+  @keyframes slowspin{to{transform:rotate(360deg);}}
+
+  /* AT-A-GLANCE BAND */
+  .band{background:var(--night-2);color:#efe7d5;}
+  .journey{max-width:var(--maxw);margin:0 auto;padding:20px 22px;display:flex;align-items:stretch;gap:6px;}
+  .jlabel{align-self:center;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;margin-right:6px;}
+  .stop{flex:1;text-align:center;padding:6px 4px;}
+  .stop .dot{width:14px;height:14px;border-radius:50%;margin:0 auto 8px;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent);}
+  .stop .nm{font-family:"Fraunces",serif;font-weight:600;font-size:15px;color:#fff;}
+  .stop .ds{font-size:11.5px;color:#b9c0d6;line-height:1.3;margin-top:2px;}
+  .arrow{align-self:flex-start;margin-top:20px;color:#5b6486;font-size:18px;flex:0 0 auto;}
+
+  /* SECTION SHELL */
+  section.block{padding:46px 0 8px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+  .sec-num{font-family:"Fraunces",serif;font-weight:900;font-size:15px;color:#fff;background:var(--night);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .sec-ico{width:24px;height:24px;color:var(--accent);flex:0 0 auto;}
+  .rule{height:3px;background:linear-gradient(90deg,var(--accent),var(--gold) 60%,transparent);border-radius:3px;margin:10px 0 22px;}
+  .lead{font-size:15px;color:var(--ink-soft);font-style:italic;margin:-6px 0 20px;}
+
+  /* CALLOUT CARD */
+  .card{background:var(--parch-2);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:18px 20px;margin:20px 0;}
+  .card.warm{border-left-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--parch));}
+  .card.cool{border-left-color:var(--echo);background:var(--echo-soft);}
+  .card .tag{font-size:11.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--night);margin-bottom:7px;display:block;}
+  .card.warm .tag{color:#95590c;} .card.cool .tag{color:var(--echo);} .card p:last-child{margin-bottom:0;}
+
+  /* PULL QUOTE */
+  .pull{margin:24px 0;padding:16px 22px;border-left:5px solid var(--accent);background:linear-gradient(90deg,var(--gold-soft),transparent);
+    font-family:"Fraunces",serif;font-size:21px;font-style:italic;color:var(--night);line-height:1.35;}
+  .pull cite{display:block;font-family:"Inter";font-style:normal;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:8px;}
+
+  /* SUMMARY TIMELINE */
+  .tl{position:relative;margin:8px 0 6px;padding-left:8px;}
+  .step{position:relative;padding:0 0 22px 54px;}
+  .step:before{content:"";position:absolute;left:19px;top:6px;bottom:-6px;width:2px;background:var(--line);}
+  .step:last-child:before{display:none;}
+  .step .badge{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:11px;background:var(--night);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:700;font-size:15px;z-index:2;}
+  .step .vv{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--accent);text-transform:uppercase;}
+  .step h3{margin:2px 0 5px;} .step p{margin:0;font-size:15.5px;}
+
+  /* PARALLEL CARDS */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:8px 0 4px;}
+  .pcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;}
+  .pcard .row{padding:13px 16px;}
+  .pcard .k{border-left:5px solid var(--gold);background:var(--gold-soft);}
+  .pcard .b{border-left:5px solid var(--echo);background:var(--echo-soft);}
+  .pcard .mini{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;}
+  .pcard .k .mini{color:#8d6210;} .pcard .b .mini{color:var(--echo);}
+  .pcard .row p{margin:0;font-size:14px;line-height:1.5;}
+  .pcard .teach{margin-top:auto;padding:12px 16px;background:#faf6ec;border-top:1px dashed var(--line);font-size:13px;color:var(--ink);}
+  .pcard .teach b{color:var(--night);}
+
+  /* MANUAL POINTS + MINI TIMELINE + IDEAS */
+  .points{list-style:none;padding:0;margin:14px 0;}
+  .points li{position:relative;padding:12px 16px 12px 46px;background:var(--parch-2);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;font-size:15px;}
+  .points li:before{content:"";position:absolute;left:16px;top:16px;width:14px;height:14px;border-radius:50%;border:3px solid var(--accent);}
+  .points li strong{color:var(--night);}
+  .resto{display:flex;gap:8px;align-items:stretch;margin:14px 0 6px;flex-wrap:nowrap;}
+  .rnode{flex:1;background:var(--night);color:#f2ecdd;border-radius:12px;padding:14px;}
+  .rnode .yr{font-family:"Fraunces",serif;font-weight:700;color:var(--gold);font-size:15px;}
+  .rnode .tt{font-weight:700;font-size:14px;margin:3px 0 4px;color:#fff;} .rnode .ds{font-size:12px;color:#c3c9de;line-height:1.4;}
+  .rarrow{align-self:center;color:var(--accent);font-size:20px;flex:0 0 auto;}
+  .ideas{list-style:none;padding:0;margin:12px 0;}
+  .ideas li{position:relative;padding:11px 14px 11px 44px;border-bottom:1px solid var(--line);font-size:15px;}
+  .ideas li:last-child{border-bottom:0;}
+  .ideas li svg{position:absolute;left:14px;top:12px;width:20px;height:20px;color:var(--echo);}
+
+  /* CHRIST SECTION */
+  .christ{background:linear-gradient(165deg,var(--night) 0%,var(--night-2) 100%);color:#efe9dc;margin-top:44px;}
+  .christ .wrap{padding-top:44px;padding-bottom:14px;}
+  .christ h2.sec{color:#fff;} .christ .sec-num{background:var(--accent);color:#1b2544;}
+  .christ .sec-ico{color:var(--gold);}
+  .christ .rule{background:linear-gradient(90deg,var(--gold),var(--accent) 60%,transparent);}
+  .christ h3{color:var(--gold);}
+  .christ .lead{color:#b9c0d6;}
+  .ccard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-left:4px solid var(--gold);border-radius:12px;padding:16px 18px;margin:0 0 14px;}
+  .ccard .ct{font-family:"Fraunces",serif;font-weight:600;font-size:17px;color:#fff;margin-bottom:5px;}
+  .ccard p{margin:0;font-size:15px;color:#dcd6c8;line-height:1.58;}
+  .ccard .ref{display:block;margin-top:7px;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-soft);}
+  .witness{margin:22px 0 8px;padding:20px 22px;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(211,160,44,.10);
+    font-family:"Fraunces",serif;font-style:italic;font-size:20px;line-height:1.4;color:#fff;text-align:center;}
+  .witness cite{display:block;font-family:"Inter";font-style:normal;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-soft);margin-top:10px;}
+
+  footer{background:var(--night-2);color:#aab2cc;}
+  footer .wrap{padding:26px 22px;font-size:12.5px;line-height:1.6;} footer b{color:#e7e0d2;}
+  .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 40%,transparent);display:flex;align-items:center;gap:8px;}
+  .printbtn:hover{filter:brightness(.93);}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:720px){
+    .hero-inner{grid-template-columns:1fr;} .hero-art{order:-1;min-width:0;}
+    .journey{flex-direction:column;gap:0;} .jlabel{margin:0 0 8px;text-align:center;}
+    .arrow{align-self:center;transform:rotate(90deg);margin:2px 0;}
+    .grid{grid-template-columns:1fr;} .resto{flex-direction:column;} .rarrow{transform:rotate(90deg);}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none;} .spin{animation:none;} html{scroll-behavior:auto;}}
+  @media print{
+    body{font-size:11.5pt;} .printbtn{display:none;}
+    .hero{background:var(--night)!important;} .christ{background:var(--night)!important;} .reveal{opacity:1;transform:none;}
+    section.block{padding:16px 0 4px;break-inside:avoid;} .pcard,.step,.card,.rnode,.ccard{break-inside:avoid;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <svg class="stars" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+    <g fill="#fff">
+      <circle cx="90" cy="60" r="1.6" opacity=".7"/><circle cx="220" cy="130" r="1.1" opacity=".5"/>
+      <circle cx="340" cy="45" r="1.4" opacity=".6"/><circle cx="470" cy="180" r="1" opacity=".4"/>
+      <circle cx="150" cy="250" r="1.2" opacity=".5"/><circle cx="620" cy="70" r="1.5" opacity=".55"/>
+      <circle cx="760" cy="210" r="1.1" opacity=".45"/><circle cx="880" cy="95" r="1.7" opacity=".6"/>
+      <circle cx="1010" cy="300" r="1.2" opacity=".5"/><circle cx="1120" cy="150" r="1.4" opacity=".55"/>
+      <circle cx="530" cy="330" r="1.3" opacity=".45"/><circle cx="300" cy="350" r="1" opacity=".4"/>
+      <circle cx="960" cy="30" r="1.1" opacity=".5"/><circle cx="700" cy="360" r="1.3" opacity=".4"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Deep Dive · Wisdom Literature</div>
+      <h1>Job</h1>
+      <p class="kicker">The Righteous Sufferer · The Voice from the Whirlwind</p>
+      <span class="theme-chip"><b>“Yet Will I Trust in Him”</b> · Come, Follow Me · August 10–16, 2026</span>
+      <p class="hook">Job 1–3; 12–14; 19; 21–24; 38–40; 42. A good man loses everything, his friends insist he must have earned it, and God finally answers — not with an explanation, but with a whirlwind full of questions.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg width="150" height="150" viewBox="0 0 120 120" fill="none">
+        <g class="spin" stroke="#f0d374" stroke-linecap="round" opacity=".9">
+          <path d="M60 18c22 0 34 10 34 20s-14 16-30 16-26 5-26 12 10 12 24 12" stroke-width="2.4" opacity=".85"/>
+          <path d="M60 30c15 0 24 7 24 14s-10 11-21 11-18 4-18 8 7 9 17 9" stroke-width="2" opacity=".7"/>
+          <path d="M62 44c9 0 15 4 15 8s-6 7-13 7-11 2-11 5 5 5 10 5" stroke-width="1.7" opacity=".55"/>
+          <path d="M52 84c6 4 14 6 22 6" stroke-width="2.2" opacity=".5"/>
+          <path d="M46 96c9 5 20 7 30 6" stroke-width="1.8" opacity=".35"/>
+        </g>
+        <g fill="#fff">
+          <circle cx="26" cy="24" r="1.9" opacity=".9"/><circle cx="100" cy="34" r="1.5" opacity=".75"/>
+          <circle cx="18" cy="66" r="1.4" opacity=".6"/><circle cx="104" cy="86" r="1.8" opacity=".7"/>
+          <circle cx="60" cy="10" r="2.1" opacity=".95"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- ============ AT-A-GLANCE BAND ============ -->
+<div class="band">
+  <div class="journey">
+    <span class="jlabel">The Arc</span>
+    <div class="stop"><div class="dot"></div><div class="nm">Blessed</div><div class="ds">Job 1:1–5 · greatest man of the East</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Stripped</div><div class="ds">Job 1–2 · four messengers, then boils</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Lament</div><div class="ds">Job 3 · he curses his birthday</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Debate</div><div class="ds">Job 12–24 · friends accuse, Job argues</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Whirlwind</div><div class="ds">Job 38–41 · God asks the questions</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">Restored</div><div class="ds">Job 42 · doubled, and at peace</div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ 1. HISTORY ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">1</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 4v5h5"/></svg>
+      <h2 class="sec">Historical Summary of the Period</h2></div>
+    <div class="rule"></div>
+
+    <p><strong>A book with no address.</strong> Almost every Old Testament book so far has been anchored in time: a pharaoh, a king, an exile, a decree. Job has none of that. No Israel, no Moses, no law, no tabernacle, no exodus, no dated event anywhere in forty-two chapters. That silence is deliberate — and it is the first clue to what kind of book this is.</p>
+
+    <p><strong>Where: the land of Uz.</strong> Job is introduced as a man of Uz, “the greatest of all the men of the east” (Job 1:3). Uz appears only twice more in scripture, both times linked with Edom — the country of Esau’s descendants southeast of the Dead Sea (Jeremiah 25:20–21; Lamentations 4:21). The internal clues fit that neighborhood: Job’s friend Eliphaz is a <em>Temanite</em>, and Teman was an Edomite site not far from what later became Petra; Job lives on the edge of the desert (Job 1:19) but on land fertile enough to graze thousands of animals; and he is within raiding range of both Sabeans from southern Arabia and Chaldeans from lower Mesopotamia (Job 1:15, 17). Scholars have proposed the Wadi Sirhan depression in northern Arabia as a location that satisfies all of these at once. What matters most is the one thing every proposal agrees on: <strong>Uz is outside Canaan.</strong> Job is almost certainly not an Israelite — and the book’s message is meant to travel.</p>
+
+    <p><strong>When: probably the patriarchal era.</strong> Five details in the text point toward the world of Abraham, Isaac, and Jacob — roughly the second millennium BC:</p>
+    <ul class="points">
+      <li><strong>Wealth counted in livestock</strong> (Job 1:3; 42:12), exactly how Genesis measures Abraham and Jacob (Genesis 12:16; 13:2; 30:43).</li>
+      <li><strong>Job serves as priest for his own family</strong>, offering sacrifices for his children (Job 1:5) — a pre-Aaronic pattern that faded once nations organized formal priesthoods.</li>
+      <li><strong>The <em>qesitah</em></strong>, the unit of money Job’s relatives give him (Job 42:11), appears elsewhere in scripture only around Jacob (Genesis 33:19; Joshua 24:32).</li>
+      <li><strong>A patriarch-length lifespan</strong>: Job lives 140 more years after his trial and sees four generations (Job 42:16).</li>
+      <li><strong>Sabeans and Chaldeans as raiding nomads</strong> rather than the settled kingdoms they became later (Job 1:15, 17).</li>
+    </ul>
+    <p>None of this is airtight — and honest scholarship says so. But it explains why the book feels so ancient even though it was written down and shaped as poetry much later.</p>
+
+    <p><strong>What kind of writing: wisdom literature.</strong> This week the curriculum crosses a border. From Genesis through Esther the Old Testament is mostly <em>story</em>. From Job forward it is mostly <em>poetry</em>. Job opens and closes in prose — the prologue in chapters 1–2 and the epilogue in 42 — and everything between is Hebrew verse. Hebrew poetry doesn’t rhyme; its signature move is <em>parallelism</em>, saying a thing twice with a deliberate variation the second time. Job belongs to the category scholars call <strong>wisdom literature</strong>, alongside Proverbs and Ecclesiastes: writing that wrestles with big philosophical questions rather than narrating events. Reading Job like a newspaper will frustrate a student; reading it like a poem opens it up.</p>
+
+    <p><strong>The idea Job is arguing against.</strong> The ancient Near East ran on what scholars call the <em>retribution principle</em>: the righteous prosper, the wicked suffer, and therefore anyone suffering must have done something. That assumption is the engine of the entire book. It is what Eliphaz, Bildad, and Zophar believe, it is why they slide from comfort to accusation, and it is what the Lord finally rebukes them for (Job 42:7–9).</p>
+
+    <div class="card"><span class="tag">Concrete anchor · the “Babylonian Job”</span>
+      <p>Job was not the only ancient text asking this question. Cuneiform tablets recovered from the library of Assyrian king Ashurbanipal at Nineveh preserve a poem called <em>Ludlul bēl nēmeqi</em>, “I will praise the lord of wisdom,” nicknamed <strong>the Babylonian Job</strong>. In it a wealthy official named Shubshi-meshre-Shakkan loses status, health, and friends, cannot find out what he did wrong, and is eventually restored by the god Marduk. Related texts include the <em>Babylonian Theodicy</em>, the Sumerian <em>A Man and His God</em>, and the Canaanite tale of King Keret, who — like Job — loses seven sons.</p>
+      <p style="margin-top:12px">The differences are where the book of Job gets its power. In the Mesopotamian poems the sufferer is never actually blameless, the deity is inscrutable and possibly arbitrary, and the god never shows up to speak. In Job, the man <em>is</em> upright, the question is pressed all the way down, and <strong>God answers in person.</strong> Job isn’t a copy of these texts. It’s the answer to them.</p>
+    </div>
+
+    <p><strong>Was Job a real person?</strong> The poetic form has led some to wonder whether he is a literary figure. Latter-day Saints have a straightforward reason for confidence: scripture and modern prophets treat him as an actual man. Ezekiel names Job alongside Noah and Daniel as a byword for righteousness (Ezekiel 14:14, 20), James points to his endurance (James 5:11), and the Lord invokes him by name to Joseph Smith in Liberty Jail (Doctrine and Covenants 121:10).</p>
+
+    <p><strong>The customs behind the scenes.</strong> Several details read as strange until you know the culture. Tearing one’s robe and shaving the head are formal mourning acts (Job 1:20). Sitting among ashes with a broken piece of pottery to scrape sores (Job 2:8) places Job on the ash heap outside town — the refuse dump, the last place a wealthy man would ever be found. And the three friends sitting with him seven days without saying a word (Job 2:13) is not awkwardness; it is the proper mourning custom, and it is the best thing they do in the entire book. Their trouble starts the moment they open their mouths.</p>
+  </section>
+
+  <!-- ============ 2. CHAPTER SUMMARY ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">2</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <h2 class="sec">Passage Summary</h2></div>
+    <div class="rule"></div>
+    <p class="lead">The assigned chapters trace one man’s journey from certainty, through collapse and argument, to a very different kind of certainty.</p>
+
+    <div class="tl">
+      <div class="step"><span class="badge">1</span><div class="vv">Job 1:1–5</div><h3>A man worth describing</h3>
+        <p>Job is “perfect and upright,” a phrase whose Hebrew root means blameless, complete, or whole rather than sinless. He has seven sons, three daughters, and enormous herds. Notice his instinct: when his children hold feasts, he offers sacrifices for them just in case. Job’s religion is proactive, not reactive.</p></div>
+
+      <div class="step"><span class="badge">2</span><div class="vv">Job 1:6–12; 2:1–6</div><h3>The scene in heaven</h3>
+        <p>A heavenly council convenes and an accuser raises a challenge: Job only worships because he’s been paid well. Take away the blessings and he will curse God. The question the book is really asking is planted right here — <em>why do you serve God?</em> (See the note below on how to read this scene.)</p></div>
+
+      <div class="step"><span class="badge">3</span><div class="vv">Job 1:13–22</div><h3>Four messengers, one day</h3>
+        <p>Oxen and donkeys raided by Sabeans. Sheep and servants burned. Camels taken by Chaldeans. Then a wind collapses the house where all ten children were gathered. Each messenger arrives before the last one finishes. Job tears his robe, shaves his head — and falls down and worships. “The Lord gave, and the Lord hath taken away” (1:21). He does not sin or charge God foolishly.</p></div>
+
+      <div class="step"><span class="badge">4</span><div class="vv">Job 2:7–13</div><h3>Body, wife, and three friends</h3>
+        <p>Job is struck with painful sores head to foot and ends up on the ash heap. His wife — who has lost the same ten children — tells him to curse God and die. Job’s answer is one of the most remarkable lines in scripture: should we accept good from God and not adversity? Eliphaz, Bildad, and Zophar travel to comfort him, don’t recognize him, and sit silently with him for seven days.</p></div>
+
+      <div class="step"><span class="badge">5</span><div class="vv">Job 3</div><h3>Job breaks</h3>
+        <p>The poetry begins. Job curses the day he was born and wishes he had never drawn breath. This is crucial for teaching: <strong>lament is not apostasy.</strong> Job says devastating things about his own life — but never once curses God, which is exactly what the accuser predicted he would do. Jeremiah, Moses, and Jonah all voice the same kind of anguish.</p></div>
+
+      <div class="step"><span class="badge">6</span><div class="vv">Job 12–14</div><h3>“Though he slay me, yet will I trust in him”</h3>
+        <p>Job answers his friends with heavy sarcasm — no doubt <em>they</em> are the people, and wisdom will die when they do (12:2). Then he preaches better theology than they do: in God’s hand is the life of every living thing; with Him are wisdom and strength (12:10, 13, 16). Chapter 13 contains the verse the whole week is named after (13:15), and chapter 14 asks the question the Restoration would answer: “If a man die, shall he live again?” (14:14).</p></div>
+
+      <div class="step"><span class="badge">7</span><div class="vv">Job 19</div><h3>Abandoned — and the great declaration</h3>
+        <p>Verses 1–22 are the low point: family gone, servants ignoring him, his own breath repulsive to his wife, mocked by children. Then Job wishes his words could be carved in rock forever — and delivers the line that got its wish: <strong>“I know that my redeemer liveth”</strong> (19:25), and that though his skin be destroyed, in his flesh he will see God. This is a testimony of a living Redeemer and of resurrection, spoken from an ash heap.</p></div>
+
+      <div class="step"><span class="badge">8</span><div class="vv">Job 21–24</div><h3>The debate’s third round</h3>
+        <p>Job dismantles the retribution principle with plain observation: the wicked often live long, grow rich, and die comfortably (21:7–13). Eliphaz responds by inventing specific sins for Job — stripping the poor, withholding water (22:5–9) — none of which happened. Job’s longing is not to be proven innocent but to be <em>heard</em>: if only he could find God and lay his case before Him (23:3–9). And then, without any evidence in front of him, faith: God knows the way I take, “when he hath tried me, I shall come forth as gold” (23:10). Chapter 24 catalogs the world’s unpunished injustice and lets it stand unresolved.</p></div>
+
+      <div class="step"><span class="badge">9</span><div class="vv">Job 38–39</div><h3>The Lord answers out of the whirlwind</h3>
+        <p>God finally speaks — and does not explain, defend Himself, or address Job’s claims of innocence. He asks questions. Dozens of them, more than sixty in all. Where were you when I laid the foundations of the earth? Have you walked into the springs of the sea, or entered the storehouses of snow? Do you know when the wild goats give birth? Verse 38:7 opens a window no other Old Testament passage does: at the Creation, the morning stars sang together and the sons of God shouted for joy — a glimpse of the premortal council. Job cannot answer a single question, and that is the point.</p></div>
+
+      <div class="step"><span class="badge">10</span><div class="vv">Job 40–41</div><h3>Behemoth and leviathan</h3>
+        <p>The Lord describes two immense creatures Job can neither tame nor comprehend. <em>Behemoth</em> (the Hebrew is the plural of “beast”) is a massive land animal, possibly a poetic hippopotamus; <em>leviathan</em> is a great sea creature, perhaps a crocodile or a beast out of Canaanite legend. The argument is not zoology. It is: <em>you cannot manage even the creatures in My world — trust that I can manage the parts of your life you can’t see.</em></p></div>
+
+      <div class="step"><span class="badge">11</span><div class="vv">Job 42:1–6</div><h3>Job’s answer</h3>
+        <p>Job concedes that he spoke about things he did not understand. He does not confess the sins his friends invented; he repents of having accused God of injustice. His shift is from hearing about God to seeing Him (42:5) — from secondhand faith to firsthand.</p></div>
+
+      <div class="step"><span class="badge">12</span><div class="vv">Job 42:7–17</div><h3>The verdict and the restoration</h3>
+        <p>The Lord’s anger burns against Eliphaz, Bildad, and Zophar — not against Job. They defended God badly, and Job must pray for them. Note the sequence: the Lord turns Job’s captivity <em>when Job prays for the friends who wronged him</em> (42:10). Job receives double his livestock and ten more children; his three daughters are named — Jemima, Kezia, and Keren-happuch — and given an inheritance alongside their brothers, which was highly unusual. Job lives 140 more years and sees four generations.</p></div>
+    </div>
+
+    <div class="card warm"><span class="tag">Teacher’s note · how to read Job 1–2</span>
+      <p>Students will ask whether God really made a bet with Satan. The Come, Follow Me outline addresses this directly: these opening chapters emphasize, <em>in a poetic way</em>, Satan’s role as our adversary and accuser — they are not describing an actual transaction between God and Satan. The Hebrew word rendered “Satan” simply means <strong>adversary</strong> or <strong>accuser</strong>, and in Hebrew it appears with the definite article: <em>the</em> accuser, a role in the scene. The Joseph Smith Translation changes “sons of God” to “children of God” in Job 1:6. Two anchors to give students: God has power over Satan, and God does only what is for the benefit of His children (2 Nephi 26:24).</p>
+    </div>
+
+    <div class="card cool"><span class="tag">Translation note · Job 42:6</span>
+      <p>The King James text reads “I abhor <em>myself</em>,” but “myself” is italicized — meaning it isn’t in the Hebrew; translators supplied it. The Hebrew verb can mean to renounce or reject rather than to loathe. Job may well be saying, <em>I take it back, and I repent in dust and ashes.</em> That is a meaningfully different ending: not a broken man hating himself, but an honest man withdrawing a charge he shouldn’t have made. Worth correcting if a student reads self-hatred into it.</p>
+    </div>
+
+    <blockquote class="pull">“I know that my redeemer liveth.”<cite>Job 19:25</cite></blockquote>
+  </section>
+
+  <!-- ============ 3. BOOK OF MORMON PARALLELS ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">3</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-1.6-1.2-3.6-2-6-2v13c2.4 0 4.4.8 6 2"/><path d="M12 6c1.6-1.2 3.6-2 6-2v13c-2.4 0-4.4.8-6 2"/><path d="M12 6v13"/></svg>
+      <h2 class="sec">Comparison to the Book of Mormon</h2></div>
+    <div class="rule"></div>
+    <p class="lead">Job raises the question and refuses easy answers. The Book of Mormon supplies much of the doctrine that makes sense of it — which is why the outline itself sends students to these passages.</p>
+
+    <div class="grid">
+      <div class="pcard">
+        <div class="row k"><div class="mini">Job 23:10; 21:7–13</div><p>Job insists his suffering is not punishment, and observes that the wicked frequently prosper — the retribution principle simply doesn’t hold.</p></div>
+        <div class="row b"><div class="mini">2 Nephi 2:11–13</div><p>Lehi teaches that opposition in all things is built into mortality by design; without it, righteousness, happiness, and even existence collapse.</p></div>
+        <div class="teach"><b>Teaches:</b> Opposition is a feature of the plan, not evidence that something has gone wrong or that you did something to deserve it.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Job 23:10</div><p>“When he hath tried me, I shall come forth as gold” — Job trusts the outcome of a refining he cannot see the end of.</p></div>
+        <div class="row b"><div class="mini">Mosiah 23:21–23; 24:10–16</div><p>Alma’s people, faithful and innocent, are put in bondage under Amulon. The Lord does not immediately remove the burden — He makes it light on their backs.</p></div>
+        <div class="teach"><b>Teaches:</b> God sometimes changes our capacity rather than our circumstances. That is not a lesser miracle.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Job 2:7; 19:1–22</div><p>Job is left with a ruined body and a stripped life, with no explanation offered and no visible end in sight.</p></div>
+        <div class="row b"><div class="mini">Ether 12:27</div><p>The Lord tells Moroni that He gives men weakness so they will be humble, and that grace turns weak things into strong ones.</p></div>
+        <div class="teach"><b>Teaches:</b> God’s standard answer to affliction is transformation, not removal. The trial is often the tool.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Job 4–5; 8; 11; 22:5</div><p>Job’s friends conclude from his suffering that he must be wicked. The Lord later rebukes them for it (42:7).</p></div>
+        <div class="row b"><div class="mini">Alma 14:8–13</div><p>Innocent believers are burned at Ammonihah while Alma and Amulek watch, unable to intervene. Alma explains the Lord receives them in glory and is letting the wicked fill the measure of their own guilt.</p></div>
+        <div class="teach"><b>Teaches:</b> The righteous genuinely do suffer, sometimes horrifically. Suffering says nothing about a person’s standing before God.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Job 14:14; 19:26</div><p>“If a man die, shall he live again?” Job hopes that after his skin is destroyed, he will still see God in his flesh.</p></div>
+        <div class="row b"><div class="mini">Alma 11:42–44</div><p>Amulek describes the Resurrection in detail: every limb and joint restored to its perfect frame, and all brought to stand before God.</p></div>
+        <div class="teach"><b>Teaches:</b> Job’s deepest question gets a direct, specific answer in the Book of Mormon. The hope he reached for is doctrine we have.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Job 38–41</div><p>God’s reply is sixty-plus unanswerable questions about creation. Job is not told <em>why</em>; he is shown how much he doesn’t know.</p></div>
+        <div class="row b"><div class="mini">1 Nephi 11:17</div><p>Asked whether he knows the condescension of God, Nephi answers that he knows God loves His children, but does not know the meaning of all things.</p></div>
+        <div class="teach"><b>Teaches:</b> You can hold a firm testimony and an open question at the same time. Nephi models exactly the posture Job arrives at.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Job 40:1–5; 42:1–6</div><p>Job had been arguing his case against God’s management. After the whirlwind he stops arguing and yields.</p></div>
+        <div class="row b"><div class="mini">Jacob 4:8–10</div><p>Jacob warns that the ways of the Lord are unsearchable, and counsels us not to try to counsel the Lord but to take counsel from His hand.</p></div>
+        <div class="teach"><b>Teaches:</b> The pivot from “explain Yourself” to “teach me” is the same turn in both books — and it is where peace starts.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Job 42:8–10</div><p>Job is asked to pray for the three men who spent thirty chapters accusing him. His own restoration begins the moment he does.</p></div>
+        <div class="row b"><div class="mini">1 Nephi 7:19–21</div><p>Nephi, having just been bound and left for dead by his brothers, frankly forgives them and prays that they will be forgiven.</p></div>
+        <div class="teach"><b>Teaches:</b> Praying for people who have hurt you isn’t the last step of healing. In both accounts it’s the first.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. TIE TO COME, FOLLOW ME ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">4</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>
+      <h2 class="sec">Tie to Come, Follow Me</h2></div>
+    <div class="rule"></div>
+
+    <p><strong>This week’s outline:</strong> “Yet Will I Trust in Him” — Job 1–3; 12–14; 19; 21–24; 38–40; 42, August 10–16, 2026. The manual frames the whole week around a single honest observation: it’s natural to wonder why bad things happen to good people, and why good things happen to bad ones. Job was a good man to whom a great deal of bad happened. His friends concluded he must not really be good; Job wondered whether God was really just. The outline’s summary line is worth writing on the board: <em>in the book of Job, faith is questioned and tested but never abandoned — questions can coexist with faith.</em></p>
+
+    <h3 style="margin-top:22px">The four principles the manual builds the week on</h3>
+    <ul class="points">
+      <li><strong>“I can trust God in all circumstances” (Job 1–3; 12–13).</strong> The manual asks students to read what the accuser says about Job (1:9–11; 2:4–5) and then ask themselves: <em>why do I remain faithful to God?</em> Why would obeying only for the reason the adversary suggested be dangerous? Then look at Job’s actual responses (1:20–22; 2:9–10), and at what he knew about God in chapters 12–13 that let him keep trusting.</li>
+      <li><strong>“Jesus Christ is my Redeemer” (Job 19).</strong> Ponder the trials in 19:1–22 against the truths in 19:23–27. How do <em>you</em> know your Redeemer lives, and what difference does it make? The manual suggests singing or listening to “I Know That My Redeemer Lives” (Hymns, no. 136), and cross-references Doctrine and Covenants 121:1–12 and 122.</li>
+      <li><strong>“When he hath tried me, I shall come forth as gold” (Job 21–24) — flagged for seminary.</strong> The debate in these chapters centers on why righteous people suffer. The manual hands students five latter-day passages that supply what Job lacked: 2 Nephi 2:11–13; Mosiah 23:21–23 and 24:10–16; Ether 12:27; Doctrine and Covenants 58:3–5; Abraham 3:22–26. It also points to President Spencer W. Kimball’s chapter “Tragedy or Destiny?” and ends with the assignment: <em>how would you now answer someone who asks why God lets good people suffer?</em></li>
+      <li><strong>“God’s perspective is greater than mine” (Job 38–40; 42).</strong> Job asked repeatedly why (19:6–7; 23:1–9; 31) and never got a reason — but he got a message. Work through the Lord’s questions in 38:1–7 and 18–24, look at some of the creations He points to, and see how Job’s view changed in 42:1–6 (compare Moses 1:8–10).</li>
+    </ul>
+
+    <div class="card"><span class="tag">Talks and helps the outline itself cites</span>
+      <p><strong>Tamara W. Runia,</strong> “Seeing God’s Family through the Overview Lens” (Liahona, Nov. 2023, 62–69) and <strong>President Russell M. Nelson,</strong> “Think Celestial!” (Liahona, Nov. 2023, 117–20) — both offered as perspective-changers to remember the next time trials feel overwhelming. The Scripture Helps for this week add <strong>Elder Dale G. Renlund,</strong> “Trust God and Let Him Prevail” (Liahona, Aug. 2022), which is the single most useful background reading for a teacher this week, plus Elder D. Todd Christofferson’s “Our Relationship with God” (May 2022) and Elder David A. Bednar’s “We Will Prove Them Herewith” (Nov. 2020). Video: <em>Yet Will I Trust Him</em> (4:53) in the Gospel Library.</p>
+      <p style="margin-top:12px"><strong>The three Scripture Helps questions</strong> the outline links: What might Job have meant by “I know that my redeemer liveth”? What occasion caused the children of God to shout for joy? What are behemoth and leviathan? All three are answered in Section 1 and 2 above.</p>
+    </div>
+
+    <h3 style="margin-top:24px">Latter-day connection: Liberty Jail</h3>
+    <p>The strongest Restoration tie this week is one the outline points to directly. In March 1839, in a freezing basement cell in Missouri, Joseph Smith cried out much as Job had. The Lord’s reply named Job by name.</p>
+    <div class="resto">
+      <div class="rnode"><div class="yr">c. 2000 BC</div><div class="tt">Job in Uz</div><div class="ds">Stripped of family, wealth, and health; accused by his friends; answered out of a whirlwind.</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">March 1839</div><div class="tt">D&amp;C 121–122</div><div class="ds">“O God, where art thou?” The Lord answers that it is only for a small moment — and tells Joseph he is not yet as Job (121:10).</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">Today</div><div class="tt">The same counsel</div><div class="ds">D&amp;C 122:7 — all these things shall give thee experience. The Son of Man descended below them all.</div></div>
+    </div>
+
+    <h3 style="margin-top:24px">Teaching ideas for youth Sunday School (ages 12–13)</h3>
+    <ul class="ideas">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Open with the accuser’s question, not Job’s.</strong> Write on the board: “Would you still keep the commandments if it made your life harder instead of easier?” Let them answer honestly before they know that’s the exact charge leveled in Job 1:9–11. It reframes the whole book from “why do bad things happen” to “why do you follow God.”</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>The bad-comfort / good-comfort sort.</strong> Read Job 22:5 and Job 16:5 side by side. In pairs, have them write two responses to a friend whose parents just announced a divorce: one that sounds like Eliphaz, one that sounds like what Job wished he’d received. Twelve- and thirteen-year-olds are actively learning how to sit with a hurting friend — this is the most immediately useful thing in the chapter.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Gold object lesson for Job 23:10.</strong> Bring a piece of unrefined-looking rock or a picture of gold ore next to a refined bar. Explain that refining requires heat that nothing else will do the job of. Then ask: what would it mean to say God is not punishing you but refining you? Careful framing matters — this is not “God caused your trial,” it’s “God can use it.”</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Sixty-six questions.</strong> Read six or eight of the Lord’s questions from Job 38 out loud, rapid fire, and have the class try to answer them. They can’t. Then ask what God was doing — He never explained Job’s suffering. Land on the difference between getting an <em>answer</em> and getting a <em>perspective</em>.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Use the manual’s “be creative” suggestion.</strong> Bring one ordinary object and pass it around: look at it from above, underneath, an inch away, across the room. Same object, four different truths about it. That is Job 38–42 in ninety seconds — and it’s a physical activity, which this age group needs about twenty minutes in.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Carve it in rock.</strong> Job wished his testimony could be engraved forever (19:23–24) — and it was. Give each student a card to write one line of what they know about the Savior, and point out they’re doing exactly what Job asked for. Pair it with verse 25.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Be ready for the hard question.</strong> Someone will ask about the God-and-Satan conversation, and someone may be carrying a real trial into class. Have the Teacher’s Note above ready, and be willing to say plainly that the book never answers <em>why</em> — and that not knowing why is not the same as not being loved.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Close with hymn 136.</strong> Both the youth and children sections of the outline recommend “I Know That My Redeemer Lives.” Sing or play the first verse and ask which phrase they’d have wanted carved in the rock.</li>
+    </ul>
+
+    <div class="card cool"><span class="tag">If you’re also teaching at home · younger children</span>
+      <p>The outline’s Primary ideas run on four short beats: <strong>faith in Jesus Christ helps me during hard times</strong> (Job 1:1, 13–22; 2:7–10; 12:10, 13, 16), <strong>because of Jesus Christ I will live again</strong> (Job 14:14 answered with Alma 11:42–44 and “Did Jesus Really Live Again?”, Children’s Songbook 64), <strong>good friends lift each other</strong> (Job 16:1–5 vs. 22:5), and <strong>Jesus Christ is my Redeemer</strong> (Job 19:23–27, with children making a small testimony book). There’s a Primary activity page for the Redeemer lesson in the Gospel Library, and a 1:55 “Job” video.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ 5. TIE TO JESUS CHRIST ============ -->
+<section class="christ block reveal">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">5</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M6.5 8h11"/><path d="M9 21h6"/></svg>
+      <h2 class="sec">Tie to Jesus Christ</h2></div>
+    <div class="rule"></div>
+    <p class="lead">Job never learned why he suffered. But sitting in the ashes with no evidence at all, he named the One who would make it right.</p>
+
+    <div class="ccard">
+      <div class="ct">The kinsman-redeemer</div>
+      <p>When Job says “redeemer,” he is using a legal term. In the ancient world a redeemer — Hebrew <em>go’el</em> — was typically a close relative with both the right and the obligation to buy back what a family member had lost: land, freedom, standing, name. It’s the same role Boaz fills for Ruth and Naomi. Job, who has lost every one of those things and has no living relative able to restore them, declares that he has a Redeemer anyway, and that this Redeemer <em>lives</em> and will stand upon the earth at the latter day. Jesus Christ qualifies as our <em>go’el</em> precisely because He took our flesh — He became the relative with the right to redeem.<span class="ref">Job 19:25–27 · Ruth 2:20 · Mosiah 3:7–9</span></p>
+    </div>
+
+    <div class="ccard">
+      <div class="ct">“If a man die, shall he live again?”</div>
+      <p>Job asks the question in chapter 14 and reaches for the answer in chapter 19: that after his body is destroyed, he will still see God in his flesh. Every Easter morning since has been the answer. The Resurrection is not a consolation attached to Job’s story from outside — it is the specific hope he articulated, centuries before it happened, and the reason his ending is not merely a nicer set of circumstances but a genuine restoration.<span class="ref">Job 14:14 · Job 19:26 · Alma 11:42–44 · John 11:25</span></p>
+    </div>
+
+    <div class="ccard">
+      <div class="ct">The innocent sufferer — and the difference</div>
+      <p>Job is a type of Christ in several ways: blameless, stripped of everything, physically broken, misjudged by the very people who came to be with him, silent before accusers who had no idea what they were talking about. But the shadow is not the substance, and the differences matter more than the likenesses. Job’s suffering came upon him; Christ’s was chosen. Job suffered his own affliction; Christ suffered ours. Job was upright but not sinless; Christ alone was without sin. And Job had to ask God for a hearing he never quite got — while Christ <em>is</em> the hearing, the Advocate who stands and pleads our case.<span class="ref">Isaiah 53:3–5 · Alma 7:11–13 · D&amp;C 45:3–5</span></p>
+    </div>
+
+    <div class="ccard">
+      <div class="ct">The voice in the whirlwind is His voice</div>
+      <p>The God who answers Job out of the storm speaks as the Creator: the One who laid the foundations of the earth while the morning stars sang and the children of God shouted for joy. Scripture identifies that Creator as Jehovah — Jesus Christ, under the Father’s direction. Which means the voice challenging Job to consider how little he understands about suffering belongs to the very Being who would come down and endure more of it than Job ever did.<span class="ref">Job 38:4–7 · John 1:1–3 · Mosiah 3:8 · Helaman 14:12</span></p>
+    </div>
+
+    <div class="ccard">
+      <div class="ct">Restoration begins with intercession</div>
+      <p>The book’s quiet hinge is Job 42:10: Job’s own captivity is turned when he prays for the friends who wronged him. On the cross, the Savior did the same for the men executing Him. Elder Dale G. Renlund has taught, in substance, that Christ delights to restore what we cannot restore, to heal what we cannot heal, and to make up for unfairness we had no power to prevent. Job got double. Through the Atonement of Jesus Christ, so do we — not as compensation for a bad experience, but as inheritance.<span class="ref">Job 42:10 · Luke 23:34 · Isaiah 61:7 · D&amp;C 122:7–9</span></p>
+    </div>
+
+    <div class="witness">Job’s certainty was never that he understood.<br>It was that Someone living would stand up for him.
+      <cite>The point of the week</cite>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <b>Job 1–3; 12–14; 19; 21–24; 38–40; 42 — “Yet Will I Trust in Him.”</b> Come, Follow Me—For Home and Church: Old Testament 2026, August 10–16 (week 33), with Scripture Helps: Old Testament and “Thoughts to Keep in Mind: Reading Poetry in the Old Testament,” churchofjesuschrist.org. Historical background drawn from standard reference works on the land of Uz, the patriarchal-era dating markers, and Mesopotamian wisdom literature (<em>Ludlul bēl nēmeqi</em>, the Babylonian Theodicy). Scripture quotations are King James Version; quotations from Church leaders are paraphrased with references given. Prepared for youth Sunday School, ages 12–13.
+</div></footer>
+
+<button class="printbtn" onclick="window.print()" aria-label="Print handout">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+  Print
+</button>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    function showAll(){ els.forEach(function(el){ el.classList.add('in'); }); }
+    if(!('IntersectionObserver' in window)){ showAll(); return; }
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.08, rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+    setTimeout(showAll, 2500);
+  })();
+</script>
+</body>
+</html>

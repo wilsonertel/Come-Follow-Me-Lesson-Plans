@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Part 3 — Job 21–24 — When He Hath Tried Me, I Shall Come Forth as Gold</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<style>
+  :root{
+    --night:#3b1d20;
+    --night-2:#210f11;
+    --accent:#cf8a20;
+    --accent-soft:#eab554;
+    --accent-dark:#96601a;
+    --gold:#efc45f;
+    --parch:#faf5ea;
+    --parch-2:#f1e8d6;
+    --ink:#2c2721;
+    --ink-soft:#5e5546;
+    --echo:#4a6b5b;
+    --echo-soft:#e4eee8;
+    --gold-soft:#faeed4;
+    --line:#ded1b8;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--parch);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);}
+  h2.sec{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(25px,4.4vw,33px);line-height:1.1;margin:0;color:var(--night);}
+  h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:20px;color:var(--night);margin:0 0 6px;}
+  p{margin:0 0 15px;} strong{font-weight:700;color:#221f19;} em{font-style:italic;}
+  .partpill{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:999px;
+    padding:5px 13px;font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin-bottom:6px;}
+
+  .hero{position:relative;overflow:hidden;color:#f4efe4;
+    background:radial-gradient(120% 90% at 82% 8%, color-mix(in srgb,var(--accent) 36%,transparent), transparent 46%),
+      radial-gradient(90% 70% at 78% 30%, color-mix(in srgb,var(--gold) 20%,transparent), transparent 55%),
+      linear-gradient(160deg,var(--night) 0%,var(--night-2) 100%);}
+  .tex{position:absolute;inset:0;pointer-events:none;opacity:.8;}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:50px 22px 56px;position:relative;z-index:2;
+    display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;}
+  .hero .eyebrow{color:var(--accent-soft);}
+  .hero h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(40px,8.4vw,72px);line-height:.94;letter-spacing:-.01em;margin:10px 0 8px;color:#fff;}
+  .hero .kicker{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(17px,3.2vw,22px);color:var(--gold);margin:0 0 18px;}
+  .theme-chip{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:600;color:#f4efe4;}
+  .theme-chip b{color:var(--accent-soft);font-weight:700;}
+  .hook{margin:18px 0 0;max-width:38ch;color:#e7e0d2;font-size:15.5px;line-height:1.55;}
+  .hero-art{align-self:stretch;display:flex;align-items:center;justify-content:center;min-width:150px;}
+  .spin{animation:slowspin 46s linear infinite;transform-origin:60px 60px;}
+  @keyframes slowspin{to{transform:rotate(360deg);}}
+  .flick{animation:flick 4.5s ease-in-out infinite;transform-origin:60px 90px;}
+  @keyframes flick{0%,100%{transform:scaleY(1) scaleX(1);opacity:.95;}50%{transform:scaleY(1.07) scaleX(.97);opacity:.8;}}
+
+  .band{background:var(--night-2);color:#efe7d5;}
+  .journey{max-width:var(--maxw);margin:0 auto;padding:18px 22px;display:flex;align-items:stretch;gap:6px;}
+  .jlabel{align-self:center;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;margin-right:6px;}
+  .stop{flex:1;text-align:center;padding:6px 4px;}
+  .stop .dot{width:13px;height:13px;border-radius:50%;margin:0 auto 8px;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent);}
+  .stop .nm{font-family:"Fraunces",serif;font-weight:600;font-size:15px;color:#fff;}
+  .stop .ds{font-size:11.5px;color:#b9c0d6;line-height:1.3;margin-top:2px;}
+  .arrow{align-self:flex-start;margin-top:18px;color:#6a6f86;font-size:18px;flex:0 0 auto;}
+
+  section.block{padding:44px 0 8px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+  .sec-num{font-family:"Fraunces",serif;font-weight:900;font-size:15px;color:#fff;background:var(--night);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .sec-ico{width:24px;height:24px;color:var(--accent);flex:0 0 auto;}
+  .rule{height:3px;background:linear-gradient(90deg,var(--accent),var(--gold) 60%,transparent);border-radius:3px;margin:10px 0 22px;}
+  .lead{font-size:15px;color:var(--ink-soft);font-style:italic;margin:-6px 0 20px;}
+
+  .card{background:var(--parch-2);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:18px 20px;margin:20px 0;}
+  .card.warm{border-left-color:var(--accent);background:color-mix(in srgb,var(--accent) 11%,var(--parch));}
+  .card.cool{border-left-color:var(--echo);background:var(--echo-soft);}
+  .card .tag{font-size:11.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--night);margin-bottom:7px;display:block;}
+  .card.warm .tag{color:var(--accent-dark);} .card.cool .tag{color:var(--echo);} .card p:last-child{margin-bottom:0;}
+
+  .pull{margin:24px 0;padding:16px 22px;border-left:5px solid var(--accent);background:linear-gradient(90deg,var(--gold-soft),transparent);
+    font-family:"Fraunces",serif;font-size:21px;font-style:italic;color:var(--night);line-height:1.35;}
+  .pull cite{display:block;font-family:"Inter";font-style:normal;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:8px;}
+
+  .tl{position:relative;margin:8px 0 6px;padding-left:8px;}
+  .step{position:relative;padding:0 0 22px 54px;}
+  .step:before{content:"";position:absolute;left:19px;top:6px;bottom:-6px;width:2px;background:var(--line);}
+  .step:last-child:before{display:none;}
+  .step .badge{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:11px;background:var(--night);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:700;font-size:15px;z-index:2;}
+  .step .vv{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--accent);text-transform:uppercase;}
+  .step h3{margin:2px 0 5px;} .step p{margin:0;font-size:15.5px;}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:8px 0 4px;}
+  .pcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;}
+  .pcard .row{padding:13px 16px;}
+  .pcard .k{border-left:5px solid var(--gold);background:var(--gold-soft);}
+  .pcard .b{border-left:5px solid var(--echo);background:var(--echo-soft);}
+  .pcard .mini{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;}
+  .pcard .k .mini{color:var(--accent-dark);} .pcard .b .mini{color:var(--echo);}
+  .pcard .row p{margin:0;font-size:14px;line-height:1.5;}
+  .pcard .teach{margin-top:auto;padding:12px 16px;background:#fbf8f1;border-top:1px dashed var(--line);font-size:13px;color:var(--ink);}
+  .pcard .teach b{color:var(--night);}
+
+  .points{list-style:none;padding:0;margin:14px 0;}
+  .points li{position:relative;padding:12px 16px 12px 46px;background:var(--parch-2);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;font-size:15px;}
+  .points li:before{content:"";position:absolute;left:16px;top:16px;width:14px;height:14px;border-radius:50%;border:3px solid var(--accent);}
+  .points li strong{color:var(--night);}
+  .resto{display:flex;gap:8px;align-items:stretch;margin:14px 0 6px;flex-wrap:nowrap;}
+  .rnode{flex:1;background:var(--night);color:#f2ecdd;border-radius:12px;padding:14px;}
+  .rnode .yr{font-family:"Fraunces",serif;font-weight:700;color:var(--gold);font-size:15px;}
+  .rnode .tt{font-weight:700;font-size:14px;margin:3px 0 4px;color:#fff;} .rnode .ds{font-size:12px;color:#c9cddc;line-height:1.4;}
+  .rarrow{align-self:center;color:var(--accent);font-size:20px;flex:0 0 auto;}
+  .ideas{list-style:none;padding:0;margin:12px 0;}
+  .ideas li{position:relative;padding:11px 14px 11px 44px;border-bottom:1px solid var(--line);font-size:15px;}
+  .ideas li:last-child{border-bottom:0;}
+  .ideas li svg{position:absolute;left:14px;top:12px;width:20px;height:20px;color:var(--echo);}
+
+  .christ{background:linear-gradient(165deg,var(--night) 0%,var(--night-2) 100%);color:#efe9dc;margin-top:42px;}
+  .christ .wrap{padding-top:42px;padding-bottom:14px;}
+  .christ h2.sec{color:#fff;} .christ .sec-num{background:var(--accent);color:#fff;}
+  .christ .sec-ico{color:var(--gold);}
+  .christ .rule{background:linear-gradient(90deg,var(--gold),var(--accent) 60%,transparent);}
+  .christ h3{color:var(--gold);} .christ .lead{color:#c3c7d6;}
+  .ccard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-left:4px solid var(--gold);border-radius:12px;padding:16px 18px;margin:0 0 14px;}
+  .ccard .ct{font-family:"Fraunces",serif;font-weight:600;font-size:17px;color:#fff;margin-bottom:5px;}
+  .ccard p{margin:0;font-size:15px;color:#ded9cc;line-height:1.58;}
+  .ccard .ref{display:block;margin-top:7px;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-soft);}
+  .witness{margin:22px 0 8px;padding:20px 22px;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:color-mix(in srgb,var(--accent) 14%,transparent);
+    font-family:"Fraunces",serif;font-style:italic;font-size:20px;line-height:1.4;color:#fff;text-align:center;}
+  .witness cite{display:block;font-family:"Inter";font-style:normal;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-soft);margin-top:10px;}
+
+  .series{background:var(--parch-2);border-top:1px solid var(--line);}
+  .series .wrap{padding:22px;}
+  .series h4{margin:0 0 10px;font-family:"Fraunces",serif;font-size:15px;color:var(--night);}
+  .series ol{margin:0;padding-left:20px;font-size:13.5px;color:var(--ink-soft);line-height:1.75;}
+  .series li.here{color:var(--night);font-weight:700;}
+
+  footer{background:var(--night-2);color:#aab2cc;}
+  footer .wrap{padding:24px 22px;font-size:12.5px;line-height:1.6;} footer b{color:#e7e0d2;}
+  .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 40%,transparent);display:flex;align-items:center;gap:8px;}
+  .printbtn:hover{filter:brightness(.93);}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:720px){
+    .hero-inner{grid-template-columns:1fr;} .hero-art{order:-1;min-width:0;}
+    .journey{flex-direction:column;gap:0;} .jlabel{margin:0 0 8px;text-align:center;}
+    .arrow{align-self:center;transform:rotate(90deg);margin:2px 0;}
+    .grid{grid-template-columns:1fr;} .resto{flex-direction:column;} .rarrow{transform:rotate(90deg);}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none;} .spin,.flick{animation:none;} html{scroll-behavior:auto;}}
+  @media print{
+    body{font-size:11.5pt;} .printbtn{display:none;}
+    .hero{background:var(--night)!important;} .christ{background:var(--night)!important;} .reveal{opacity:1;transform:none;}
+    section.block{padding:16px 0 4px;break-inside:avoid;} .pcard,.step,.card,.rnode,.ccard{break-inside:avoid;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="tex" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+<g fill="#efc45f" opacity=".35">
+<circle cx="120" cy="300" r="1.6"/><circle cx="260" cy="340" r="1.2"/><circle cx="400" cy="290" r="1.4"/>
+<circle cx="560" cy="335" r="1.1"/><circle cx="720" cy="295" r="1.5"/><circle cx="880" cy="340" r="1.2"/>
+<circle cx="1040" cy="300" r="1.4"/><circle cx="1160" cy="335" r="1.1"/></g></svg>
+  <div class="hero-inner">
+    <div>
+      <span class="partpill">Part 3 of 4</span>
+      <div class="eyebrow">Deep Dive &middot; The Third Cycle &middot; Flagged for Seminary</div>
+      <h1>Job 21&ndash;24</h1>
+      <p class="kicker">The Wicked Prosper &middot; The Friends Invent Sins &middot; The Refiner&rsquo;s Fire</p>
+      <span class="theme-chip"><b>&ldquo;When he hath tried me, I shall come forth as gold&rdquo;</b> &middot; Come, Follow Me &middot; August 10&ndash;16, 2026</span>
+      <p class="hook">Job takes apart the theory that suffering proves sin&mdash;using nothing but observation. Then, with no evidence in front of him, he says the sentence that gives this section its name.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true"><svg width="150" height="150" viewBox="0 0 120 120" fill="none">
+  <path d="M34 46h52l-8 34a10 10 0 0 1-10 8H52a10 10 0 0 1-10-8L34 46Z" fill="#5a2a2c" stroke="#efc45f" stroke-width="2"/>
+  <path d="M30 46h60" stroke="#efc45f" stroke-width="3" stroke-linecap="round"/>
+  <g class="flick"><path d="M60 20c7 10 12 15 12 23a12 12 0 0 1-24 0c0-8 5-13 12-23Z" fill="#cf8a20" opacity=".9"/>
+  <path d="M60 30c3.5 5 6 8 6 12a6 6 0 0 1-12 0c0-4 2.5-7 6-12Z" fill="#efc45f"/></g>
+  <path d="M50 96h20" stroke="#efc45f" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+  <circle cx="60" cy="104" r="3" fill="#efc45f" opacity=".9"/>
+</svg></div>
+  </div>
+</header>
+
+<div class="band"><div class="journey"><span class="jlabel">Movement</span><div class="stop"><div class="dot"></div><div class="nm">The evidence</div><div class="ds">Job 21 &middot; the wicked live long and die easy</div></div><div class="arrow">&#9656;</div><div class="stop"><div class="dot"></div><div class="nm">The accusation</div><div class="ds">Job 22 &middot; Eliphaz invents specific sins</div></div><div class="arrow">&#9656;</div><div class="stop"><div class="dot"></div><div class="nm">The search</div><div class="ds">Job 23:1&ndash;9 &middot; &ldquo;Oh that I knew where I might find him!&rdquo;</div></div><div class="arrow">&#9656;</div><div class="stop"><div class="dot"></div><div class="nm">The gold</div><div class="ds">Job 23:10&ndash;12 &middot; &ldquo;I shall come forth as gold&rdquo;</div></div><div class="arrow">&#9656;</div><div class="stop"><div class="dot"></div><div class="nm">The unanswered</div><div class="ds">Job 24 &middot; the world&rsquo;s injustice, left standing</div></div></div></div>
+
+<div class="wrap">
+
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">1</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 4v5h5"/></svg>
+      <h2 class="sec">Historical Summary of the Period</h2></div>
+    <div class="rule"></div>
+
+<p><strong>Where these chapters sit.</strong> The dialogue of Job runs in three cycles. Eliphaz, Bildad, and Zophar each take a turn and Job answers each of them&mdash;three rounds of that pattern. Chapters 21&ndash;24 land inside the third and final cycle, and something notable happens here: the pattern starts breaking down. The speeches get shorter, Zophar never gets a third turn at all, and the friends begin repeating themselves. The structure itself is telling you their argument has run out of road before Job&rsquo;s has.</p>
+
+<p><strong>The theory on trial: the retribution principle.</strong> The whole ancient Near East ran on the assumption that the righteous prosper and the wicked suffer&mdash;which means suffering is diagnostic. Look at someone&rsquo;s circumstances and you can read their standing with God. It is a tidy system, it makes the world feel safe, and it is what Job&rsquo;s friends are defending. Chapter 21 is Job&rsquo;s demolition of it, and he does not use revelation to do it. He uses observation: go look at the wicked, he says. They get old. They get rich. Their children dance. They die peacefully.</p>
+
+<p><strong>Wisdom debate as a literary form.</strong> Job&rsquo;s back-and-forth is not unique in the ancient world. The Akkadian poem known as the <em>Babylonian Theodicy</em> is built exactly this way&mdash;an extended dialogue between a sufferer and a friend, arranged in twenty-seven acrostic strophes, arguing over whether the gods deal justly. The related <em>Ludlul b&ecirc;l n&ecirc;meqi</em>, the &ldquo;Babylonian Job,&rdquo; survives on cuneiform tablets from Ashurbanipal&rsquo;s library at Nineveh. Job&rsquo;s form would have been recognizable to any educated person in the region. Its <em>conclusion</em> would not have been: those poems end in resignation before inscrutable gods, while Job ends with God speaking and with the friends&mdash;not the sufferer&mdash;being corrected.</p>
+
+<div class="card"><span class="tag">Concrete anchor &middot; how ancient refining actually worked</span>
+<p>Job 23:10 is a metallurgical image and it repays a minute of background. Ancient refiners heated ore in a crucible until the metal liquefied, then drew off the lighter impurities that rose to the surface. In the process called cupellation, lead was added and the whole mass heated in a shallow porous vessel until the lead and base metals oxidized and soaked away, leaving the precious metal behind. The refiner could not step away&mdash;too little heat and nothing separates, too much and you damage the metal. He watched the surface, and he knew the work was finished when the metal went bright and still and he could see his own reflection in it.</p>
+<p style="margin-top:12px">Every part of that maps onto Job&rsquo;s sentence: the heat is not punishment, it is the only process that separates; the refiner is <em>present</em> the entire time; and the finished sign is a reflection. Job says this without knowing whether it is true of his own case. That is what makes it faith rather than observation.</p></div>
+
+<p><strong>Eliphaz the Temanite and the reputation of Edomite wisdom.</strong> Job&rsquo;s lead accuser comes from Teman, a site in Edom. That detail is not decorative. Teman had a regional reputation as a center of wisdom&mdash;Jeremiah, delivering a prophecy against Edom, asks pointedly whether wisdom is no more in Teman (Jeremiah 49:7). Eliphaz is not a fool speaking out of turn; he is the credentialed one in the room. Chapter 22 is what happens when respected wisdom defends God with a bad premise: it starts inventing facts.</p>
+
+<p><strong>Courtroom language in chapter 23.</strong> When Job says he would <em>order his cause</em> before God and fill his mouth with arguments (23:4), he is speaking as a litigant. He is not asking for comfort or even for relief. He is asking for a hearing&mdash;the chance to present a case before a judge who will actually listen. Keep this in view; in chapters 38&ndash;42 he gets his audience, and it goes nothing like he planned.</p>
+
+<p><strong>Chapter 24 and real ancient injustice.</strong> The abuses Job catalogs are specific and legal: people removing boundary landmarks, seizing a widow&rsquo;s ox as a pledge, taking a poor man&rsquo;s garment so he sleeps naked in the cold, driving the needy off the road. These are documented practices, prohibited elsewhere in Israelite law precisely because they happened. Chapter 24 is not abstract theodicy&mdash;it is a man pointing at the evening news and asking why nothing is being done.</p>
+
+  </section>
+
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">2</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <h2 class="sec">Passage Summary</h2></div>
+    <div class="rule"></div>
+
+<p class="lead">Four chapters, one argument: suffering is not a scoreboard. Job proves it with evidence, is accused of fabricated crimes, and answers with a sentence of pure trust.</p>
+<div class="tl">
+<div class="step"><span class="badge">1</span><div class="vv">Job 21:1&ndash;6</div><h3>&ldquo;Let this be your consolations&rdquo;</h3><p>Job asks his friends for one thing: listen, and after I have spoken, mock if you must. He warns them that what he is about to say is frightening even to him. He knows he is about to challenge the assumption everyone in the room is standing on.</p></div>
+<div class="step"><span class="badge">2</span><div class="vv">Job 21:7&ndash;16</div><h3>The evidence against the theory</h3><p>Why do the wicked live, grow old, and become mighty? Their children are established with them, their houses are safe, their livestock multiply, they sing and dance&mdash;and they say to God, depart from us, we don&rsquo;t want to know your ways. Job is not being cynical. He is being empirical.</p></div>
+<div class="step"><span class="badge">3</span><div class="vv">Job 21:17&ndash;26</div><h3>Both die alike</h3><p>One person dies in full strength, quiet and at ease; another dies in bitterness having never tasted anything good. They lie down together in the dust and the worms cover them both. Death does not sort people by righteousness&mdash;so a person&rsquo;s circumstances cannot be read as a verdict.</p></div>
+<div class="step"><span class="badge">4</span><div class="vv">Job 21:27&ndash;34</div><h3>&ldquo;How then comfort ye me in vain?&rdquo;</h3><p>Job says his friends&rsquo; answers are false comfort&mdash;that if they would simply ask travelers who have been out in the world, they would hear the same evidence he is presenting. He closes the chapter with the charge that their consolation is empty and their replies contain falsehood.</p></div>
+<div class="step"><span class="badge">5</span><div class="vv">Job 22:1&ndash;11</div><h3>Eliphaz invents crimes</h3><p>This is the low point of the friends&rsquo; conduct. Cornered by Job&rsquo;s evidence, Eliphaz simply manufactures charges: is not thy wickedness great? He accuses Job of taking pledges from his brothers for nothing, stripping the naked of clothing, withholding water from the weary, and sending widows away empty. None of it happened. The text has told us from verse one that Job is upright.</p></div>
+<div class="step"><span class="badge">6</span><div class="vv">Job 22:12&ndash;30</div><h3>Good advice on a bad premise</h3><p>Eliphaz finishes with counsel that would be beautiful in another setting: acquaint now thyself with God and be at peace; lay up His words in your heart; return to the Almighty and you shall be built up. It is not false&mdash;it is misapplied. He is prescribing repentance to a man who does not need it, which is what makes it cruel rather than kind.</p></div>
+<div class="step"><span class="badge">7</span><div class="vv">Job 23:1&ndash;7</div><h3>&ldquo;Oh that I knew where I might find him!&rdquo;</h3><p>Job&rsquo;s answer ignores the accusations entirely. What he wants is not acquittal&mdash;it is access. He would come to God&rsquo;s seat, order his case, fill his mouth with arguments, and know what God would answer. And he is confident of the outcome: God would not simply overpower him; He would <em>listen</em>.</p></div>
+<div class="step"><span class="badge">8</span><div class="vv">Job 23:8&ndash;9</div><h3>Four directions, no God</h3><p>Forward, backward, left, right&mdash;Job looks in every direction and cannot perceive Him. This is one of the most relatable verses in the book, and it belongs in class: the silence is not evidence of absence, and Job is about to say so in the very next verse.</p></div>
+<div class="step"><span class="badge">9</span><div class="vv">Job 23:10&ndash;12</div><h3>&ldquo;But he knoweth the way that I take&rdquo;</h3><p>Immediately after saying he cannot find God, Job says God knows exactly where <em>he</em> is&mdash;and that when the trial is finished he will come forth as gold. Then he grounds it: his foot has held to God&rsquo;s steps, he has not gone back, and he has esteemed the words of God&rsquo;s mouth more than his necessary food. Trust plus track record.</p></div>
+<div class="step"><span class="badge">10</span><div class="vv">Job 23:13&ndash;17</div><h3>Honest fear</h3><p>Do not skip this. In the same breath as the gold verse, Job admits he is troubled and afraid at God&rsquo;s presence. The confidence in verse 10 is not cheerfulness. It coexists with dread. Both are in the text, and students should see that they are allowed to hold both.</p></div>
+<div class="step"><span class="badge">11</span><div class="vv">Job 24:1&ndash;12</div><h3>The oppressed, in detail</h3><p>Job catalogs real injustice: landmarks removed, flocks stolen, the donkey of the fatherless driven away, the widow&rsquo;s ox taken as a pledge, the poor sleeping naked in the cold and hungry among the sheaves they harvested. Men groan out of the city and God does not appear to lay it to their charge.</p></div>
+<div class="step"><span class="badge">12</span><div class="vv">Job 24:13&ndash;25</div><h3>Those who rebel against the light</h3><p>The chapter turns to those who work in the dark&mdash;the murderer rising at daylight, the thief, the adulterer waiting for twilight. Job insists judgment will come eventually, but he does not pretend it comes now, and he ends by daring anyone to prove him a liar. Then silence. The friends have nothing left.</p></div>
+</div>
+<div class="card warm"><span class="tag">Teacher&rsquo;s note &middot; chapter 24 does not resolve</span>
+<p>Be ready for this. Chapter 24 ends without an answer&mdash;Job lists genuine, ongoing injustice and simply asks why God does not set times of judgment. No tidy conclusion follows. That is deliberate, and it is one of the most honest things in scripture. If a student says &ldquo;but that&rsquo;s not fair,&rdquo; the correct response is agreement, not a patch. The book will not resolve it either; what it will do is bring God into the room. Teaching this passage honestly means being willing to leave a question open until chapters 38&ndash;42.</p></div>
+
+<blockquote class="pull">&ldquo;When he hath tried me, I shall come forth as gold.&rdquo;<cite>Job 23:10</cite></blockquote>
+
+  </section>
+
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">3</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-1.6-1.2-3.6-2-6-2v13c2.4 0 4.4.8 6 2"/><path d="M12 6c1.6-1.2 3.6-2 6-2v13c-2.4 0-4.4.8-6 2"/><path d="M12 6v13"/></svg>
+      <h2 class="sec">Comparison to the Book of Mormon</h2></div>
+    <div class="rule"></div>
+
+<p class="lead">This is the section the outline sends students to the Restoration for, and four of the five passages it recommends are in the Book of Mormon. These parallels are the manual&rsquo;s own assignment, expanded.</p>
+<div class="grid">
+<div class="pcard"><div class="row k"><div class="mini">Job 21:7&ndash;16</div><p>Job&rsquo;s evidence: the wicked live long, prosper, and openly tell God to leave them alone&mdash;with no visible consequence.</p></div><div class="row b"><div class="mini">3 Nephi 24:14&ndash;18</div><p>The Lord quotes the same complaint back&mdash;it is vain to serve God, the proud are happy, those who tempt God are delivered&mdash;and answers it with a book of remembrance and a coming day of judgment.</p></div><div class="teach"><b>Teaches:</b> Scripture does not deny the observation. It answers it with a longer timeline, not a denial of the evidence.</div></div>
+<div class="pcard"><div class="row k"><div class="mini">Job 23:10</div><p>&ldquo;When he hath tried me, I shall come forth as gold&rdquo;&mdash;spoken with no visible sign that the trial will end.</p></div><div class="row b"><div class="mini">Mosiah 23:21&ndash;23</div><p>The Lord seeth fit to chasten His people; He trieth their patience and their faith&mdash;nevertheless, whosoever putteth trust in Him shall be lifted up at the last day.</p></div><div class="teach"><b>Teaches:</b> Trial and trust are not opposites in God&rsquo;s dealings with a righteous people. The refining is done to people He is pleased with.</div></div>
+<div class="pcard"><div class="row k"><div class="mini">Job 23:8&ndash;9</div><p>Job looks in four directions and cannot find God&mdash;while continuing to trust that God knows exactly where he is.</p></div><div class="row b"><div class="mini">Mosiah 24:10&ndash;16</div><p>Alma&rsquo;s people are forbidden to pray aloud on pain of death, so they pray in their hearts; the Lord tells them He will ease their burdens, and the burdens become light.</p></div><div class="teach"><b>Teaches:</b> God&rsquo;s answer to the innocent under pressure is often to change their capacity rather than their circumstances&mdash;quietly, without announcement.</div></div>
+<div class="pcard"><div class="row k"><div class="mini">Job 22:5&ndash;9</div><p>Eliphaz invents specific sins to defend his theory: withheld water, stripped clothing, widows sent away empty. None of it is true.</p></div><div class="row b"><div class="mini">1 Nephi 17:17&ndash;22</div><p>Laman and Lemuel misread Nephi entirely&mdash;calling him a fool, insisting their father is led by foolish imagination, and claiming the people they left were righteous.</p></div><div class="teach"><b>Teaches:</b> When people are committed to a conclusion, they will supply the evidence. Being misjudged by those closest to you is a scriptural experience, not a personal failure.</div></div>
+<div class="pcard"><div class="row k"><div class="mini">Job 23:3&ndash;7</div><p>&ldquo;Oh that I knew where I might find him!&rdquo; Job wants an audience, not an acquittal.</p></div><div class="row b"><div class="mini">Enos 1:2&ndash;5</div><p>Enos wrestles before God all day and into the night, crying in mighty prayer&mdash;and a voice comes.</p></div><div class="teach"><b>Teaches:</b> Wanting access to God badly enough to wrestle for it is treated in scripture as righteousness, not impatience.</div></div>
+<div class="pcard"><div class="row k"><div class="mini">Job 23:12</div><p>Job has esteemed the words of God&rsquo;s mouth more than his necessary food&mdash;said while starving on an ash heap.</p></div><div class="row b"><div class="mini">2 Nephi 32:3</div><p>Feast upon the words of Christ, for the words of Christ will tell you all things what ye should do.</p></div><div class="teach"><b>Teaches:</b> The habits built before the crisis are what carry you through it. Job is drawing on a lifetime of scripture, not improvising.</div></div>
+<div class="pcard"><div class="row k"><div class="mini">Job 24:1&ndash;12</div><p>Genuine injustice, catalogued in detail, with no judgment falling and no explanation offered.</p></div><div class="row b"><div class="mini">Alma 14:9&ndash;13</div><p>Believers are burned at Ammonihah while Alma and Amulek watch. Alma explains the Lord receives them in glory and permits it so the judgments upon the wicked will be just.</p></div><div class="teach"><b>Teaches:</b> God&rsquo;s restraint is not indifference. Sometimes He allows evil to complete itself so that justice, when it comes, is unanswerable.</div></div>
+<div class="pcard"><div class="row k"><div class="mini">Job 23:10&ndash;12</div><p>The refining metaphor: heat that removes what does not belong rather than punishment that settles a score.</p></div><div class="row b"><div class="mini">Ether 12:27</div><p>If men come unto Christ He will show them their weakness; He gives weakness that they may be humble, and His grace makes weak things become strong.</p></div><div class="teach"><b>Teaches:</b> God&rsquo;s standard response to affliction is transformation, not removal. The trial is frequently the tool.</div></div>
+</div>
+
+  </section>
+
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">4</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>
+      <h2 class="sec">Tie to Come, Follow Me</h2></div>
+    <div class="rule"></div>
+
+<p><strong>This week&rsquo;s outline:</strong> &ldquo;Yet Will I Trust in Him&rdquo;&mdash;Job 1&ndash;3; 12&ndash;14; 19; 21&ndash;24; 38&ndash;40; 42, August 10&ndash;16, 2026. This handout covers the manual&rsquo;s <strong>third principle</strong>, which carries the seminary icon&mdash;the manual expects this one to be worked through carefully rather than skimmed.</p>
+
+<p>The manual states the problem plainly: in Job 21&ndash;24 you read a debate between Job and his friends, and at the heart of it is a question many people have asked&mdash;<em>why do righteous people sometimes suffer?</em> Its honest framing follows: although we do not have all the answers, in the restored gospel we have truths that help us make sense of adversity.</p>
+
+<h3 style="margin-top:22px">The five latter-day passages the manual hands students</h3>
+<ul class="points"><li><strong>2 Nephi 2:11&ndash;13</strong>&mdash;opposition in all things is built into the plan by design.</li><li><strong>Mosiah 23:21&ndash;23; 24:10&ndash;16</strong>&mdash;the Lord tries the patience and faith of a righteous people, then makes their burdens light.</li><li><strong>Ether 12:27</strong>&mdash;weakness is given so that we will be humble, and grace makes weak things strong.</li><li><strong>Doctrine and Covenants 58:3&ndash;5</strong>&mdash;you cannot see with your natural eyes the design of your God concerning what comes after much tribulation; the glory follows.</li><li><strong>Abraham 3:22&ndash;26</strong>&mdash;we were prepared before we came, and we came to be proved. The manual&rsquo;s question for each: what do these teach you about Heavenly Father and His plan?</li></ul>
+
+<div class="card"><span class="tag">The manual&rsquo;s closing assignment</span>
+<p>After studying those passages, the outline asks: <strong>&ldquo;Based on what you have studied, how might you answer a question like &lsquo;Why does God allow righteous people to suffer?&rsquo;&rdquo;</strong> This is the deliverable for the whole section. It also recommends President Spencer W. Kimball&rsquo;s teachings on adversity in &ldquo;Tragedy or Destiny?&rdquo; (Teachings of Presidents of the Church: Spencer W. Kimball, 11&ndash;21). For teacher preparation, the Scripture Helps add Elder Dale G. Renlund&rsquo;s &ldquo;Trust God and Let Him Prevail&rdquo; (Liahona, Aug. 2022), Elder D. Todd Christofferson&rsquo;s &ldquo;Our Relationship with God&rdquo; (May 2022), and Elder David A. Bednar&rsquo;s &ldquo;We Will Prove Them Herewith&rdquo; (Nov. 2020).</p></div>
+
+<h3 style="margin-top:24px">What the Scripture Helps say about the friends</h3>
+<p>On why Job&rsquo;s friends accused him: although they initially showed compassion, they shifted from comfort to accusation because they believed the common misconception that suffering must be God&rsquo;s punishment for disobedience&mdash;and the Lord eventually called them to repentance for their false ideas about His justice (Job 42:7&ndash;9). President Dieter F. Uchtdorf has taught, in substance, that it is beneath us as Christians to assume that people who suffer must deserve it (&ldquo;You Are My Hands,&rdquo; May 2010).</p>
+
+<h3 style="margin-top:24px">Teaching ideas for youth Sunday School (ages 12&ndash;13)</h3>
+<ul class="ideas"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Run the experiment before the doctrine.</strong> Ask: &ldquo;If someone&rsquo;s life is going badly, does that tell you anything about how righteous they are?&rdquo; Let them argue. Then read Job 21:7&ndash;13 and point out that Job already did this experiment and reached the same conclusion three thousand years ago.</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Refiner&rsquo;s fire, done properly.</strong> Show a picture of gold ore beside a refined bar and walk through the crucible details in Section 1: heat that separates rather than punishes, a refiner who never leaves, and a finished sign that he can see his reflection. Then read 23:10. Frame it carefully&mdash;this is <em>God can use it</em>, not <em>God caused it</em>. That distinction matters enormously to a kid whose family is going through something.</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>The invented-accusation exercise.</strong> Read Job 22:5&ndash;9 aloud and ask the class to check those charges against what they know from chapter 1. Then ask why a good man would make things up to defend God. This is the most transferable lesson in the chapter&mdash;they are at the age where friends start explaining other people&rsquo;s misfortunes.</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Four directions.</strong> Have four students stand at the four walls. Read 23:8&ndash;9&mdash;forward, backward, left, right, no God to be found. Then read verse 10 and ask what changed. Nothing changed except what Job chose to say next.</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Give them the manual&rsquo;s assignment for real.</strong> Split into pairs, hand each pair one of the five latter-day passages, give six minutes, and have each pair report one sentence toward answering &ldquo;Why does God allow righteous people to suffer?&rdquo; Write the sentences on the board as a class answer. This is exactly what the outline asks for.</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Let chapter 24 stay open.</strong> Read a few verses and admit out loud that Job never gets an answer here. Thirteen-year-olds have finely tuned detectors for adults who paper over hard things, and honesty now buys credibility for everything else you say.</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Close on 23:12.</strong> Job says he valued God&rsquo;s words more than his necessary food&mdash;said by a starving man. Ask what habit he must have built <em>before</em> the trial for that to be true, and what habit they are building now.</li></ul>
+
+  </section>
+</div>
+
+<section class="christ block reveal">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">5</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M6.5 8h11"/><path d="M9 21h6"/></svg>
+      <h2 class="sec">Tie to Jesus Christ</h2></div>
+    <div class="rule"></div>
+
+<p class="lead">Job wanted a hearing before God and could not find Him in any direction. The doctrine of Christ answers both halves of that.</p>
+<div class="ccard"><div class="ct">He is the Refiner</div><p>Job&rsquo;s image has a named owner. Malachi prophesies of a messenger who comes suddenly to His temple and sits as a refiner and purifier of silver&mdash;and the Savior quotes that prophecy to the Nephites Himself. The refiner in Job 23:10 is not an impersonal process. He sits by the crucible, He watches the whole time, and He is the one who decides when the work is finished.<span class="ref">Job 23:10 &middot; Malachi 3:2&ndash;3 &middot; 3 Nephi 24:2&ndash;3 &middot; D&amp;C 128:24</span></p></div>
+<div class="ccard"><div class="ct">&ldquo;He knoweth the way that I take&rdquo;</div><p>Job cannot find God, but insists God can find him. That is shepherd language, and the Savior claims it: He knows His sheep, calls them by name, and goes after the one that is missing. The asymmetry in Job 23:8&ndash;10 is the whole comfort of the passage&mdash;being lost to your own perception is not the same as being lost to His.<span class="ref">Job 23:8&ndash;10 &middot; John 10:14&ndash;16 &middot; Luke 15:4&ndash;6 &middot; Alma 5:38</span></p></div>
+<div class="ccard"><div class="ct">The hearing Job asked for</div><p>Job wants to come to God&rsquo;s seat, order his cause, and be heard by a judge who will not simply overpower him. That is the office of an Advocate&mdash;and latter-day revelation gives the Savior&rsquo;s own words of pleading before the Father: <em>spare these my brethren that believe on my name, that they may come unto me and have everlasting life</em>. Job wanted to argue his own case. Christ argues it better than Job could have.<span class="ref">Job 23:3&ndash;7 &middot; D&amp;C 45:3&ndash;5 &middot; 1 John 2:1 &middot; Moroni 7:27&ndash;28</span></p></div>
+<div class="ccard"><div class="ct">He came forth as gold&mdash;first</div><p>Job hoped that when the trial was over he would emerge refined. The Savior is the one who actually did it: tried in all points, tempted, betrayed, falsely accused by people defending their own version of righteousness, and brought forth without any impurity to burn away. When Job says <em>I shall come forth as gold</em>, he is describing a pattern the Savior would complete and then make available.<span class="ref">Job 23:10 &middot; Hebrews 4:15 &middot; Hebrews 5:8&ndash;9 &middot; D&amp;C 122:8</span></p></div>
+<div class="ccard"><div class="ct">Chapter 24 gets an answer&mdash;in Him</div><p>Job lists injustice that nobody addresses and asks why God sets no times of judgment. The Atonement is the answer to that list: Christ took upon Himself the sins committed and the pains suffered, so that the accounts of chapter 24 are neither forgotten nor left unpaid. The unfairness Job pointed at will be repaired by the only Person who has the standing to repair it.<span class="ref">Job 24:1&ndash;12 &middot; Alma 7:11&ndash;13 &middot; 2 Nephi 9:21&ndash;22 &middot; Isaiah 61:1&ndash;3</span></p></div>
+<div class="witness">Job asked to find God and present his case.<br>Christ is the finding, and He is the case.
+<cite>The point of Part 3</cite></div>
+
+  </div>
+</section>
+
+<div class="series"><div class="wrap">
+  <h4>This week in four parts &middot; Job 1&ndash;3; 12&ndash;14; 19; 21&ndash;24; 38&ndash;40; 42</h4>
+  <ol>
+    <li>Job 1&ndash;3; 12&ndash;13 &mdash; &ldquo;I can trust God in all circumstances&rdquo;</li>
+    <li>Job 14; 19 &mdash; &ldquo;Jesus Christ is my Redeemer&rdquo;</li>
+    <li class="here">Job 21&ndash;24 &mdash; &ldquo;When he hath tried me, I shall come forth as gold&rdquo;</li>
+    <li>Job 38&ndash;40; 42 &mdash; &ldquo;God&rsquo;s perspective is greater than mine&rdquo;</li>
+  </ol>
+</div></div>
+
+<footer><div class="wrap"><b>Job 21&ndash;24 &mdash; &ldquo;When he hath tried me, I shall come forth as gold&rdquo;.</b> Come, Follow Me&mdash;For Home and Church: Old Testament 2026, August 10&ndash;16 (week 33), with Scripture Helps: Old Testament and &ldquo;Thoughts to Keep in Mind: Reading Poetry in the Old Testament,&rdquo; churchofjesuschrist.org. Scripture quotations are King James Version; statements by Church leaders are paraphrased with references given. Prepared for youth Sunday School, ages 12&ndash;13. Background on ancient refining and cupellation, the three-cycle disputation structure, Teman&rsquo;s reputation for wisdom (Jeremiah 49:7), and Mesopotamian wisdom dialogues (the Babylonian Theodicy, <em>Ludlul b&ecirc;l n&ecirc;meqi</em>) drawn from standard reference works.</div></footer>
+
+<button class="printbtn" onclick="window.print()" aria-label="Print handout">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+  Print
+</button>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    function showAll(){ els.forEach(function(el){ el.classList.add('in'); }); }
+    if(!('IntersectionObserver' in window)){ showAll(); return; }
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.08, rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+    setTimeout(showAll, 2500);
+  })();
+</script>
+</body>
+</html>
