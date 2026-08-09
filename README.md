@@ -51,3 +51,4 @@ Weeks follow the official Come, Follow Me outline at [churchofjesuschrist.org](h
 | July 6–12 | 2 Kings 2–7 — "There Is a Prophet in Israel" | 2 Kings 2 Youth Handout, 2 Kings 3 Lesson Handout, plus 2 Word docs |
 | July 13–19 | 2 Kings 16–25 — "He Trusted in the Lord God of Israel" | 2 Kings 16–25 Lesson Handout |
 | August 3–9 | Esther — "Thou Art Come … for Such a Time as This" | Esther Lesson Handout |
+| August 10–16 | Job 1–3; 12–14; 19; 21–24; 38–40; 42 — "Yet Will I Trust in Him" | Combined Handout, plus Parts 1–4 (Job 1–3; 12–13 · Job 14; 19 · Job 21–24 · Job 38–40; 42) |
