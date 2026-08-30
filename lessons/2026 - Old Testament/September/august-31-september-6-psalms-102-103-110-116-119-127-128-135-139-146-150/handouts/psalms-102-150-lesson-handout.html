@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Psalms 102–150 — Lesson Handout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<style>
+  :root{
+    /* Motif: lamplight — "thy word is a lamp unto my feet" (Ps. 119:105).
+       Night indigo of a pilgrim road, warm oil-lamp gold, temple teal for echoes. */
+    --night:#1a1b3d;
+    --night-2:#0e0f26;
+    --accent:#e3a53c;
+    --accent-soft:#f2c168;
+    --gold:#f0d493;
+    --parch:#faf6ed;
+    --parch-2:#f2ead9;
+    --ink:#2b2722;
+    --ink-soft:#5d5545;
+    --echo:#3a6b74;
+    --echo-soft:#e2eded;
+    --gold-soft:#f8efd6;
+    --line:#dccfb4;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--parch);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);}
+  h2.sec{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(26px,4.4vw,34px);line-height:1.1;margin:0;color:var(--night);}
+  h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:20px;color:var(--night);margin:0 0 6px;}
+  p{margin:0 0 15px;} strong{font-weight:700;color:#221f19;} em{font-style:italic;}
+
+  .hero{position:relative;overflow:hidden;color:#f4efe4;
+    background:radial-gradient(120% 90% at 82% 8%, color-mix(in srgb,var(--accent) 42%,transparent), transparent 46%),
+      radial-gradient(90% 70% at 78% 30%, color-mix(in srgb,var(--gold) 22%,transparent), transparent 55%),
+      linear-gradient(160deg,var(--night) 0%,var(--night-2) 100%);}
+  .stars{position:absolute;inset:0;pointer-events:none;opacity:.85;}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:56px 22px 60px;position:relative;z-index:2;
+    display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;}
+  .hero .eyebrow{color:var(--accent-soft);}
+  .hero h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(40px,8.4vw,72px);line-height:.92;letter-spacing:-.01em;margin:12px 0 8px;color:#fff;}
+  .hero .kicker{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(18px,3.4vw,23px);color:var(--gold);margin:0 0 18px;}
+  .theme-chip{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:600;color:#f4efe4;}
+  .theme-chip b{color:var(--accent-soft);font-weight:700;}
+  .hook{margin:18px 0 0;max-width:36ch;color:#e7e0d2;font-size:15.5px;line-height:1.55;}
+  .hero-art{align-self:stretch;display:flex;align-items:center;justify-content:center;min-width:150px;}
+
+  .band{background:var(--night-2);color:#efe7d5;}
+  .journey{max-width:var(--maxw);margin:0 auto;padding:20px 22px;display:flex;align-items:stretch;gap:6px;}
+  .jlabel{align-self:center;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;margin-right:6px;}
+  .stop{flex:1;text-align:center;padding:6px 4px;}
+  .stop .dot{width:14px;height:14px;border-radius:50%;margin:0 auto 8px;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent);}
+  .stop .nm{font-family:"Fraunces",serif;font-weight:600;font-size:15px;color:#fff;}
+  .stop .ds{font-size:11.5px;color:#b9c0d6;line-height:1.3;margin-top:2px;}
+  .arrow{align-self:flex-start;margin-top:20px;color:#5b6486;font-size:18px;flex:0 0 auto;}
+
+  section.block{padding:46px 0 8px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+  .sec-num{font-family:"Fraunces",serif;font-weight:900;font-size:15px;color:#fff;background:var(--night);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .sec-ico{width:24px;height:24px;color:var(--accent);flex:0 0 auto;}
+  .rule{height:3px;background:linear-gradient(90deg,var(--accent),var(--gold) 60%,transparent);border-radius:3px;margin:10px 0 22px;}
+  .lead{font-size:15px;color:var(--ink-soft);font-style:italic;margin:-6px 0 20px;}
+
+  .card{background:var(--parch-2);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:18px 20px;margin:20px 0;}
+  .card.warm{border-left-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--parch));}
+  .card .tag{font-size:11.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--night);margin-bottom:7px;display:block;}
+  .card.warm .tag{color:#a4560f;} .card p:last-child{margin-bottom:0;}
+
+  .pull{margin:24px 0;padding:16px 22px;border-left:5px solid var(--accent);background:linear-gradient(90deg,var(--gold-soft),transparent);
+    font-family:"Fraunces",serif;font-size:21px;font-style:italic;color:var(--night);line-height:1.35;}
+  .pull cite{display:block;font-family:"Inter";font-style:normal;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:8px;}
+
+  .tl{position:relative;margin:8px 0 6px;padding-left:8px;}
+  .step{position:relative;padding:0 0 22px 54px;}
+  .step:before{content:"";position:absolute;left:19px;top:6px;bottom:-6px;width:2px;background:var(--line);}
+  .step:last-child:before{display:none;}
+  .step .badge{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:11px;background:var(--night);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:700;font-size:15px;z-index:2;}
+  .step .vv{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--accent);text-transform:uppercase;}
+  .step h3{margin:2px 0 5px;} .step p{margin:0;font-size:15.5px;}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:8px 0 4px;}
+  .pcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;}
+  .pcard .row{padding:13px 16px;}
+  .pcard .k{border-left:5px solid var(--gold);background:var(--gold-soft);}
+  .pcard .b{border-left:5px solid var(--echo);background:var(--echo-soft);}
+  .pcard .mini{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;}
+  .pcard .k .mini{color:#9a6a12;} .pcard .b .mini{color:var(--echo);}
+  .pcard .row p{margin:0;font-size:14px;line-height:1.5;}
+  .pcard .teach{margin-top:auto;padding:12px 16px;background:#faf6ec;border-top:1px dashed var(--line);font-size:13px;color:var(--ink);}
+  .pcard .teach b{color:var(--night);}
+
+  .points{list-style:none;padding:0;margin:14px 0;}
+  .points li{position:relative;padding:12px 16px 12px 46px;background:var(--parch-2);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;font-size:15px;}
+  .points li:before{content:"";position:absolute;left:16px;top:16px;width:14px;height:14px;border-radius:50%;border:3px solid var(--accent);}
+  .points li strong{color:var(--night);}
+  .resto{display:flex;gap:8px;align-items:stretch;margin:14px 0 6px;flex-wrap:nowrap;}
+  .rnode{flex:1;background:var(--night);color:#f2ecdd;border-radius:12px;padding:14px;}
+  .rnode .yr{font-family:"Fraunces",serif;font-weight:700;color:var(--gold);font-size:15px;}
+  .rnode .tt{font-weight:700;font-size:14px;margin:3px 0 4px;color:#fff;} .rnode .ds{font-size:12px;color:#c3c9de;line-height:1.4;}
+  .rarrow{align-self:center;color:var(--accent);font-size:20px;flex:0 0 auto;}
+  .ideas{list-style:none;padding:0;margin:12px 0;}
+  .ideas li{position:relative;padding:11px 14px 11px 44px;border-bottom:1px solid var(--line);font-size:15px;}
+  .ideas li:last-child{border-bottom:0;}
+  .ideas li svg{position:absolute;left:14px;top:12px;width:20px;height:20px;color:var(--echo);}
+
+  footer{margin-top:40px;background:var(--night-2);color:#aab2cc;}
+  footer .wrap{padding:26px 22px;font-size:12.5px;line-height:1.6;} footer b{color:#e7e0d2;}
+  .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 40%,transparent);display:flex;align-items:center;gap:8px;}
+  .printbtn:hover{filter:brightness(.93);}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:720px){
+    .hero-inner{grid-template-columns:1fr;} .hero-art{order:-1;min-width:0;}
+    .journey{flex-direction:column;gap:0;} .jlabel{margin:0 0 8px;text-align:center;}
+    .arrow{align-self:center;transform:rotate(90deg);margin:2px 0;}
+    .grid{grid-template-columns:1fr;} .resto{flex-direction:column;} .rarrow{transform:rotate(90deg);}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none;} html{scroll-behavior:auto;}}
+  @media print{
+    body{font-size:11.5pt;} .printbtn{display:none;}
+    .hero{background:var(--night)!important;} .reveal{opacity:1;transform:none;}
+    section.block{padding:16px 0 4px;break-inside:avoid;} .pcard,.step,.card,.rnode{break-inside:avoid;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <svg class="stars" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+    <g fill="#f8efd6">
+      <circle cx="80" cy="60" r="1.6" opacity=".55"/><circle cx="190" cy="130" r="1.1" opacity=".4"/>
+      <circle cx="300" cy="48" r="1.4" opacity=".5"/><circle cx="415" cy="180" r="1" opacity=".35"/>
+      <circle cx="520" cy="90" r="1.7" opacity=".5"/><circle cx="640" cy="40" r="1.2" opacity=".45"/>
+      <circle cx="720" cy="210" r="1.3" opacity=".3"/><circle cx="880" cy="70" r="1.5" opacity=".45"/>
+      <circle cx="960" cy="160" r="1" opacity=".35"/><circle cx="1100" cy="105" r="1.6" opacity=".4"/>
+      <circle cx="1160" cy="250" r="1.1" opacity=".3"/><circle cx="60" cy="290" r="1.2" opacity=".3"/>
+      <circle cx="250" cy="330" r="1.4" opacity=".28"/><circle cx="470" cy="300" r="1" opacity=".3"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Deep Dive · The Praise Psalms</div>
+      <h1>Psalms 102–150</h1>
+      <p class="kicker">Israel's Hymnbook · Lament, Messiah, Lamplight, Hallelujah</p>
+      <span class="theme-chip"><b>"Let Every Thing That Hath Breath Praise the Lord"</b> · Come, Follow Me · August 31–September 6, 2026</span>
+      <p class="hook">Nine weeks of Old Testament kings and prophets, and then this: the songs those people actually sang. Selected psalms from Psalms 102–103; 110; 116–119; 127–128; 135–139; 146–150.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 200 220" width="176" height="194">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="46%" r="52%">
+            <stop offset="0%" stop-color="#f2c168" stop-opacity=".5"/>
+            <stop offset="100%" stop-color="#f2c168" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="100" cy="105" r="98" fill="url(#glow)"/>
+        <g stroke="#f0d493" stroke-opacity=".3" stroke-width="1.5" stroke-linecap="round">
+          <path d="M100 6 V22"/><path d="M28 40 L38 52"/><path d="M172 40 L162 52"/>
+          <path d="M8 108 H24"/><path d="M176 108 H192"/>
+        </g>
+        <!-- soundbox -->
+        <path d="M62 148 Q100 166 138 148 L132 178 Q100 191 68 178 Z" fill="none" stroke="#f2c168" stroke-width="3.4" stroke-linejoin="round"/>
+        <!-- arms -->
+        <path d="M66 150 C50 116 54 78 74 52" fill="none" stroke="#f2c168" stroke-width="3.4" stroke-linecap="round"/>
+        <path d="M134 150 C150 116 146 78 126 52" fill="none" stroke="#f2c168" stroke-width="3.4" stroke-linecap="round"/>
+        <!-- yoke -->
+        <path d="M70 54 Q100 41 130 54" fill="none" stroke="#f2c168" stroke-width="3.4" stroke-linecap="round"/>
+        <!-- strings -->
+        <g stroke="#f8efd6" stroke-opacity=".8" stroke-width="1.5">
+          <path d="M79 55 L77 154"/><path d="M89 51 L88 158"/><path d="M100 49 L100 160"/>
+          <path d="M111 51 L112 158"/><path d="M121 55 L123 154"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- ============ AT-A-GLANCE BAND ============ -->
+<div class="band">
+  <div class="journey">
+    <span class="jlabel">The Week at a Glance</span>
+    <div class="stop"><div class="dot"></div><div class="nm">102–103</div><div class="ds">Lament turns to blessing</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">110</div><div class="ds">The Priest-King</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">116–118</div><div class="ds">The Passover Hallel</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">119</div><div class="ds">The lamp and the path</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">127–139</div><div class="ds">Home, idols, and being known</div></div>
+    <div class="arrow">▸</div>
+    <div class="stop"><div class="dot"></div><div class="nm">146–150</div><div class="ds">The Hallelujah finale</div></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ 1. HISTORY ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">1</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 4v5h5"/></svg>
+      <h2 class="sec">Historical Summary of the Period</h2></div>
+    <div class="rule"></div>
+
+    <p><strong>The Psalms are not one moment in history — they are a thousand years of them.</strong> Unlike Kings or Chronicles, this book has no single setting. Its 150 poems were composed across the whole sweep of Israel's story: some traditionally reach back to Moses, roughly half carry a superscription linking them to David (about 1000 BC), others belong to the Levitical singer-guilds of the temple, and several clearly come from the exile in Babylon (587–538 BC) or the rebuilding that followed. What students are reading this week is Israel's <strong>hymnbook</strong>, assembled over centuries and finally arranged into the form we have.</p>
+
+    <p>The Hebrew name for the book is <em>Tehillim</em> — "praises" — from the same root as <em>hallelujah</em>, "praise Jehovah." The English title comes from the Greek <em>psalmoi</em>, songs sung to a stringed instrument. Both names are true to the book: these are lyrics, not essays, and they were meant to be sung out loud.</p>
+
+    <p><strong>How the book is put together.</strong> The Psalter is divided into five books — Psalms 1–41, 42–72, 73–89, 90–106, and 107–150 — a five-fold shape that ancient readers connected to the five books of Moses. Each book closes with a burst of praise. This week's block straddles the last two: Psalms 102–103 sit near the end of Book IV, and everything from 110 onward belongs to Book V, the collection most concerned with return from exile, the reign of the Lord, and the coming Messiah. Psalms 146–150 function as the closing doxology not just of Book V but of the entire Psalter — which is why the manual's title for the week comes from its very last verse.</p>
+
+    <p><strong>Music was a profession.</strong> The temple in Jerusalem had a staffed music program. David is credited with organizing the Levites into singer-guilds under Asaph, Heman, and Jeduthun, who "prophesied with harps, with psalteries, and with cymbals" (1 Chronicles 25:1). Superscriptions preserve their working notes: "To the chief Musician," tune names, instrument directions. The word <em>Selah</em> appears 71 times in the book and its exact meaning is still uncertain — most likely a cue to the performers, something like a rest or a musical interlude. Psalm 150 reads almost like an inventory of the instruments actually in use: trumpet (the <em>shofar</em>, a ram's horn), psaltery and harp (the <em>nevel</em> and <em>kinnor</em>, both stringed), timbrel (a hand drum), pipe, and two kinds of cymbals.</p>
+
+    <p><strong>Three collections inside this week's block.</strong> Several of these psalms weren't just individual poems — they traveled in sets with fixed uses in worship:</p>
+
+    <p>• <strong>The Egyptian Hallel (Psalms 113–118).</strong> Six psalms of praise sung at the great festivals, above all Passover, remembering the Exodus. In first-century practice, 113–114 were sung before the meal and 115–118 after the final cup. This is almost certainly what Matthew means when he writes that Jesus and the Apostles, at the end of the Last Supper, "had sung an hymn" and went out to the Mount of Olives (Matthew 26:30; Mark 14:26). <strong>Psalms 116, 117, and 118 are in this week's reading</strong> — the Savior sang these words on the night of Gethsemane.</p>
+
+    <p>• <strong>The Songs of Ascents (Psalms 120–134).</strong> Fifteen psalms each headed <em>Shir HaMa'alot</em>, "a song of the ascents" (KJV: "song of degrees"). The most common explanation is that pilgrims sang them as they climbed the road up to Jerusalem for the festivals. A long Jewish tradition instead ties them to the fifteen steps in the Second Temple where the Levite musicians stood (Mishnah, Middot 2:5). <strong>Psalms 127 and 128 belong to this set</strong> — travel songs about home, sung by people walking away from home.</p>
+
+    <p>• <strong>The closing Hallelujah psalms (146–150).</strong> Each one opens and closes with "Praise ye the Lord." They were used in synagogue morning worship and still are.</p>
+
+    <p><strong>Psalm 102 and the shadow of exile.</strong> Its heading calls it "a prayer of the afflicted." The middle of the psalm asks God to arise and have mercy on Zion because "thy servants take pleasure in her stones" (v. 14) — the language of someone looking at rubble. Most readers place it during or just after the Babylonian exile, when the temple lay destroyed and Jerusalem's walls were down. Psalm 137, later in this week's block, is explicit about it: "By the rivers of Babylon, there we sat down." So this week's reading spans the emotional range of the whole nation — a people who had lost everything, and the same people singing at the top of their lungs by the end.</p>
+
+    <div class="card"><span class="tag">Artifact: the Great Psalms Scroll (11Q5)</span><p>In 1956, Bedouin searchers found a scroll in Cave 11 at Qumran, near the Dead Sea; it was unrolled in 1961. Made of thick animal hide, it runs about 4.25 meters and preserves 28 columns of text in an elegant Herodian book-hand. Paleography and radiocarbon dating both place it in roughly the first century AD. Here is what makes it useful this week: its contents are drawn almost entirely from <strong>Psalms 101–150</strong> — this week's exact territory — containing all or part of more than forty psalms, arranged in an order different from our Bibles, plus eight extra compositions including Psalm 151 and a prose note on how many songs David wrote. A real, touchable object proves that these particular psalms were being copied, ordered, and sung by ordinary Jews in the Savior's own generation.</p></div>
+  </section>
+
+  <!-- ============ 2. PASSAGE SUMMARY ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">2</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <h2 class="sec">Passage Summary</h2></div>
+    <div class="rule"></div>
+    <p class="lead">The week's reading isn't a story with a plot; it's a sequence of moods. Read it as a movement from the bottom of the pit to the roof of the temple.</p>
+
+    <div class="tl">
+      <div class="step"><span class="badge">1</span><div class="vv">Psalm 102</div><h3>A prayer from the bottom</h3><p>The first eleven verses are an unsparing description of misery — sleepless, appetite gone, bones burning, alone "as a sparrow… upon the house top" (v. 7). Then verse 12 pivots on one word: <em>But.</em> "But thou, O Lord, shalt endure for ever." The psalmist stops describing himself and starts describing God, and the whole poem changes altitude. God will arise on Zion, hear the groaning of the prisoner, and be praised by "the people which shall be created" (v. 18) — a generation not yet born. Verses 25–27 close with the heavens wearing out like a garment while God remains the same; the writer of Hebrews applies those verses directly to Jesus Christ (Hebrews 1:10–12).</p></div>
+
+      <div class="step"><span class="badge">2</span><div class="vv">Psalm 103</div><h3>"Bless the Lord, O my soul"</h3><p>A catalogue of what God actually does: forgives iniquities, heals diseases, redeems from destruction, crowns with lovingkindness and tender mercies (vv. 3–4). Two of the Bible's great images of forgiveness sit here — sin removed "as far as the east is from the west" (v. 12), and God pitying us "like as a father pitieth his children," because "he knoweth our frame; he remembereth that we are dust" (vv. 13–14). The psalm ends by widening out to angels, hosts, and all His works. Verses 17–18 tie God's everlasting mercy specifically to those who keep His covenant.</p></div>
+
+      <div class="step"><span class="badge">3</span><div class="vv">Psalm 110</div><h3>The Priest-King at the right hand</h3><p>Short, strange, and one of the most quoted Old Testament chapters in the New Testament. Verse 1 records one Lord speaking to another Lord: "Sit thou at my right hand." In the King James Version, "L<span style="font-variant:small-caps">ORD</span>" in small capitals stands in for the name <em>Jehovah</em>, following the Jewish practice of substituting <em>adonai</em> out of reverence — so the psalm has Jehovah addressing the king as "my Lord." Verse 4 adds the second bombshell: this figure is "a priest for ever after the order of Melchizedek." Jesus used verse 1 to challenge the Pharisees about who the Messiah really is (Matthew 22:41–45), and Hebrews 5–7 builds its whole argument about Christ's priesthood on verse 4. Psalm 110 is one of only two places in the entire Old Testament that names Melchizedek.</p></div>
+
+      <div class="step"><span class="badge">4</span><div class="vv">Psalms 116–118</div><h3>The songs of the Last Supper</h3><p><strong>116</strong> is a personal thank-you from someone who nearly died: "I love the Lord, because he hath heard my voice" (v. 1); "I will take the cup of salvation, and call upon the name of the Lord" (v. 13); and the line that reframes death entirely — "Precious in the sight of the Lord is the death of his saints" (v. 15). <strong>117</strong> is the shortest chapter in the Bible, two verses, and it invites <em>all nations</em> to praise. <strong>118</strong> is the climax of the Hallel and is packed with phrases the Gospels reuse: the stone the builders refused becoming the head of the corner (v. 22), "This is the day which the Lord hath made" (v. 24), and "Save now" — in Hebrew, <em>hoshia-na</em>, <strong>Hosanna</strong> — followed by "Blessed be he that cometh in the name of the Lord" (vv. 25–26), the exact words the crowds shouted at the triumphal entry.</p></div>
+
+      <div class="step"><span class="badge">5</span><div class="vv">Psalm 119</div><h3>176 verses about one subject</h3><p>The longest chapter in the Bible, and the most tightly engineered poem in it. It is an <strong>acrostic</strong>: 22 stanzas, one for each letter of the Hebrew alphabet, each stanza exactly eight verses long, and every verse within a stanza beginning with that same letter — which is why the KJV prints ALEPH, BETH, GIMEL down the page. In a culture where scripture was memorized and recited, the alphabet was the filing system. Nearly every verse uses one of eight words for God's instruction (law, testimonies, precepts, statutes, commandments, judgments, word, way). Watch for the travel vocabulary the manual highlights — walk, path, way, feet, wander — and note the honest ending: after 175 verses of devotion, verse 176 admits, "I have gone astray like a lost sheep; seek thy servant."</p></div>
+
+      <div class="step"><span class="badge">6</span><div class="vv">Psalms 127–128</div><h3>Two pilgrim songs about home</h3><p><strong>127</strong> opens with the thesis: "Except the Lord build the house, they labour in vain that build it." Working yourself to exhaustion without God is wasted effort — He gives His beloved sleep. Then verses 3–5 call children "an heritage of the Lord" and compare them to arrows in a warrior's hand. In the ancient world, a large household <em>was</em> a family's security and strength. <strong>128</strong> continues with a picture of an ordinary blessed life: honest work, a family gathered around a table, and peace on Israel. Both were sung on the road to Jerusalem, by people missing exactly what the psalms describe.</p></div>
+
+      <div class="step"><span class="badge">7</span><div class="vv">Psalms 135–136</div><h3>Idols that can't do anything</h3><p><strong>135</strong> recites what the Lord has done — He made lightning and rain, struck Egypt, gave Israel a land — and then turns to the competition: idols of silver and gold have mouths that don't speak, eyes that don't see, ears that don't hear, and no breath at all (vv. 15–17). Verse 18 is the sharp one: "They that make them are like unto them." You become what you worship. <strong>136</strong> answers with the opposite of a dead thing — twenty-six verses of history, each one answered by the congregation: "for his mercy endureth for ever."</p></div>
+
+      <div class="step"><span class="badge">8</span><div class="vv">Psalms 137–139</div><h3>Exile, and being fully known</h3><p><strong>137</strong> is the exile in miniature: harps hung on willows, captors demanding a cheerful song, and the refusal — "How shall we sing the Lord's song in a strange land?" It ends in raw, unresolved anger (see the note below). <strong>138</strong> thanks God before the world's rulers and promises He regards the lowly. <strong>139</strong> is the summit: God knows when you sit and stand and what you'll say before you say it (vv. 1–4); there is nowhere you can go to escape Him — heaven, the grave, the far side of the sea, darkness itself (vv. 7–12); He formed you and you are "fearfully and wonderfully made" (v. 14). The psalm ends by <em>inviting</em> that scrutiny: "Search me, O God, and know my heart… and lead me in the way everlasting" (vv. 23–24).</p></div>
+
+      <div class="step"><span class="badge">9</span><div class="vv">Psalms 146–150</div><h3>The finale: five hallelujahs</h3><p>Every one of these opens and closes with "Praise ye the Lord." <strong>146</strong> warns against putting confidence in princes, whose plans die with them, and lists what God does instead: feeds the hungry, frees prisoners, opens blind eyes, lifts the bowed down. <strong>147</strong> holds two scales at once — He counts and names the stars, <em>and</em> He heals the brokenhearted (vv. 3–4). <strong>148</strong> summons all creation to praise: angels, sun and moon, sea creatures, weather, mountains, trees, animals, kings, young men and maidens. <strong>149</strong> calls for a new song and pairs high praise in the mouth with a two-edged sword in the hand. <strong>150</strong> answers where, why, and how to praise — in the sanctuary, for His mighty acts, with every instrument in the building — and closes the entire book of Psalms with the line the manual took for its title: "Let every thing that hath breath praise the Lord."</p></div>
+    </div>
+
+    <div class="card warm"><span class="tag">Note for the teacher: the hard verses</span><p>Two places in this block can stop a sharp student cold, and it's better to name them than to hope nobody reads that far. <strong>Psalm 137:8–9</strong> ends with a brutal wish against Babylon's children. <strong>Psalm 139:19–22</strong> speaks of hating God's enemies with "perfect hatred." Context helps: these are the words of people whose city had been burned and whose families had been marched into captivity, and Hebrew poetry gives that rage to God rather than acting on it — the psalmist is handing it over, not picking up a sword. The Church's <em>Scripture Helps</em> notes that "perfect hatred" was likely an expression of undivided loyalty to God, and then points where the lesson should land: the Savior's higher law in Matthew 5:43–44, "Love your enemies… pray for them which despitefully use you." A good frame for youth: the Psalms are honest about what people actually feel. Bringing God your ugliest feelings is allowed. Staying there is not.</p></div>
+
+    <div class="card"><span class="tag">Word study: <em>hesed</em></span><p>The word translated "mercy" in Psalm 103 (and "mercy endureth for ever" in Psalm 136) is the Hebrew <em>hesed</em> — closer to covenant loyalty than to pity. President Russell M. Nelson has taught that those who make a covenant with God gain access to this special kind of love and mercy, and that once we make a covenant we "leave neutral ground forever" ("The Everlasting Covenant," <em>Liahona</em>, Oct. 2022, 5). That single word is why Psalm 103:17–18 attaches everlasting mercy to those who keep His covenant: it isn't a condition God bolted on, it's what the word means.</p></div>
+
+    <blockquote class="pull">Thy word is a lamp unto my feet, and a light unto my path.<cite>Psalm 119:105</cite></blockquote>
+  </section>
+
+  <!-- ============ 3. BOOK OF MORMON PARALLELS ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">3</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-1.6-1.2-3.6-2-6-2v13c2.4 0 4.4.8 6 2"/><path d="M12 6c1.6-1.2 3.6-2 6-2v13c-2.4 0-4.4.8-6 2"/><path d="M12 6v13"/></svg>
+      <h2 class="sec">Comparison to the Book of Mormon</h2></div>
+    <div class="rule"></div>
+    <p class="lead">Lehi's family carried the brass plates out of Jerusalem around 600 BC — the same city, the same temple tradition, the same songs. The echoes below aren't coincidences of wording; they're the same doctrine surfacing on two continents.</p>
+
+    <div class="grid">
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Psalm 110:4</div><p>The Messiah is "a priest for ever after the order of Melchizedek" — one of only two Old Testament mentions of Melchizedek at all.</p></div>
+        <div class="row b"><div class="mini">Alma 13:1–19</div><p>Alma explains that priests are "ordained after the order of his Son," and gives more detail about Melchizedek, king of Salem, than the whole Bible does.</p></div>
+        <div class="teach"><b>Teaches:</b> The priesthood is named after Melchizedek out of reverence, but it was always "after the Order of the Son of God" (D&amp;C 107:3) — its whole purpose is to point people to Christ.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Psalm 119 (walk, path, way, feet)</div><p>The longest chapter in scripture is built around one image: life as a road, and God's word as what keeps your feet on it.</p></div>
+        <div class="row b"><div class="mini">2 Nephi 31:17–21</div><p>The strait and narrow path, entered by baptism, walked by pressing forward and feasting on the words of Christ, which "tell you all things what ye should do."</p></div>
+        <div class="teach"><b>Teaches:</b> Both writers say the same thing — getting on the path is a moment, staying on it is a daily diet of God's word.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Psalm 119:105</div><p>A lamp for the feet and a light for the path — enough illumination for the next step, not a floodlight over the whole journey.</p></div>
+        <div class="row b"><div class="mini">1 Nephi 8:20–28; 11:25</div><p>The rod of iron runs alongside the path through the mist of darkness; Nephi is told plainly that the rod of iron <em>is</em> the word of God.</p></div>
+        <div class="teach"><b>Teaches:</b> Lehi's dream is Psalm 119 in picture form. In a fog you don't need to see the destination — you need something solid to hold that runs the right direction.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Psalm 118:22</div><p>"The stone which the builders refused is become the head stone of the corner" — the piece thrown off the site turns out to be load-bearing.</p></div>
+        <div class="row b"><div class="mini">Jacob 4:15–17; Helaman 5:12</div><p>Jacob foresees the Jews rejecting "the stone upon which they might build and have safe foundation." Helaman urges building on the rock of our Redeemer, where the devil's whirlwind cannot drag you down.</p></div>
+        <div class="teach"><b>Teaches:</b> Rejecting Christ doesn't make Him less foundational. It just means you're building on something that won't hold.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Psalms 102:1–11; 103:13–14</div><p>God hears the groaning of the prisoner, and "knoweth our frame" — He understands what we're made of and what we can take.</p></div>
+        <div class="row b"><div class="mini">Alma 7:11–13</div><p>Christ takes upon Him our pains, sicknesses, and infirmities so that "he may know according to the flesh how to succor his people."</p></div>
+        <div class="teach"><b>Teaches:</b> Alma explains <em>how</em> the comfort of Psalm 102 works. It isn't sympathy from a distance — it's experience.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Psalm 135:15–18</div><p>Idols have mouths, eyes, and ears that do nothing, and "they that make them are like unto them."</p></div>
+        <div class="row b"><div class="mini">Alma 31:12–23</div><p>The Zoramites climb a stand they built themselves, the Rameumptom, recite a prayer they wrote themselves, and go home unchanged — worship aimed at their own reflection.</p></div>
+        <div class="teach"><b>Teaches:</b> An idol doesn't have to be a statue. Anything you build, then bow to, will eventually shape you into its likeness.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Psalm 139:1–12</div><p>God knows the psalmist's sitting down and rising up, his thoughts from far off, and there is no place — not heaven, not the grave, not darkness — where He isn't.</p></div>
+        <div class="row b"><div class="mini">Alma 26:37</div><p>God is "mindful of every people, whatsoever land they may be in"; He numbers His people, and His mercies are over all the earth.</p></div>
+        <div class="teach"><b>Teaches:</b> Ammon's discovery in the mission field is Psalm 139's discovery in prayer — nobody is outside God's attention, including the person who feels most overlooked.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Psalms 146–150</div><p>Five closing psalms that do nothing but praise, ending with every breathing thing joining in.</p></div>
+        <div class="row b"><div class="mini">Mosiah 2:20–21; Alma 5:26</div><p>King Benjamin: if you gave all the thanks and praise your whole soul possesses, you would still be an unprofitable servant. Alma: "if ye have felt to sing the song of redeeming love… can ye feel so now?"</p></div>
+        <div class="teach"><b>Teaches:</b> Praise is never repayment — the debt is too big. It's the natural sound a rescued person makes, and Alma treats it as a spiritual vital sign.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Psalm 127:1, 3</div><p>"Except the Lord build the house, they labour in vain," and children are "an heritage of the Lord."</p></div>
+        <div class="row b"><div class="mini">Enos 1:1–4</div><p>Enos credits his wrestle before God to his father, who "taught me in his language, and also in the nurture and admonition of the Lord."</p></div>
+        <div class="teach"><b>Teaches:</b> The Lord builds the house through parents doing ordinary teaching. Enos's conversion started years earlier, at somebody's dinner table.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="row k"><div class="mini">Psalm 149:6</div><p>High praises of God in the mouth, paired with a two-edged sword in the hand — praise described as something with cutting force.</p></div>
+        <div class="row b"><div class="mini">Helaman 5:44–47; D&amp;C 6:2</div><p>Nephi and Lehi in prison are encircled by fire and hear a still, small voice of perfect mildness that pierces to the very soul. The Lord's word is "sharper than a two-edged sword."</p></div>
+        <div class="teach"><b>Teaches:</b> God's word doesn't work by volume. The quietest voice in the room can cut deeper than anything shouted at you.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 4. TIE TO COME, FOLLOW ME ============ -->
+  <section class="block reveal">
+    <div class="sec-head"><span class="sec-num">4</span>
+      <svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>
+      <h2 class="sec">Tie to Come, Follow Me</h2></div>
+    <div class="rule"></div>
+
+    <p>This week's outline is titled <strong>"Let Every Thing That Hath Breath Praise the Lord"</strong> (August 31–September 6, 2026). Its opening note explains that <em>Tehillim</em>, the Jewish name for Psalms, means "praises," and that if you had to sum up the book in one word, <em>praise</em> would be the word. The manual is careful to say praise looks different for different people — singing, praying, bearing testimony — and that it usually leads somewhere: to a deeper commitment to follow the Lord.</p>
+
+    <h3 style="margin-top:22px">The six principles the manual builds the week around</h3>
+    <ul class="points">
+      <li><strong>"The Lord can comfort me in my suffering."</strong> (Psalms 102–3; 116) The outline has readers notice the anxiety and isolation in Psalm 102:1–11, then read 102:12–28; 103; and 116 looking for phrases that give confidence to "call upon the name of the Lord" (Psalm 116:13), and suggests marking or memorizing them. Cross-references: Isaiah 25:8; Hebrews 2:17–18; Alma 7:11–13; Camille N. Johnson, "Christ Is Relief," <em>Liahona</em>, May 2023, 81–83; "Where Can I Turn for Peace?" (<em>Hymns</em>, no. 129).</li>
+
+      <li><strong>"Jesus Christ fulfilled prophecies from the Psalms."</strong> (Psalms 110; 118) The manual lists three specific fulfillments and asks what they teach about the Savior: Psalm 110:1–4 (see Matthew 22:41–45; Hebrews 5:4–10; 6:20); Psalm 118:22 (see Matthew 21:42; Acts 4:10–11; 1 Peter 2:7); Psalm 118:25–26 (see Matthew 21:9).</li>
+
+      <li><strong>"God's word will keep me on His path."</strong> (Psalm 119) — <em>flagged as a seminary-doctrine section.</em> Students are told to hunt for the words <em>walk, path, way, feet,</em> and <em>wander</em>, then think about their own journey. The outline supplies a study table on the path: Proverbs 4:11–19; Matthew 7:13–14; 1 Nephi 8:20–28; 2 Nephi 31:17–21; Alma 7:9, 19–20; Doctrine and Covenants 25:2. It quotes President Russell M. Nelson on studying the "scriptural road map" and correcting course through repentance ("Living by Scriptural Guidance," <em>Ensign</em>, Nov. 2000, 17), and points to Dieter F. Uchtdorf, "The Prodigal and the Road That Leads Home," <em>Liahona</em>, Nov. 2023, 86–88.</li>
+
+      <li><strong>"The Lord is more powerful than any idol."</strong> (Psalms 134–36) Built on Psalm 135:15–18, with a direct question: what might you be tempted to trust in that works like an idol? Then make a list of what the Lord has actually done for you.</li>
+
+      <li><strong>"The Lord knows my heart."</strong> (Psalm 139) What in this psalm shows that the Lord is aware of your thoughts, actions, strengths, and weaknesses — and how does that change your choices?</li>
+
+      <li><strong>"Praise ye the Lord."</strong> (Psalms 146–50) Why is praising Him important, and what are some ways to do it?</li>
+    </ul>
+
+    <h3 style="margin-top:24px">Scripture Helps the outline links this week</h3>
+    <ul class="points">
+      <li><strong>Why are there Hebrew letters throughout Psalm 119?</strong> It's an acrostic — 22 stanzas of eight verses each, one stanza per letter of the Hebrew alphabet, every verse in a stanza starting with that letter. In an age of oral transmission, a memory aid.</li>
+      <li><strong>How are children a "heritage of the Lord"?</strong> Psalm 127 argues that human effort alone can't build a house or guard a city; verses 3–5 say God establishes a household through children. "The Family: A Proclamation to the World" quotes Psalm 127:3 directly.</li>
+      <li><strong>Why does this psalm speak about "perfect hatred"?</strong> (Psalm 139:19–22) Likely an expression of undivided loyalty to God — and to be read alongside the Savior's higher law in Matthew 5:43–44.</li>
+      <li><strong>Also in the background notes:</strong> the meaning of <em>hesed</em> in Psalm 103:17–18; why there are two "Lords" in Psalm 110:1–2 (small-caps L<span style="font-variant:small-caps">ORD</span> stands for Jehovah); who was "a priest for ever after the order of Melchizedek" (see JST Genesis 14:25–40; Alma 13:14–19; D&amp;C 84:14; 107:1–4); what makes the death of the saints "precious" (Psalm 116:15, with President Nelson calling death a homecoming); the stone the builders refused; and the two-edged sword of Psalm 149:6–9 (compare D&amp;C 6:2).</li>
+    </ul>
+
+    <h3 style="margin-top:24px">These songs in the Restoration</h3>
+    <div class="resto">
+      <div class="rnode"><div class="yr">c. 1000 BC</div><div class="tt">David organizes the singers</div><div class="ds">Levite guilds under Asaph, Heman, and Jeduthun prophesy with harps, psalteries, and cymbals (1 Chronicles 25:1).</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">c. AD 33</div><div class="tt">The hymn at the Last Supper</div><div class="ds">Jesus and the Apostles sing the Hallel — Psalms 115–118 — and go out to the Mount of Olives (Matthew 26:30).</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">July 1830</div><div class="tt">D&amp;C 25</div><div class="ds">Emma Smith is called to make a hymn selection for the Church, and the Lord declares that "the song of the righteous is a prayer unto me" (v. 12). Verse 2 is in the manual's path table.</div></div>
+      <div class="rarrow">▸</div>
+      <div class="rnode"><div class="yr">1835</div><div class="tt">D&amp;C 107</div><div class="ds">The revelation on priesthood names what Psalm 110:4 only hinted at: the higher priesthood is "after the Order of the Son of God," called Melchizedek out of reverence.</div></div>
+    </div>
+
+    <h3 style="margin-top:24px">Teaching ideas for youth Sunday School (ages 12–13)</h3>
+    <ul class="ideas">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Open with the hymnbook.</strong> Hand out hymnals and give everyone 60 seconds to find one line that says something true about God. Read a few aloud, then explain that Psalms <em>is</em> the hymnbook — the actual lyrics Israel sang in the temple. Read Psalm 150 and count how many instruments are named.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Build a class acrostic (Psalm 119).</strong> Explain the alphabet structure, then assign each student a letter and one minute to write a single line of praise starting with it. Read them in order as a class poem. Ten minutes, and they'll never forget what an acrostic is.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>The lamp, not the floodlight.</strong> Darken the room, set a few chairs as obstacles, and have a volunteer cross using only a phone light aimed at their feet. Then read Psalm 119:105 and ask why God gives a <em>lamp for the feet</em> instead of lighting the whole route. Good place to bring in 1 Nephi 8:20–28.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>The rejected stone.</strong> Bring a handful of rocks and have the class pick the one they'd throw away. Read Psalm 118:22, then Matthew 21:42, then Helaman 5:12. Ask what it means that the discarded stone was the one holding the building up.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>The Melchizedek connection (especially for the deacons).</strong> Put Psalm 110:1, 4 on the board next to Matthew 22:41–45, Alma 13:2, and D&amp;C 107:3–4. Ask: what did Jesus want the Pharisees to work out from a psalm they'd sung their whole lives? Then: what priesthood are you preparing to receive, and what is it named after?</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Modern idols, without the lecture.</strong> Read Psalm 135:15–18 and list what an idol <em>can't</em> do: see, hear, speak, breathe. Then ask what things people trust in today that also can't do those four things — and what they can't do for you at two in the morning. Let students name them; don't supply the list yourself.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Psalm 139, privately.</strong> Read verses 1–12, then have each student write down one thing God knows about them that nobody else does — and keep the paper. Don't collect it, don't ask anyone to share. Then read verses 23–24 and ask why someone would <em>invite</em> God to search them. Elder Clement M. Matswagothata's "He Knows You by Name" (<em>Liahona</em>, May 2026, 50–51) pairs well here.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Have a plan for the hard verses.</strong> If someone finds Psalm 137:9 or the "perfect hatred" of 139:22, don't deflect. Name what happened to these people, explain that the Psalms let you say the worst thing you feel <em>to God</em> instead of doing it, and end at Matthew 5:43–44. Students trust a teacher who doesn't dodge.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Close by singing.</strong> The <em>Scripture Helps</em> media list pairs "Praise to the Lord, the Almighty" (<em>Hymns</em>, no. 72) with Psalm 150, and "All Creatures of Our God and King" (no. 62) with Psalm 148. Read the psalm, then sing the hymn, and point out that they've just done exactly what the class has been studying for 40 minutes.</li>
+    </ul>
+  </section>
+</div>
+
+<footer><div class="wrap"><b>Psalms 102–103; 110; 116–119; 127–128; 135–139; 146–150 — "Let Every Thing That Hath Breath Praise the Lord."</b> Section 4 follows the official outline and Scripture Helps for August 31–September 6, 2026, in <em>Come, Follow Me—For Home and Church: Old Testament 2026</em> (churchofjesuschrist.org). Historical background draws on standard scholarship on the Psalter's structure, the Hallel and Songs of Ascents, and the Great Psalms Scroll (11Q5) from Qumran Cave 11. Scripture quotations are King James Version and Book of Mormon.</div></footer>
+
+<button class="printbtn" onclick="window.print()" aria-label="Print handout">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+  Print
+</button>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    function showAll(){ els.forEach(function(el){ el.classList.add('in'); }); }
+    if(!('IntersectionObserver' in window)){ showAll(); return; }
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.08, rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+    setTimeout(showAll, 2500);
+  })();
+</script>
+</body>
+</html>
