@@ -69,6 +69,12 @@
   .thanks{background:var(--gold-soft);border:1px solid var(--gold);border-radius:16px;padding:36px 26px;margin:34px 0 44px;text-align:center;}
   .thanks h2{font-family:"Fraunces",Georgia,serif;color:var(--night);font-size:28px;margin:0 0 8px;}
   .thanks p{margin:0;color:var(--ink-soft);font-size:15.5px;}
+  a.s{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(47,111,99,.4);}
+  a.s:hover{border-bottom-color:var(--teal);background:rgba(47,111,99,.08);}
+  a.s:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:2px;}
+  .hero a.s,footer a.s{color:var(--gold);border-bottom-color:rgba(230,179,74,.45);}
+  .hero a.s:hover,footer a.s:hover{border-bottom-color:var(--gold);background:rgba(230,179,74,.14);}
+  @media print{a.s{color:inherit;border-bottom:0;}}
   @media (max-width:680px){.answerbox{margin-left:0;}}
 </style>
 </head>
@@ -77,7 +83,7 @@
   <div class="hero-inner">
     <div class="eyebrow">Come, Follow Me &middot; August 31 – September 6</div>
     <h1>Weekly Quiz</h1>
-    <p class="kicker">Psalms 102–103; 110; 116–119; 127–128; 135–139; 146–150 &middot; &ldquo;Let Every Thing That Hath Breath Praise the Lord&rdquo;</p>
+    <p class="kicker"><a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/102?lang=eng" target="_blank" rel="noopener">Psalms 102–103</a>; <a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/110?lang=eng" target="_blank" rel="noopener">110</a>; <a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/116?lang=eng" target="_blank" rel="noopener">116–119</a>; <a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/127?lang=eng" target="_blank" rel="noopener">127–128</a>; <a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/135?lang=eng" target="_blank" rel="noopener">135–139</a>; <a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/146?lang=eng" target="_blank" rel="noopener">146–150</a> &middot; &ldquo;Let Every Thing That Hath Breath Praise the Lord&rdquo;</p>
     <p class="sub">Type your name, answer each question in your own words, then press Submit. Your answers go straight to your teacher.</p>
   </div>
 </header>
@@ -96,17 +102,17 @@
         <div class="answerbox"><textarea id="a0" name="answer0" rows="2" required></textarea></div>
       </li>
       <li>
-        <div class="qrow"><span class="qnum">2</span><label class="qtext" for="a1">How many words are in Psalms 116:13?</label></div>
+        <div class="qrow"><span class="qnum">2</span><label class="qtext" for="a1">How many words are in <a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/116?lang=eng&amp;id=p13#p13" target="_blank" rel="noopener">Psalms 116:13</a>?</label></div>
         <input type="hidden" name="q1" value="How many words are in Psalms 116:13?">
         <div class="answerbox"><textarea id="a1" name="answer1" rows="2" required></textarea></div>
       </li>
       <li>
-        <div class="qrow"><span class="qnum">3</span><label class="qtext" for="a2">Finish the sentence. According to the header in Psalms 119, &ldquo;Blessed are they who keep the ______.&rdquo;</label></div>
+        <div class="qrow"><span class="qnum">3</span><label class="qtext" for="a2">Finish the sentence. According to the header in <a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/119?lang=eng" target="_blank" rel="noopener">Psalms 119</a>, &ldquo;Blessed are they who keep the ______.&rdquo;</label></div>
         <input type="hidden" name="q2" value="Finish the sentence. According to the header in Psalms 119, &quot;Blessed are they who keep the ______.&quot;">
         <div class="answerbox"><textarea id="a2" name="answer2" rows="2" required></textarea></div>
       </li>
       <li>
-        <div class="qrow"><span class="qnum">4</span><label class="qtext" for="a3">In the Come, Follow Me manual, there is a small section that teaches about Psalms 134–136. What is the title of that section?</label></div>
+        <div class="qrow"><span class="qnum">4</span><label class="qtext" for="a3">In the Come, Follow Me manual, there is a small section that teaches about <a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/134?lang=eng" target="_blank" rel="noopener">Psalms 134–136</a>. What is the title of that section?</label></div>
         <input type="hidden" name="q3" value="In the Come, Follow Me manual, there is a small section that teaches about Psalms 134–136. What is the title of that section?">
         <div class="answerbox"><textarea id="a3" name="answer3" rows="2" required></textarea></div>
       </li>
@@ -128,7 +134,7 @@
   </div>
 </div>
 <iframe name="cfm_sink" style="display:none" aria-hidden="true" title="submit target"></iframe>
-<footer><div class="wrap"><b>Psalms 102–103; 110; 116–119; 127–128; 135–139; 146–150 &mdash; Weekly Quiz.</b> Come, Follow Me: Old Testament 2026 (August 31 – September 6). Your name and answers are sent to your teacher's response sheet.</div></footer>
+<footer><div class="wrap"><b><a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/102?lang=eng" target="_blank" rel="noopener">Psalms 102–103</a>; <a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/110?lang=eng" target="_blank" rel="noopener">110</a>; <a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/116?lang=eng" target="_blank" rel="noopener">116–119</a>; <a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/127?lang=eng" target="_blank" rel="noopener">127–128</a>; <a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/135?lang=eng" target="_blank" rel="noopener">135–139</a>; <a class="s" href="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/146?lang=eng" target="_blank" rel="noopener">146–150</a> &mdash; Weekly Quiz.</b> Come, Follow Me: Old Testament 2026 (August 31 – September 6). Your name and answers are sent to your teacher's response sheet.</div></footer>
 <script>
 function quizSubmit(f){
   setTimeout(function(){
