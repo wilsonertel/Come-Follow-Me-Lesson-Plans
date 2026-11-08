@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Daniel 1–7 — No Other God That Can Deliver — Lesson Handout</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<style>  :root{
+    /* ---- DESIGN TOKENS — customize per lesson's motif ---- */
+    --night:#14295e;      /* dark hero base */
+    --night-2:#0c1a40;    /* darker band */
+    --accent:#e8742a;     /* primary accent (motif color) */
+    --accent-soft:#f6a65a;
+    --gold:#e7b84a;       /* highlight */
+    --parch:#f7f3ea;      /* reading surface */
+    --parch-2:#eef0f6;    /* card surface */
+    --ink:#24262e;        /* body text */
+    --ink-soft:#525667;
+    --echo:#2a7f86;       /* second accent: the "parallel/echo" color */
+    --echo-soft:#e2f0f1;
+    --gold-soft:#f8eed5;
+    --line:#d6d9e4;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--parch);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);}
+  h2.sec{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(26px,4.4vw,34px);line-height:1.1;margin:0;color:var(--night);}
+  h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:20px;color:var(--night);margin:0 0 6px;}
+  p{margin:0 0 15px;} strong{font-weight:700;color:#221f19;} em{font-style:italic;}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;color:#f4efe4;
+    background:radial-gradient(120% 90% at 82% 8%, color-mix(in srgb,var(--accent) 42%,transparent), transparent 46%),
+      radial-gradient(90% 70% at 78% 30%, color-mix(in srgb,var(--gold) 22%,transparent), transparent 55%),
+      linear-gradient(160deg,var(--night) 0%,var(--night-2) 100%);}
+  .stars{position:absolute;inset:0;pointer-events:none;opacity:.9;}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:56px 22px 60px;position:relative;z-index:2;
+    display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;}
+  .hero .eyebrow{color:var(--accent-soft);}
+  .hero h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(48px,10vw,86px);line-height:.9;letter-spacing:-.01em;margin:12px 0 8px;color:#fff;}
+  .hero .kicker{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(18px,3.4vw,23px);color:var(--gold);margin:0 0 18px;}
+  .theme-chip{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:600;color:#f4efe4;}
+  .theme-chip b{color:var(--accent-soft);font-weight:700;}
+  .hook{margin:18px 0 0;max-width:34ch;color:#e7e0d2;font-size:15.5px;line-height:1.55;}
+  .hero-art{align-self:stretch;display:flex;align-items:center;justify-content:center;min-width:150px;}
+  /* Put a simple inline SVG motif here (flame, star, temple, water…). Optional gentle animation. */
+
+  /* AT-A-GLANCE BAND (optional: a journey map, a key-facts strip, a cast of characters) */
+  .band{background:var(--night-2);color:#efe7d5;}
+  .journey{max-width:var(--maxw);margin:0 auto;padding:20px 22px;display:flex;align-items:stretch;gap:6px;}
+  .jlabel{align-self:center;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;margin-right:6px;}
+  .stop{flex:1;text-align:center;padding:6px 4px;}
+  .stop .dot{width:14px;height:14px;border-radius:50%;margin:0 auto 8px;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent);}
+  .stop .nm{font-family:"Fraunces",serif;font-weight:600;font-size:16px;color:#fff;}
+  .stop .ds{font-size:11.5px;color:#b9c0d6;line-height:1.3;margin-top:2px;}
+  .arrow{align-self:flex-start;margin-top:20px;color:#5b6486;font-size:18px;flex:0 0 auto;}
+
+  /* SECTION SHELL */
+  section.block{padding:46px 0 8px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+  .sec-num{font-family:"Fraunces",serif;font-weight:900;font-size:15px;color:#fff;background:var(--night);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .sec-ico{width:24px;height:24px;color:var(--accent);flex:0 0 auto;}
+  .rule{height:3px;background:linear-gradient(90deg,var(--accent),var(--gold) 60%,transparent);border-radius:3px;margin:10px 0 22px;}
+  .lead{font-size:15px;color:var(--ink-soft);font-style:italic;margin:-6px 0 20px;}
+
+  /* CALLOUT CARD */
+  .card{background:var(--parch-2);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:18px 20px;margin:20px 0;}
+  .card.warm{border-left-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--parch));}
+  .card .tag{font-size:11.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--night);margin-bottom:7px;display:block;}
+  .card.warm .tag{color:#a4560f;} .card p:last-child{margin-bottom:0;}
+
+  /* PULL QUOTE */
+  .pull{margin:24px 0;padding:16px 22px;border-left:5px solid var(--accent);background:linear-gradient(90deg,var(--gold-soft),transparent);
+    font-family:"Fraunces",serif;font-size:21px;font-style:italic;color:var(--night);line-height:1.35;}
+  .pull cite{display:block;font-family:"Inter";font-style:normal;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:8px;}
+
+  /* SUMMARY TIMELINE */
+  .tl{position:relative;margin:8px 0 6px;padding-left:8px;}
+  .step{position:relative;padding:0 0 22px 54px;}
+  .step:before{content:"";position:absolute;left:19px;top:6px;bottom:-6px;width:2px;background:var(--line);}
+  .step:last-child:before{display:none;}
+  .step .badge{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:11px;background:var(--night);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:700;font-size:15px;z-index:2;}
+  .step .vv{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--accent);text-transform:uppercase;}
+  .step h3{margin:2px 0 5px;} .step p{margin:0;font-size:15.5px;}
+
+  /* PARALLEL CARDS */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:8px 0 4px;}
+  .pcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;}
+  .pcard .row{padding:13px 16px;}
+  .pcard .k{border-left:5px solid var(--gold);background:var(--gold-soft);}
+  .pcard .b{border-left:5px solid var(--echo);background:var(--echo-soft);}
+  .pcard .mini{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;}
+  .pcard .k .mini{color:#9a6a12;} .pcard .b .mini{color:var(--echo);}
+  .pcard .row p{margin:0;font-size:14px;line-height:1.5;}
+  .pcard .teach{margin-top:auto;padding:12px 16px;background:#faf6ec;border-top:1px dashed var(--line);font-size:13px;color:var(--ink);}
+  .pcard .teach b{color:var(--night);}
+
+  /* MANUAL POINTS + MINI TIMELINE + IDEAS */
+  .points{list-style:none;padding:0;margin:14px 0;}
+  .points li{position:relative;padding:12px 16px 12px 46px;background:var(--parch-2);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;font-size:15px;}
+  .points li:before{content:"";position:absolute;left:16px;top:16px;width:14px;height:14px;border-radius:50%;border:3px solid var(--accent);}
+  .points li strong{color:var(--night);}
+  .resto{display:flex;gap:8px;align-items:stretch;margin:14px 0 6px;flex-wrap:nowrap;}
+  .rnode{flex:1;background:var(--night);color:#f2ecdd;border-radius:12px;padding:14px;}
+  .rnode .yr{font-family:"Fraunces",serif;font-weight:700;color:var(--gold);font-size:15px;}
+  .rnode .tt{font-weight:700;font-size:14px;margin:3px 0 4px;color:#fff;} .rnode .ds{font-size:12px;color:#c3c9de;line-height:1.4;}
+  .rarrow{align-self:center;color:var(--accent);font-size:20px;flex:0 0 auto;}
+  .ideas{list-style:none;padding:0;margin:12px 0;}
+  .ideas li{position:relative;padding:11px 14px 11px 44px;border-bottom:1px solid var(--line);font-size:15px;}
+  .ideas li:last-child{border-bottom:0;}
+  .ideas li svg{position:absolute;left:14px;top:12px;width:20px;height:20px;color:var(--echo);}
+
+  footer{margin-top:40px;background:var(--night-2);color:#aab2cc;}
+  footer .wrap{padding:26px 22px;font-size:12.5px;line-height:1.6;} footer b{color:#e7e0d2;}
+  .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 40%,transparent);display:flex;align-items:center;gap:8px;}
+  .printbtn:hover{filter:brightness(.93);}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:720px){
+    .hero-inner{grid-template-columns:1fr;} .hero-art{order:-1;min-width:0;}
+    .journey{flex-direction:column;gap:0;} .jlabel{margin:0 0 8px;text-align:center;}
+    .arrow{align-self:center;transform:rotate(90deg);margin:2px 0;}
+    .grid{grid-template-columns:1fr;} .resto{flex-direction:column;} .rarrow{transform:rotate(90deg);}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none;} html{scroll-behavior:auto;}}
+  @media print{
+    body{font-size:11.5pt;} .printbtn{display:none;}
+    .hero{background:var(--night)!important;} .reveal{opacity:1;transform:none;}
+    section.block{padding:16px 0 4px;break-inside:avoid;} .pcard,.step,.card,.rnode{break-inside:avoid;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .helps{list-style:none;padding:0;margin:10px 0;} .helps li{padding:9px 0 9px 28px;position:relative;border-bottom:1px dashed var(--line);font-size:15px;}
+  .helps li:before{content:"?";position:absolute;left:2px;top:9px;width:18px;height:18px;border-radius:50%;background:var(--echo);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+  .christ{background:var(--night);color:#efe7d5;border-radius:16px;padding:22px 22px 8px;margin:10px 0;}
+  .christ h3{color:var(--gold);} .christ p{font-size:15.5px;} .christ strong{color:#fff;}
+  .christ .ref{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--accent-soft);text-transform:uppercase;}
+  @media (max-width:720px){.two{grid-template-columns:1fr;}}
+</style></head><body>
+<header class="hero"><div class="hero-inner"><div>
+<div class="eyebrow">Come, Follow Me · Old Testament 2026 · Youth Sunday School</div><h1>Daniel 1–7</h1><p class="kicker">The Food · The Stone · The Furnace · The Lions · The Son of Man</p>
+<span class="theme-chip"><b>“There Is No Other God That Can Deliver”</b> · November 9–15</span><p class="hook">Four teenagers far from home, a whole empire pushing them to forget who they are—and a God who walks into the fire with them.</p></div>
+<div class="hero-art" aria-hidden="true"><svg width="200" height="220" viewBox="0 0 200 220">
+<defs><radialGradient id="fire" cx=".5" cy=".75" r=".6"><stop offset="0" stop-color="#ffd27a"/><stop offset=".5" stop-color="#f08a24"/><stop offset="1" stop-color="#b8401a"/></radialGradient></defs>
+<rect x="18" y="40" width="164" height="170" fill="#2a4fa0"/>
+<g fill="#2a4fa0"><rect x="18" y="26" width="18" height="16"/><rect x="50" y="26" width="18" height="16"/><rect x="82" y="26" width="18" height="16"/><rect x="114" y="26" width="18" height="16"/><rect x="146" y="26" width="18" height="16"/><rect x="164" y="26" width="18" height="16"/></g>
+<g fill="#e7b84a"><rect x="18" y="58" width="164" height="4"/><rect x="18" y="196" width="164" height="4"/></g>
+<path d="M54 210 V118 a46 46 0 0 1 92 0 V210 Z" fill="url(#fire)"/>
+<g fill="#3a1a0a" opacity=".85"><rect x="66" y="150" width="11" height="40" rx="5"/><rect x="86" y="146" width="11" height="44" rx="5"/><rect x="104" y="150" width="11" height="40" rx="5"/></g>
+<rect x="123" y="144" width="12" height="46" rx="6" fill="#fff6d8"/>
+<g fill="#e7b84a"><circle cx="71" cy="145" r="5"/><circle cx="91" cy="141" r="5"/><circle cx="109" cy="145" r="5"/></g><circle cx="129" cy="139" r="6" fill="#fff6d8"/>
+</svg></div></div></header>
+<div class="band"><div class="journey"><span class="jlabel">Daniel’s timeline</span><div class="stop"><div class="dot"></div><div class="nm">605 BC</div><div class="ds">Taken to Babylon as a youth (1:1)</div></div><div class="arrow">▸</div><div class="stop"><div class="dot"></div><div class="nm">c. 603 BC</div><div class="ds">The statue dream (2:1)</div></div><div class="arrow">▸</div><div class="stop"><div class="dot"></div><div class="nm">c. 553 BC</div><div class="ds">Vision of four beasts (7:1)</div></div><div class="arrow">▸</div><div class="stop"><div class="dot"></div><div class="nm">539 BC</div><div class="ds">Writing on the wall; Babylon falls (5)</div></div><div class="arrow">▸</div><div class="stop"><div class="dot"></div><div class="nm">c. 539 BC</div><div class="ds">The lions’ den under Darius (6)</div></div></div></div>
+<div class="wrap">
+<section class="block reveal"><div class="sec-head"><span class="sec-num">1</span>
+<svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 4v5h5"/></svg>
+<h2 class="sec">Historical Summary of the Period</h2></div><div class="rule"></div>
+
+<p><strong>When.</strong> Daniel’s story starts about eight years before Ezekiel’s. In <strong>605 BC</strong> the Babylonian crown prince <strong>Nebuchadnezzar</strong> crushed the Egyptian army at <strong>Carchemish</strong>, a victory recorded in the Babylonian Chronicle. That same year his father died and he became king (reigned 605–562 BC). Judah’s King Jehoiakim submitted, and Babylon took young hostages from the royal family and the nobility—among them <strong>Daniel, Hananiah, Mishael, and Azariah</strong> (Daniel 1:1–6; 2 Kings 24:1). Daniel 1:1 calls this Jehoiakim’s “third year,” while Jeremiah 25:1 says “fourth”; the difference likely comes from Babylon and Judah counting a king’s first partial year differently.</p>
+<p><strong>Who they were.</strong> The text calls them “children” (1:4)—most likely teenagers. They were chosen for being healthy, good-looking, and smart, then put through <strong>three years of royal training</strong> in “the learning and the tongue of the Chaldeans”: cuneiform writing, Akkadian, astronomy, and the dream-and-omen literature Babylon’s wise men used to advise the king.</p>
+<p><strong>The city.</strong> Babylon was the greatest city of its day. Visitors entered through the <strong>Ishtar Gate</strong>, covered in glazed blue bricks with golden dragons and bulls, and walked a Processional Way lined with molded lions. Nebuchadnezzar rebuilt the city on a massive scale and stamped his name into its bricks—fitting his boast in Daniel 4:30: “Is not this great Babylon, that I have built?”</p>
+<p><strong>After Nebuchadnezzar.</strong> When he died in 562 BC, several short reigns followed. The last king, <strong>Nabonidus (556–539 BC)</strong>, spent about ten years at the Arabian oasis of Tayma and left his son <strong>Belshazzar</strong> in charge of Babylon. That is why Belshazzar could offer Daniel only the <strong>“third ruler in the kingdom”</strong> (5:7, 16, 29)—Nabonidus was first and Belshazzar second. (Daniel 5 calls Nebuchadnezzar Belshazzar’s “father,” a common ancient way of naming a royal predecessor.) In <strong>October 539 BC</strong> the armies of <strong>Cyrus of Persia</strong> took Babylon, ending the empire in a single night, just as Daniel 5:30 describes.</p>
+<p><strong>Languages.</strong> Daniel 2:4 through 7:28 is written in <strong>Aramaic</strong>, the international language of the empire, while the rest of the book is Hebrew. The switch happens when the Chaldean wise men answer the king “in Syriack” (2:4)—the section that tells the nations about Israel’s God is written in the language of the nations.</p>
+<div class="card"><span class="tag">Archaeology anchors</span><p><strong>The Babylonian Chronicle</strong> (British Museum) records Nebuchadnezzar’s victory at Carchemish in 605 BC and his capture of “the city of Judah” in 597 BC.</p>
+<p><strong>The Nabonidus Cylinders from Ur.</strong> In 1854 four clay cylinders were found in the foundation of the ziggurat at Ur. Nabonidus prays for himself and for “Belshazzar, the eldest son.” Before that discovery, some critics claimed Belshazzar never existed because no ancient record outside Daniel named him.</p>
+<p><strong>The Ishtar Gate</strong> has been reconstructed from its original glazed bricks in Berlin’s Pergamon Museum, and Nebuchadnezzar’s name-stamped bricks fill museums around the world.</p>
+<p><strong>The Cyrus Cylinder</strong> (British Museum) describes Cyrus taking Babylon and allowing captive peoples to return home and restore their sanctuaries—the policy behind Ezra 1.</p></div><div class="card warm"><span class="tag">Honest note: “Darius the Mede” and the Prayer of Nabonidus</span><p>No record outside the Bible yet names “Darius the Mede” (5:31; 6:1). Scholars suggest he may be another name for a governor Cyrus appointed (such as Gubaru) or even for Cyrus himself (6:28 can be read “Darius, that is, Cyrus”). Among the Dead Sea Scrolls is a fragment called the <em>Prayer of Nabonidus</em>, in which a Babylonian king is afflicted for seven years at Teman and helped by a Jewish exile—a story many scholars compare to Daniel 4. These are open questions, and it’s fine to tell students so.</p></div><div class="card"><span class="tag">New names, same identity</span><p>Babylon renamed the four young men to honor its own gods (1:7). Their Hebrew names each testified of the Lord: <strong>Daniel</strong> = “God is my judge”; <strong>Hananiah</strong> = “the LORD is gracious”; <strong>Mishael</strong> = “who is like God?”; <strong>Azariah</strong> = “the LORD has helped.” Babylon could change their names, but not their covenants.</p></div>
+</section><section class="block reveal"><div class="sec-head"><span class="sec-num">2</span>
+<svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+<h2 class="sec">Passage Summary</h2></div><div class="rule"></div>
+<div class="tl"><div class="step"><span class="badge">1</span><div class="vv">Daniel 1</div><h3>The king’s food</h3><p>Daniel “purposed in his heart that he would not defile himself” with the king’s meat and wine (1:8). He politely asks for a ten-day test of “pulse” (vegetables and grains) and water. At the end they look healthier than everyone else. God gives the four “knowledge and skill,” and Daniel understanding in visions and dreams (1:17). The king finds them “ten times better” than all his wise men (1:20).</p></div><div class="step"><span class="badge">2</span><div class="vv">Daniel 2:1–23</div><h3>A dream no one can tell</h3><p>Nebuchadnezzar demands that his wise men tell him both his dream and its meaning—or die. They say only the gods could do that. Daniel asks the king for time, asks his three friends to pray, and the secret is revealed to him “in a night vision.” His first response is to bless God (2:19–23).</p></div><div class="step"><span class="badge">3</span><div class="vv">Daniel 2:24–49</div><h3>The statue and the stone</h3><p>The dream: a huge statue—gold head (Babylon), silver chest, bronze belly, iron legs, feet of iron mixed with clay. A stone “cut out without hands” smashes the feet and grows into a mountain filling the whole earth. Daniel gives God the credit (2:27–28) and explains that God will set up “a kingdom, which shall never be destroyed” (2:44). The king declares, “your God is a God of gods” (2:47).</p></div><div class="step"><span class="badge">4</span><div class="vv">Daniel 3</div><h3>The golden image and the fiery furnace</h3><p>Nebuchadnezzar sets up a gold image 60 cubits high (about 90 feet) on the plain of Dura and orders everyone to bow when the music plays. Shadrach, Meshach, and Abed-nego refuse: God is able to deliver us, “But if not … we will not serve thy gods” (3:17–18). The furnace is heated seven times hotter. The king sees four men walking loose in the fire, the fourth “like the Son of God” (3:25). They come out without even the smell of fire (3:27). The king proclaims there is “no other God that can deliver after this sort” (3:29)—this week’s title.</p></div><div class="step"><span class="badge">5</span><div class="vv">Daniel 4</div><h3>The king who ate grass</h3><p>Written as Nebuchadnezzar’s own testimony. He dreams of a great tree chopped down. Daniel urges him to repent. A year later, while boasting about Babylon, he loses his reason and lives like an animal for “seven times.” When he lifts his eyes to heaven, his understanding returns and he praises the King of heaven, who can humble “those that walk in pride” (4:37).</p></div><div class="step"><span class="badge">6</span><div class="vv">Daniel 5</div><h3>The writing on the wall</h3><p>At a drunken feast Belshazzar drinks from the sacred vessels taken from Jerusalem’s temple while praising idols. A hand writes on the wall. Daniel refuses the king’s gifts, reminds him he knew what happened to Nebuchadnezzar and still didn’t humble himself (5:22), and reads: MENE—God has numbered your kingdom; TEKEL—“thou art weighed in the balances, and art found wanting”; PERES—your kingdom is divided to the Medes and Persians. That night Belshazzar is killed.</p></div><div class="step"><span class="badge">7</span><div class="vv">Daniel 6</div><h3>The lions’ den</h3><p>Daniel, now an old man, is so excellent that King Darius plans to set him over the whole realm. Jealous officials can find no fault “except we find it against him concerning the law of his God” (6:5) and trick the king into a 30-day ban on prayer. Daniel goes home, opens his windows toward Jerusalem, and prays three times a day “as he did aforetime” (6:10). He is thrown to the lions; a stone is sealed over the den. Early in the morning the king runs to the den: “My God hath sent his angel, and hath shut the lions’ mouths” (6:22).</p></div><div class="step"><span class="badge">8</span><div class="vv">Daniel 7</div><h3>Four beasts and the Son of Man</h3><p>Daniel’s own vision: four beasts rise from the sea (a winged lion, a bear, a four-headed leopard, and a terrifying iron-toothed beast with ten horns). The “Ancient of days” takes His seat and books are opened. Then “one like the Son of man” comes with the clouds of heaven and receives “an everlasting dominion” (7:13–14), and “the saints of the most High” receive the kingdom (7:18, 27).</p></div></div><div class="card warm"><span class="tag">Hard questions students may ask</span><p><strong>Why refuse the king’s food? Was it about being vegetarian?</strong> No. The king’s meat likely wasn’t prepared according to the law of Moses (Leviticus 11), may have been offered to Babylon’s gods first, and eating from the king’s table signaled loyalty and dependence on him. It was about keeping covenant identity in a culture designed to absorb them. This is one of this week’s Scripture Helps questions.</p>
+<p><strong>What if God doesn’t rescue me?</strong> That is exactly the question “But if not” answers (3:18). Their faith was in God, not in a particular outcome. The manual pairs this with Alma 14:8–13, where faithful believers were not saved from the fire.</p>
+<p><strong>Why did Belshazzar get no second chance?</strong> Daniel points out that he already knew Nebuchadnezzar’s story and chose pride anyway (5:22–23).</p></div><blockquote class="pull">“The God of heaven [shall] set up a kingdom, which shall never be destroyed.”<cite>Daniel 2:44</cite></blockquote>
+</section><section class="block reveal"><div class="sec-head"><span class="sec-num">3</span>
+<svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6c-1.6-1.2-3.6-2-6-2v13c2.4 0 4.4.8 6 2"/><path d="M12 6c1.6-1.2 3.6-2 6-2v13c-2.4 0-4.4.8-6 2"/><path d="M12 6v13"/></svg>
+<h2 class="sec">Book of Mormon Parallels</h2></div><div class="rule"></div>
+<p class="lead">The Book of Mormon is full of young people, prisoners, and prophets who stayed true under pressure—and saw God deliver them.</p><div class="grid"><div class="pcard"><div class="row k"><div class="mini">Daniel</div><p><strong>Teenagers keep their standards</strong> in a foreign court and are blessed with strength and wisdom (Daniel 1:8–20).</p></div><div class="row b"><div class="mini">Book of Mormon</div><p>The <strong>2,000 stripling warriors</strong>, “very young,” trusted what their mothers taught them and were preserved (Alma 56:47–48; 57:21, 25–26).</p></div><div class="teach"><b>Teaches:</b> Young people can hold their covenants under pressure, and God strengthens them.</div></div><div class="pcard"><div class="row k"><div class="mini">Daniel</div><p><strong>Daniel and his friends pray together</strong> before the secret is revealed (Daniel 2:17–19).</p></div><div class="row b"><div class="mini">Book of Mormon</div><p>The sons of Mosiah “had given themselves to much prayer, and fasting” and so taught “with power and authority of God” (Alma 17:2–3). Alma fasted and prayed “many days” to know for himself (Alma 5:46).</p></div><div class="teach"><b>Teaches:</b> Revelation follows spiritual preparation.</div></div><div class="pcard"><div class="row k"><div class="mini">Daniel</div><p><strong>A stone becomes a mountain</strong> filling the whole earth (Daniel 2:34–35, 44–45).</p></div><div class="row b"><div class="mini">Book of Mormon</div><p>Nephi sees the Church of the Lamb small in number yet “upon all the face of the earth,” armed with the power of God (1 Nephi 14:12–14).</p></div><div class="teach"><b>Teaches:</b> God’s kingdom grows from small beginnings until it fills the earth.</div></div><div class="pcard"><div class="row k"><div class="mini">Daniel</div><p><strong>“But if not”</strong>—faith that doesn’t depend on rescue (Daniel 3:16–18).</p></div><div class="row b"><div class="mini">Book of Mormon</div><p>Alma and Amulek watched believers burned and were told the Lord would receive them in glory (Alma 14:8–13). Abinadi sealed his testimony in fire (Mosiah 17:20).</p></div><div class="teach"><b>Teaches:</b> God always keeps His promises—sometimes by delivering from the fire, sometimes through it.</div></div><div class="pcard"><div class="row k"><div class="mini">Daniel</div><p><strong>Men walk unharmed in the flames</strong>, and the king is converted (Daniel 3:24–29).</p></div><div class="row b"><div class="mini">Book of Mormon</div><p>Nephi and Lehi are encircled by fire in a Lamanite prison and are not burned; about 300 witnesses are converted (Helaman 5:22–24, 44–49).</p></div><div class="teach"><b>Teaches:</b> God’s presence protects His servants and turns onlookers to Him.</div></div><div class="pcard"><div class="row k"><div class="mini">Daniel</div><p><strong>Thrown into a furnace and a den of lions</strong> (Daniel 3; 6).</p></div><div class="row b"><div class="mini">Book of Mormon</div><p>The Three Nephites were cast into a furnace and “received no harm,” and into a den of wild beasts, where they played with them “as a child with a suckling lamb” (3 Nephi 28:21–22).</p></div><div class="teach"><b>Teaches:</b> Nothing can destroy those the Lord preserves for His work.</div></div><div class="pcard"><div class="row k"><div class="mini">Daniel</div><p><strong>A prophet reads the writing on the wall</strong> to a proud, feasting king (Daniel 5).</p></div><div class="row b"><div class="mini">Book of Mormon</div><p><strong>Samuel the Lamanite</strong> stands on the city wall and warns a proud, prosperous people (Helaman 13:4, 38).</p></div><div class="teach"><b>Teaches:</b> Pride is “weighed in the balances”; the Lord warns before judgment comes.</div></div><div class="pcard"><div class="row k"><div class="mini">Daniel</div><p><strong>A law forbids prayer</strong>, and Daniel prays anyway (Daniel 6:7–10).</p></div><div class="row b"><div class="mini">Book of Mormon</div><p>Amulon forbade Alma’s people to pray aloud; they “did pour out their hearts to him” silently, and the Lord eased their burdens (Mosiah 24:10–15).</p></div><div class="teach"><b>Teaches:</b> No law, threat, or circumstance can cut us off from prayer.</div></div></div>
+</section><section class="block reveal"><div class="sec-head"><span class="sec-num">4</span>
+<svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>
+<h2 class="sec">Tie to Come, Follow Me</h2></div><div class="rule"></div>
+<p>This week’s outline is titled <strong>“There Is No Other God That Can Deliver”</strong> (November 9–15; Daniel 1–7). Its introduction notes that most of us won’t face a furnace or lions, but all of us face trials of faith. Daniel and his friends stayed true by doing small and simple things: praying, fasting, choosing good friends, trusting God, and being a light—like Joseph in Egypt and Esther in Persia.</p>
+<h3 style="margin-top:22px">The outline’s principles</h3><ul class="points"><li><strong>I can trust in the Lord when my faith is tried</strong> (Daniel 1; 3; 6; seminary focus). Notice how they were pressured and how they responded (1:10–13; 3:15–18; 6:10). Questions: When have you felt pressured to do something wrong? What if your faith doesn’t bring the miracle you hope for (see Alma 14:8–13; Daniel 3:13–18)? How can your choices lead others to faith (2:47; 3:28–29)? See President Dieter F. Uchtdorf, “Be Not Afraid, Only Believe” (October 2015).</li><li><strong>The Church of Jesus Christ of Latter-day Saints is the kingdom of God on earth</strong> (Daniel 2:34–35, 44–45). The manual quotes President D. Todd Christofferson, who taught that the Church is that prophesied latter-day kingdom, set up by God, rolling forth like the stone to fill the earth (“Why the Church,” October 2015). What is your role in helping this prophecy come to pass? See “Hark, All Ye Nations!” (Hymns, no. 264) and the video “God Gave Them Knowledge.”</li><li><strong>Receiving revelation requires spiritual preparation</strong> (Daniel 2:1–30). How would you feel in Daniel’s position (2:1–15)? What did he do (2:16–18)? How had God prepared him earlier (1:17)? What do you learn from how he responded after he received help (2:19–30)?</li><li><strong>Jesus Christ is the Son of the Eternal Father</strong> (Daniel 7:13–14). Many Jews in Jesus’s day understood “Son of man” as a title for the Messiah (see Moses 6:57). Jesus used it often (Matthew 25:31; Mark 9:31; 10:45) and declared it at His trial (Mark 14:61–64). Compare Daniel 7:13–14 with the promises in D&C 121:29, 46; see also D&C 49:6.</li></ul><p style="font-size:15px"><strong>From the children’s section</strong> (useful for this age, too): compare the blessings in Daniel 1:15–17 with the Word of Wisdom’s promises in D&C 89:18–21, and talk about why prayer mattered so much to Daniel (see President Henry B. Eyring, “Prayers for Peace,” April 2026).</p><h3 style="margin-top:22px">Scripture Helps questions this week</h3><ul class="helps"><li>Why did Daniel and his friends refuse the king’s food? <em>(see the note in Section 2)</em></li><li>What is the meaning of the beasts in Daniel’s dream?</li><li>What does it mean that the Son of Man will come to the Ancient of Days? <em>(see D&C 116 below)</em></li></ul><div class="card"><span class="tag">Latter-day connections</span><p><strong>Doctrine and Covenants 65:2</strong> (1831): the Lord echoes Daniel—the gospel will “roll forth unto the ends of the earth, as the stone which is cut out of the mountain without hands.”</p>
+<p><strong>Doctrine and Covenants 116</strong> (1838): Spring Hill, Missouri, is named Adam-ondi-Ahman, where Adam, “the Ancient of Days,” will sit, “as spoken of by Daniel the prophet” (see also D&C 27:11; 107:53–56). Latter-day Saints understand Daniel 7:9–14 to describe a future gathering where Adam meets with the Savior before the Second Coming.</p>
+<p><strong>Doctrine and Covenants 89:18–21:</strong> the Word of Wisdom promises health, wisdom, and “great treasures of knowledge”—much like what Daniel and his friends received (Daniel 1:15–20).</p></div><h3 style="margin-top:22px">The stone begins to roll</h3><div class="resto"><div class="rnode"><div class="yr">c. 603 BC</div><div class="tt">Nebuchadnezzar’s dream</div><div class="ds">A stone cut without hands will fill the earth (Daniel 2).</div></div><div class="rarrow">▸</div><div class="rnode"><div class="yr">1830</div><div class="tt">The Church organized</div><div class="ds">April 6, with six official members.</div></div><div class="rarrow">▸</div><div class="rnode"><div class="yr">1831</div><div class="tt">D&C 65</div><div class="ds">The Lord identifies the restored gospel with Daniel’s stone.</div></div><div class="rarrow">▸</div><div class="rnode"><div class="yr">1838</div><div class="tt">D&C 116</div><div class="ds">Adam-ondi-Ahman and the Ancient of Days.</div></div></div><h3 style="margin-top:24px">Teaching ideas for ages 12–13</h3><ul class="ideas"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Name swap.</strong> Put the four Hebrew names and meanings on the board, then the Babylonian names. Ask: What labels does the world try to put on you? What name did you take upon yourself at baptism (Mosiah 5:8)? How did these four keep their identity even when their names changed?</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Decide before the moment.</strong> Read 1:8: Daniel “purposed in his heart” before the food arrived. Give small groups realistic pressure scenarios (phones, friends, sports on Sunday, language, a party). Have them plan a respectful response like Daniel’s polite ten-day test.</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>“But if not.”</strong> Have each student write a hard thing they or someone they love is facing (they keep the card). Read 3:16–18 together. Ask: What does faith look like if the situation doesn’t change? Share Alma 14:11 and discuss.</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Draw the statue.</strong> Sketch it on the board, labeling the metals from head to toe. Let a student “roll” a paper stone into the feet. Note that the Church began with six members in 1830. What helps the stone keep rolling today—and what part can a 12-year-old play?</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Daniel’s open window.</strong> Prayer was Daniel’s habit long before the law (“as he did aforetime,” 6:10). Ask what daily habits make faith automatic. Invite students to pray morning, midday, and night this week and report next Sunday.</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg><strong>Son of Man scripture chase.</strong> Split up Daniel 7:13–14; Matthew 25:31; Mark 10:45; Mark 14:61–62. Each group reports what that verse teaches about Jesus.</li></ul>
+</section><section class="block reveal"><div class="sec-head"><span class="sec-num">5</span>
+<svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>
+<h2 class="sec">Tie to Jesus Christ</h2></div><div class="rule"></div>
+<div class="christ"><p class="ref">Daniel 3:25 · Isaiah 43:2 · Alma 7:11–12</p><h3>He walks with us in the fire</h3><p>Nebuchadnezzar saw a fourth figure with the three young men; he later called him God’s “angel” (3:28), and the text doesn’t say more. But the pattern is clear: God doesn’t always remove the fire—He comes into it. Jesus Christ took upon Himself our pains and afflictions so He knows how to help us in ours.</p><p class="ref">Daniel 2:34–35, 44–45 · Helaman 5:12</p><h3>His kingdom fills the earth</h3><p>The kingdom in Daniel 2 belongs to Christ. Helaman taught his sons to build on “the rock of our Redeemer”—the sure foundation no storm can destroy.</p><p class="ref">Daniel 7:13–14 · Mark 14:61–62</p><h3>He is the Son of Man</h3><p>“Son of Man” was Jesus’s favorite title for Himself. At His trial He applied Daniel’s vision to Himself—coming “in the clouds of heaven”—and that claim led to His condemnation. Daniel had already seen how the story ends: an everlasting dominion that “shall not pass away.”</p><p class="ref">Daniel 6:17–23 · Matthew 27:66; 28:1–6</p><h3>A type of His death and Resurrection</h3><p>An innocent man is condemned by jealous leaders, placed in a pit, and shut in with a sealed stone. Very early in the morning someone hurries to the place and finds him alive. Daniel’s rescue foreshadows a greater morning when the sealed tomb was found empty.</p><p class="ref">Daniel 1; 3; 6 · Hebrews 4:15</p><h3>The perfectly faithful one</h3><p>Daniel and his friends resisted Babylon’s pressure. Jesus was “in all points tempted like as we are, yet without sin.” Because He never gave in, He has power to help us when we’re tempted to bow to the world’s golden images.</p></div>
+</section>
+</div>
+<footer><div class="wrap"><b>Daniel 1–7 — “There Is No Other God That Can Deliver.”</b> Sources: Come, Follow Me—For Home and Church: Old Testament 2026, Nov. 9–15; Scripture Helps: Old Testament; Bible Dictionary, “Daniel”; King James Version, Book of Mormon, and Doctrine and Covenants (brief quotations); Babylonian Chronicle; Nabonidus Cylinders from Ur; Cyrus Cylinder. Prepared for youth Sunday School, ages 12–13.</div></footer>
+<button class="printbtn" onclick="window.print()" aria-label="Print handout"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>Print</button>
+<script>(function(){var els=document.querySelectorAll('.reveal');function showAll(){els.forEach(function(el){el.classList.add('in');});}
+if(!('IntersectionObserver' in window)){showAll();return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+els.forEach(function(el){io.observe(el);});window.addEventListener('beforeprint',showAll);setTimeout(showAll,2500);})();</script>
+</body></html>

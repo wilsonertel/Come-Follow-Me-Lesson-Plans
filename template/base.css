@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Come, Follow Me handout — shared design system (template/base.css)
+   Extracted from examples/daniel-handout.html and examples/ezekiel-handout.html
+   (their stylesheets are identical except for the :root colour tokens).
+   build.py inlines this file, then appends the lesson's own :root tokens,
+   so a lesson overrides ONLY colours. Edit layout here, never per lesson.
+   ========================================================================== */
+:root{
+    /* ---- DESIGN TOKENS — customize per lesson's motif ---- */
+    --night:#14295e;      /* dark hero base */
+    --night-2:#0c1a40;    /* darker band */
+    --accent:#e8742a;     /* primary accent (motif color) */
+    --accent-soft:#f6a65a;
+    --gold:#e7b84a;       /* highlight */
+    --parch:#f7f3ea;      /* reading surface */
+    --parch-2:#eef0f6;    /* card surface */
+    --ink:#24262e;        /* body text */
+    --ink-soft:#525667;
+    --echo:#2a7f86;       /* second accent: the "parallel/echo" color */
+    --echo-soft:#e2f0f1;
+    --gold-soft:#f8eed5;
+    --line:#d6d9e4;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--parch);color:var(--ink);
+    font-family:"Inter",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);}
+  h2.sec{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:clamp(26px,4.4vw,34px);line-height:1.1;margin:0;color:var(--night);}
+  h3{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:20px;color:var(--night);margin:0 0 6px;}
+  p{margin:0 0 15px;} strong{font-weight:700;color:#221f19;} em{font-style:italic;}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;color:#f4efe4;
+    background:radial-gradient(120% 90% at 82% 8%, color-mix(in srgb,var(--accent) 42%,transparent), transparent 46%),
+      radial-gradient(90% 70% at 78% 30%, color-mix(in srgb,var(--gold) 22%,transparent), transparent 55%),
+      linear-gradient(160deg,var(--night) 0%,var(--night-2) 100%);}
+  .stars{position:absolute;inset:0;pointer-events:none;opacity:.9;}
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:56px 22px 60px;position:relative;z-index:2;
+    display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;}
+  .hero .eyebrow{color:var(--accent-soft);}
+  .hero h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(48px,10vw,86px);line-height:.9;letter-spacing:-.01em;margin:12px 0 8px;color:#fff;}
+  .hero .kicker{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(18px,3.4vw,23px);color:var(--gold);margin:0 0 18px;}
+  .theme-chip{display:inline-flex;align-items:center;gap:9px;flex-wrap:wrap;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:999px;padding:8px 15px;font-size:13.5px;font-weight:600;color:#f4efe4;}
+  .theme-chip b{color:var(--accent-soft);font-weight:700;}
+  .hook{margin:18px 0 0;max-width:34ch;color:#e7e0d2;font-size:15.5px;line-height:1.55;}
+  .hero-art{align-self:stretch;display:flex;align-items:center;justify-content:center;min-width:150px;}
+  /* Put a simple inline SVG motif here (flame, star, temple, water…). Optional gentle animation. */
+
+  /* AT-A-GLANCE BAND (optional: a journey map, a key-facts strip, a cast of characters) */
+  .band{background:var(--night-2);color:#efe7d5;}
+  .journey{max-width:var(--maxw);margin:0 auto;padding:20px 22px;display:flex;align-items:stretch;gap:6px;}
+  .jlabel{align-self:center;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;margin-right:6px;}
+  .stop{flex:1;text-align:center;padding:6px 4px;}
+  .stop .dot{width:14px;height:14px;border-radius:50%;margin:0 auto 8px;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 22%,transparent);}
+  .stop .nm{font-family:"Fraunces",serif;font-weight:600;font-size:16px;color:#fff;}
+  .stop .ds{font-size:11.5px;color:#b9c0d6;line-height:1.3;margin-top:2px;}
+  .arrow{align-self:flex-start;margin-top:20px;color:#5b6486;font-size:18px;flex:0 0 auto;}
+
+  /* SECTION SHELL */
+  section.block{padding:46px 0 8px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+  .sec-num{font-family:"Fraunces",serif;font-weight:900;font-size:15px;color:#fff;background:var(--night);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .sec-ico{width:24px;height:24px;color:var(--accent);flex:0 0 auto;}
+  .rule{height:3px;background:linear-gradient(90deg,var(--accent),var(--gold) 60%,transparent);border-radius:3px;margin:10px 0 22px;}
+  .lead{font-size:15px;color:var(--ink-soft);font-style:italic;margin:-6px 0 20px;}
+
+  /* CALLOUT CARD */
+  .card{background:var(--parch-2);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:12px;padding:18px 20px;margin:20px 0;}
+  .card.warm{border-left-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,var(--parch));}
+  .card .tag{font-size:11.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--night);margin-bottom:7px;display:block;}
+  .card.warm .tag{color:#a4560f;} .card p:last-child{margin-bottom:0;}
+
+  /* PULL QUOTE */
+  .pull{margin:24px 0;padding:16px 22px;border-left:5px solid var(--accent);background:linear-gradient(90deg,var(--gold-soft),transparent);
+    font-family:"Fraunces",serif;font-size:21px;font-style:italic;color:var(--night);line-height:1.35;}
+  .pull cite{display:block;font-family:"Inter";font-style:normal;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:8px;}
+
+  /* SUMMARY TIMELINE */
+  .tl{position:relative;margin:8px 0 6px;padding-left:8px;}
+  .step{position:relative;padding:0 0 22px 54px;}
+  .step:before{content:"";position:absolute;left:19px;top:6px;bottom:-6px;width:2px;background:var(--line);}
+  .step:last-child:before{display:none;}
+  .step .badge{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:11px;background:var(--night);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:700;font-size:15px;z-index:2;}
+  .step .vv{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--accent);text-transform:uppercase;}
+  .step h3{margin:2px 0 5px;} .step p{margin:0;font-size:15.5px;}
+
+  /* PARALLEL CARDS */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:8px 0 4px;}
+  .pcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;display:flex;flex-direction:column;}
+  .pcard .row{padding:13px 16px;}
+  .pcard .k{border-left:5px solid var(--gold);background:var(--gold-soft);}
+  .pcard .b{border-left:5px solid var(--echo);background:var(--echo-soft);}
+  .pcard .mini{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;}
+  .pcard .k .mini{color:#9a6a12;} .pcard .b .mini{color:var(--echo);}
+  .pcard .row p{margin:0;font-size:14px;line-height:1.5;}
+  .pcard .teach{margin-top:auto;padding:12px 16px;background:#faf6ec;border-top:1px dashed var(--line);font-size:13px;color:var(--ink);}
+  .pcard .teach b{color:var(--night);}
+
+  /* MANUAL POINTS + MINI TIMELINE + IDEAS */
+  .points{list-style:none;padding:0;margin:14px 0;}
+  .points li{position:relative;padding:12px 16px 12px 46px;background:var(--parch-2);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;font-size:15px;}
+  .points li:before{content:"";position:absolute;left:16px;top:16px;width:14px;height:14px;border-radius:50%;border:3px solid var(--accent);}
+  .points li strong{color:var(--night);}
+  .resto{display:flex;gap:8px;align-items:stretch;margin:14px 0 6px;flex-wrap:nowrap;}
+  .rnode{flex:1;background:var(--night);color:#f2ecdd;border-radius:12px;padding:14px;}
+  .rnode .yr{font-family:"Fraunces",serif;font-weight:700;color:var(--gold);font-size:15px;}
+  .rnode .tt{font-weight:700;font-size:14px;margin:3px 0 4px;color:#fff;} .rnode .ds{font-size:12px;color:#c3c9de;line-height:1.4;}
+  .rarrow{align-self:center;color:var(--accent);font-size:20px;flex:0 0 auto;}
+  .ideas{list-style:none;padding:0;margin:12px 0;}
+  .ideas li{position:relative;padding:11px 14px 11px 44px;border-bottom:1px solid var(--line);font-size:15px;}
+  .ideas li:last-child{border-bottom:0;}
+  .ideas li svg{position:absolute;left:14px;top:12px;width:20px;height:20px;color:var(--echo);}
+
+  footer{margin-top:40px;background:var(--night-2);color:#aab2cc;}
+  footer .wrap{padding:26px 22px;font-size:12.5px;line-height:1.6;} footer b{color:#e7e0d2;}
+  .printbtn{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:12px 20px;font-family:"Inter";font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 8px 24px color-mix(in srgb,var(--accent) 40%,transparent);display:flex;align-items:center;gap:8px;}
+  .printbtn:hover{filter:brightness(.93);}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:720px){
+    .hero-inner{grid-template-columns:1fr;} .hero-art{order:-1;min-width:0;}
+    .journey{flex-direction:column;gap:0;} .jlabel{margin:0 0 8px;text-align:center;}
+    .arrow{align-self:center;transform:rotate(90deg);margin:2px 0;}
+    .grid{grid-template-columns:1fr;} .resto{flex-direction:column;} .rarrow{transform:rotate(90deg);}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none;} html{scroll-behavior:auto;}}
+  @media print{
+    body{font-size:11.5pt;} .printbtn{display:none;}
+    .hero{background:var(--night)!important;} .reveal{opacity:1;transform:none;}
+    section.block{padding:16px 0 4px;break-inside:avoid;} .pcard,.step,.card,.rnode{break-inside:avoid;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .helps{list-style:none;padding:0;margin:10px 0;} .helps li{padding:9px 0 9px 28px;position:relative;border-bottom:1px dashed var(--line);font-size:15px;}
+  .helps li:before{content:"?";position:absolute;left:2px;top:9px;width:18px;height:18px;border-radius:50%;background:var(--echo);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;}
+  .christ{background:var(--night);color:#efe7d5;border-radius:16px;padding:22px 22px 8px;margin:10px 0;}
+  .christ h3{color:var(--gold);} .christ p{font-size:15.5px;} .christ strong{color:#fff;}
+  .christ .ref{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--accent-soft);text-transform:uppercase;}
+  @media (max-width:720px){.two{grid-template-columns:1fr;}}
+
+/* ---- Gospel Library scripture links (same style as the rest of the site) ---- */
+a.s{color:var(--echo);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--echo) 38%,transparent);}
+a.s:hover{border-bottom-color:var(--echo);background:color-mix(in srgb,var(--echo) 10%,transparent);}
+a.s:focus-visible{outline:2px solid var(--echo);outline-offset:2px;border-radius:2px;}
+.hero a.s,.band a.s,.rnode a.s,.christ a.s,footer a.s{color:var(--gold);border-bottom-color:color-mix(in srgb,var(--gold) 42%,transparent);}
+.hero a.s:hover,.band a.s:hover,.rnode a.s:hover,.christ a.s:hover,footer a.s:hover{border-bottom-color:var(--gold);background:color-mix(in srgb,var(--gold) 14%,transparent);}
+.step .vv a.s,.pcard .mini a.s,.stop .nm a.s,.christ .ref a.s{color:inherit;border-bottom-color:color-mix(in srgb,currentColor 45%,transparent);}
+
+/* ---- parallel cards: the echo row stretches so short cards don't show a white gap ---- */
+.pcard .row.b{flex:1;}
+
+/* ---- phone safety: the motif SVG scales down instead of clipping; long words wrap ---- */
+.hero-art svg{max-width:100%;height:auto;}
+.hero h1,h2.sec,h3{overflow-wrap:break-word;}
+@media (max-width:420px){.hero-inner{padding:40px 18px 44px;}.wrap{padding:0 16px;}.card,.christ{padding-left:16px;padding-right:16px;}}
+/* print: never hidden, never mid-fade (the examples' plain .reveal rule could print while the 0.6 s fade was still running) */
+@media print{.reveal,.reveal.in{opacity:1!important;transform:none!important;transition:none!important;}
+  a.s{color:inherit;border-bottom:0;}
+  /* let long sections flow across pages (whole-section avoid left half-empty pages);
+     keep the small units together and never strand a heading at the bottom of a page */
+  section.block{break-inside:auto;}
+  .sec-head,.rule,h3,.christ .ref,.step .vv{break-after:avoid;}
+  .pull,.points li,.ideas li,.helps li,.resto{break-inside:avoid;}
+  .christ{break-inside:auto;}
+  footer{break-inside:avoid;}}
