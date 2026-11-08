@@ -7,7 +7,11 @@ Weekly lesson handouts and teaching helps for **Come, Follow Me — For Home and
 Open **[index.html](index.html)** — the home page lists all 12 months of the 2026 curriculum. Every week of the official outline has its own folder and page:
 
 ```
-index.html                          ← Home page (all 12 months, all 52 weeks)
+index.html                          ← Home page (latest handouts + all 12 months, all 52 weeks)
+handouts/<year>/NN-slug.html        ← Handouts built by the template (src/ holds each one's content)
+template/                           ← Handout builder: base.css, build.py, research/review/render tools
+examples/                           ← The two reference handouts (Ezekiel, Daniel) that set the bar
+notes/                              ← research-log.md (sources per week) + fetched outlines
 race/                               ← The Scripture Race reading game
 lessons/
   2026 - Old Testament/
@@ -38,7 +42,25 @@ keeps its own roster. To put the whole class on one live leaderboard, follow
 
 Weeks follow the official Come, Follow Me outline at [churchofjesuschrist.org](https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026?lang=eng) — same date ranges, scripture blocks, and lesson titles. Weeks that span two months are filed under the month in which the week ends (matching the Gospel Library app).
 
-## Adding a New Lesson
+## Building a Weekly Handout
+
+Handouts are built from a Python data file by `template/build.py` (see `CLAUDE.md` and
+`.claude/skills/cfm-handout/SKILL.md` for the full workflow — Claude Code runs it when asked for
+"this week's lesson" or "next week's lesson"):
+
+```bash
+python3 template/week.py                                    # which week is it?
+python3 template/fetch_outline.py 47 -o notes/outlines/2026-47-outline.md
+python3 template/build.py build handouts/2026/src/47-hosea-joel.py
+python3 template/scripture.py --lesson handouts/2026/src/47-hosea-joel.py   # review every reference
+python3 template/scripture.py --quotes handouts/2026/src/47-hosea-joel.py   # check quotations
+node template/render_check.js handouts/2026/47-hosea-joel.html              # screenshots + PDF
+```
+
+A build writes the handout, links it from its week page, marks the week ready on the home page,
+and refreshes the home page's "Latest handouts" list.
+
+## Adding a New Lesson by Hand
 
 1. Drop the handout file(s) into that week's `handouts/` folder.
 2. Add a link to the file on the week's `index.html` hub page.
@@ -54,3 +76,4 @@ Weeks follow the official Come, Follow Me outline at [churchofjesuschrist.org](h
 | August 10–16 | Job 1–3; 12–14; 19; 21–24; 38–40; 42 — "Yet Will I Trust in Him" | Combined Handout, plus Parts 1–4 (Job 1–3; 12–13 · Job 14; 19 · Job 21–24 · Job 38–40; 42), Weekly Quiz |
 | August 31 – September 6 | Psalms 102–103; 110; 116–119; 127–128; 135–139; 146–150 — "Let Every Thing That Hath Breath Praise the Lord" | Psalms 102–150 Lesson Handout, Weekly Quiz |
 | September 7–13 | Proverbs 1–4; 15–16; 22; 31; Ecclesiastes 1–3; 11–12 — "He Shall Direct Thy Paths" | Weekly Quiz (3 short answers + 3 longer responses) |
+| November 16–22 | Hosea 1–6; 10–14; Joel — "I Will Love Them Freely" | Hosea & Joel Lesson Handout (`handouts/2026/47-hosea-joel.html`) |
