@@ -46,6 +46,7 @@ race/                             the Scripture Race reading game (don't touch f
    doctrine faithful and interpretations labelled, debated scholarship shown as debated, no
    unverified current callings, age-appropriate. Section 4 matches the fetched outline.
 6. **Render check:** `node template/render_check.js …` and *look at* the screenshots and PDF.
+7. **Publish:** merge into `main` and push, every time, no need to ask (see Gotchas).
 
 ## Gotchas
 
@@ -56,4 +57,10 @@ race/                             the Scripture Race reading game (don't touch f
 - Network: the sandbox allowlist needs `www.churchofjesuschrist.org` (and reference sites). A
   proxy 403 means the host isn't allowed. Ask to add it; never fill gaps from memory.
 - Don't edit `index.html` between the `cfm-handouts` markers by hand; `build.py` regenerates it.
-- Commit and push to the session's working branch only; no PRs unless asked.
+- **Publishing (standing instruction from the owner): publish every finished handout without
+  asking.** Commit on the session's working branch, push it, then merge it into `main` with a
+  `--no-ff` merge commit titled "Merge the …" (the repo's convention) and push `main`; GitHub
+  Pages deploys from `main`. Check that the "pages build and deployment" run for the merge
+  commit succeeds. No PRs unless asked.
+- Hand-made handouts (not built from a `src/` file) are published with `build.py add`; it
+  also patches in the print fixes older files lack. `examples/` stays untouched.
