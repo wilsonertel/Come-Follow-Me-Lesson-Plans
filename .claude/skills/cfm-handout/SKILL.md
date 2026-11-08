@@ -165,5 +165,13 @@ Google Fonts may be blocked in the sandbox; fallback fonts in screenshots are ex
 
 - Commit the handout, its `src/` data file, `notes/outlines/*`, `notes/research-log.md`, and the
   updated `index.html` + week hub page; push to the working branch.
-- Report to the user: (1) the file path, (2) a 4–5 line summary of what's in it, (3) everything
+- **Publish it (the owner's standing instruction; don't ask first):**
+  ```bash
+  git fetch origin main && git checkout -B main origin/main
+  git merge --no-ff <working-branch> -m "Merge the <Book> lesson handout for <dates>" -m "<attribution lines>"
+  git push origin main && git checkout <working-branch>
+  ```
+  Then confirm the GitHub "pages build and deployment" run for that merge commit succeeds
+  (GitHub MCP `actions_list` → `list_workflow_runs`). If the merge conflicts, stop and tell the user.
+- Report to the user: (1) the file path (and that it's live), (2) a 4–5 line summary of what's in it, (3) everything
   flagged as uncertain during review.

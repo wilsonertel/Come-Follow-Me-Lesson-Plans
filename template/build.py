@@ -10,6 +10,10 @@ Commands
     python3 template/build.py build handouts/2026/src/47-hosea-joel.py
         → writes handouts/2026/47-hosea-joel.html, then updates the home page
           list, the week hub page, and the week's badge on the home page.
+    python3 template/build.py add examples/daniel-handout.html --week 46 --slug daniel \
+        --dates "November 9–15" --start 2026-11-09 --block "Daniel 1–7" \
+        --title "There Is No Other God That Can Deliver"
+        → publishes a hand-made handout the same way (meta tags, hub link, badge, list).
     python3 template/build.py index
         → regenerates only the home-page "Latest handouts" list.
     python3 template/build.py extract-css examples/daniel-handout.html
@@ -387,9 +391,55 @@ def build(path):
     return out
 
 
+PRINT_FIX = """
+/* cfm-print-fix (added by build.py add) */
+@media print{.reveal,.reveal.in{opacity:1!important;transform:none!important;transition:none!important;}
+  section.block{break-inside:auto;} .sec-head,.rule,h3,.christ .ref,.step .vv{break-after:avoid;}
+  .pull,.points li,.ideas li,.helps li,.resto,footer{break-inside:avoid;} .christ{break-inside:auto;}}
+"""
+
+
+def add_existing(src, year, week, slug, dates, start, block, title, volume="Old Testament", hub=None):
+    """Publish a hand-made handout: copy it to handouts/<year>/NN-slug.html with cfm: meta tags,
+    then link it from its week hub, mark the week ready, and refresh the home-page list."""
+    doc = open(src, encoding="utf-8").read()
+    doc = re.sub(r'<meta name="cfm:[^"]*" content="[^"]*">', "", doc)
+    meta = "".join(f'<meta name="cfm:{k}" content="{html.escape(str(v))}">' for k, v in [
+        ("year", year), ("week", week), ("dates", dates), ("block", block),
+        ("outline-title", title), ("start", start)])
+    doc = re.sub(r"(</title>)", r"\1\n" + meta.replace("\\", "\\\\"), doc, count=1)
+    # older hand-made handouts lack the print fixes in base.css: add them to the main
+    # stylesheet (the LAST </style>; the first one belongs to <noscript>)
+    if "cfm-print-fix" not in doc:
+        i = doc.rfind("</style>")
+        doc = doc[:i] + PRINT_FIX + doc[i:]
+    if hub is None:
+        import week as wk  # template/week.py
+        hub = wk.week_info(wk.week_end(__import__("datetime").date.fromisoformat(start)))["hub"]
+    L = dict(year=year, week=week, slug=slug, scripture_block=block, week_hub=hub)
+    out = out_path(L)
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    open(out, "w", encoding="utf-8").write(doc)
+    print(f"wrote {os.path.relpath(out, ROOT)} (from {src})")
+    link_week_hub(L, out)
+    rebuild_index()
+    for w in _WARNINGS:
+        print("WARNING:", w)
+
+
 def main(argv):
     if len(argv) >= 2 and argv[0] == "build":
         build(argv[1])
+    elif argv[:1] == ["add"]:
+        import argparse
+        ap = argparse.ArgumentParser(prog="build.py add")
+        ap.add_argument("src")
+        for a in ("--week", "--slug", "--dates", "--start", "--block", "--title"):
+            ap.add_argument(a, required=True)
+        ap.add_argument("--year", type=int, default=2026)
+        ap.add_argument("--volume", default="Old Testament")
+        o = ap.parse_args(argv[1:])
+        add_existing(o.src, o.year, int(o.week), o.slug, o.dates, o.start, o.block, o.title, o.volume)
     elif argv[:1] == ["index"]:
         rebuild_index()
     elif len(argv) >= 2 and argv[0] == "extract-css":
