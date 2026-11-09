@@ -77,5 +77,5 @@ and refreshes the home page's "Latest handouts" list.
 | August 31 – September 6 | Psalms 102–103; 110; 116–119; 127–128; 135–139; 146–150 — "Let Every Thing That Hath Breath Praise the Lord" | Psalms 102–150 Lesson Handout, Weekly Quiz |
 | September 7–13 | Proverbs 1–4; 15–16; 22; 31; Ecclesiastes 1–3; 11–12 — "He Shall Direct Thy Paths" | Weekly Quiz (3 short answers + 3 longer responses) |
 | November 2–8 | Ezekiel 1–3; 33–34; 36–37; 47 — "A New Spirit Will I Put within You" | Ezekiel Lesson Handout (`handouts/2026/45-ezekiel.html`) |
-| November 9–15 | Daniel 1–7 — "There Is No Other God That Can Deliver" | Daniel Lesson Handout (`handouts/2026/46-daniel.html`) |
+| November 9–15 | Daniel 1–7 — "There Is No Other God That Can Deliver" | Daniel Lesson Handout (`handouts/2026/46-daniel.html`), Weekly Quiz (3 short answers + 1 longer response) |
 | November 16–22 | Hosea 1–6; 10–14; Joel — "I Will Love Them Freely" | Hosea & Joel Lesson Handout (`handouts/2026/47-hosea-joel.html`) |
